@@ -10,6 +10,20 @@ if (Test-Path $installed) { throw 'Refusing ZIP checks with pre-existing install
 $appProcess=$null
 try {
   Expand-Archive $archive -DestinationPath $folder
+  # Windows TEMP may use an 8.3 alias while Process.Path returns the long name.
+  Add-Type @'
+using System;
+using System.Text;
+using System.Runtime.InteropServices;
+public static class OWGuideZipPath {
+  [DllImport("kernel32.dll", CharSet=CharSet.Unicode, SetLastError=true)]
+  public static extern uint GetLongPathName(string path, StringBuilder result, uint size);
+}
+'@
+  $longFolder=[Text.StringBuilder]::new(32768)
+  $length=[OWGuideZipPath]::GetLongPathName($folder,$longFolder,32768)
+  if ($length -eq 0 -or $length -ge 32768) { throw 'Could not resolve the extracted folder to its full Windows path.' }
+  $folder=$longFolder.ToString()
   foreach ($file in @('OWGuide.exe','portable.marker','Launch-OWGuide.ps1','Launch-OWGuide.cmd','READ-ME.md','LICENSE.txt','THIRD_PARTY_NOTICES.txt')) {
     if (!(Test-Path (Join-Path $folder $file))) { throw "Portable ZIP is missing $file" }
   }
