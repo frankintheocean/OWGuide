@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-12T04:46:54.419420Z",
+  "patch": "Overwatch Retail Patch Notes \u2013 October 6, 2026",
+  "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/",
+  "sha256": "03d8559f26c57a7b2c46cd630c69ce8f09c563959fb14a076543264dc0197b04",
+  "statistics": 41,
+  "additionalAbilities": [
+    "conspirator",
+    "reconstruction"
+  ],
+  "note": "Curated factual values only. No old values or unspecified base values inferred; full guide and map review remains pending."
+}

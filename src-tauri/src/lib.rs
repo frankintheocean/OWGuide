@@ -1,5 +1,5 @@
 use base64::{engine::general_purpose::STANDARD, Engine};
-use ed25519_dalek::{Signature, Verifier, VerifyingKey};
+use ed25519_dalek::{Signature, VerifyingKey};
 use rusqlite::{params, Connection, OptionalExtension};
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
@@ -48,12 +48,22 @@ pub fn validate_content(value: &Value) -> Result<()> {
                 return Err("Unknown review source".into());
             }
             if key == "heroes" {
+                let mut levels = HashSet::new();
+                for guide in row["guides"].as_array().ok_or("Missing guides")? {
+                    if !levels.insert(guide["level"].as_str().unwrap_or_default()) {
+                        return Err("Duplicate guide level".into());
+                    }
+                }
                 let mut abilities = HashSet::new();
                 for a in row["abilities"].as_array().ok_or("Missing abilities")? {
                     if !abilities.insert(a["id"].as_str().unwrap_or_default()) {
                         return Err("Duplicate ability".into());
                     }
+                    let mut stats = HashSet::new();
                     for s in a["stats"].as_array().ok_or("Missing stats")? {
+                        if !stats.insert(s["name"].as_str().unwrap_or_default()) {
+                            return Err("Duplicate statistic name".into());
+                        }
                         if !sources.contains(s["sourceId"].as_str().unwrap_or_default()) {
                             return Err("Unknown statistic source".into());
                         }
@@ -61,6 +71,12 @@ pub fn validate_content(value: &Value) -> Result<()> {
                 }
             } else if key == "maps" {
                 let markers = row["markers"].as_array().ok_or("Missing markers")?;
+                let mut marker_ids = HashSet::new();
+                for marker in markers {
+                    if !marker_ids.insert(marker["id"].as_str().unwrap_or_default()) {
+                        return Err("Duplicate map marker".into());
+                    }
+                }
                 if !markers.is_empty() && row["asset"].is_null() {
                     return Err("Map coordinates need a licensed asset".into());
                 }
@@ -397,6 +413,14 @@ pub struct Manifest {
     pub bytes: usize,
     pub signature: String,
 }
+fn publisher_key(raw: &str) -> Result<VerifyingKey> {
+    let key: [u8; 32] = STANDARD
+        .decode(raw)
+        .map_err(|_| "Invalid publisher key")?
+        .try_into()
+        .map_err(|_| "Invalid publisher key length")?;
+    VerifyingKey::from_bytes(&key).map_err(|_| "Invalid publisher key".into())
+}
 pub fn verify_package(manifest: &Manifest, bytes: &[u8], key: &str) -> Result<Value> {
     if manifest.schema_version != 1 || manifest.bytes != bytes.len() || bytes.len() > MAX_CONTENT {
         return Err("Content manifest size or schema is invalid".into());
@@ -404,12 +428,7 @@ pub fn verify_package(manifest: &Manifest, bytes: &[u8], key: &str) -> Result<Va
     if hex::encode(Sha256::digest(bytes)) != manifest.sha256 {
         return Err("Content checksum mismatch".into());
     }
-    let key: [u8; 32] = STANDARD
-        .decode(key)
-        .map_err(|_| "Invalid publisher key")?
-        .try_into()
-        .map_err(|_| "Invalid publisher key length")?;
-    let key = VerifyingKey::from_bytes(&key).map_err(|_| "Invalid publisher key")?;
+    let key = publisher_key(key)?;
     let signature = Signature::from_slice(
         &STANDARD
             .decode(&manifest.signature)
@@ -417,7 +436,7 @@ pub fn verify_package(manifest: &Manifest, bytes: &[u8], key: &str) -> Result<Va
     )
     .map_err(|_| "Invalid signature length")?;
     // Sign exact package bytes, not a JSON reserialization. Version is checked against signed data below.
-    key.verify(bytes, &signature)
+    key.verify_strict(bytes, &signature)
         .map_err(|_| "Publisher signature did not verify")?;
     let value: Value = serde_json::from_slice(bytes).map_err(|e| e.to_string())?;
     validate_content(&value)?;
@@ -470,6 +489,7 @@ fn download(
     Ok(bytes)
 }
 pub fn fetch_update(endpoint: &str, current: &str, key: &str) -> Result<Value> {
+    publisher_key(key)?;
     let endpoint = safe_url(endpoint)?;
     let client = reqwest::blocking::Client::builder()
         .timeout(Duration::from_secs(30))

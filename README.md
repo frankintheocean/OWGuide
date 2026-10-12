@@ -6,8 +6,8 @@ OWGuide is an independent Windows hero guide and strategy companion for Overwatc
 
 ## 🎮 What works
 
-- Hero selector with search, role filters, sorting, keyboard navigation, and original role graphics.
-- Five guide sections for each of 54 official roster entries. All 54 have original source-informed coaching; missing content is clearly labeled.
+- Hero selector with search, role filters, sorting, keyboard and standard gamepad navigation, and original role graphics.
+- Five guide sections for each of 54 official roster entries. All 54 have original profiles and coaching; 278 abilities include 41 sourced patch values. Missing content is clearly labeled.
 - Counter Picker with deterministic scores, role filters, team selection, synergy evidence, confidence, and missing-evidence states. Stale advice is excluded unless you select it.
 - A library of 59 snapshot map entries with honest text fallbacks. Map geometry is not invented.
 - Favorites, recent guides, three-hero comparison, notes, named strategies, guide/map bookmarks, practice progress, and a configurable dashboard.
@@ -45,19 +45,19 @@ For an existing system Chromium, set `OWGUIDE_CHROMIUM` to its executable path. 
 
 ## 🗂️ Files
 
-| Folder | Purpose |
-| --- | --- |
-| `src/components` | 🧩 Shared screens and controls |
-| `src/domain` | 🧮 Typed data, search, storage bridge, and recommendations |
-| `src/data` | 📚 Attributed offline content snapshot |
-| `src-tauri/src` | 🦀 Desktop commands, database, and signature checks |
-| `src-tauri/migrations` | 🗃️ Database changes |
-| `content` | 🔎 Schemas and release-review records |
-| `scripts` | 🔧 Content, source, and license tools |
-| `tests` | 🧪 Unit and browser checks |
-| `packaging` | 📦 Windows install, repair, portable, and smoke scripts |
-| `.github/workflows` | ⚙️ CI, candidate packages, and gated releases |
-| `docs` | 📖 Build, trust, and verification notes |
+| Folder                 | Purpose                                                    |
+| ---------------------- | ---------------------------------------------------------- |
+| `src/components`       | 🧩 Shared screens and controls                             |
+| `src/domain`           | 🧮 Typed data, search, storage bridge, and recommendations |
+| `src/data`             | 📚 Attributed offline content snapshot                     |
+| `src-tauri/src`        | 🦀 Desktop commands, database, and signature checks        |
+| `src-tauri/migrations` | 🗃️ Database changes                                        |
+| `content`              | 🔎 Schemas and release-review records                      |
+| `scripts`              | 🔧 Content, source, and license tools                      |
+| `tests`                | 🧪 Unit and browser checks                                 |
+| `packaging`            | 📦 Windows install, repair, portable, and smoke scripts    |
+| `.github/workflows`    | ⚙️ CI, candidate packages, and gated releases              |
+| `docs`                 | 📖 Build, trust, and verification notes                    |
 
 ## 🔗 Read next
 

@@ -18,4 +18,4 @@ Users do not need developer tools. WebView2 Runtime is required. The release man
 
 ## 🧑‍🔬 Record native acceptance
 
-After running the real Windows checks, get the build fingerprint with `node scripts/acceptance.mjs --print-tree`. Record it with the actual reviewer, date, and check outcomes in `content/production-acceptance.json`. The fingerprint covers the frontend, Rust backend, packaging, schemas, lockfile, and workflows. Do not mark an unrun check true.
+After running the real Windows checks, get the build fingerprint with `node scripts/acceptance.mjs --print-tree`. Record it with the actual reviewer, date, observed evidence references and summaries, and check outcomes in `content/production-acceptance.json`. The fingerprint covers the frontend, Rust backend, packaging, test and content tools, native checklist, schemas, lockfile, and workflows. Each passed check needs an evidence entry with `method` (`manual` or `automated`), `reference` and `summary`. Do not mark an unrun check true.

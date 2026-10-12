@@ -5,6 +5,7 @@ import {
   createPublicKey,
   sign,
 } from "node:crypto";
+import { invalidateChangedContent } from "../src/domain/content-review";
 import { contentSchema } from "../src/domain/schema";
 const input = process.argv[2] ?? "src/data/content.json",
   base = process.argv[3];
@@ -17,47 +18,11 @@ if (!keyPath)
   throw new Error(
     "Set OWGUIDE_SIGNING_KEY_FILE to a private Ed25519 PEM outside the repository.",
   );
-const c = contentSchema.parse(JSON.parse(readFileSync(input, "utf8")));
+let c = contentSchema.parse(JSON.parse(readFileSync(input, "utf8")));
 const previous = process.env.OWGUIDE_PREVIOUS_CONTENT;
 if (previous) {
   const old = contentSchema.parse(JSON.parse(readFileSync(previous, "utf8")));
-  const changed = new Set(
-    c.heroes
-      .filter(
-        (h) =>
-          JSON.stringify(h.abilities) !==
-          JSON.stringify(old.heroes.find((x) => x.id === h.id)?.abilities),
-      )
-      .map((h) => h.id),
-  );
-  const changedMaps = new Set(
-    c.maps
-      .filter(
-        (m) =>
-          JSON.stringify(m) !==
-          JSON.stringify(old.maps.find((x) => x.id === m.id)),
-      )
-      .map((m) => m.id),
-  );
-  for (const h of c.heroes)
-    if (changed.has(h.id) || old.patch !== c.patch) h.review.stale = true;
-  for (const m of c.matchups)
-    if (
-      changed.has(m.heroId) ||
-      changed.has(m.enemyId) ||
-      old.patch !== c.patch
-    )
-      m.review.stale = true;
-  for (const s of c.synergies)
-    if (changed.has(s.heroId) || changed.has(s.allyId) || old.patch !== c.patch)
-      s.review.stale = true;
-  for (const m of c.mapFit)
-    if (
-      changed.has(m.heroId) ||
-      changedMaps.has(m.mapId) ||
-      old.patch !== c.patch
-    )
-      m.review.stale = true;
+  c = invalidateChangedContent(old, c);
 }
 const key = createPrivateKey(readFileSync(keyPath));
 if (key.asymmetricKeyType !== "ed25519")

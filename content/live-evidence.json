@@ -2,7 +2,7 @@
   "records": [
     {
       "url": "https://overwatch.blizzard.com/en-us/heroes/",
-      "retrievedAt": "2026-10-12T03:26:05.992Z",
+      "retrievedAt": "2026-10-12T04:53:11.006Z",
       "sha256": "c4e8959a76a9084e0687b59595c77675ba7ebf4494f1a3e8d4421bd081f8ae48",
       "roster": [
         "doctrine",
@@ -64,7 +64,7 @@
     },
     {
       "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/",
-      "retrievedAt": "2026-10-12T03:26:06.175Z",
+      "retrievedAt": "2026-10-12T04:53:11.174Z",
       "sha256": "03d8559f26c57a7b2c46cd630c69ce8f09c563959fb14a076543264dc0197b04",
       "roster": [],
       "patchTitle": "Overwatch Retail Patch Notes – October 6, 2026"

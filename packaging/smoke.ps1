@@ -11,8 +11,13 @@ function Run-Msi([string]$arguments) {
   $p = Start-Process msiexec.exe -ArgumentList $arguments -Wait -PassThru
   if ($p.ExitCode -notin @(0,3010)) { throw "Windows Installer failed: $($p.ExitCode)" }
 }
-function Wait-Database([string]$path) {
-  for ($i=0;$i -lt 30;$i++) { if ((Test-Path $path) -and (Get-Item $path).Length -gt 0) { return }; Start-Sleep -Seconds 1 }
+function Wait-Database([string]$path, [System.Diagnostics.Process]$appProcess) {
+  for ($i=0;$i -lt 30;$i++) {
+    $appProcess.Refresh()
+    if ($appProcess.HasExited) { throw 'The app exited before its database and main window became ready.' }
+    if ((Test-Path $path) -and (Get-Item $path).Length -gt 0 -and $appProcess.MainWindowHandle -ne [IntPtr]::Zero) { return }
+    Start-Sleep -Seconds 1
+  }
   throw "Application did not create its database: $path"
 }
 Run-Msi "/i `"$msi`" /qn /norestart INSTALLDIR=`"$install`" /l*v `"$env:TEMP\owguide-install.log`""
@@ -20,7 +25,7 @@ $exe = Join-Path $install 'OWGuide.exe'
 if (!(Test-Path $exe)) { $exe = Join-Path $install 'owguide.exe' }
 if (!(Test-Path $exe)) { throw 'Installed executable missing.' }
 $process = Start-Process $exe -PassThru
-try { Wait-Database (Join-Path $data 'owguide.sqlite') } finally { if (!$process.HasExited) { Stop-Process -Id $process.Id -Force } }
+try { Wait-Database (Join-Path $data 'owguide.sqlite') $process } finally { if (!$process.HasExited) { Stop-Process -Id $process.Id -Force } }
 & python tests/desktop-db.py (Join-Path $data 'owguide.sqlite') --seed-personal
 if ($LASTEXITCODE -ne 0) { throw 'Could not seed personal data for the maintenance test.' }
 $sentinel = Join-Path $data 'preserve-test.txt'
@@ -39,7 +44,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Uninstall changed personal database contents.'
 $before = (Get-FileHash (Join-Path $data 'owguide.sqlite')).Hash
 $portable = Join-Path $root "release/OWGuide-$Version-portable"
 $process = Start-Process "$portable\OWGuide.exe" -WorkingDirectory $portable -PassThru
-try { Wait-Database "$portable\OWGuideData\owguide.sqlite" } finally { if (!$process.HasExited) { Stop-Process -Id $process.Id -Force } }
+try { Wait-Database "$portable\OWGuideData\owguide.sqlite" $process } finally { if (!$process.HasExited) { Stop-Process -Id $process.Id -Force } }
 if ((Get-FileHash (Join-Path $data 'owguide.sqlite')).Hash -ne $before) { throw 'Portable launch touched installed app data.' }
 & python tests/desktop-db.py "$portable\OWGuideData\owguide.sqlite"
 if ($LASTEXITCODE -ne 0) { throw 'Portable database validation failed.' }

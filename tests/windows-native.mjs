@@ -5,6 +5,7 @@ import { spawn, execFileSync } from "node:child_process";
 import { mkdirSync, writeFileSync, existsSync, readFileSync } from "node:fs";
 import { resolve, dirname, join } from "node:path";
 import { release } from "node:os";
+import { createServer } from "node:net";
 import { setTimeout as delay } from "node:timers/promises";
 if (process.platform !== "win32")
   throw new Error("Native checks require Windows and WebView2.");
@@ -13,6 +14,10 @@ const executable = resolve(
 );
 if (!existsSync(join(dirname(executable), "portable.marker")))
   throw new Error("Native checks require the isolated portable candidate.");
+if (existsSync(join(dirname(executable), "OWGuideData", "owguide.sqlite")))
+  throw new Error(
+    "Refusing to overwrite pre-existing portable user data. Use a fresh test candidate.",
+  );
 const directory = resolve("test-results/native-windows");
 mkdirSync(directory, { recursive: true });
 const checks = [];
@@ -31,6 +36,8 @@ function windowAction(title, action, width = 1000, height = 720) {
       title,
       "-Action",
       action,
+      "-ProcessId",
+      String(processHandle.pid),
       "-Width",
       String(width),
       "-Height",
@@ -40,12 +47,19 @@ function windowAction(title, action, width = 1000, height = 720) {
   );
 }
 async function start() {
+  const port = await new Promise((resolve, reject) => {
+    const server = createServer();
+    server.once("error", reject);
+    server.listen(0, "127.0.0.1", () => {
+      const address = server.address();
+      server.close(() => resolve(address.port));
+    });
+  });
   processHandle = spawn(executable, [], {
     cwd: dirname(executable),
     env: {
       ...process.env,
-      WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS:
-        '--remote-debugging-port=9222 --host-resolver-rules="MAP * ~NOTFOUND"',
+      WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS: `--remote-debugging-port=${port} --host-resolver-rules="MAP * ~NOTFOUND"`,
     },
     stdio: "ignore",
   });
@@ -55,7 +69,7 @@ async function start() {
   const deadline = Date.now() + 45000;
   while (Date.now() < deadline) {
     try {
-      browser = await chromium.connectOverCDP("http://127.0.0.1:9222", {
+      browser = await chromium.connectOverCDP(`http://127.0.0.1:${port}`, {
         timeout: 2000,
       });
       break;
@@ -73,6 +87,7 @@ async function start() {
     context.pages().find((p) => !p.url().includes("quick=1")) ??
     context.pages()[0];
   await page.getByRole("button", { name: "Heroes", exact: true }).waitFor();
+  windowAction("OWGuide", "restore");
   const native = await page.evaluate(() =>
     Boolean(globalThis.__TAURI_INTERNALS__),
   );
@@ -80,22 +95,34 @@ async function start() {
   return { context, page };
 }
 async function stop() {
-  if (browser) {
-    await browser.close();
-    browser = undefined;
-  }
-  if (processHandle && processHandle.exitCode === null) {
-    windowAction("OWGuide", "close");
+  if (processHandle && processHandle.exitCode === null && processHandle.pid) {
+    try {
+      windowAction("OWGuide · Quick Reference", "close");
+    } catch {
+      /* The compact window may already be closed. */
+    }
+    try {
+      windowAction("OWGuide", "close");
+    } catch {
+      processHandle.kill();
+    }
     try {
       await expect
         .poll(() => processHandle.exitCode, { timeout: 15000 })
         .not.toBeNull();
     } catch {
       processHandle.kill();
-      throw new Error("Native app did not exit after closing its main window.");
+      throw new Error(
+        "Native app did not exit after closing its owned windows.",
+      );
     }
   }
+  if (browser) {
+    await browser.close();
+    browser = undefined;
+  }
 }
+
 try {
   let { context, page } = await start();
   await context.setOffline(true);
@@ -230,6 +257,11 @@ try {
   );
 } catch (error) {
   writeFileSync(join(directory, "failure.txt"), String(error?.stack ?? error));
+  const annotation = String(error?.message ?? error)
+    .replaceAll("%", "%25")
+    .replaceAll("\r", "%0D")
+    .replaceAll("\n", "%0A");
+  console.error(`::error title=Native Windows acceptance::${annotation}`);
   throw error;
 } finally {
   await stop();

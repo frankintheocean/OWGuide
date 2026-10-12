@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "patch": "Overwatch Retail Patch Notes – October 6, 2026",
-  "generatedAt": "2026-10-12T04:23:17.401048Z",
+  "generatedAt": "2026-10-12T04:46:54.419420Z",
   "liveVerifiedAt": "2026-10-12T03:23:53.284825Z",
   "rosterVerified": true,
   "standardTeamSize": 5,
@@ -29,7 +29,7 @@
       "label": "Official latest retail patch notes — October 6, 2026",
       "retrievedAt": "2026-10-12T03:23:53.284825Z",
       "kind": "official",
-      "license": "Reference link only; no assets redistributed"
+      "license": "Factual metadata and original OWGuide summaries only; no game artwork or full source prose redistributed."
     },
     {
       "id": "blizzard-roster-live",
@@ -37,7 +37,7 @@
       "label": "Official roster and linked hero kit pages; coaching is OWGuide editorial",
       "retrievedAt": "2026-10-12T03:23:53.284825Z",
       "kind": "official",
-      "license": "Names, roles, and ability names only. No images or page prose redistributed."
+      "license": "Factual metadata and original OWGuide summaries only; no game artwork or full source prose redistributed."
     }
   ],
   "heroes": [
@@ -49,20 +49,22 @@
       "difficulty": "demanding",
       "playstyle": [
         "backline",
-        "poke"
+        "peel"
       ],
       "strengths": [
-        "Ranged support",
-        "Healing denial"
+        "Healing denial",
+        "ranged teammate support"
       ],
       "weaknesses": [
-        "No movement escape",
-        "Vulnerable to coordinated dives"
+        "Aim-dependent healing",
+        "a missed defensive dart leaves fewer answers"
       ],
       "attributes": {
-        "Range": "Long sightlines",
-        "Mobility": "Limited",
-        "Healing": "Aim-based ranged support"
+        "Engagement range": "Distant rifle sightlines",
+        "Mobility": "No movement ability in the captured kit",
+        "Survivability": "Sleep and grenade protect a threatened position",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Coordinate Nano Boost before the fight. Track cleansing and defensive abilities before committing your grenade."
       },
       "abilities": [
         {
@@ -127,13 +129,26 @@
       "name": "Anran",
       "role": "damage",
       "biography": "A graduate of Wuxing University's Fire College who specializes in fire attacks.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "flank"
+        "flank",
+        "brawl"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Burn pressure",
+        "movement into close combat"
+      ],
+      "weaknesses": [
+        "Healing from Dancing Blaze needs enemies in reach",
+        "rushing without an exit spends mobility"
+      ],
+      "attributes": {
+        "Engagement range": "Fire projectiles and contact attacks",
+        "Mobility": "Inferno Rush advances into contact",
+        "Survivability": "Dancing Blaze avoids damage and heals through hits",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Plan where Inferno Rush or Vermillion Ascent will leave you. If using Vermillion Revival, judge the surviving enemy pressure rather than assuming a return will make the original engagement safe."
+      },
       "abilities": [
         {
           "id": "zhuque-fans",
@@ -218,13 +233,26 @@
       "name": "Ashe",
       "role": "damage",
       "biography": "A Deadlock gang leader who fights with a rifle and explosives.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
-        "poke"
+        "poke",
+        "backline"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Scoped accuracy",
+        "explosive pressure"
+      ],
+      "weaknesses": [
+        "Aiming slows firing",
+        "the movement tool also spends your close-range displacement"
+      ],
+      "attributes": {
+        "Engagement range": "Aimed rifle fire",
+        "Mobility": "Coach Gun propels you backward",
+        "Survivability": "Distance and displacement",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Place B.O.B. where his line of fire complements your team's angle. Announce the deployment and watch for abilities that can shut him down."
+      },
       "abilities": [
         {
           "id": "the-viper",
@@ -288,13 +316,26 @@
       "name": "Baptiste",
       "role": "support",
       "biography": "A former Talon medic who now uses his combat training to help people harmed by war.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "backline"
+        "backline",
+        "peel"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Area recovery",
+        "projectile amplification"
+      ],
+      "weaknesses": [
+        "Field placement is vulnerable to destruction",
+        "healing must land near allies"
+      ],
+      "attributes": {
+        "Engagement range": "Ranged bursts and healing splash",
+        "Mobility": "Exo Boots provide vertical access",
+        "Survivability": "Regenerative Burst and a destroyable Immortality Field",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Amplification Matrix needs a usable firing lane. Communicate its position before the fight and do not force teammates to abandon cover just to shoot through it."
+      },
       "abilities": [
         {
           "id": "biotic-launcher",
@@ -365,13 +406,26 @@
       "name": "Bastion",
       "role": "damage",
       "biography": "An omnic war machine that became an explorer with an interest in nature.",
-      "difficulty": null,
+      "difficulty": "approachable",
       "playstyle": [
-        "poke"
+        "poke",
+        "brawl"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Sustained cannon pressure",
+        "flexible weapon forms"
+      ],
+      "weaknesses": [
+        "Artillery stops movement",
+        "Assault reduces mobility"
+      ],
+      "attributes": {
+        "Engagement range": "Accurate Recon fire and Assault pressure",
+        "Mobility": "Mobile Recon; slower Assault",
+        "Survivability": "Use cover around configuration changes",
+        "Skill floor": "Start with covered positions and one reliable contribution.",
+        "Skill ceiling": "Artillery commits your position. Start it from safety and place shots around the enemy's likely movement and escape choices; treat forcing a rotation as useful pressure."
+      },
       "abilities": [
         {
           "id": "configuration-assault",
@@ -399,7 +453,14 @@
           "name": "Reconfigure",
           "description": "Change between the two weapon configurations.",
           "kind": "ability",
-          "stats": []
+          "stats": [
+            {
+              "name": "Duration",
+              "value": 5,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "configuration-artillery",
@@ -442,13 +503,26 @@
       "name": "Brigitte",
       "role": "support",
       "biography": "An engineer who took up arms to defend others alongside Reinhardt.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "peel"
+        "peel",
+        "brawl"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Displacement",
+        "nearby ally sustain"
+      ],
+      "weaknesses": [
+        "Inspire needs damage contact",
+        "a frontal shield cannot cover every direction"
+      ],
+      "attributes": {
+        "Engagement range": "Flail reach and Whip Shot",
+        "Mobility": "Shield Bash needs a raised barrier",
+        "Survivability": "Inspire and a frontal shield",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Watch the enemy dive timing and answer it together with your other support. Rally is a team engagement resource; choose a fight your nearby allies can participate in."
+      },
       "abilities": [
         {
           "id": "rocket-flail",
@@ -533,13 +607,26 @@
       "name": "Cassidy",
       "role": "damage",
       "biography": "An outlaw gunslinger who uses a revolver to carry out his own idea of justice.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
+        "poke",
         "peel"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Aimed pressure",
+        "reload through movement"
+      ],
+      "weaknesses": [
+        "Roll is a commitment",
+        "Deadeye cannot attach to Lifeline on this patch"
+      ],
+      "attributes": {
+        "Engagement range": "Aimed revolver shots",
+        "Mobility": "Combat Roll reloads while repositioning",
+        "Survivability": "Damage reduction during the roll",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Deadeye announces a threat and exposes your position. Check cover, interruption threats, and escape routes before activating it; forcing enemies away can matter even without an elimination."
+      },
       "abilities": [
         {
           "id": "peacekeeper",
@@ -558,7 +645,7 @@
         {
           "id": "deadeye",
           "name": "Deadeye",
-          "description": "Acquire targets before releasing the charged shots.",
+          "description": "Acquire targets before releasing the charged shots. Deadeye prevents attaching to Jetpack Cat’s Lifeline on this patch.",
           "kind": "ultimate",
           "stats": []
         }
@@ -596,13 +683,26 @@
       "name": "D.Mon",
       "role": "tank",
       "biography": "The new leader of MEKA, a Korean mech team, who coordinates allies in close fighting.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
-        "frontline"
+        "frontline",
+        "brawl"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Barrier-backed displacement",
+        "different mech and pilot weapons"
+      ],
+      "weaknesses": [
+        "Propulsors spend fuel",
+        "Surging Strike needs the barrier stance"
+      ],
+      "attributes": {
+        "Engagement range": "Energy blade and repeater fire",
+        "Mobility": "Fuel-funded horizontal Propulsors",
+        "Survivability": "Power Barrier covers the front",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Limit Break creates a sweeping engagement opportunity that benefits from coordinated pressure. If the mech is lost, play the pilot's weapon and return-to-mech plan from safety rather than continuing the same frontline commitment."
+      },
       "abilities": [
         {
           "id": "plasma-saber",
@@ -707,17 +807,19 @@
         "peel"
       ],
       "strengths": [
-        "Vertical mobility",
-        "Projectile interception"
+        "Projectile protection",
+        "fast repositioning"
       ],
       "weaknesses": [
-        "Resource-limited defense",
-        "Beam threats"
+        "Matrix covers a limited direction",
+        "losing the mech changes your combat role"
       ],
       "attributes": {
-        "Range": "Close pressure",
-        "Mobility": "Boosters",
-        "Survivability": "Defense Matrix and cover"
+        "Engagement range": "Short-distance cannons and missiles",
+        "Mobility": "Directional Boosters",
+        "Survivability": "Defense Matrix intercepts frontal projectiles",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Switch between diving and peeling as enemy threats change. Keep an escape plan when your mech is pressured."
       },
       "abilities": [
         {
@@ -753,7 +855,14 @@
           "name": "Micro Missiles",
           "description": "Release a sequence of small explosive missiles.",
           "kind": "ability",
-          "stats": []
+          "stats": [
+            {
+              "name": "Fire rate",
+              "value": 14,
+              "unit": "shots/s",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "self-destruct",
@@ -810,13 +919,26 @@
       "name": "Doctrine",
       "role": "support",
       "biography": "A cyberneticist who uses a drone fleet to control healing, pressure, and movement.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
-        "backline"
+        "backline",
+        "poke"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Attack-speed support",
+        "adaptable infused abilities"
+      ],
+      "weaknesses": [
+        "Infuse affects the next ability",
+        "spending movement removes a repositioning option"
+      ],
+      "attributes": {
+        "Engagement range": "Medium-distance scepter shots",
+        "Mobility": "Shrouded Momentum; infused flight",
+        "Survivability": "Movement damage reduction and drone support",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Coordinate Deliverance with teammate pressure while monitoring who needs its protective overhealth. Shrouded Momentum can reposition you; keep a destination and an exit instead of using movement as a substitute for a safe plan."
+      },
       "abilities": [
         {
           "id": "eternal-scepter",
@@ -837,21 +959,48 @@
           "name": "Invigorating Drones",
           "description": "Drones heal an ally and increase attack speed; infusion also sends drones to you.",
           "kind": "ability",
-          "stats": []
+          "stats": [
+            {
+              "name": "Attack speed bonus",
+              "value": 30,
+              "unit": "%",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "shrouded-momentum",
           "name": "Shrouded Momentum",
           "description": "Move horizontally with damage reduction; infusion permits flight.",
           "kind": "ability",
-          "stats": []
+          "stats": [
+            {
+              "name": "Cooldown",
+              "value": 8,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Damage reduction",
+              "value": 40,
+              "unit": "%",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "deliverance",
           "name": "Deliverance",
           "description": "The drone swarm gives teammates overhealth and lowers opponents' maximum health.",
-          "kind": "unknown",
-          "stats": []
+          "kind": "ultimate",
+          "stats": [
+            {
+              "name": "Overhealth/debuff duration",
+              "value": 6,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            }
+          ]
         }
       ],
       "guides": [
@@ -887,13 +1036,26 @@
       "name": "Domina",
       "role": "tank",
       "biography": "A Vishkar negotiator who uses hard-light barriers and controlled pressure.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "frontline"
+        "frontline",
+        "poke"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Beam pressure",
+        "wall-dependent stuns"
+      ],
+      "weaknesses": [
+        "Repulsor stun needs a wall",
+        "recovery relies on ability damage"
+      ],
+      "attributes": {
+        "Engagement range": "Medium-distance beam",
+        "Mobility": "Sonic Repulsors separate approaching enemies",
+        "Survivability": "Barrier segments and ability lifesteal",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Plan a Crystal Charge detonation around enemy movement. Panopticon is a committed space-control tool; use it when teammate pressure can capitalize on the trapped area."
+      },
       "abilities": [
         {
           "id": "photon-magnum",
@@ -921,7 +1083,14 @@
           "name": "Crystal Charge",
           "description": "Place an explosive crystal and trigger it with a second activation.",
           "kind": "ability",
-          "stats": []
+          "stats": [
+            {
+              "name": "Cooldown",
+              "value": 7,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "panopticon",
@@ -929,6 +1098,20 @@
           "description": "Enclose opponents with hard light that explodes when its duration ends.",
           "kind": "unknown",
           "stats": []
+        },
+        {
+          "id": "reconstruction",
+          "name": "Reconstruction",
+          "kind": "passive",
+          "description": "Recover health through ability lifesteal.",
+          "stats": [
+            {
+              "name": "Ability lifesteal",
+              "value": 100,
+              "unit": "%",
+              "sourceId": "blizzard-live"
+            }
+          ]
         }
       ],
       "guides": [
@@ -964,13 +1147,26 @@
       "name": "Doomfist",
       "role": "tank",
       "biography": "A former Talon leader who uses a powerful gauntlet and committed movement.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
-        "dive"
+        "dive",
+        "frontline"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Displacement",
+        "chained movement"
+      ],
+      "weaknesses": [
+        "Empowered punch needs blocked damage",
+        "movement also commits your exit resources"
+      ],
+      "attributes": {
+        "Engagement range": "Close spread fire and contact attacks",
+        "Mobility": "Rocket Punch and Seismic Slam",
+        "Survivability": "Power Block protects the front",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Coordinate displacement with an ally's line of fire. Meteor Strike can change your position as well as threaten a target; reassess the enemy's defensive resources before landing."
+      },
       "abilities": [
         {
           "id": "hand-cannon",
@@ -1041,13 +1237,26 @@
       "name": "Echo",
       "role": "damage",
       "biography": "An adaptive omnic created by Overwatch scientist Mina Liao.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
-        "flank"
+        "flank",
+        "poke"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Delayed explosive pressure",
+        "stronger beam against weakened targets"
+      ],
+      "weaknesses": [
+        "Beam advantage needs a target below half health",
+        "flight must end at a useful position"
+      ],
+      "attributes": {
+        "Engagement range": "Projectile volleys and a channeled beam",
+        "Mobility": "Flight and Glide",
+        "Survivability": "Aerial repositioning",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Choose a Duplicate target whose abilities you can use well in the current fight. Consider where the copied kit will leave you when the transformation ends."
+      },
       "abilities": [
         {
           "id": "tri-shot",
@@ -1125,13 +1334,26 @@
       "name": "Emre",
       "role": "damage",
       "biography": "A former Overwatch operative who returned after unexplained changes to his body and mind.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "poke"
+        "poke",
+        "flank"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Accurate burst pressure",
+        "bouncing explosive"
+      ],
+      "weaknesses": [
+        "Aiming and burst tracking require target control",
+        "full transformation details remain unverified"
+      ],
+      "attributes": {
+        "Engagement range": "Aimed burst rifle",
+        "Mobility": "No movement tool documented on the captured page",
+        "Survivability": "Earlier regeneration with an immediate heal",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Override Protocol changes the commitment you can make. Review the form's current in-game mechanics before engaging and keep your team's sightlines in mind as you reposition."
+      },
       "abilities": [
         {
           "id": "synthetic-burst-rifle",
@@ -1145,7 +1367,14 @@
           "name": "Cyber Frag",
           "description": "Throw an explosive with a delayed detonation after it bounces.",
           "kind": "ability",
-          "stats": []
+          "stats": [
+            {
+              "name": "Cooldown",
+              "value": 9,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "override-protocol",
@@ -1195,13 +1424,26 @@
       "name": "Freja",
       "role": "damage",
       "biography": "A former rescue operative who became a professional bounty hunter.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
+        "flank",
         "poke"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Dash refreshes Take Aim",
+        "vertical access"
+      ],
+      "weaknesses": [
+        "The captured page omits full weapon details",
+        "repeated dashes must leave an exit"
+      ],
+      "attributes": {
+        "Engagement range": "Fast explosive Take Aim bolt",
+        "Mobility": "Quick Dash and Updraft",
+        "Survivability": "Reposition through movement",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Bola Shot can create a grouping opportunity. Use Updraft and your firing lane to time it with teammate pressure, while watching who can contest your airborne position."
+      },
       "abilities": [
         {
           "id": "bola-shot",
@@ -1267,21 +1509,23 @@
       "biography": "A cybernetic ninja who creates pressure with mobility and precise projectiles.",
       "difficulty": "demanding",
       "playstyle": [
-        "flank",
-        "dive"
+        "dive",
+        "flank"
       ],
       "strengths": [
-        "Vertical routes",
-        "Finishing pressure"
+        "Elimination dash resets",
+        "vertical access"
       ],
       "weaknesses": [
-        "Control effects",
-        "Risky deep engagements"
+        "A dash reset requires an elimination",
+        "defensive deflection must face the threat"
       ],
       "attributes": {
-        "Range": "Projectile poke and close finish",
-        "Mobility": "Wall climb and dash",
-        "Damage": "Precision and committed burst"
+        "Engagement range": "Shuriken bursts and close blade attacks",
+        "Mobility": "Swift Strike, double jump and wall climb",
+        "Survivability": "Deflect counters incoming projectiles and melee",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Coordinate a flank with your tank. Track enemy control effects before Dragonblade."
       },
       "abilities": [
         {
@@ -1303,14 +1547,28 @@
           "name": "Swift Strike",
           "description": "Dash through opponents to damage them; an elimination resets the dash.",
           "kind": "ability",
-          "stats": []
+          "stats": [
+            {
+              "name": "Damage",
+              "value": 60,
+              "unit": "damage",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "dragonblade",
           "name": "Dragonblade",
           "description": "Replace ranged attacks with a drawn blade.",
           "kind": "ultimate",
-          "stats": []
+          "stats": [
+            {
+              "name": "Damage per swing",
+              "value": 100,
+              "unit": "damage",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "cyber-agility",
@@ -1353,13 +1611,26 @@
       "name": "Hanzo",
       "role": "damage",
       "biography": "A Shimada archer who seeks a new path after his family's conflict.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
-        "poke"
+        "poke",
+        "backline"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Temporary enemy reveal",
+        "burst arrows"
+      ],
+      "weaknesses": [
+        "Arrow travel needs prediction",
+        "climb and lunge need a safe destination"
+      ],
+      "attributes": {
+        "Engagement range": "Charged arrows",
+        "Mobility": "Lunge and Wall Climb",
+        "Survivability": "Keep space and covered firing angles",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Dragonstrike can cut off a route or support a coordinated engagement. Pair its path with teammate pressure so enemies cannot avoid it at no cost."
+      },
       "abilities": [
         {
           "id": "storm-bow",
@@ -1437,13 +1708,26 @@
       "name": "Hazard",
       "role": "tank",
       "biography": "An underworld disruptor who fights with spikes, movement, and a temporary wall.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "brawl"
+        "brawl",
+        "frontline"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Wall displacement",
+        "leap follow-up"
+      ],
+      "weaknesses": [
+        "Guard direction matters",
+        "the leap follow-up commits you near enemies"
+      ],
+      "attributes": {
+        "Engagement range": "Spike burst and contact slash",
+        "Mobility": "Violent Leap and Vault",
+        "Survivability": "Spike Guard protects the front",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Use Spike Guard against useful frontal pressure while tracking threats from other angles. Downpour creates an engagement opportunity that needs teammate follow-up, not a reason to leap alone into the whole enemy team."
+      },
       "abilities": [
         {
           "id": "bonespur",
@@ -1521,13 +1805,26 @@
       "name": "Illari",
       "role": "support",
       "biography": "A survivor of the Inti Warriors who uses solar-powered support technology.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "poke"
+        "poke",
+        "backline"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Separate pylon support",
+        "ranged pressure"
+      ],
+      "weaknesses": [
+        "Healing beam spends solar energy",
+        "a pylon position needs useful ally coverage"
+      ],
+      "attributes": {
+        "Engagement range": "Long-distance shots; medium-distance healing",
+        "Mobility": "Directional Outburst",
+        "Survivability": "Healing Pylon and enemy displacement",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Plan a Captive Sun engagement with teammate follow-up and an escape. Marking enemies is not enough if your team cannot safely apply the needed pressure."
+      },
       "abilities": [
         {
           "id": "solar-rifle",
@@ -1591,13 +1888,26 @@
       "name": "Jetpack Cat",
       "role": "support",
       "biography": "A feline pilot using jet technology designed by Brigitte.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
-        "peel"
+        "peel",
+        "backline"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Ally movement support",
+        "shared repositioning"
+      ],
+      "weaknesses": [
+        "Fuel recovery slows when towing",
+        "a transport route can expose both players"
+      ],
+      "attributes": {
+        "Engagement range": "Medium-distance healing and damage spread",
+        "Mobility": "Frenetic Flight and ally transport",
+        "Survivability": "Purr provides area recovery and knockback",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Use Purr where allies need its area healing and enemies can be displaced usefully. Catnapper changes an enemy's position; choose the landing and your own follow-up route before diving."
+      },
       "abilities": [
         {
           "id": "biotic-pawjectiles",
@@ -1668,13 +1978,26 @@
       "name": "Junker Queen",
       "role": "tank",
       "biography": "The ruler of Junkertown, known for close-range combat and her axe.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "brawl"
+        "brawl",
+        "frontline"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Wound sustain",
+        "team movement support"
+      ],
+      "weaknesses": [
+        "Wound recovery needs damage contact",
+        "Rampage commits forward"
+      ],
+      "attributes": {
+        "Engagement range": "Shotgun and frontal wound attacks",
+        "Mobility": "Commanding Shout increases movement speed",
+        "Survivability": "Healing from wounds and temporary team health",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Rampage needs a route, a target group, and teammate follow-up. Track defensive answers to healing denial and avoid ending the charge beyond your team's support."
+      },
       "abilities": [
         {
           "id": "scattergun",
@@ -1745,13 +2068,26 @@
       "name": "Junkrat",
       "role": "damage",
       "biography": "A demolitionist whose explosives create pressure around obstacles.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "poke"
+        "poke",
+        "brawl"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Explosive area pressure",
+        "movement denial"
+      ],
+      "weaknesses": [
+        "Bouncing projectiles need trajectory control",
+        "a trap must be placed on a useful route"
+      ],
+      "attributes": {
+        "Engagement range": "Bouncing explosives",
+        "Mobility": "Concussion Mine creates knockback",
+        "Survivability": "Trap-based threat control",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Start RIP-Tire from a position enemies cannot immediately reach. Choose a path that threatens a valuable group, and be ready to move your own body when the ultimate ends."
+      },
       "abilities": [
         {
           "id": "frag-launcher",
@@ -1822,13 +2158,26 @@
       "name": "Juno",
       "role": "support",
       "biography": "A Martian-born support using space technology to protect her team and help her home.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "backline"
+        "backline",
+        "peel"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Team movement",
+        "guided healing and damage"
+      ],
+      "weaknesses": [
+        "Torpedoes need lock-on before firing",
+        "the moving ray requires teammate coordination"
+      ],
+      "attributes": {
+        "Engagement range": "Burst shots and lock-on torpedoes",
+        "Mobility": "Glide Boost, Hyper Ring and airborne movement",
+        "Survivability": "Movement and Orbital Ray healing",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Orbital Ray moves through space. Start it along your team's intended engagement and keep Glide Boost for the repositioning that the moving fight requires."
+      },
       "abilities": [
         {
           "id": "mediblaster",
@@ -1912,17 +2261,19 @@
         "backline"
       ],
       "strengths": [
-        "Cleanse utility",
-        "Ally repositioning"
+        "Rapid teammate access",
+        "temporary protection"
       ],
       "weaknesses": [
-        "Projectile aim demands",
-        "Escape depends on allies"
+        "Teleport needs an ally destination",
+        "Suzu timing determines who benefits"
       ],
       "attributes": {
-        "Range": "Ranged healing and projectiles",
-        "Mobility": "Ally teleport and wall climb",
-        "Healing": "Targeted support"
+        "Engagement range": "Seeking healing papers and ranged kunai",
+        "Mobility": "Swift Step targets an ally",
+        "Survivability": "Suzu protection and cleansing",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Alternate healing with safe projectile pressure. Plan a rush path your team can actually use."
       },
       "abilities": [
         {
@@ -1994,13 +2345,26 @@
       "name": "Lifeweaver",
       "role": "support",
       "biography": "The inventor of biolight, a technology that combines living forms with hard light.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "backline"
+        "backline",
+        "peel"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Ally rescue",
+        "vertical platform access"
+      ],
+      "weaknesses": [
+        "Life Grip moves another player",
+        "a poor destination can disrupt their plan"
+      ],
+      "attributes": {
+        "Engagement range": "Targeted blossom heals and thorn pairs",
+        "Mobility": "Petal Platform and Rejuvenating Dash",
+        "Survivability": "Dash healing and protected ally travel",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Use Tree of Life to sustain a contested area your team can actually hold. Keep track of your allies' escape routes so your protection adds choices instead of replacing their judgment."
+      },
       "abilities": [
         {
           "id": "healing-blossom",
@@ -2078,13 +2442,26 @@
       "name": "Lúcio",
       "role": "support",
       "biography": "A musician and activist who supports his team through movement and music.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
-        "brawl"
+        "brawl",
+        "peel"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Team movement",
+        "local displacement"
+      ],
+      "weaknesses": [
+        "Song benefits need nearby teammates",
+        "choosing speed changes the current healing contribution"
+      ],
+      "attributes": {
+        "Engagement range": "Sonic projectiles and nearby song effects",
+        "Mobility": "Wall Ride and movement-speed song",
+        "Survivability": "Healing song and Sound Barrier",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Plan Sound Barrier around a dangerous enemy commitment and your allies' positions. Soundwave can separate an attacker from a vulnerable teammate without requiring a solo chase."
+      },
       "abilities": [
         {
           "id": "sonic-amplifier",
@@ -2119,7 +2496,14 @@
           "name": "Sound Barrier",
           "description": "Give nearby teammates a temporary extra-health buffer.",
           "kind": "ultimate",
-          "stats": []
+          "stats": [
+            {
+              "name": "Duration",
+              "value": 6,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "wall-ride",
@@ -2162,13 +2546,26 @@
       "name": "Mauga",
       "role": "tank",
       "biography": "A Samoan fighter who uses heavy pressure and thrives in a direct confrontation.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "brawl"
+        "brawl",
+        "frontline"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Team damage-based healing",
+        "uninterrupted charge"
+      ],
+      "weaknesses": [
+        "Cage Fight contains you too",
+        "Overdrive needs allies able to deal damage"
+      ],
+      "attributes": {
+        "Engagement range": "Damage contact for critical-hit sustain",
+        "Mobility": "Overrun charge",
+        "Survivability": "Critical-hit extra health and Cardiac Overdrive",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Cage Fight can also trap you in a bad situation. Check who will be inside, who can support from outside, and whether your team is ready to commit."
+      },
       "abilities": [
         {
           "id": "overrun",
@@ -2232,13 +2629,26 @@
       "name": "Mei",
       "role": "damage",
       "biography": "A climate scientist who uses ice technology to shape a fight.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "brawl"
+        "brawl",
+        "peel"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Route control",
+        "slowing pressure"
+      ],
+      "weaknesses": [
+        "Cryo-Freeze pauses your contribution",
+        "a wall can also interrupt your team's path"
+      ],
+      "attributes": {
+        "Engagement range": "Close slowing spray and distant icicle",
+        "Mobility": "No travel ability in the captured kit",
+        "Survivability": "Cryo-Freeze heals while invulnerable",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Choose Blizzard when your team can pressure the area and follow up. Keep track of escape and defensive abilities, and use Cryo-Freeze from a position you can leave afterward."
+      },
       "abilities": [
         {
           "id": "endothermic-blaster",
@@ -2308,17 +2718,19 @@
         "peel"
       ],
       "strengths": [
-        "Ally mobility",
-        "Damage amplification"
+        "Damage amplification",
+        "teammate revival"
       ],
       "weaknesses": [
-        "Ally-dependent escape",
-        "Risky resurrection exposure"
+        "Travel needs an ally",
+        "resurrecting in an unsafe location risks another loss"
       ],
       "attributes": {
-        "Range": "Ally beam range",
-        "Mobility": "Ally flight",
-        "Healing": "Single-target beam"
+        "Engagement range": "Ally-targeted beams and a sidearm",
+        "Mobility": "Guardian Angel and controlled descent",
+        "Survivability": "Ally-based repositioning; flight during Valkyrie",
+        "Skill floor": "Start with covered positions and one reliable contribution.",
+        "Skill ceiling": "Check enemy sightlines before Resurrection. A lost resurrection attempt can cost another teammate."
       },
       "abilities": [
         {
@@ -2397,13 +2809,26 @@
       "name": "Mizuki",
       "role": "support",
       "biography": "A fighter determined to escape a curse and control his own future.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
+        "backline",
         "peel"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Bouncing ally healing",
+        "movement restraint"
+      ],
+      "weaknesses": [
+        "Return depends on a useful starting position",
+        "aura benefits need teammates nearby"
+      ],
+      "attributes": {
+        "Engagement range": "Bouncing projectile and healing hat",
+        "Mobility": "Katashiro Return advances and returns",
+        "Survivability": "Remedy Aura and sanctuary protection",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Place Kekkai Sanctuary where allies can use its healing and projectile protection. Consider incoming directions and escape routes; the sanctuary is not a guarantee against every attack type."
+      },
       "abilities": [
         {
           "id": "spirit-glaive",
@@ -2481,13 +2906,26 @@
       "name": "Moira",
       "role": "support",
       "biography": "A genetic researcher whose methods are controversial and whose kit mixes healing and damage.",
-      "difficulty": null,
+      "difficulty": "approachable",
       "playstyle": [
+        "brawl",
         "backline"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Flexible orbs",
+        "combined healing and damage beam"
+      ],
+      "weaknesses": [
+        "Healing spends energy",
+        "Fade prevents shooting during its movement"
+      ],
+      "attributes": {
+        "Engagement range": "Frontal healing and ranged damage beam",
+        "Mobility": "Fade repositioning",
+        "Survivability": "Damage-driven self-healing and invulnerable movement",
+        "Skill floor": "Start with covered positions and one reliable contribution.",
+        "Skill ceiling": "Line up Coalescence to support allies and pressure enemies together. Track interruption threats and reposition through the beam's duration rather than standing in an exposed lane."
+      },
       "abilities": [
         {
           "id": "biotic-grasp",
@@ -2551,13 +2989,26 @@
       "name": "Orisa",
       "role": "tank",
       "biography": "A robot built to protect Numbani and learning how to meet that responsibility.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "frontline"
+        "frontline",
+        "brawl"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Displacement",
+        "defensive commitment tools"
+      ],
+      "weaknesses": [
+        "The weapon uses heat",
+        "Terra Surge anchors you while charging"
+      ],
+      "attributes": {
+        "Engagement range": "Automatic fire and thrown javelin",
+        "Mobility": "Javelin Spin increases forward speed",
+        "Survivability": "Fortify and frontal projectile removal",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Terra Surge needs nearby targets and a safe commitment. Watch escape routes and teammate pressure; a long charge is not automatically better than an earlier release."
+      },
       "abilities": [
         {
           "id": "augmented-fusion-driver",
@@ -2628,13 +3079,26 @@
       "name": "Pharah",
       "role": "damage",
       "biography": "A soldier who uses flight equipment and explosive projectiles.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "poke"
+        "poke",
+        "flank"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Vertical access",
+        "blast displacement"
+      ],
+      "weaknesses": [
+        "Fuel recharges on the ground",
+        "aerial movement still needs a landing plan"
+      ],
+      "attributes": {
+        "Engagement range": "Long-distance explosive rockets",
+        "Mobility": "Jet Dash, Jump Jet and fuel-funded hover",
+        "Survivability": "Air-to-ground repositioning",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Barrage leaves you committed to a position. Track interruption threats and use teammate pressure to create the opening; plan what happens immediately afterward."
+      },
       "abilities": [
         {
           "id": "rocket-launcher",
@@ -2712,13 +3176,26 @@
       "name": "Ramattra",
       "role": "tank",
       "biography": "The leader of Null Sector who changes forms to control different engagement ranges.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "frontline"
+        "frontline",
+        "brawl"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Piercing punch waves",
+        "ground-based slowing"
+      ],
+      "weaknesses": [
+        "Barrier placement needs a relevant angle",
+        "Annihilation extension needs nearby damage contact"
+      ],
+      "attributes": {
+        "Engagement range": "Omnic projectiles and Nemesis punches",
+        "Mobility": "Change engagement through the two combat forms",
+        "Survivability": "Placed barrier and form-dependent pressure",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Annihilation rewards staying in contact, but chasing beyond teammate sightlines can undo its value. Call the engagement and track enemy displacement or escape before committing."
+      },
       "abilities": [
         {
           "id": "void-accelerator-omnic-form",
@@ -2789,13 +3266,26 @@
       "name": "Reaper",
       "role": "damage",
       "biography": "A masked combatant whose identity and motives are shrouded in secrecy.",
-      "difficulty": null,
+      "difficulty": "approachable",
       "playstyle": [
-        "flank"
+        "flank",
+        "brawl"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Close pressure",
+        "a defensive movement exit"
+      ],
+      "weaknesses": [
+        "Wraith prevents shooting",
+        "a ranged target requires a safe approach"
+      ],
+      "attributes": {
+        "Engagement range": "Close shotgun spread",
+        "Mobility": "Shadow Step and Wraith Form",
+        "Survivability": "Damage healing and invulnerable travel",
+        "Skill floor": "Start with covered positions and one reliable contribution.",
+        "Skill ceiling": "Death Blossom is vulnerable to defensive answers and interruption. Identify those resources before committing, and avoid giving up a safe close-range position for a low-value solo ultimate."
+      },
       "abilities": [
         {
           "id": "hellfire-shotguns",
@@ -2868,21 +3358,23 @@
       "biography": "A German crusader who protects allies while contesting close-range space.",
       "difficulty": "approachable",
       "playstyle": [
-        "brawl",
-        "frontline"
+        "frontline",
+        "brawl"
       ],
       "strengths": [
-        "Close-range pressure",
-        "Mobile barrier"
+        "Space control at melee distance",
+        "knockdown"
       ],
       "weaknesses": [
-        "Limited vertical access",
-        "Open sightlines are costly"
+        "Barrier protection faces one direction",
+        "Charge needs a safe endpoint"
       ],
       "attributes": {
-        "Range": "Close",
-        "Mobility": "Committed charge",
-        "Survivability": "Barrier and hard cover"
+        "Engagement range": "Hammer reach plus a fire projectile",
+        "Mobility": "Charge commits forward",
+        "Survivability": "Frontal Barrier Field",
+        "Skill floor": "Start with covered positions and one reliable contribution.",
+        "Skill ceiling": "Watch enemy crowd control before committing Earthshatter. Use short swings of pressure to force defensive resources."
       },
       "abilities": [
         {
@@ -2954,41 +3446,148 @@
       "name": "Roadhog",
       "role": "tank",
       "biography": "A powerful enforcer who threatens nearby enemies with a hook and shotgun.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "frontline"
+        "frontline",
+        "peel"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Enemy displacement",
+        "an absorption-to-explosion sequence"
+      ],
+      "weaknesses": [
+        "Breather and Compactor have timed windows",
+        "do not assume an old hook damage sequence"
+      ],
+      "attributes": {
+        "Engagement range": "Two-burst close shotgun",
+        "Mobility": "No travel ability in the captured kit",
+        "Survivability": "Take a Breather and projectile absorption",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Whole Hog can displace enemies out of an area as well as deal damage. Consider where you are pushing the target and whether that direction helps your team's objective."
+      },
       "abilities": [
         {
           "id": "scrap-gun",
           "name": "Scrap Gun",
           "description": "Fire two bursts from a close-range shotgun.",
           "kind": "weapon",
-          "stats": []
+          "stats": [
+            {
+              "name": "Damage per volley",
+              "value": 204,
+              "unit": "damage",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Ammo",
+              "value": 12,
+              "unit": "rounds",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Critical multiplier",
+              "value": 1.5,
+              "unit": "×",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Falloff starts",
+              "value": 20,
+              "unit": "m",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Falloff ends",
+              "value": 35,
+              "unit": "m",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "trash-compactor",
           "name": "Trash Compactor",
           "description": "Collect incoming projectiles and turn them into an explosive scrap ball.",
           "kind": "ability",
-          "stats": []
+          "stats": [
+            {
+              "name": "Absorption duration",
+              "value": 2,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Cooldown (5v5)",
+              "value": 10,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Explosion damage minimum",
+              "value": 75,
+              "unit": "damage",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Explosion damage maximum",
+              "value": 200,
+              "unit": "damage",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "chain-hook",
           "name": "Chain Hook",
           "description": "Catch an opponent and pull them toward you.",
           "kind": "ability",
-          "stats": []
+          "stats": [
+            {
+              "name": "Cooldown (5v5)",
+              "value": 6,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Pulled enemy distance",
+              "value": 4.5,
+              "unit": "m",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "take-a-breather",
           "name": "Take a Breather",
           "description": "Restore your health while reducing damage received.",
           "kind": "ability",
-          "stats": []
+          "stats": [
+            {
+              "name": "Maximum duration",
+              "value": 2,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Healing rate",
+              "value": 200,
+              "unit": "health/s",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Damage reduction",
+              "value": 35,
+              "unit": "%",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Cooldown",
+              "value": 2,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "whole-hog",
@@ -3031,13 +3630,26 @@
       "name": "Shion",
       "role": "damage",
       "biography": "An omnic who escaped Hashimoto captivity and became one of the clan's feared Elders.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
-        "flank"
+        "flank",
+        "brawl"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Movement-driven pressure",
+        "controllable attack spread"
+      ],
+      "weaknesses": [
+        "Dismounting spends the bike route",
+        "temporary extra health is a timed resource"
+      ],
+      "attributes": {
+        "Engagement range": "Fast pistols and variable-spread Execution",
+        "Mobility": "Joyride and Evade",
+        "Survivability": "Evade provides temporary extra health",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Satsuriku Spree commits a sequence of rushes. Track enemy control and escape options before starting, and think through where each rush leaves your own position."
+      },
       "abilities": [
         {
           "id": "kira-pistols",
@@ -3108,13 +3720,26 @@
       "name": "Sierra",
       "role": "damage",
       "biography": "A Helix Security teammate whose enhanced abilities support rifle pressure and movement.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "poke"
+        "poke",
+        "flank"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Marked-target tracking",
+        "sustained accuracy"
+      ],
+      "weaknesses": [
+        "Rifle accuracy builds through sustained fire",
+        "a drone needs a useful endpoint"
+      ],
+      "attributes": {
+        "Engagement range": "Sustained automatic rifle fire",
+        "Mobility": "Anchor Drone grapple",
+        "Survivability": "Reposition along a prepared drone route",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Place Anchor Drone to provide a useful grapple route before danger reaches you. Trailblazer's forward path should support an engagement or contested route your team can use."
+      },
       "abilities": [
         {
           "id": "helix-rifle",
@@ -3185,13 +3810,26 @@
       "name": "Sigma",
       "role": "tank",
       "biography": "An astrophysicist whose gravity research left him with powers exploited by Talon.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
+        "frontline",
         "poke"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Adjustable barrier position",
+        "ranged displacement"
+      ],
+      "weaknesses": [
+        "Grasp answers frontal projectiles",
+        "barrier deployment needs timely placement and recall"
+      ],
+      "attributes": {
+        "Engagement range": "Area charges and thrown debris",
+        "Mobility": "No travel ability in the captured kit",
+        "Survivability": "Floating barrier and projectile-to-health absorption",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Gravitic Flux needs an engagement plan and awareness of interruption threats. Call the lifted targets and use safe positioning while your team prepares its follow-up."
+      },
       "abilities": [
         {
           "id": "hyperspheres",
@@ -3262,13 +3900,26 @@
       "name": "Sojourn",
       "role": "damage",
       "biography": "A former Overwatch leader determined to help its new generation avoid past mistakes.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
-        "poke"
+        "poke",
+        "flank"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Stored-energy burst",
+        "damaging area control"
+      ],
+      "weaknesses": [
+        "The stronger shot spends energy",
+        "slide commitment changes your escape options"
+      ],
+      "attributes": {
+        "Engagement range": "Projectiles and an energy-funded piercing shot",
+        "Mobility": "Power Slide and jump cancel",
+        "Survivability": "Slide-based repositioning",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Overclock needs useful sightlines throughout its window. Change angles with your team and track defensive abilities that can deny a charged shot."
+      },
       "abilities": [
         {
           "id": "railgun",
@@ -3332,13 +3983,26 @@
       "name": "Soldier: 76",
       "role": "damage",
       "biography": "A wanted vigilante investigating the truth behind Overwatch's collapse.",
-      "difficulty": null,
+      "difficulty": "approachable",
       "playstyle": [
-        "poke"
+        "poke",
+        "flank"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Straightforward ranged fire",
+        "self and ally healing field"
+      ],
+      "weaknesses": [
+        "The field stays at its placement",
+        "running forward still needs cover"
+      ],
+      "attributes": {
+        "Engagement range": "Automatic rifle and explosive rockets",
+        "Mobility": "Forward Sprint",
+        "Survivability": "Biotic Field recovery",
+        "Skill floor": "Start with covered positions and one reliable contribution.",
+        "Skill ceiling": "Tactical Visor still requires enemies in view. Check barriers, cover, and defensive abilities before committing; moving to a better lane can matter more than activating immediately."
+      },
       "abilities": [
         {
           "id": "heavy-pulse-rifle",
@@ -3409,47 +4073,156 @@
       "name": "Sombra",
       "role": "support",
       "biography": "A hacker who uses information and, in the current Support kit, protective utility to influence a fight.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "peel"
+        "peel",
+        "backline"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Output reduction",
+        "awareness of charged enemy ultimates"
+      ],
+      "weaknesses": [
+        "Healing support competes with deep positioning",
+        "old Damage-role advice is outdated"
+      ],
+      "attributes": {
+        "Engagement range": "Short pistol range and healing/debuff zones",
+        "Mobility": "Translocator with temporary stealth",
+        "Survivability": "Hotfix support and covered repositioning",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Coordinate EMP with teammate pressure. Watch which deployables you can disrupt and avoid making a deep ultimate engagement that leaves your team without support."
+      },
       "abilities": [
         {
           "id": "machine-pistol",
           "name": "Machine Pistol",
           "description": "Fire a short-distance automatic pistol.",
           "kind": "weapon",
-          "stats": []
+          "stats": [
+            {
+              "name": "Damage per projectile",
+              "value": 7,
+              "unit": "damage",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "hotfix",
           "name": "Hotfix",
           "description": "Give an ally healing over time; also hack health packs and most opposing deployables.",
           "kind": "ability",
-          "stats": []
+          "stats": [
+            {
+              "name": "Immediate healing",
+              "value": 65,
+              "unit": "health",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Healing rate",
+              "value": 25,
+              "unit": "health/s",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Total healing cap",
+              "value": 175,
+              "unit": "health",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Maximum duration",
+              "value": 12,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Range",
+              "value": 17,
+              "unit": "m",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Charges",
+              "value": 2,
+              "unit": "charges",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Cooldown",
+              "value": 8,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "cyberspace",
           "name": "Cyberspace",
           "description": "The impact zone weakens enemies and heals teammates.",
           "kind": "ability",
-          "stats": []
+          "stats": [
+            {
+              "name": "Zone duration",
+              "value": 3,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Zone radius",
+              "value": 5,
+              "unit": "m",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Damage/healing output reduction",
+              "value": 50,
+              "unit": "%",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "translocator",
           "name": "Translocator",
           "description": "Teleport to a thrown beacon and briefly enter stealth afterward.",
           "kind": "ability",
-          "stats": []
+          "stats": [
+            {
+              "name": "Cooldown",
+              "value": 7.5,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            },
+            {
+              "name": "Stealth duration",
+              "value": 6.5,
+              "unit": "s",
+              "sourceId": "blizzard-live"
+            }
+          ]
         },
         {
           "id": "emp",
           "name": "EMP",
           "description": "Damage enemies based on their current health, hack them and remove nearby barriers.",
           "kind": "ultimate",
+          "stats": [
+            {
+              "name": "Current-health damage",
+              "value": 20,
+              "unit": "%",
+              "sourceId": "blizzard-live"
+            }
+          ]
+        },
+        {
+          "id": "conspirator",
+          "name": "Conspirator",
+          "kind": "passive",
+          "description": "See which opposing ultimates are fully charged.",
           "stats": []
         }
       ],
@@ -3486,13 +4259,26 @@
       "name": "Symmetra",
       "role": "damage",
       "biography": "A hard-light architect who uses constructs to shape movement and sightlines.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "brawl"
+        "brawl",
+        "poke"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Team route changes",
+        "increasing beam pressure"
+      ],
+      "weaknesses": [
+        "Teleporters need coordinated use",
+        "turrets must cover a relevant route"
+      ],
+      "attributes": {
+        "Engagement range": "Short beam and charged ranged orb",
+        "Mobility": "Temporary team Teleporter",
+        "Survivability": "Turret slowing and a large barrier",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Photon Barrier is strongest when it divides the enemy's useful sightlines while your allies can move and shoot around it. Think about the whole fight space, not just the target in front of you."
+      },
       "abilities": [
         {
           "id": "photon-projector",
@@ -3556,13 +4342,26 @@
       "name": "Torbjörn",
       "role": "damage",
       "biography": "An engineer whose weapons and turret technology helped equip Overwatch.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "poke"
+        "poke",
+        "peel"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Separate turret pressure",
+        "molten area control"
+      ],
+      "weaknesses": [
+        "Turret placement needs useful sightlines",
+        "repair time competes with direct combat"
+      ],
+      "attributes": {
+        "Engagement range": "Longer rivet shots and close secondary fire",
+        "Mobility": "Overload increases movement speed",
+        "Survivability": "Overload extra health and repairable turret",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Spread Molten Core across paths enemies need to use. Avoid putting every pool in one spot that the whole team can simply walk around."
+      },
       "abilities": [
         {
           "id": "rivet-gun",
@@ -3633,13 +4432,25 @@
       "name": "Tracer",
       "role": "damage",
       "biography": "A former Overwatch pilot whose time-shifting equipment gives her unusual movement.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
-        "flank"
+        "flank",
+        "dive"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Fast angle changes",
+        "a reversible engagement"
+      ],
+      "weaknesses": [
+        "Recall returns to a previous state, so the earlier position must be safe"
+      ],
+      "attributes": {
+        "Engagement range": "Short-distance automatic pistols",
+        "Mobility": "Blink and Recall",
+        "Survivability": "Recall restores an earlier position and health",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Plan a Pulse Bomb approach around movement and defensive answers. Your goal is a reliable opportunity, not a deep commitment just because the ultimate is ready."
+      },
       "abilities": [
         {
           "id": "pulse-pistols",
@@ -3703,13 +4514,26 @@
       "name": "Vendetta",
       "role": "damage",
       "biography": "An Italian arena champion seeking control of her family's criminal legacy.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
+        "flank",
         "brawl"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Chained melee pressure",
+        "movement toward a thrown sword"
+      ],
+      "weaknesses": [
+        "Blocking and Projected Edge spend energy",
+        "a thrown sword commits your destination"
+      ],
+      "attributes": {
+        "Engagement range": "Sword attacks and a guarding-stance projectile",
+        "Mobility": "Whirlwind Dash and Soaring Slice",
+        "Survivability": "Frontal sword guard",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Projected Edge spends defensive energy, so weigh its pressure against the protection you will need afterward. Coordinate Sundering Blade with teammates who can act on its frontal threat."
+      },
       "abilities": [
         {
           "id": "palatine-fang",
@@ -3787,13 +4611,26 @@
       "name": "Venture",
       "role": "damage",
       "biography": "An archaeologist and explorer who uses excavation equipment in combat.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
-        "flank"
+        "flank",
+        "brawl"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Emergence attacks",
+        "displacement"
+      ],
+      "weaknesses": [
+        "Drill Dash and emergence need an endpoint",
+        "underground safety does not guarantee a safe exit"
+      ],
+      "attributes": {
+        "Engagement range": "Short-travel explosive and ground shockwaves",
+        "Mobility": "Drill Dash and Burrow",
+        "Survivability": "Underground invulnerability",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Tectonic Shock should threaten routes the enemy must hold or cross. Time it with teammate pressure so an opponent cannot simply back away from the whole engagement."
+      },
       "abilities": [
         {
           "id": "smart-excavator",
@@ -3857,13 +4694,26 @@
       "name": "Widowmaker",
       "role": "damage",
       "biography": "An assassin who uses patient long-range aim and strict control of sightlines.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
-        "poke"
+        "poke",
+        "backline"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Team-wide enemy reveal",
+        "long sightline access"
+      ],
+      "weaknesses": [
+        "Scoped aim needs precision",
+        "a grapple requires a useful destination"
+      ],
+      "attributes": {
+        "Engagement range": "Scoped distant shots and automatic fire",
+        "Mobility": "Grappling Hook to a ledge",
+        "Survivability": "Distance, grapple routes and trap warning",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Call information from Infra-Sight so your whole team can act on it. Track enemy movement abilities before committing to an exposed sniper angle."
+      },
       "abilities": [
         {
           "id": "widows-kiss",
@@ -3930,20 +4780,22 @@
       "difficulty": "moderate",
       "playstyle": [
         "dive",
-        "frontline"
+        "peel"
       ],
       "strengths": [
-        "Vertical access",
-        "Barrier isolation"
+        "Landing pressure",
+        "covered close engagement"
       ],
       "weaknesses": [
-        "Close-range exposure",
-        "Punished by sustained close damage"
+        "A jump needs a landing and return plan",
+        "Primal Rage changes the available attacks"
       ],
       "attributes": {
-        "Range": "Close pressure",
-        "Mobility": "Vertical leap",
-        "Survivability": "Barrier and disengagement"
+        "Engagement range": "Frontal electricity and a charged ranged shot",
+        "Mobility": "Jump Pack",
+        "Survivability": "Barrier dome; health increase during Primal Rage",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Time a dive with your damage heroes. Pressure support sightlines and leave before the enemy can surround you."
       },
       "abilities": [
         {
@@ -4008,13 +4860,26 @@
       "name": "Wrecking Ball",
       "role": "tank",
       "biography": "A resourceful hamster engineer who turned a rolling mech into a fighting machine.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
-        "dive"
+        "dive",
+        "flank"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Fast rotations",
+        "collision displacement"
+      ],
+      "weaknesses": [
+        "Grapple speed needs a useful route",
+        "Adaptive Shield depends on nearby opponents"
+      ],
+      "attributes": {
+        "Engagement range": "Automatic cannons and collision attacks",
+        "Mobility": "Grappling Claw and Roll",
+        "Survivability": "Nearby-enemy-scaled temporary health",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Minefield can control movement and objective access. Coordinate the space it denies with a teammate's pressure, and avoid leaving allies exposed while you chase a separate target."
+      },
       "abilities": [
         {
           "id": "quad-cannons",
@@ -4092,13 +4957,26 @@
       "name": "Wuyang",
       "role": "support",
       "biography": "A Water College support who uses healing technology and guided water attacks.",
-      "difficulty": null,
+      "difficulty": "demanding",
       "playstyle": [
-        "backline"
+        "backline",
+        "peel"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Controllable projectile path",
+        "healing-received support"
+      ],
+      "weaknesses": [
+        "Stronger healing spends resource",
+        "protecting a target needs correct timing"
+      ],
+      "attributes": {
+        "Engagement range": "Guided water orb and targeted stream",
+        "Mobility": "Rushing Torrent movement and jump",
+        "Survivability": "Stream healing and protective Tidal Blast",
+        "Skill floor": "Practice the kit’s timing and movement before combining full engagements.",
+        "Skill ceiling": "Use Guardian Wave to support an ally's engagement or displace an approaching threat. Tidal Blast protects a host and later detonates, so time the commitment with that delayed effect in mind."
+      },
       "abilities": [
         {
           "id": "xuanwu-staff",
@@ -4171,21 +5049,23 @@
       "biography": "A Russian athlete who uses protective barriers to build weapon pressure.",
       "difficulty": "moderate",
       "playstyle": [
-        "brawl",
-        "frontline"
+        "frontline",
+        "brawl"
       ],
       "strengths": [
-        "Timed protection",
-        "Close pressure"
+        "Damage growth through absorption",
+        "enemy grouping"
       ],
       "weaknesses": [
-        "Limited vertical access",
-        "Barrier resource management"
+        "Weapon output depends on absorbed damage",
+        "barrier timing spends an important defensive option"
       ],
       "attributes": {
-        "Range": "Close beam and projectile pressure",
-        "Mobility": "Limited",
-        "Survivability": "Timed barriers"
+        "Engagement range": "Short beam and energy grenade",
+        "Mobility": "No travel ability in the captured kit",
+        "Survivability": "Self and ally barriers",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Track enemy escape and defensive abilities before Graviton Surge. Call a follow-up plan with your team."
       },
       "abilities": [
         {
@@ -4257,13 +5137,26 @@
       "name": "Zenyatta",
       "role": "support",
       "biography": "An omnic monk who supports allies through spiritual orbs and precise projectile pressure.",
-      "difficulty": null,
+      "difficulty": "moderate",
       "playstyle": [
+        "poke",
         "backline"
       ],
-      "strengths": [],
-      "weaknesses": [],
-      "attributes": {},
+      "strengths": [
+        "Enemy damage amplification",
+        "ranged pressure"
+      ],
+      "weaknesses": [
+        "A healing orb targets an ally",
+        "safe ranged positioning remains important outside the ultimate"
+      ],
+      "attributes": {
+        "Engagement range": "Energy orbs and charged volleys",
+        "Mobility": "Transcendence increases movement speed",
+        "Survivability": "Harmony support; invulnerability during Transcendence",
+        "Skill floor": "Practice aim, resource timing and safe repositioning together.",
+        "Skill ceiling": "Time Transcendence to answer a dangerous engagement that your allies can actually receive healing through. Track healing-denial effects and enemy displacement before relying on it as the whole defensive plan."
+      },
       "abilities": [
         {
           "id": "orb-of-destruction",
@@ -4528,15 +5421,16 @@
         "team-deathmatch"
       ],
       "location": "Annecy, France",
-      "currentVerified": false,
+      "currentVerified": true,
       "notes": [
         "Deathmatch mode: use cover to isolate engagements and keep a retreat option. Choose fights you can finish without exposing yourself to several opponents. This is general coaching, not a verified map-specific position.",
-        "Team Deathmatch mode: group your pressure and avoid giving opponents isolated eliminations. Help a teammate finish a fight before starting another. Exact map positions are unverified."
+        "Team Deathmatch mode: group your pressure and avoid giving opponents isolated eliminations. Help a teammate finish a fight before starting another. Exact map positions are unverified.",
+        "The current Halloween variant is available through November 3, 2026. Check current visuals before relying on older screenshots."
       ],
       "markers": [],
       "asset": null,
       "review": {
-        "sourceId": "overfast-snapshot",
+        "sourceId": "blizzard-live",
         "patch": "Unverified snapshot",
         "reviewedAt": null,
         "confidence": "low",
@@ -4634,14 +5528,17 @@
         "hybrid"
       ],
       "location": "Stuttgart, Germany",
-      "currentVerified": false,
+      "currentVerified": true,
       "notes": [
-        "Hybrid mode: attackers first capture an objective, then advance a payload. Reassess your positions after that transition. Defenders should plan a regroup point before the objective is lost. No specific position or sightline on this map has been verified."
+        "Hybrid mode: attackers first capture an objective, then advance a payload. Reassess your positions after that transition. Defenders should plan a regroup point before the objective is lost. No specific position or sightline on this map has been verified.",
+        "The October 6 patch removed a sightline through a door near the first chokepoint.",
+        "Attack: do not base an opening on that old door sightline. Check the live doorway from cover before committing.",
+        "Defense: review the first chokepoint in a custom game. Older door-angle guides may no longer apply."
       ],
       "markers": [],
       "asset": null,
       "review": {
-        "sourceId": "overfast-snapshot",
+        "sourceId": "blizzard-live",
         "patch": "Unverified snapshot",
         "reviewedAt": null,
         "confidence": "low",
@@ -4760,14 +5657,15 @@
         "hybrid"
       ],
       "location": "Los Angeles, United States",
-      "currentVerified": false,
+      "currentVerified": true,
       "notes": [
-        "Hybrid mode: attackers first capture an objective, then advance a payload. Reassess your positions after that transition. Defenders should plan a regroup point before the objective is lost. No specific position or sightline on this map has been verified."
+        "Hybrid mode: attackers first capture an objective, then advance a payload. Reassess your positions after that transition. Defenders should plan a regroup point before the objective is lost. No specific position or sightline on this map has been verified.",
+        "The current Halloween variant is available through November 3, 2026. Check current visuals before relying on older screenshots."
       ],
       "markers": [],
       "asset": null,
       "review": {
-        "sourceId": "overfast-snapshot",
+        "sourceId": "blizzard-live",
         "patch": "Unverified snapshot",
         "reviewedAt": null,
         "confidence": "low",
@@ -4844,14 +5742,15 @@
         "control"
       ],
       "location": "China",
-      "currentVerified": false,
+      "currentVerified": true,
       "notes": [
-        "Control mode: contest the active objective with a coordinated team. Regroup after a lost fight and choose a safe approach before committing; this is mode-level advice, not a marked route on this map."
+        "Control mode: contest the active objective with a coordinated team. Regroup after a lost fight and choose a safe approach before committing; this is mode-level advice, not a marked route on this map.",
+        "The current Halloween variant is available through November 3, 2026. Check current visuals before relying on older screenshots."
       ],
       "markers": [],
       "asset": null,
       "review": {
-        "sourceId": "overfast-snapshot",
+        "sourceId": "blizzard-live",
         "patch": "Unverified snapshot",
         "reviewedAt": null,
         "confidence": "low",

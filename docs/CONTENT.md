@@ -6,6 +6,9 @@ The initial map list comes from OverFast commit `6ca950ec3ed2b3419b2b89beb9fbf3f
 npm run content:capture
 python3 scripts/import-live.py
 npx tsx scripts/apply-coaching.ts
+python3 scripts/apply-abilities.py
+python3 scripts/apply-patch-facts.py
+python3 scripts/apply-profiles.py
 npm run schemas
 npm run content:validate
 npm run content:verify-live
@@ -42,3 +45,11 @@ No live feed has been deployed, no key is configured in this build, and network 
 ## 📖 Ability summaries
 
 `content/ability-summaries.json` contains original summaries of mechanics described by the captured official hero pages. Run `python3 scripts/apply-abilities.py` after source capture. It stops if ability names or list lengths change. The source hashes are recorded in `content/ability-evidence.json`. It copies no images or full page text. These summaries establish basic mechanics, not cooldowns, damage values, complete passive coverage, or balance approval. Unconfirmed ability types stay `unknown`.
+
+## 🧮 Retail patch facts
+
+`content/patch-facts.json` records 41 current numeric values and two passives from the October 6 patch. The importer checks the patch identity and each quote inside the correct hero and ability block. It keeps 5v5 values separate from 6v6 and excludes Stadium sections. `content/patch-evidence.json` records the raw page hash. Available values link to their source in the app; missing values remain blank. Four maps have current availability evidence from the patch, but that does not establish the full rotation or tactical coverage.
+
+## 🧑‍🏫 Qualitative profiles
+
+`content/hero-profiles.json` contains original difficulty estimates, playstyles, range descriptions, strengths and resource constraints for all 54 heroes. These are coaching judgments, not official ratings or measured outcomes. They stay marked for tactical review. The publisher invalidates advice when role, biography, abilities, map facts or patch identity change. An explicit new review can be preserved only when it matches the patch, follows package generation and differs from the old review date.

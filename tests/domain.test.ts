@@ -32,10 +32,18 @@ describe("content integrity", () => {
       expect(() => contentSchema.parse(c)).toThrow();
     }
   });
-  it("does not invent stats or map coordinates", () => {
+  it("uses official sources for numeric facts and does not invent map coordinates", () => {
+    const facts = content.heroes.flatMap((h) =>
+      h.abilities.flatMap((a) => a.stats),
+    );
+    expect(facts).toHaveLength(41);
     expect(
-      content.heroes.flatMap((h) => h.abilities.flatMap((a) => a.stats)),
-    ).toEqual([]);
+      facts.every((s) =>
+        content.sources.some(
+          (source) => source.id === s.sourceId && source.kind === "official",
+        ),
+      ),
+    ).toBe(true);
     expect(
       content.maps.every((m) => m.asset === null && m.markers.length === 0),
     ).toBe(true);
@@ -172,7 +180,9 @@ it("provides sourced original summaries for every captured ability without inven
   for (const hero of content.heroes) {
     for (const ability of hero.abilities) {
       expect(ability.description?.trim().length).toBeGreaterThan(20);
-      expect(ability.stats).toEqual([]);
+      expect(ability.stats.every((s) => s.sourceId === "blizzard-live")).toBe(
+        true,
+      );
     }
   }
 });
@@ -199,4 +209,32 @@ it("maps standard controller input with a dead zone and ignores unsupported layo
     "Escape",
   );
   expect(gamepadAction({ mapping: "", axes: [-1, 0], buttons })).toBeNull();
+});
+
+it("keeps current rework facts distinct from archived coaching and six-player values", () => {
+  const ability = (heroId: string, id: string) =>
+    content.heroes
+      .find((h) => h.id === heroId)!
+      .abilities.find((a) => a.id === id)!;
+  expect(
+    ability("roadhog", "chain-hook").stats.find(
+      (s) => s.name === "Cooldown (5v5)",
+    )?.value,
+  ).toBe(6);
+  expect(
+    ability("sombra", "emp").stats.find(
+      (s) => s.name === "Current-health damage",
+    )?.value,
+  ).toBe(20);
+  expect(
+    ability("genji", "swift-strike").stats.find((s) => s.name === "Damage")
+      ?.value,
+  ).toBe(60);
+  expect(ability("sombra", "conspirator").kind).toBe("passive");
+  expect(
+    content.maps
+      .filter((m) => m.currentVerified)
+      .map((m) => m.id)
+      .sort(),
+  ).toEqual(["chateau-guillard", "eichenwalde", "hollywood", "lijiang-tower"]);
 });

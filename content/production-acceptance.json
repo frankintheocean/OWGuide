@@ -1,1 +1,20 @@
-{"sourceTree":null,"reviewer":null,"checkedAt":null,"checks":{"liveRosterAndPatch":false,"allHeroGuides":false,"allSupportedMaps":false,"windows10":false,"windows11":false,"webViewOffline":false,"mainAndQuickWindows":false,"multiMonitorAndDpi":false,"keyboardAndScreenReader":false,"installerGuiAndDeleteData":false,"portableReadonlyFailure":false,"securityReview":false}}
+{
+  "sourceTree": null,
+  "reviewer": null,
+  "checkedAt": null,
+  "checks": {
+    "liveRosterAndPatch": false,
+    "allHeroGuides": false,
+    "allSupportedMaps": false,
+    "windows10": false,
+    "windows11": false,
+    "webViewOffline": false,
+    "mainAndQuickWindows": false,
+    "multiMonitorAndDpi": false,
+    "keyboardAndScreenReader": false,
+    "installerGuiAndDeleteData": false,
+    "portableReadonlyFailure": false,
+    "securityReview": false
+  },
+  "evidence": {}
+}

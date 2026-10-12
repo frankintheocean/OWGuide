@@ -161,14 +161,21 @@ export const contentSchema = z
     )
       issue("Duplicate content ID");
     for (const h of c.heroes) {
+      if (new Set(h.guides.map((g) => g.level)).size !== h.guides.length)
+        issue(`Duplicate guide level in ${h.id}`);
       if (new Set(h.abilities.map((a) => a.id)).size !== h.abilities.length)
         issue(`Duplicate ability in ${h.id}`);
       if (!sources.has(h.review.sourceId)) issue(`Unknown source for ${h.id}`);
-      for (const a of h.abilities)
+      for (const a of h.abilities) {
+        if (new Set(a.stats.map((s) => s.name)).size !== a.stats.length)
+          issue(`Duplicate statistic in ${h.id}:${a.id}`);
         for (const s of a.stats)
           if (!sources.has(s.sourceId)) issue("Unknown statistic source");
+      }
     }
     for (const m of c.maps) {
+      if (new Set(m.markers.map((p) => p.id)).size !== m.markers.length)
+        issue(`Duplicate marker in ${m.id}`);
       if (!sources.has(m.review.sourceId)) issue("Unknown map source");
       if (m.markers.length && !m.asset)
         issue("Coordinates require a rights-cleared image");

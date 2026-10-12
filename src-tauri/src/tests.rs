@@ -85,6 +85,13 @@ fn signatures_hashes_sizes_and_versions_are_checked() {
     manifest.version = "99.0.0".into();
     assert!(verify_package(&manifest, &bytes, &key).is_err());
     manifest.version = seed()["version"].as_str().unwrap().into();
+    manifest.bytes += 1;
+    assert!(verify_package(&manifest, &bytes, &key).is_err());
+    manifest.bytes -= 1;
+    manifest.schema_version = 99;
+    assert!(verify_package(&manifest, &bytes, &key).is_err());
+    manifest.schema_version = 1;
+    assert!(verify_package(&manifest, &bytes, &STANDARD.encode([8; 32])).is_err());
     manifest.signature = STANDARD.encode([0; 64]);
     assert!(verify_package(&manifest, &bytes, &key).is_err());
     manifest.signature = STANDARD.encode(signing.sign(&bytes).to_bytes());
@@ -175,4 +182,28 @@ fn source_links_are_confined_to_attributed_https_urls() {
         .source_allowed("https://example.com/not-a-source")
         .unwrap());
     assert!(s.source_allowed("file:///etc/passwd").is_err());
+}
+
+#[test]
+fn invalid_publisher_key_is_rejected_before_any_network_work() {
+    assert!(
+        fetch_update("https://example.com/manifest.json", "0.3.0", "bad-key")
+            .unwrap_err()
+            .contains("publisher key")
+    );
+}
+#[test]
+fn duplicate_guide_levels_and_stats_are_rejected() {
+    let mut c = seed();
+    let guide = c["heroes"][0]["guides"][0].clone();
+    c["heroes"][0]["guides"].as_array_mut().unwrap().push(guide);
+    assert!(validate_content(&c)
+        .unwrap_err()
+        .contains("Duplicate guide"));
+    let mut c = seed();
+    let stat = serde_json::json!({"name":"TEST STAT","value":1,"unit":"test only","sourceId":c["sources"][0]["id"]});
+    c["heroes"][0]["abilities"][0]["stats"] = serde_json::json!([stat, stat]);
+    assert!(validate_content(&c)
+        .unwrap_err()
+        .contains("Duplicate statistic"));
 }

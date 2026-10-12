@@ -132,6 +132,10 @@ export function HeroProfile({
           <>
             <div className="card">
               <h2>The essentials</h2>
+              <p className="muted">
+                This is original qualitative coaching. Difficulty describes
+                learning demands, not an official rating or measured statistic.
+              </p>
               <p>{hero.biography ?? "Biography awaits source review."}</p>
               <div className="attribute-grid">
                 {Object.entries(hero.attributes).map(([k, v]) => (
@@ -195,7 +199,18 @@ export function HeroProfile({
                       <div key={s.name}>
                         <dt>{s.name}</dt>
                         <dd>
-                          {s.value} {s.unit}
+                          {s.value} {s.unit}{" "}
+                          <a
+                            href={
+                              content.sources.find(
+                                (source) => source.id === s.sourceId,
+                              )?.url
+                            }
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            Source
+                          </a>
                         </dd>
                       </div>
                     ))}

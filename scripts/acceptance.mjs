@@ -1,23 +1,13 @@
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
-const required = [
-  "liveRosterAndPatch",
-  "allHeroGuides",
-  "allSupportedMaps",
-  "windows10",
-  "windows11",
-  "webViewOffline",
-  "mainAndQuickWindows",
-  "multiMonitorAndDpi",
-  "keyboardAndScreenReader",
-  "installerGuiAndDeleteData",
-  "portableReadonlyFailure",
-  "securityReview",
-];
+import { acceptanceProblems } from "./acceptance-report.mjs";
 const paths = [
   "src",
   "src-tauri",
+  "scripts",
+  "tests",
+  "docs/WINDOWS-TESTS.md",
   "packaging",
   "package.json",
   "package-lock.json",
@@ -41,16 +31,9 @@ if (process.argv.includes("--print-tree")) {
 const report = JSON.parse(
   readFileSync("content/production-acceptance.json", "utf8"),
 );
-const checked = Date.parse(report.checkedAt);
-if (
-  report.sourceTree !== tree ||
-  !report.reviewer ||
-  !Number.isFinite(checked) ||
-  checked > Date.now() + 300000 ||
-  Date.now() - checked > 7 * 86400000 ||
-  required.some((k) => report.checks?.[k] !== true)
-)
-  throw new Error(
-    "Production acceptance is missing, incomplete, stale, or belongs to a different source tree. Run and record the Windows checks first.",
-  );
-console.log("Recorded production acceptance matches this source tree.");
+const problems = acceptanceProblems(report, tree);
+if (problems.length)
+  throw new Error(`Production acceptance failed:\n${problems.join("\n")}`);
+console.log(
+  "Recorded production acceptance and evidence match this source tree.",
+);
