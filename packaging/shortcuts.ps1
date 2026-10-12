@@ -18,10 +18,11 @@ function Test-OWGuideShortcuts([string]$executable) {
       foreach ($link in $candidates) {
         $shortcut=$shell.CreateShortcut($link.FullName)
         if ([IO.Path]::GetFullPath($shortcut.TargetPath) -ne [IO.Path]::GetFullPath($executable)) { throw "The $kind shortcut targets a different executable." }
-        if (![string]::IsNullOrWhiteSpace($shortcut.IconLocation)) {
-          $icon=$shortcut.IconLocation -replace ',\s*-?\d+$',''
-          if (!(Test-Path $icon)) { throw "The $kind shortcut icon file is missing." }
-        }
+        $icon=($shortcut.IconLocation -replace ',\s*-?\d+$','').Trim('"')
+        # Shell links may use the target executable's embedded icon (",0").
+        if ([string]::IsNullOrWhiteSpace($icon)) { $icon=$shortcut.TargetPath }
+        $icon=[Environment]::ExpandEnvironmentVariables($icon)
+        if (!(Test-Path $icon)) { throw "The $kind shortcut icon file is missing: $icon. Reported icon: $($shortcut.IconLocation)" }
       }
     }
   } finally { [Runtime.InteropServices.Marshal]::FinalReleaseComObject($shell) | Out-Null }
