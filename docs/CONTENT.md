@@ -58,3 +58,9 @@ No live feed has been deployed, no key is configured in this build, and network 
 ## 🧾 Hero page facts
 
 Eleven additional numeric facts come from eight official hero pages. `content/hero-page-facts.json` records the short factual excerpts; the importer checks each excerpt inside the named ability. `content/hero-fact-evidence.json` records page hashes and capture dates. Together with the 41 patch facts, the package contains 52 sourced values. Missing base values remain blank.
+
+## 🏷️ Draft reviews and source hashes
+
+The bundled matchup drafts have no balance review date and low confidence. Current recommendations require a matching patch, a review date and a clear stale flag. Both desktop and frontend validation reject contradictory active review metadata. The publisher first marks affected guides stale, then checks these rules, so changing a patch does not approve old advice.
+
+Older Python source records hashed text after universal-newline conversion. They retain that `sha256` field for audit and also record `rawSha256` from the captured file bytes. Use the raw-byte field for direct page comparisons. Signed content package hashes always use exact package bytes.

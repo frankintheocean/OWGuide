@@ -22,11 +22,11 @@ for tag in re.findall(r'<a[^>]*class="hero-card"[^>]*>',roster_page):
  h.update(name=name,role=role,abilities=abilities,review={'sourceId':source['id'],'patch':patch,'reviewedAt':None,'confidence':'medium','stale':True})
  # A role rework invalidates old coaching, even if the hero ID is unchanged.
  if key in existing and previous_role!=role:h.update(playstyle=[],strengths=[],weaknesses=[],attributes={},guides=[])
- heroes.append(h);evidence.append({'id':key,'url':f'https://overwatch.blizzard.com/en-us/heroes/{key}/','retrievedAt':stamp,'sha256':hashlib.sha256(page.encode()).hexdigest(),'abilityIds':[a['id'] for a in abilities],'role':role})
+ heroes.append(h);evidence.append({'id':key,'url':f'https://overwatch.blizzard.com/en-us/heroes/{key}/','retrievedAt':stamp,'sha256':hashlib.sha256(page.encode()).hexdigest(),'rawSha256':hashlib.sha256(pathlib.Path(f'/tmp/owguide-live-heroes/{key}.html').read_bytes()).hexdigest(),'abilityIds':[a['id'] for a in abilities],'role':role})
 content.update(version=content['version'],patch=patch,generatedAt=stamp,liveVerifiedAt=stamp,rosterVerified=True,heroes=sorted(heroes,key=lambda h:h['name']))
 # Existing tactical advice remains stale; source capture is not editorial approval.
 for collection in ['matchups','synergies','mapFit']:
  for edge in content[collection]:edge['review']['stale']=True
 (root/'src/data/content.json').write_text(json.dumps(content,ensure_ascii=False,indent=2)+'\n')
-(root/'content/source-evidence.json').write_text(json.dumps({'capturedAt':stamp,'patchTitle':patch,'rosterSha256':hashlib.sha256(roster_page.encode()).hexdigest(),'patchSha256':hashlib.sha256(patch_page.encode()).hexdigest(),'heroPages':evidence,'note':'Official metadata captured. Live balance review of coaching and map rotation remain separate.'},ensure_ascii=False,indent=2)+'\n')
+(root/'content/source-evidence.json').write_text(json.dumps({'capturedAt':stamp,'patchTitle':patch,'rosterSha256':hashlib.sha256(roster_page.encode()).hexdigest(),'patchSha256':hashlib.sha256(patch_page.encode()).hexdigest(),'rawRosterSha256':hashlib.sha256(pathlib.Path('/tmp/owguide-live-heroes.html').read_bytes()).hexdigest(),'rawPatchSha256':hashlib.sha256(pathlib.Path('/tmp/owguide-live-patch.html').read_bytes()).hexdigest(),'heroPages':evidence,'sha256Method':'Legacy sha256 values normalize universal newlines; raw-prefixed hashes use capture bytes.','note':'Official metadata captured. Live balance review of coaching and map rotation remain separate.'},ensure_ascii=False,indent=2)+'\n')
 print(f'Imported {len(heroes)} official roster entries for {patch}')

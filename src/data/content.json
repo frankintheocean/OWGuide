@@ -1,25 +1,25 @@
 {
   "schemaVersion": 1,
-  "version": "0.5.0",
+  "version": "0.6.0",
   "patch": "Overwatch Retail Patch Notes – October 6, 2026",
-  "generatedAt": "2026-10-12T06:33:08.696184Z",
+  "generatedAt": "2026-10-12T08:40:46.085279Z",
   "liveVerifiedAt": "2026-10-12T03:23:53.284825Z",
   "rosterVerified": true,
   "standardTeamSize": 5,
   "sources": [
     {
       "id": "overfast-snapshot",
-      "url": "https://github.com/TeKrop/overfast-api/tree/6ca950ec3ed2b3419b2b89beb9fbf3f5bad77405",
+      "url": "https://github.com/TeKrop/overfast-api/blob/6ca950ec3ed2b3419b2b89beb9fbf3f5bad77405/app/domain/utils/data/maps.csv",
       "label": "OverFast source snapshot (not live verification)",
-      "retrievedAt": "2026-10-12T00:00:00Z",
+      "retrievedAt": "2026-10-12T08:40:46.085279Z",
       "kind": "snapshot",
       "license": "MIT for source code; names and role/mode facts only. No Blizzard artwork or page prose bundled."
     },
     {
       "id": "owguide-editorial",
-      "url": "https://github.com/frankintheocean/OWGuide",
+      "url": "https://github.com/frankintheocean/OWGuide/blob/d644ed2606c9ccf6d93af0c86ae998bf86767a46/src/data/content.json",
       "label": "OWGuide original coaching; balance review pending",
-      "retrievedAt": "2026-10-12T00:00:00Z",
+      "retrievedAt": "2026-10-12T08:40:46.085279Z",
       "kind": "editorial",
       "license": "GPL-3.0; original text"
     },
@@ -6626,8 +6626,8 @@
       "review": {
         "sourceId": "owguide-editorial",
         "patch": "Unverified snapshot",
-        "reviewedAt": "2026-10-12T00:00:00Z",
-        "confidence": "medium",
+        "reviewedAt": null,
+        "confidence": "low",
         "stale": true
       }
     },
@@ -6639,8 +6639,8 @@
       "review": {
         "sourceId": "owguide-editorial",
         "patch": "Unverified snapshot",
-        "reviewedAt": "2026-10-12T00:00:00Z",
-        "confidence": "medium",
+        "reviewedAt": null,
+        "confidence": "low",
         "stale": true
       }
     },
@@ -6652,8 +6652,8 @@
       "review": {
         "sourceId": "owguide-editorial",
         "patch": "Unverified snapshot",
-        "reviewedAt": "2026-10-12T00:00:00Z",
-        "confidence": "medium",
+        "reviewedAt": null,
+        "confidence": "low",
         "stale": true
       }
     },
@@ -6665,8 +6665,8 @@
       "review": {
         "sourceId": "owguide-editorial",
         "patch": "Unverified snapshot",
-        "reviewedAt": "2026-10-12T00:00:00Z",
-        "confidence": "medium",
+        "reviewedAt": null,
+        "confidence": "low",
         "stale": true
       }
     },
@@ -6678,8 +6678,8 @@
       "review": {
         "sourceId": "owguide-editorial",
         "patch": "Unverified snapshot",
-        "reviewedAt": "2026-10-12T00:00:00Z",
-        "confidence": "medium",
+        "reviewedAt": null,
+        "confidence": "low",
         "stale": true
       }
     },
@@ -6691,8 +6691,8 @@
       "review": {
         "sourceId": "owguide-editorial",
         "patch": "Unverified snapshot",
-        "reviewedAt": "2026-10-12T00:00:00Z",
-        "confidence": "medium",
+        "reviewedAt": null,
+        "confidence": "low",
         "stale": true
       }
     },
@@ -6704,8 +6704,8 @@
       "review": {
         "sourceId": "owguide-editorial",
         "patch": "Unverified snapshot",
-        "reviewedAt": "2026-10-12T00:00:00Z",
-        "confidence": "medium",
+        "reviewedAt": null,
+        "confidence": "low",
         "stale": true
       }
     },
@@ -6717,8 +6717,8 @@
       "review": {
         "sourceId": "owguide-editorial",
         "patch": "Unverified snapshot",
-        "reviewedAt": "2026-10-12T00:00:00Z",
-        "confidence": "medium",
+        "reviewedAt": null,
+        "confidence": "low",
         "stale": true
       }
     },
@@ -6730,8 +6730,8 @@
       "review": {
         "sourceId": "owguide-editorial",
         "patch": "Unverified snapshot",
-        "reviewedAt": "2026-10-12T00:00:00Z",
-        "confidence": "medium",
+        "reviewedAt": null,
+        "confidence": "low",
         "stale": true
       }
     }
@@ -6745,8 +6745,8 @@
       "review": {
         "sourceId": "owguide-editorial",
         "patch": "Unverified snapshot",
-        "reviewedAt": "2026-10-12T00:00:00Z",
-        "confidence": "medium",
+        "reviewedAt": null,
+        "confidence": "low",
         "stale": true
       }
     }

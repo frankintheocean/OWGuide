@@ -333,3 +333,19 @@ fn unicode_text_limits_match_the_frontend_without_installing_unreadable_content(
     assert!(store.install(&c).is_err());
     assert_eq!(store.snapshot().unwrap().content, seed());
 }
+
+#[test]
+fn active_content_reviews_require_the_current_patch_and_a_date() {
+    let mut value = seed();
+    let patch = value["patch"].clone();
+    let date = value["generatedAt"].clone();
+    value["matchups"][0]["explanation"] = serde_json::json!("TEST FIXTURE for review metadata");
+    value["matchups"][0]["review"]["stale"] = serde_json::json!(false);
+    value["matchups"][0]["review"]["patch"] = patch;
+    value["matchups"][0]["review"]["reviewedAt"] = Value::Null;
+    assert!(validate_content(&value).is_err());
+    value["matchups"][0]["review"]["reviewedAt"] = date;
+    assert!(validate_content(&value).is_ok());
+    value["matchups"][0]["review"]["patch"] = serde_json::json!("TEST OLD PATCH");
+    assert!(validate_content(&value).is_err());
+}

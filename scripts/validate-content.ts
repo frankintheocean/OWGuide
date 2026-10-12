@@ -1,3 +1,4 @@
+import { isCurrentReview } from "../src/domain/reviews";
 import { readFileSync } from "node:fs";
 import { contentSchema } from "../src/domain/schema";
 const path =
@@ -28,22 +29,30 @@ if (process.argv.includes("--release")) {
       !h.abilities.length ||
       h.abilities.some((a) => !a.description || a.kind === "unknown") ||
       new Set(h.guides.map((g) => g.level)).size !== 3 ||
-      h.review.stale ||
-      !h.review.reviewedAt
+      !isCurrentReview(h.review, c.patch)
     )
       gaps.push(`${h.name}: substantive hero review incomplete`);
-    if (!c.matchups.some((m) => m.heroId === h.id && !m.review.stale))
+    if (
+      !c.matchups.some(
+        (m) => m.heroId === h.id && isCurrentReview(m.review, c.patch),
+      )
+    )
       gaps.push(`${h.name}: no current reviewed matchup`);
   }
   if (
     !c.maps.length ||
-    c.maps.some((m) => !m.currentVerified || m.review.stale || !m.notes.length)
+    c.maps.some(
+      (m) =>
+        !m.currentVerified ||
+        !isCurrentReview(m.review, c.patch) ||
+        !m.notes.length,
+    )
   )
     gaps.push("Map coverage and coaching review incomplete");
   if (
-    c.matchups.some((m) => m.review.stale) ||
-    c.synergies.some((m) => m.review.stale) ||
-    c.mapFit.some((m) => m.review.stale)
+    c.matchups.some((m) => !isCurrentReview(m.review, c.patch)) ||
+    c.synergies.some((m) => !isCurrentReview(m.review, c.patch)) ||
+    c.mapFit.some((m) => !isCurrentReview(m.review, c.patch))
   )
     gaps.push("Stale recommendation relationships remain");
   if (gaps.length) {

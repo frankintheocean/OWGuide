@@ -107,7 +107,7 @@ describe("counter scoring", () => {
         explanation: "TEST FIXTURE, not a factual map recommendation",
         review: {
           sourceId: c.sources[0].id,
-          patch: "test",
+          patch: c.patch,
           reviewedAt: c.generatedAt,
           confidence: "high",
           stale: false,
@@ -252,4 +252,54 @@ it("uses the same emoji text boundary as the native validator", () => {
     userSchema.safeParse({ ...defaultUser, notes: { ana: "🙂".repeat(12001) } })
       .success,
   ).toBe(false);
+});
+
+it("requires a matching patch and a review date for current recommendations", () => {
+  const c = structuredClone(content);
+  const matchup = c.matchups.find(
+    (row) => row.heroId === "dva" && row.enemyId === "pharah",
+  )!;
+  matchup.explanation =
+    "TEST FIXTURE for review metadata, not a game recommendation";
+  matchup.review = {
+    ...matchup.review,
+    patch: c.patch,
+    reviewedAt: c.generatedAt,
+    stale: false,
+    confidence: "high",
+  };
+  expect(contentSchema.safeParse(c).success).toBe(true);
+  expect(
+    recommend(c, ["pharah"], [], "tank", "").find(
+      (row) => row.hero.id === "dva",
+    )?.score,
+  ).toBe(2);
+  matchup.review.patch = "TEST OLD PATCH";
+  expect(contentSchema.safeParse(c).success).toBe(false);
+  expect(
+    recommend(c, ["pharah"], [], "tank", "").find(
+      (row) => row.hero.id === "dva",
+    )?.score,
+  ).toBeNull();
+  const archived = recommend(c, ["pharah"], [], "tank", "", true).find(
+    (row) => row.hero.id === "dva",
+  )!;
+  expect(archived.score).toBe(2);
+  expect(archived.confidence).toBe("low");
+  expect(archived.evidence[0].stale).toBe(true);
+  matchup.review.patch = c.patch;
+  matchup.review.reviewedAt = null;
+  expect(contentSchema.safeParse(c).success).toBe(false);
+  expect(
+    recommend(c, ["pharah"], [], "tank", "").find(
+      (row) => row.hero.id === "dva",
+    )?.score,
+  ).toBeNull();
+});
+it("does not assign balance review dates to the bundled unreviewed drafts", () => {
+  for (const row of [...content.matchups, ...content.synergies]) {
+    expect(row.review.stale).toBe(true);
+    expect(row.review.reviewedAt).toBeNull();
+    expect(row.review.confidence).toBe("low");
+  }
 });

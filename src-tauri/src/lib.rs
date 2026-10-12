@@ -50,6 +50,12 @@ pub fn validate_content(value: &Value) -> Result<()> {
             if !sources.contains(row["review"]["sourceId"].as_str().unwrap_or_default()) {
                 return Err("Unknown review source".into());
             }
+            let review = &row["review"];
+            if review["stale"].as_bool() == Some(false)
+                && (review["patch"] != value["patch"] || review["reviewedAt"].is_null())
+            {
+                return Err("Active reviews need a date and the current patch".into());
+            }
             if key == "heroes" {
                 let mut levels = HashSet::new();
                 for guide in row["guides"].as_array().ok_or("Missing guides")? {

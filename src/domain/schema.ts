@@ -1,3 +1,4 @@
+import { isCurrentReview } from "./reviews";
 import { z } from "zod";
 export const roleSchema = z.enum(["tank", "damage", "support"]);
 const id = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
@@ -21,6 +22,7 @@ const review = z
     stale: z.boolean(),
   })
   .strict();
+export type Review = z.infer<typeof review>;
 export const guideSchema = z
   .object({
     level: z.enum(["beginner", "intermediate", "advanced"]),
@@ -101,7 +103,7 @@ export const mapSchema = z
     review,
   })
   .strict();
-export const contentSchema = z
+export const contentStructureSchema = z
   .object({
     schemaVersion: z.literal(1),
     version: z.string().regex(/^\d+\.\d+\.\d+$/),
@@ -147,63 +149,72 @@ export const contentSchema = z
         .strict(),
     ),
   })
-  .strict()
-  .superRefine((c, ctx) => {
-    const heroes = new Set(c.heroes.map((h) => h.id)),
-      maps = new Set(c.maps.map((m) => m.id)),
-      sources = new Set(c.sources.map((s) => s.id));
-    const issue = (message: string) =>
-      ctx.addIssue({ code: "custom", message });
-    if (
-      heroes.size !== c.heroes.length ||
-      maps.size !== c.maps.length ||
-      sources.size !== c.sources.length
-    )
-      issue("Duplicate content ID");
-    for (const h of c.heroes) {
-      if (new Set(h.guides.map((g) => g.level)).size !== h.guides.length)
-        issue(`Duplicate guide level in ${h.id}`);
-      if (new Set(h.abilities.map((a) => a.id)).size !== h.abilities.length)
-        issue(`Duplicate ability in ${h.id}`);
-      if (!sources.has(h.review.sourceId)) issue(`Unknown source for ${h.id}`);
-      for (const a of h.abilities) {
-        if (new Set(a.stats.map((s) => s.name)).size !== a.stats.length)
-          issue(`Duplicate statistic in ${h.id}:${a.id}`);
-        for (const s of a.stats)
-          if (!sources.has(s.sourceId)) issue("Unknown statistic source");
-      }
+  .strict();
+export const contentSchema = contentStructureSchema.superRefine((c, ctx) => {
+  const heroes = new Set(c.heroes.map((h) => h.id)),
+    maps = new Set(c.maps.map((m) => m.id)),
+    sources = new Set(c.sources.map((s) => s.id));
+  const issue = (message: string) => ctx.addIssue({ code: "custom", message });
+  if (
+    heroes.size !== c.heroes.length ||
+    maps.size !== c.maps.length ||
+    sources.size !== c.sources.length
+  )
+    issue("Duplicate content ID");
+  for (const row of [
+    ...c.heroes,
+    ...c.maps,
+    ...c.matchups,
+    ...c.synergies,
+    ...c.mapFit,
+  ]) {
+    if (!row.review.stale && !isCurrentReview(row.review, c.patch))
+      issue("Active reviews need a date and the current patch");
+  }
+  for (const h of c.heroes) {
+    if (new Set(h.guides.map((g) => g.level)).size !== h.guides.length)
+      issue(`Duplicate guide level in ${h.id}`);
+    if (new Set(h.abilities.map((a) => a.id)).size !== h.abilities.length)
+      issue(`Duplicate ability in ${h.id}`);
+    if (!sources.has(h.review.sourceId)) issue(`Unknown source for ${h.id}`);
+    for (const a of h.abilities) {
+      if (new Set(a.stats.map((s) => s.name)).size !== a.stats.length)
+        issue(`Duplicate statistic in ${h.id}:${a.id}`);
+      for (const s of a.stats)
+        if (!sources.has(s.sourceId)) issue("Unknown statistic source");
     }
-    for (const m of c.maps) {
-      if (new Set(m.markers.map((p) => p.id)).size !== m.markers.length)
-        issue(`Duplicate marker in ${m.id}`);
-      if (!sources.has(m.review.sourceId)) issue("Unknown map source");
-      if (m.markers.length && !m.asset)
-        issue("Coordinates require a rights-cleared image");
-      if (m.asset && !sources.has(m.asset.sourceId))
-        issue("Unknown asset source");
-      for (const p of m.markers)
-        if (!sources.has(p.sourceId) || p.heroIds.some((h) => !heroes.has(h)))
-          issue("Invalid map marker reference");
-    }
-    for (const e of [...c.matchups, ...c.synergies, ...c.mapFit]) {
-      if (!heroes.has(e.heroId) || !sources.has(e.review.sourceId))
-        issue("Unknown relationship reference");
-      if ("enemyId" in e && (!heroes.has(e.enemyId) || e.enemyId === e.heroId))
-        issue("Invalid opponent");
-      if ("allyId" in e && (!heroes.has(e.allyId) || e.allyId === e.heroId))
-        issue("Invalid ally");
-      if ("mapId" in e && !maps.has(e.mapId)) issue("Invalid map");
-    }
-    for (const rows of [c.matchups, c.synergies, c.mapFit]) {
-      const keys = rows.map(
-        (e) =>
-          `${e.heroId}:${"enemyId" in e ? e.enemyId : "allyId" in e ? e.allyId : e.mapId}`,
-      );
-      if (new Set(keys).size !== keys.length) issue("Duplicate relationship");
-    }
-    if (c.rosterVerified && !c.liveVerifiedAt)
-      issue("Verified roster needs a live verification timestamp");
-  });
+  }
+  for (const m of c.maps) {
+    if (new Set(m.markers.map((p) => p.id)).size !== m.markers.length)
+      issue(`Duplicate marker in ${m.id}`);
+    if (!sources.has(m.review.sourceId)) issue("Unknown map source");
+    if (m.markers.length && !m.asset)
+      issue("Coordinates require a rights-cleared image");
+    if (m.asset && !sources.has(m.asset.sourceId))
+      issue("Unknown asset source");
+    for (const p of m.markers)
+      if (!sources.has(p.sourceId) || p.heroIds.some((h) => !heroes.has(h)))
+        issue("Invalid map marker reference");
+  }
+  for (const e of [...c.matchups, ...c.synergies, ...c.mapFit]) {
+    if (!heroes.has(e.heroId) || !sources.has(e.review.sourceId))
+      issue("Unknown relationship reference");
+    if ("enemyId" in e && (!heroes.has(e.enemyId) || e.enemyId === e.heroId))
+      issue("Invalid opponent");
+    if ("allyId" in e && (!heroes.has(e.allyId) || e.allyId === e.heroId))
+      issue("Invalid ally");
+    if ("mapId" in e && !maps.has(e.mapId)) issue("Invalid map");
+  }
+  for (const rows of [c.matchups, c.synergies, c.mapFit]) {
+    const keys = rows.map(
+      (e) =>
+        `${e.heroId}:${"enemyId" in e ? e.enemyId : "allyId" in e ? e.allyId : e.mapId}`,
+    );
+    if (new Set(keys).size !== keys.length) issue("Duplicate relationship");
+  }
+  if (c.rosterVerified && !c.liveVerifiedAt)
+    issue("Verified roster needs a live verification timestamp");
+});
 export type Content = z.infer<typeof contentSchema>;
 export type Hero = Content["heroes"][number];
 export type GameMap = Content["maps"][number];

@@ -143,7 +143,7 @@ export default function App() {
     const click = (event: MouseEvent) => {
       const anchor =
         event.target instanceof Element ? event.target.closest("a") : null;
-      if (anchor?.href.startsWith("https://")) {
+      if (isTauri() && anchor?.href.startsWith("https://")) {
         event.preventDefault();
         void openSource(anchor.href).catch((e) => setNotice(message(e)));
       }
@@ -978,21 +978,41 @@ export default function App() {
                             </button>
                             <p>
                               {r.hero.role} · {r.confidence} confidence ·{" "}
-                              {r.coverage}/{enemy.length} threats reviewed
+                              {r.coverage}/{enemy.length} interactions included
                             </p>
                             {r.evidence.map((e, i) => (
-                              <p key={i}>
-                                <span className="score-inline">
-                                  {e.points > 0 ? "+" : ""}
-                                  {e.points}
-                                </span>
-                                {e.label}
-                              </p>
+                              <div key={i}>
+                                <p>
+                                  <span className="score-inline">
+                                    {e.points > 0 ? "+" : ""}
+                                    {e.points}
+                                  </span>
+                                  {e.label}
+                                </p>
+                                <small>
+                                  {e.source && (
+                                    <>
+                                      <a
+                                        href={e.source.url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                      >
+                                        {e.source.label}
+                                      </a>
+                                      <br />
+                                    </>
+                                  )}
+                                  {e.review.patch} · {e.confidence} source
+                                  confidence ·{" "}
+                                  {e.review.reviewedAt ??
+                                    "Not balance reviewed"}
+                                </small>
+                              </div>
                             ))}
                             {r.unknown > 0 && (
                               <small>
-                                {r.unknown} opponents have no reviewed
-                                interaction.
+                                {r.unknown} opponents have no included
+                                interaction evidence.
                               </small>
                             )}
                           </div>

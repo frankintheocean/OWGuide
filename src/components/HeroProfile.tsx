@@ -281,7 +281,22 @@ export function HeroProfile({
                   </h3>
                   <p>{m.explanation}</p>
                   <small>
-                    {m.review.patch} · {m.review.stale ? "Stale" : "Reviewed"}
+                    {m.review.patch} ·{" "}
+                    {m.review.stale ? "Review pending" : "Reviewed"}
+                    <br />
+                    {m.review.reviewedAt ?? "No balance review recorded"}
+                    <br />
+                    <a
+                      href={
+                        content.sources.find(
+                          (source) => source.id === m.review.sourceId,
+                        )?.url
+                      }
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Matchup source
+                    </a>
                   </small>
                 </article>
               ))}

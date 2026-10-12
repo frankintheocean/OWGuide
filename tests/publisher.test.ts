@@ -1,3 +1,4 @@
+import { contentSchema } from "../src/domain/schema";
 import { afterEach, expect, it } from "vitest";
 import { generateKeyPairSync, verify, createHash } from "node:crypto";
 import {
@@ -29,7 +30,7 @@ function fixture() {
   writeFileSync(input, JSON.stringify(content));
   return { directory, keys, key, input };
 }
-function publish(f: ReturnType<typeof fixture>, base: string) {
+function publish(f: ReturnType<typeof fixture>, base: string, previous = "") {
   return execFileSync(
     process.execPath,
     [
@@ -44,7 +45,7 @@ function publish(f: ReturnType<typeof fixture>, base: string) {
       env: {
         ...process.env,
         OWGUIDE_SIGNING_KEY_FILE: f.key,
-        OWGUIDE_PREVIOUS_CONTENT: "",
+        OWGUIDE_PREVIOUS_CONTENT: previous,
       },
       stdio: "pipe",
       timeout: 15000,
@@ -110,4 +111,27 @@ it("rejects broken content references before signing", () => {
   writeFileSync(f.input, JSON.stringify(invalid));
   expect(() => publish(f, "https://publisher.example/")).toThrow();
   expect(existsSync(join(f.directory, "release"))).toBe(false);
+});
+
+it("marks old reviews stale before validating a changed patch package", () => {
+  const f = fixture();
+  const previous = contentSchema.parse(structuredClone(content));
+  previous.heroes[0].review.stale = false;
+  previous.heroes[0].review.reviewedAt = previous.generatedAt;
+  previous.heroes[0].review.patch = previous.patch;
+  const previousPath = join(f.directory, "previous.json");
+  writeFileSync(previousPath, JSON.stringify(previous));
+  const next = structuredClone(previous);
+  next.patch = "TEST PATCH: synthetic publisher fixture";
+  next.version = "99.0.0";
+  writeFileSync(f.input, JSON.stringify(next));
+  publish(f, "https://publisher.example/", previousPath);
+  const installed = JSON.parse(
+    readFileSync(
+      join(f.directory, "release/content/content-99.0.0.json"),
+      "utf8",
+    ),
+  );
+  expect(installed.heroes[0].review.stale).toBe(true);
+  expect(installed.heroes[0].review.patch).toBe(previous.patch);
 });

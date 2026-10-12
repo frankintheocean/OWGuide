@@ -22,7 +22,7 @@ for hero_id in sorted(set(f['hero'] for f in facts)):
   if fact['evidence'] not in abilities.get(ability['name'],''):raise SystemExit('Missing scoped numeric evidence: '+hero_id+':'+ability['name'])
   stat={k:fact[k] for k in ['name','value','unit']}|{'sourceId':source_id}
   ability['stats']=[s for s in ability['stats'] if s['name']!=stat['name']]+[stat]
- records.append({'heroId':hero_id,'sourceId':source_id,'sha256':hashlib.sha256(raw.encode()).hexdigest()})
+ records.append({'heroId':hero_id,'sourceId':source_id,'sha256':hashlib.sha256(raw.encode()).hexdigest(),'rawSha256':hashlib.sha256(pathlib.Path(f'/tmp/owguide-live-heroes/{hero_id}.html').read_bytes()).hexdigest()})
 content['version']=max([content['version'],'0.5.0'],key=lambda v:tuple(map(int,v.split('.'))))
 content['generatedAt']=datetime.datetime.now(datetime.timezone.utc).isoformat().replace('+00:00','Z')
 (root/'src/data/content.json').write_text(json.dumps(content,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

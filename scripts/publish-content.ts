@@ -7,7 +7,7 @@ import {
 } from "node:crypto";
 import { isIP } from "node:net";
 import { invalidateChangedContent } from "../src/domain/content-review";
-import { contentSchema } from "../src/domain/schema";
+import { contentSchema, contentStructureSchema } from "../src/domain/schema";
 const input = process.argv[2] ?? "src/data/content.json",
   base = process.argv[3];
 let destination: URL;
@@ -42,12 +42,13 @@ if (!keyPath)
   throw new Error(
     "Set OWGUIDE_SIGNING_KEY_FILE to a private Ed25519 PEM outside the repository.",
   );
-let c = contentSchema.parse(JSON.parse(readFileSync(input, "utf8")));
+let c = contentStructureSchema.parse(JSON.parse(readFileSync(input, "utf8")));
 const previous = process.env.OWGUIDE_PREVIOUS_CONTENT;
 if (previous) {
   const old = contentSchema.parse(JSON.parse(readFileSync(previous, "utf8")));
   c = invalidateChangedContent(old, c);
 }
+c = contentSchema.parse(c);
 if (c.maps.some((map) => map.asset !== null || map.markers.length))
   throw new Error("This client currently supports text-only map packages.");
 const key = createPrivateKey(readFileSync(keyPath));

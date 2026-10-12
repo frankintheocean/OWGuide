@@ -82,8 +82,10 @@ try {
 if ($LASTEXITCODE -ne 0) { throw 'Could not seed GUI repair notes.' }
 $hash=(Get-FileHash $exe -Algorithm SHA256).Hash
 Remove-Item $exe
+@(Find-OWGuideShortcuts) | ForEach-Object { Remove-Item $_.FullName }
 Run-Setup 'Repair OWGuide (must already be installed)'
 if (!(Test-Path $exe) -or (Get-FileHash $exe -Algorithm SHA256).Hash -ne $hash) { throw 'Setup GUI repair did not restore the expected executable.' }
+Test-OWGuideShortcuts $exe
 & python tests/desktop-db.py (Join-Path $data 'owguide.sqlite') --check-personal
 if ($LASTEXITCODE -ne 0) { throw 'Setup GUI repair changed personal data.' }
 Run-Setup 'Uninstall OWGuide'

@@ -66,7 +66,7 @@ Section
   SetOutPath $PLUGINSDIR
   File /oname=OWGuide.msi "${MSI_FILE}"
   ${If} $Operation == "repair"
-    ExecWait '"$SYSDIR\msiexec.exe" /fa "$PLUGINSDIR\OWGuide.msi" /passive /norestart /l*v "$LogFile"' $Result
+    ExecWait '"$SYSDIR\msiexec.exe" /fvamus "$PLUGINSDIR\OWGuide.msi" /passive /norestart /l*v "$LogFile"' $Result
   ${ElseIf} $Operation == "uninstall"
     ExecWait '"$SYSDIR\msiexec.exe" /x "$PLUGINSDIR\OWGuide.msi" /passive /norestart /l*v "$LogFile"' $Result
   ${Else}

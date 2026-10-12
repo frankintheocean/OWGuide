@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-12T08:40:46.085279+00:00",
+  "mapCatalog": {
+    "maps": 59,
+    "sha256": "d492fcb158915e8d2fa81dac41ffbbae890735c2e25b41fd9eb4b374651b2818",
+    "sourceCommit": "6ca950ec3ed2b3419b2b89beb9fbf3f5bad77405"
+  },
+  "editorialSourceCommit": "d644ed2606c9ccf6d93af0c86ae998bf86767a46",
+  "note": "Re-read pinned map names and original draft matchup text. Draft relationships have no balance review date and low confidence. No matchup or map rotation approved."
+}

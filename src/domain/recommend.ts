@@ -1,4 +1,5 @@
-import type { Content, Role } from "./schema";
+import { isCurrentReview } from "./reviews";
+import type { Content, Role, Review } from "./schema";
 export function recommend(
   c: Content,
   enemyIds: string[],
@@ -9,7 +10,9 @@ export function recommend(
 ) {
   const enemies = [...new Set(enemyIds)].slice(0, c.standardTeamSize),
     allies = [...new Set(allyIds)].slice(0, c.standardTeamSize - 1);
-  const valid = (r: { stale: boolean }) => includeStale || !r.stale;
+  const sources = new Map(c.sources.map((source) => [source.id, source]));
+  const current = (r: Review) => isCurrentReview(r, c.patch);
+  const valid = (r: Review) => includeStale || current(r);
   return c.heroes
     .filter(
       (h) => (role === "all" || h.role === role) && !allies.includes(h.id),
@@ -20,6 +23,8 @@ export function recommend(
         label: string;
         confidence: string;
         stale: boolean;
+        review: Review;
+        source: Content["sources"][number] | undefined;
       }> = [];
       for (const e of c.matchups.filter(
         (e) =>
@@ -31,7 +36,9 @@ export function recommend(
           points: e.value * 2,
           label: e.explanation,
           confidence: e.review.confidence,
-          stale: e.review.stale,
+          stale: !current(e.review),
+          review: e.review,
+          source: sources.get(e.review.sourceId),
         });
       for (const e of c.synergies.filter(
         (e) =>
@@ -41,7 +48,9 @@ export function recommend(
           points: e.value,
           label: e.explanation,
           confidence: e.review.confidence,
-          stale: e.review.stale,
+          stale: !current(e.review),
+          review: e.review,
+          source: sources.get(e.review.sourceId),
         });
       for (const e of c.mapFit.filter(
         (e) => e.heroId === hero.id && e.mapId === mapId && valid(e.review),
@@ -50,7 +59,9 @@ export function recommend(
           points: e.value,
           label: e.explanation,
           confidence: e.review.confidence,
-          stale: e.review.stale,
+          stale: !current(e.review),
+          review: e.review,
+          source: sources.get(e.review.sourceId),
         });
       const coverage = c.matchups.filter(
         (e) =>

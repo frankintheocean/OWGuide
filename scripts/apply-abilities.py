@@ -16,9 +16,9 @@ for hero in content['heroes']:
   kind,description=row.split('|',1)
   if kind not in ['weapon','ability','passive','ultimate','unknown']: raise SystemExit('Invalid kind')
   ability.update(kind=kind,description=description)
- records.append({'heroId':hero['id'],'url':f"https://overwatch.blizzard.com/en-us/heroes/{hero['id']}/",'sha256':hashlib.sha256(raw.encode()).hexdigest(),'abilities':[a['id'] for a in hero['abilities']]})
-content['version']='0.3.0'
+ records.append({'heroId':hero['id'],'url':f"https://overwatch.blizzard.com/en-us/heroes/{hero['id']}/",'sha256':hashlib.sha256(raw.encode()).hexdigest(),'rawSha256':hashlib.sha256(page.read_bytes()).hexdigest(),'abilities':[a['id'] for a in hero['abilities']]})
+content['version']=max(content['version'],'0.3.0',key=lambda v:tuple(map(int,v.split('.'))))
 content['generatedAt']=datetime.datetime.now(datetime.timezone.utc).isoformat().replace('+00:00','Z')
 (root/'src/data/content.json').write_text(json.dumps(content,ensure_ascii=False,indent=2)+'\n')
-(root/'content/ability-evidence.json').write_text(json.dumps({'checkedAt':content['generatedAt'],'patch':content['patch'],'review':'OWGuide source-based editorial summary; no numeric balance claims; unknown classifications remain explicit. Coaching and matchups require separate review.','heroPages':records},indent=2)+'\n')
+(root/'content/ability-evidence.json').write_text(json.dumps({'checkedAt':content['generatedAt'],'patch':content['patch'],'review':'OWGuide source-based editorial summary; no numeric balance claims; unknown classifications remain explicit. Coaching and matchups require separate review.','heroPages':records,'sha256Method':'sha256 hashes universal-newline-normalized UTF-8 text; rawSha256 hashes capture bytes.'},indent=2)+'\n')
 print('Applied original mechanic summaries to',sum(len(h['abilities']) for h in content['heroes']),'abilities')
