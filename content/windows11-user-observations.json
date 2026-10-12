@@ -17,12 +17,14 @@
     {
       "check": "multi-monitor scaling and resizing",
       "result": "user-reported pass",
-      "statement": "scales and resizes fine across 3 monitors"
+      "statement": "scales and resizes fine across 3 monitors",
+      "detail": "User maximized and tried multiple smaller sizes on two horizontal monitors and one vertical monitor. Exact scales and which windows were tested are unknown."
     },
     {
       "check": "notes after restart",
       "result": "user-reported pass",
-      "statement": "saved notes open fine on restart"
+      "statement": "saved notes open fine on restart",
+      "detail": "Notes reopened while PC Wi-Fi remained connected; this does not verify offline launch."
     },
     {
       "check": "character artwork and tactical maps",
@@ -45,5 +47,17 @@
     "tested executable identity",
     "installer repair/uninstall observations"
   ],
-  "productionAcceptanceApproved": false
+  "productionAcceptanceApproved": false,
+  "displayArrangement": {
+    "horizontal": 2,
+    "vertical": 1
+  },
+  "candidateIdentityConfirmed": false,
+  "candidateRemoved": true,
+  "networkDuringRestart": {
+    "wifiConnected": true,
+    "appDisplayedOffline": true,
+    "networkDisabled": false
+  },
+  "followUpStatement": "User uninstalled and deleted the test build before recording its manifest commit. Screen reader was not tested."
 }
