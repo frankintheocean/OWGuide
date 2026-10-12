@@ -985,8 +985,9 @@ export default function App() {
               </div>
               {stale && (
                 <p className="callout">
-                  Archived advice can be wrong for the live patch. All bundled
-                  matchup advice is currently stale.
+                  Archived advice can be wrong for the live patch. Current
+                  editorial matchups remain low-confidence and are not
+                  gameplay-tested.
                 </p>
               )}
               {enemy.length === 0 ? (

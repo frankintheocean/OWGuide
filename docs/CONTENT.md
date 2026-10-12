@@ -69,3 +69,13 @@ Older Python source records hashed text after universal-newline conversion. They
 ## 🪄 Official perk mechanics
 
 Content package 0.7.0 includes 216 minor and major perk entries from all 54 captured official hero pages. The Abilities tab displays attributed short mechanic quotations, level, source, patch and review date. Universal search includes these entries. `content/perk-evidence.json` records every source URL and exact capture hash. The importer refuses changed captures or an unexpected four-perk layout. Perk changes invalidate related advice; a patch change marks unrevised perks stale. This does not approve broader guides or matchup rankings.
+
+## 🥊 Current editorial matchup advice
+
+Package 0.8.0 adds 55 directed assessments across all 54 heroes. Each is narrow, source-based original coaching with low confidence. These are subjective recommendations, not measured win rates or gameplay-tested rankings. Most pairs remain unknown, and this is not full favorable/neutral/unfavorable coverage for every hero. `content/matchup-reviews.json` records the author method, source page hashes and exact ability references; earlier drafts remain in `content/archived-matchups.json`.
+
+Commit the reviewed file, then run `npx tsx scripts/apply-matchups.ts <full-review-file-commit>`. The importer checks that its bytes match the pinned commit and that each cited hero, ability, page and source hash still matches this package. Use this step after the perk import. A changed patch or mechanic requires review again.
+
+## 🖼️ Required headshots
+
+The release gate now requires a licensed local headshot and favorable, neutral and unfavorable advice for every hero. A headshot record contains its local `/heroes/<hero-id>/headshot.png`, `.webp` or `.jpg` path, exact SHA-256, source and license. The build checks its file bytes. The interface loads it lazily and shows a visible fallback if it cannot load. Content updates can reuse the headshots shipped with the app; adding or changing image files requires an app build. No headshot files have been cleared or bundled yet. A schema field is not evidence of usage rights.

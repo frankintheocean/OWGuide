@@ -1,9 +1,19 @@
 import { isCurrentReview } from "../src/domain/reviews";
 import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { contentSchema } from "../src/domain/schema";
 const path =
   process.argv.find((a) => a.endsWith(".json")) ?? "src/data/content.json";
 const c = contentSchema.parse(JSON.parse(readFileSync(path, "utf8")));
+for (const hero of c.heroes) {
+  if (hero.portrait) {
+    const bytes = readFileSync(`public${hero.portrait.path}`);
+    if (
+      createHash("sha256").update(bytes).digest("hex") !== hero.portrait.sha256
+    )
+      throw new Error(`Headshot hash mismatch: ${hero.id}`);
+  }
+}
 console.log(
   `Schema and references passed: ${c.heroes.length} heroes, ${c.maps.length} maps, ${c.matchups.length} interactions.`,
 );
@@ -32,6 +42,19 @@ if (process.argv.includes("--release")) {
       !isCurrentReview(h.review, c.patch)
     )
       gaps.push(`${h.name}: substantive hero review incomplete`);
+    if (!h.portrait) gaps.push(`${h.name}: rights-cleared headshot missing`);
+    for (const assessment of [-1, 0, 1])
+      if (
+        !c.matchups.some(
+          (m) =>
+            m.heroId === h.id &&
+            m.value === assessment &&
+            isCurrentReview(m.review, c.patch),
+        )
+      )
+        gaps.push(
+          `${h.name}: ${assessment > 0 ? "good matchup" : assessment < 0 ? "counter threat" : "neutral matchup"} coverage incomplete`,
+        );
     if (
       !c.matchups.some(
         (m) => m.heroId === h.id && isCurrentReview(m.review, c.patch),

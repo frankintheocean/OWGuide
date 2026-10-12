@@ -47,7 +47,7 @@ test("hero guide tabs, favorites, drill and notes persist offline", async ({
     2,
   );
 });
-test("counter picker explains archival scores and unknowns", async ({
+test("counter picker explains current editorial scores and unknowns", async ({
   page,
 }) => {
   await page.goto("/");
@@ -57,13 +57,16 @@ test("counter picker explains archival scores and unknowns", async ({
   await page
     .getByRole("combobox", { name: "Enemy team (0/5)" })
     .selectOption("pharah");
-  await expect(
-    page.getByText("No reviewed evidence supports a ranking", { exact: false }),
-  ).toBeVisible();
+  await expect(page.locator(".recommendation").first()).toContainText("+2");
+  await expect(page.locator(".recommendation").first()).toContainText(
+    "low confidence",
+  );
   await page
     .getByRole("checkbox", { name: "Include archived advice", exact: false })
     .check();
-  await expect(page.locator(".recommendation").first()).toContainText("D.Va");
+  await expect(
+    page.locator(".recommendation").filter({ hasText: "D.Va" }),
+  ).toContainText("+2");
   await expect(page.locator(".recommendation").first()).toContainText("+2");
   await expect(page.locator(".recommendation").first()).toContainText(
     "low confidence",

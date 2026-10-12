@@ -37,6 +37,19 @@ export const heroSchema = z
     id,
     name: z.string().min(1),
     role: roleSchema,
+    portrait: z
+      .object({
+        path: z
+          .string()
+          .regex(
+            /^\/heroes\/[a-z0-9]+(?:-[a-z0-9]+)*\/headshot\.(?:png|webp|jpg)$/,
+          ),
+        sourceId: id,
+        sha256: z.string().regex(/^[a-f0-9]{64}$/),
+        license: z.string().min(1).max(12000),
+      })
+      .strict()
+      .optional(),
     biography: text.nullable(),
     difficulty: z.enum(["approachable", "moderate", "demanding"]).nullable(),
     playstyle: z.array(text),
@@ -193,6 +206,12 @@ export const contentSchema = contentStructureSchema.superRefine((c, ctx) => {
     if (new Set(h.abilities.map((a) => a.id)).size !== h.abilities.length)
       issue(`Duplicate ability in ${h.id}`);
     if (!sources.has(h.review.sourceId)) issue(`Unknown source for ${h.id}`);
+    if (
+      h.portrait &&
+      (!sources.has(h.portrait.sourceId) ||
+        !h.portrait.path.startsWith(`/heroes/${h.id}/`))
+    )
+      issue(`Invalid headshot source or hero path for ${h.id}`);
     if (
       new Set((h.perks ?? []).map((p) => p.id)).size !== (h.perks ?? []).length
     )

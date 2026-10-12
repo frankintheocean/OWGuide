@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { Content, Hero, UserData } from "../domain/schema";
+import { isCurrentReview } from "../domain/reviews";
 import { Heart, NotebookPen } from "lucide-react";
 import { HeroGlyph } from "./HeroGlyph";
 import { MapView } from "./MapView";
@@ -295,9 +296,33 @@ export function HeroProfile({
         {tab === "Matchups" && (
           <>
             <p className="callout">
-              Qualitative coaching, not win probabilities. Archived advice needs
-              a live patch review.
+              Source-based editorial coaching, not measured win rates or
+              gameplay-tested rankings. Unlisted opponents remain unknown.
             </p>
+            <div className="attribute-grid">
+              {([-1, 0, 1] as const).map((value) => {
+                const count = content.matchups.filter(
+                  (m) =>
+                    m.heroId === hero.id &&
+                    m.value === value &&
+                    isCurrentReview(m.review, content.patch),
+                ).length;
+                return (
+                  <div key={value}>
+                    <small>
+                      {value > 0
+                        ? "Good matchups"
+                        : value < 0
+                          ? "Counters to respect"
+                          : "Situational matchups"}
+                    </small>
+                    <strong>
+                      {count ? `${count} assessed` : "Coverage missing"}
+                    </strong>
+                  </div>
+                );
+              })}
+            </div>
             {content.matchups
               .filter((m) => m.heroId === hero.id)
               .map((m) => (
@@ -306,10 +331,10 @@ export function HeroProfile({
                     {content.heroes.find((h) => h.id === m.enemyId)?.name}
                     <span className="badge">
                       {m.value > 0
-                        ? "Opportunity"
+                        ? "Good matchup"
                         : m.value < 0
-                          ? "Threat"
-                          : "Neutral"}{" "}
+                          ? "Counter threat"
+                          : "Situational"}{" "}
                       · {m.review.confidence}
                     </span>
                   </h3>

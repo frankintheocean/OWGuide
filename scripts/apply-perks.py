@@ -30,7 +30,7 @@ for hero in content['heroes']:
         if not identifier or not description: raise SystemExit('Incomplete official perk')
         hero['perks'].append({'id':identifier,'name':name,'tier':tier,'description':description,'review':{'sourceId':source_id,'patch':content['patch'],'reviewedAt':checked_at,'confidence':'high','stale':False}})
     evidence.append({'heroId':hero['id'],'sourceId':source_id,'url':source['url'],'rawSha256':digest,'perks':hero['perks']})
-content['version']='0.7.0'
+content['version']=max(content['version'],'0.7.0',key=lambda v:tuple(map(int,v.split('.'))))
 content['generatedAt']=datetime.datetime.now(datetime.timezone.utc).isoformat().replace('+00:00','Z')
 (root/'src/data/content.json').write_text(json.dumps(content,ensure_ascii=False,indent=2)+'\n')
 (root/'content/perk-evidence.json').write_text(json.dumps({'checkedAt':checked_at,'patch':content['patch'],'scope':'Official perk mechanic facts only; does not approve tactical guides or matchups. No image assets imported.','heroes':evidence},ensure_ascii=False,indent=2)+'\n')

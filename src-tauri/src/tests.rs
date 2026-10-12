@@ -388,3 +388,9 @@ fn perk_sources_ids_and_patch_reviews_are_checked_before_installation() {
     outdated["heroes"][0]["perks"][0]["review"]["patch"] = serde_json::json!("Old patch");
     assert!(validate_content(&outdated).is_err());
 }
+#[test]
+fn content_cannot_introduce_an_unbundled_headshot() {
+    let mut content = seed();
+    content["heroes"][0]["portrait"] = serde_json::json!({"path":"/heroes/ana/headshot.webp","sha256":"a".repeat(64),"sourceId":content["sources"][0]["id"],"license":"TEST FIXTURE, not a licensed game image"});
+    assert!(validate_content(&content).unwrap_err().contains("bundled"));
+}

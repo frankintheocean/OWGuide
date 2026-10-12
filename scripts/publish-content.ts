@@ -49,6 +49,20 @@ if (previous) {
   c = invalidateChangedContent(old, c);
 }
 c = contentSchema.parse(c);
+const bundled = contentSchema.parse(
+  JSON.parse(
+    readFileSync(new URL("../src/data/content.json", import.meta.url), "utf8"),
+  ),
+);
+for (const hero of c.heroes)
+  if (
+    hero.portrait &&
+    JSON.stringify(hero.portrait) !==
+      JSON.stringify(bundled.heroes.find((h) => h.id === hero.id)?.portrait)
+  )
+    throw new Error(
+      "Publish only headshots already bundled with this app; new assets require an app build.",
+    );
 if (c.maps.some((map) => map.asset !== null || map.markers.length))
   throw new Error("This client currently supports text-only map packages.");
 const key = createPrivateKey(readFileSync(keyPath));

@@ -63,6 +63,26 @@ pub fn validate_content(value: &Value) -> Result<()> {
                         return Err("Duplicate guide level".into());
                     }
                 }
+                if let Some(portrait) = row.get("portrait") {
+                    if !sources.contains(portrait["sourceId"].as_str().unwrap_or_default()) {
+                        return Err("Unknown headshot source".into());
+                    }
+                    let bundled: Value =
+                        serde_json::from_str(include_str!("../../src/data/content.json"))
+                            .map_err(|e| e.to_string())?;
+                    let expected = bundled["heroes"]
+                        .as_array()
+                        .ok_or("Missing bundled roster")?
+                        .iter()
+                        .find(|h| h["id"] == row["id"])
+                        .and_then(|h| h.get("portrait"));
+                    if expected != Some(portrait) {
+                        return Err(
+                            "Content packages may only reuse headshots bundled with this app"
+                                .into(),
+                        );
+                    }
+                }
                 if let Some(perks) = row["perks"].as_array() {
                     let mut perk_ids = HashSet::new();
                     for perk in perks {

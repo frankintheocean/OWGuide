@@ -1,4 +1,5 @@
 import { describe, it, expect } from "vitest";
+import archivedMatchups from "../content/archived-matchups.json";
 import { bundledContent as content } from "../src/domain/content";
 import {
   contentSchema,
@@ -69,9 +70,19 @@ describe("content integrity", () => {
 describe("counter scoring", () => {
   it("excludes stale advice by default and never silently fabricates neutral scores", () => {
     expect(
-      recommend(content, ["pharah"], [], "all", "").every(
-        (r) => r.score === null,
-      ),
+      recommend(
+        {
+          ...content,
+          matchups: content.matchups.map((m) => ({
+            ...m,
+            review: { ...m.review, stale: true },
+          })),
+        },
+        ["pharah"],
+        [],
+        "all",
+        "",
+      ).every((r) => r.score === null),
     ).toBe(true);
   });
   it("explains deterministic scores and role filtering", () => {
@@ -297,7 +308,7 @@ it("requires a matching patch and a review date for current recommendations", ()
   ).toBeNull();
 });
 it("does not assign balance review dates to the bundled unreviewed drafts", () => {
-  for (const row of [...content.matchups, ...content.synergies]) {
+  for (const row of [...archivedMatchups.matchups, ...content.synergies]) {
     expect(row.review.stale).toBe(true);
     expect(row.review.reviewedAt).toBeNull();
     expect(row.review.confidence).toBe("low");
@@ -334,6 +345,50 @@ it("rejects duplicate perks, missing perk sources and active perk reviews from a
   ]) {
     const c = structuredClone(content);
     damage(c);
+    expect(() => contentSchema.parse(c)).toThrow();
+  }
+});
+it("current matchup advice has pinned editorial provenance and keeps unassessed pairs unknown", () => {
+  expect(content.matchups).toHaveLength(55);
+  for (const hero of content.heroes)
+    expect(content.matchups.some((m) => m.heroId === hero.id)).toBe(true);
+  for (const row of content.matchups) {
+    expect(row.review.stale).toBe(false);
+    expect(row.review.reviewedAt).toBeTruthy();
+    expect(row.review.confidence).toBe("low");
+    const source = content.sources.find((s) => s.id === row.review.sourceId)!;
+    expect(source.kind).toBe("editorial");
+    expect(source.url).toMatch(
+      /\/blob\/[a-f0-9]{40}\/content\/matchup-reviews\.json$/,
+    );
+  }
+  const ana = recommend(content, ["roadhog"], [], "support", "").find(
+    (r) => r.hero.id === "ana",
+  )!;
+  expect(ana.score).toBe(2);
+  expect(ana.confidence).toBe("low");
+  expect(
+    recommend(content, ["ana"], [], "damage", "").find(
+      (r) => r.hero.id === "ashe",
+    )?.score,
+  ).toBeNull();
+});
+it("headshots require an exact local hero path, hash and known provenance", () => {
+  const portrait = {
+    path: "/heroes/ana/headshot.webp",
+    sha256: "a".repeat(64),
+    sourceId: content.sources[0].id,
+    license: "TEST FIXTURE, original test image",
+  };
+  for (const invalid of [
+    { ...portrait, path: "https://example.com/image.webp" },
+    { ...portrait, path: "/heroes/ashe/headshot.webp" },
+    { ...portrait, sourceId: "missing" },
+    { ...portrait, sha256: "invalid" },
+    { ...portrait, license: "" },
+  ]) {
+    const c = structuredClone(content);
+    c.heroes[0].portrait = invalid;
     expect(() => contentSchema.parse(c)).toThrow();
   }
 });

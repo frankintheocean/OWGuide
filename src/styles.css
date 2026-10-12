@@ -1535,3 +1535,12 @@ legend {
   padding-inline: 6px;
   font-size: 0.85rem;
 }
+
+.hero-headshot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}

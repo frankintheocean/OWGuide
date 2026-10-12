@@ -108,6 +108,35 @@
               "support"
             ]
           },
+          "portrait": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "pattern": "^\\/heroes\\/[a-z0-9]+(?:-[a-z0-9]+)*\\/headshot\\.(?:png|webp|jpg)$"
+              },
+              "sourceId": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "license": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 12000
+              }
+            },
+            "required": [
+              "path",
+              "sourceId",
+              "sha256",
+              "license"
+            ],
+            "additionalProperties": false
+          },
           "biography": {
             "anyOf": [
               {
