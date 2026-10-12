@@ -1,0 +1,488 @@
+{
+  "ana": [
+    "demanding",
+    "backline,peel",
+    "Distant rifle sightlines",
+    "No movement ability in the captured kit",
+    "Sleep and grenade protect a threatened position",
+    "Healing denial; ranged teammate support",
+    "Aim-dependent healing; a missed defensive dart leaves fewer answers"
+  ],
+  "anran": [
+    "moderate",
+    "flank,brawl",
+    "Fire projectiles and contact attacks",
+    "Inferno Rush advances into contact",
+    "Dancing Blaze avoids damage and heals through hits",
+    "Burn pressure; movement into close combat",
+    "Healing from Dancing Blaze needs enemies in reach; rushing without an exit spends mobility"
+  ],
+  "ashe": [
+    "demanding",
+    "poke,backline",
+    "Aimed rifle fire",
+    "Coach Gun propels you backward",
+    "Distance and displacement",
+    "Scoped accuracy; explosive pressure",
+    "Aiming slows firing; the movement tool also spends your close-range displacement"
+  ],
+  "baptiste": [
+    "moderate",
+    "backline,peel",
+    "Ranged bursts and healing splash",
+    "Exo Boots provide vertical access",
+    "Regenerative Burst and a destroyable Immortality Field",
+    "Area recovery; projectile amplification",
+    "Field placement is vulnerable to destruction; healing must land near allies"
+  ],
+  "bastion": [
+    "approachable",
+    "poke,brawl",
+    "Accurate Recon fire and Assault pressure",
+    "Mobile Recon; slower Assault",
+    "Use cover around configuration changes",
+    "Sustained cannon pressure; flexible weapon forms",
+    "Artillery stops movement; Assault reduces mobility"
+  ],
+  "brigitte": [
+    "moderate",
+    "peel,brawl",
+    "Flail reach and Whip Shot",
+    "Shield Bash needs a raised barrier",
+    "Inspire and a frontal shield",
+    "Displacement; nearby ally sustain",
+    "Inspire needs damage contact; a frontal shield cannot cover every direction"
+  ],
+  "cassidy": [
+    "moderate",
+    "poke,peel",
+    "Aimed revolver shots",
+    "Combat Roll reloads while repositioning",
+    "Damage reduction during the roll",
+    "Aimed pressure; reload through movement",
+    "Roll is a commitment; Deadeye cannot attach to Lifeline on this patch"
+  ],
+  "dmon": [
+    "demanding",
+    "frontline,brawl",
+    "Energy blade and repeater fire",
+    "Fuel-funded horizontal Propulsors",
+    "Power Barrier covers the front",
+    "Barrier-backed displacement; different mech and pilot weapons",
+    "Propulsors spend fuel; Surging Strike needs the barrier stance"
+  ],
+  "doctrine": [
+    "demanding",
+    "backline,poke",
+    "Medium-distance scepter shots",
+    "Shrouded Momentum; infused flight",
+    "Movement damage reduction and drone support",
+    "Attack-speed support; adaptable infused abilities",
+    "Infuse affects the next ability; spending movement removes a repositioning option"
+  ],
+  "domina": [
+    "moderate",
+    "frontline,poke",
+    "Medium-distance beam",
+    "Sonic Repulsors separate approaching enemies",
+    "Barrier segments and ability lifesteal",
+    "Beam pressure; wall-dependent stuns",
+    "Repulsor stun needs a wall; recovery relies on ability damage"
+  ],
+  "doomfist": [
+    "demanding",
+    "dive,frontline",
+    "Close spread fire and contact attacks",
+    "Rocket Punch and Seismic Slam",
+    "Power Block protects the front",
+    "Displacement; chained movement",
+    "Empowered punch needs blocked damage; movement also commits your exit resources"
+  ],
+  "dva": [
+    "moderate",
+    "dive,peel",
+    "Short-distance cannons and missiles",
+    "Directional Boosters",
+    "Defense Matrix intercepts frontal projectiles",
+    "Projectile protection; fast repositioning",
+    "Matrix covers a limited direction; losing the mech changes your combat role"
+  ],
+  "echo": [
+    "demanding",
+    "flank,poke",
+    "Projectile volleys and a channeled beam",
+    "Flight and Glide",
+    "Aerial repositioning",
+    "Delayed explosive pressure; stronger beam against weakened targets",
+    "Beam advantage needs a target below half health; flight must end at a useful position"
+  ],
+  "emre": [
+    "moderate",
+    "poke,flank",
+    "Aimed burst rifle",
+    "No movement tool documented on the captured page",
+    "Earlier regeneration with an immediate heal",
+    "Accurate burst pressure; bouncing explosive",
+    "Aiming and burst tracking require target control; full transformation details remain unverified"
+  ],
+  "freja": [
+    "demanding",
+    "flank,poke",
+    "Fast explosive Take Aim bolt",
+    "Quick Dash and Updraft",
+    "Reposition through movement",
+    "Dash refreshes Take Aim; vertical access",
+    "The captured page omits full weapon details; repeated dashes must leave an exit"
+  ],
+  "genji": [
+    "demanding",
+    "dive,flank",
+    "Shuriken bursts and close blade attacks",
+    "Swift Strike, double jump and wall climb",
+    "Deflect counters incoming projectiles and melee",
+    "Elimination dash resets; vertical access",
+    "A dash reset requires an elimination; defensive deflection must face the threat"
+  ],
+  "hanzo": [
+    "demanding",
+    "poke,backline",
+    "Charged arrows",
+    "Lunge and Wall Climb",
+    "Keep space and covered firing angles",
+    "Temporary enemy reveal; burst arrows",
+    "Arrow travel needs prediction; climb and lunge need a safe destination"
+  ],
+  "hazard": [
+    "moderate",
+    "brawl,frontline",
+    "Spike burst and contact slash",
+    "Violent Leap and Vault",
+    "Spike Guard protects the front",
+    "Wall displacement; leap follow-up",
+    "Guard direction matters; the leap follow-up commits you near enemies"
+  ],
+  "illari": [
+    "moderate",
+    "poke,backline",
+    "Long-distance shots; medium-distance healing",
+    "Directional Outburst",
+    "Healing Pylon and enemy displacement",
+    "Separate pylon support; ranged pressure",
+    "Healing beam spends solar energy; a pylon position needs useful ally coverage"
+  ],
+  "jetpack-cat": [
+    "demanding",
+    "peel,backline",
+    "Medium-distance healing and damage spread",
+    "Frenetic Flight and ally transport",
+    "Purr provides area recovery and knockback",
+    "Ally movement support; shared repositioning",
+    "Fuel recovery slows when towing; a transport route can expose both players"
+  ],
+  "junker-queen": [
+    "moderate",
+    "brawl,frontline",
+    "Shotgun and frontal wound attacks",
+    "Commanding Shout increases movement speed",
+    "Healing from wounds and temporary team health",
+    "Wound sustain; team movement support",
+    "Wound recovery needs damage contact; Rampage commits forward"
+  ],
+  "junkrat": [
+    "moderate",
+    "poke,brawl",
+    "Bouncing explosives",
+    "Concussion Mine creates knockback",
+    "Trap-based threat control",
+    "Explosive area pressure; movement denial",
+    "Bouncing projectiles need trajectory control; a trap must be placed on a useful route"
+  ],
+  "juno": [
+    "moderate",
+    "backline,peel",
+    "Burst shots and lock-on torpedoes",
+    "Glide Boost, Hyper Ring and airborne movement",
+    "Movement and Orbital Ray healing",
+    "Team movement; guided healing and damage",
+    "Torpedoes need lock-on before firing; the moving ray requires teammate coordination"
+  ],
+  "kiriko": [
+    "demanding",
+    "peel,backline",
+    "Seeking healing papers and ranged kunai",
+    "Swift Step targets an ally",
+    "Suzu protection and cleansing",
+    "Rapid teammate access; temporary protection",
+    "Teleport needs an ally destination; Suzu timing determines who benefits"
+  ],
+  "lifeweaver": [
+    "moderate",
+    "backline,peel",
+    "Targeted blossom heals and thorn pairs",
+    "Petal Platform and Rejuvenating Dash",
+    "Dash healing and protected ally travel",
+    "Ally rescue; vertical platform access",
+    "Life Grip moves another player; a poor destination can disrupt their plan"
+  ],
+  "lucio": [
+    "demanding",
+    "brawl,peel",
+    "Sonic projectiles and nearby song effects",
+    "Wall Ride and movement-speed song",
+    "Healing song and Sound Barrier",
+    "Team movement; local displacement",
+    "Song benefits need nearby teammates; choosing speed changes the current healing contribution"
+  ],
+  "mauga": [
+    "moderate",
+    "brawl,frontline",
+    "Damage contact for critical-hit sustain",
+    "Overrun charge",
+    "Critical-hit extra health and Cardiac Overdrive",
+    "Team damage-based healing; uninterrupted charge",
+    "Cage Fight contains you too; Overdrive needs allies able to deal damage"
+  ],
+  "mei": [
+    "moderate",
+    "brawl,peel",
+    "Close slowing spray and distant icicle",
+    "No travel ability in the captured kit",
+    "Cryo-Freeze heals while invulnerable",
+    "Route control; slowing pressure",
+    "Cryo-Freeze pauses your contribution; a wall can also interrupt your team's path"
+  ],
+  "mercy": [
+    "approachable",
+    "backline,peel",
+    "Ally-targeted beams and a sidearm",
+    "Guardian Angel and controlled descent",
+    "Ally-based repositioning; flight during Valkyrie",
+    "Damage amplification; teammate revival",
+    "Travel needs an ally; resurrecting in an unsafe location risks another loss"
+  ],
+  "mizuki": [
+    "demanding",
+    "backline,peel",
+    "Bouncing projectile and healing hat",
+    "Katashiro Return advances and returns",
+    "Remedy Aura and sanctuary protection",
+    "Bouncing ally healing; movement restraint",
+    "Return depends on a useful starting position; aura benefits need teammates nearby"
+  ],
+  "moira": [
+    "approachable",
+    "brawl,backline",
+    "Frontal healing and ranged damage beam",
+    "Fade repositioning",
+    "Damage-driven self-healing and invulnerable movement",
+    "Flexible orbs; combined healing and damage beam",
+    "Healing spends energy; Fade prevents shooting during its movement"
+  ],
+  "orisa": [
+    "moderate",
+    "frontline,brawl",
+    "Automatic fire and thrown javelin",
+    "Javelin Spin increases forward speed",
+    "Fortify and frontal projectile removal",
+    "Displacement; defensive commitment tools",
+    "The weapon uses heat; Terra Surge anchors you while charging"
+  ],
+  "pharah": [
+    "moderate",
+    "poke,flank",
+    "Long-distance explosive rockets",
+    "Jet Dash, Jump Jet and fuel-funded hover",
+    "Air-to-ground repositioning",
+    "Vertical access; blast displacement",
+    "Fuel recharges on the ground; aerial movement still needs a landing plan"
+  ],
+  "ramattra": [
+    "moderate",
+    "frontline,brawl",
+    "Omnic projectiles and Nemesis punches",
+    "Change engagement through the two combat forms",
+    "Placed barrier and form-dependent pressure",
+    "Piercing punch waves; ground-based slowing",
+    "Barrier placement needs a relevant angle; Annihilation extension needs nearby damage contact"
+  ],
+  "reaper": [
+    "approachable",
+    "flank,brawl",
+    "Close shotgun spread",
+    "Shadow Step and Wraith Form",
+    "Damage healing and invulnerable travel",
+    "Close pressure; a defensive movement exit",
+    "Wraith prevents shooting; a ranged target requires a safe approach"
+  ],
+  "reinhardt": [
+    "approachable",
+    "frontline,brawl",
+    "Hammer reach plus a fire projectile",
+    "Charge commits forward",
+    "Frontal Barrier Field",
+    "Space control at melee distance; knockdown",
+    "Barrier protection faces one direction; Charge needs a safe endpoint"
+  ],
+  "roadhog": [
+    "moderate",
+    "frontline,peel",
+    "Two-burst close shotgun",
+    "No travel ability in the captured kit",
+    "Take a Breather and projectile absorption",
+    "Enemy displacement; an absorption-to-explosion sequence",
+    "Breather and Compactor have timed windows; do not assume an old hook damage sequence"
+  ],
+  "shion": [
+    "demanding",
+    "flank,brawl",
+    "Fast pistols and variable-spread Execution",
+    "Joyride and Evade",
+    "Evade provides temporary extra health",
+    "Movement-driven pressure; controllable attack spread",
+    "Dismounting spends the bike route; temporary extra health is a timed resource"
+  ],
+  "sierra": [
+    "moderate",
+    "poke,flank",
+    "Sustained automatic rifle fire",
+    "Anchor Drone grapple",
+    "Reposition along a prepared drone route",
+    "Marked-target tracking; sustained accuracy",
+    "Rifle accuracy builds through sustained fire; a drone needs a useful endpoint"
+  ],
+  "sigma": [
+    "demanding",
+    "frontline,poke",
+    "Area charges and thrown debris",
+    "No travel ability in the captured kit",
+    "Floating barrier and projectile-to-health absorption",
+    "Adjustable barrier position; ranged displacement",
+    "Grasp answers frontal projectiles; barrier deployment needs timely placement and recall"
+  ],
+  "sojourn": [
+    "demanding",
+    "poke,flank",
+    "Projectiles and an energy-funded piercing shot",
+    "Power Slide and jump cancel",
+    "Slide-based repositioning",
+    "Stored-energy burst; damaging area control",
+    "The stronger shot spends energy; slide commitment changes your escape options"
+  ],
+  "soldier-76": [
+    "approachable",
+    "poke,flank",
+    "Automatic rifle and explosive rockets",
+    "Forward Sprint",
+    "Biotic Field recovery",
+    "Straightforward ranged fire; self and ally healing field",
+    "The field stays at its placement; running forward still needs cover"
+  ],
+  "sombra": [
+    "moderate",
+    "peel,backline",
+    "Short pistol range and healing/debuff zones",
+    "Translocator with temporary stealth",
+    "Hotfix support and covered repositioning",
+    "Output reduction; awareness of charged enemy ultimates",
+    "Healing support competes with deep positioning; old Damage-role advice is outdated"
+  ],
+  "symmetra": [
+    "moderate",
+    "brawl,poke",
+    "Short beam and charged ranged orb",
+    "Temporary team Teleporter",
+    "Turret slowing and a large barrier",
+    "Team route changes; increasing beam pressure",
+    "Teleporters need coordinated use; turrets must cover a relevant route"
+  ],
+  "torbjorn": [
+    "moderate",
+    "poke,peel",
+    "Longer rivet shots and close secondary fire",
+    "Overload increases movement speed",
+    "Overload extra health and repairable turret",
+    "Separate turret pressure; molten area control",
+    "Turret placement needs useful sightlines; repair time competes with direct combat"
+  ],
+  "tracer": [
+    "demanding",
+    "flank,dive",
+    "Short-distance automatic pistols",
+    "Blink and Recall",
+    "Recall restores an earlier position and health",
+    "Fast angle changes; a reversible engagement",
+    "Recall returns to a previous state, so the earlier position must be safe"
+  ],
+  "vendetta": [
+    "demanding",
+    "flank,brawl",
+    "Sword attacks and a guarding-stance projectile",
+    "Whirlwind Dash and Soaring Slice",
+    "Frontal sword guard",
+    "Chained melee pressure; movement toward a thrown sword",
+    "Blocking and Projected Edge spend energy; a thrown sword commits your destination"
+  ],
+  "venture": [
+    "moderate",
+    "flank,brawl",
+    "Short-travel explosive and ground shockwaves",
+    "Drill Dash and Burrow",
+    "Underground invulnerability",
+    "Emergence attacks; displacement",
+    "Drill Dash and emergence need an endpoint; underground safety does not guarantee a safe exit"
+  ],
+  "widowmaker": [
+    "demanding",
+    "poke,backline",
+    "Scoped distant shots and automatic fire",
+    "Grappling Hook to a ledge",
+    "Distance, grapple routes and trap warning",
+    "Team-wide enemy reveal; long sightline access",
+    "Scoped aim needs precision; a grapple requires a useful destination"
+  ],
+  "winston": [
+    "moderate",
+    "dive,peel",
+    "Frontal electricity and a charged ranged shot",
+    "Jump Pack",
+    "Barrier dome; health increase during Primal Rage",
+    "Landing pressure; covered close engagement",
+    "A jump needs a landing and return plan; Primal Rage changes the available attacks"
+  ],
+  "wrecking-ball": [
+    "demanding",
+    "dive,flank",
+    "Automatic cannons and collision attacks",
+    "Grappling Claw and Roll",
+    "Nearby-enemy-scaled temporary health",
+    "Fast rotations; collision displacement",
+    "Grapple speed needs a useful route; Adaptive Shield depends on nearby opponents"
+  ],
+  "wuyang": [
+    "demanding",
+    "backline,peel",
+    "Guided water orb and targeted stream",
+    "Rushing Torrent movement and jump",
+    "Stream healing and protective Tidal Blast",
+    "Controllable projectile path; healing-received support",
+    "Stronger healing spends resource; protecting a target needs correct timing"
+  ],
+  "zarya": [
+    "moderate",
+    "frontline,brawl",
+    "Short beam and energy grenade",
+    "No travel ability in the captured kit",
+    "Self and ally barriers",
+    "Damage growth through absorption; enemy grouping",
+    "Weapon output depends on absorbed damage; barrier timing spends an important defensive option"
+  ],
+  "zenyatta": [
+    "moderate",
+    "poke,backline",
+    "Energy orbs and charged volleys",
+    "Transcendence increases movement speed",
+    "Harmony support; invulnerability during Transcendence",
+    "Enemy damage amplification; ranged pressure",
+    "A healing orb targets an ally; safe ranged positioning remains important outside the ultimate"
+  ]
+}

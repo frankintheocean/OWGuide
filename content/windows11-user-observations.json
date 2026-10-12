@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "recordedOn": "2026-10-12",
+  "status": "partial-user-observation",
+  "os": {
+    "name": "Windows 11",
+    "version": "23H2",
+    "build": "22631.6199"
+  },
+  "monitorCount": 3,
+  "candidateArtifact": "https://github.com/frankintheocean/OWGuide/actions/runs/38230756764/artifacts/11738423024",
+  "candidateSourceCommit": "007b46c7379a069e624319031e68550037f98bb4",
+  "testedManifestCommit": null,
+  "executableSha256": null,
+  "displayScales": null,
+  "observations": [
+    {
+      "check": "multi-monitor scaling and resizing",
+      "result": "user-reported pass",
+      "statement": "scales and resizes fine across 3 monitors",
+      "detail": "User maximized and tried multiple smaller sizes on two horizontal monitors and one vertical monitor. Exact scales and which windows were tested are unknown."
+    },
+    {
+      "check": "notes after restart",
+      "result": "user-reported pass",
+      "statement": "saved notes open fine on restart",
+      "detail": "Notes reopened while PC Wi-Fi remained connected; this does not verify offline launch."
+    },
+    {
+      "check": "character artwork and tactical maps",
+      "result": "missing",
+      "statement": "missing character images and maps"
+    },
+    {
+      "check": "current hero matchup coverage",
+      "result": "missing",
+      "statement": "no match up data for any heroes"
+    }
+  ],
+  "notEstablished": [
+    "Windows 10",
+    "offline launch with networking disabled",
+    "screen-reader navigation",
+    "monitor disconnect and placement recovery",
+    "both windows explicitly tested",
+    "display scales",
+    "tested executable identity",
+    "installer repair/uninstall observations"
+  ],
+  "productionAcceptanceApproved": false,
+  "displayArrangement": {
+    "horizontal": 2,
+    "vertical": 1
+  },
+  "candidateIdentityConfirmed": false,
+  "candidateRemoved": true,
+  "networkDuringRestart": {
+    "wifiConnected": true,
+    "appDisplayedOffline": true,
+    "networkDisabled": false
+  },
+  "followUpStatement": "User uninstalled and deleted the test build before recording its manifest commit. Screen reader was not tested."
+}

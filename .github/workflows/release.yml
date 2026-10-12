@@ -1,0 +1,109 @@
+name: Publish validated release
+on:
+  push:
+    tags: ["v1.0.0"]
+permissions:
+  contents: read
+jobs:
+  acceptance:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Tag must be on main
+        shell: bash
+        run: git merge-base --is-ancestor HEAD origin/main
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: "24.19.0"
+          cache: npm
+      - uses: dtolnay/rust-toolchain@686976e191b89faba57d3206551f0f330d8cb249
+        with:
+          toolchain: "1.99.0"
+          components: rustfmt, clippy
+      - run: npm ci
+      - run: npm run content:release
+      - name: Confirm live roster at build time
+        run: npm run content:verify-live
+      - name: Require recorded desktop GUI acceptance
+        run: node scripts/acceptance.mjs
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test
+      - run: npm run build
+      - run: cargo fmt --manifest-path src-tauri/Cargo.toml --check
+      - run: cargo test --manifest-path src-tauri/Cargo.toml --locked --no-default-features --lib
+      - run: cargo clippy --manifest-path src-tauri/Cargo.toml --locked --all-targets -- -D warnings
+      - run: npm audit --audit-level=moderate
+      - run: cargo install cargo-audit --version 0.22.0 --locked
+      - run: cargo audit --file src-tauri/Cargo.lock
+      - run: npx playwright install chromium
+      - run: npm run test:e2e
+      - run: npm run licenses
+      - run: cargo install cargo-license --version 0.6.1 --locked
+      - name: Rust licenses
+        shell: bash
+        run: cd src-tauri && cargo license --json > ../rust-licenses.json
+      - run: npm run tauri -- build --no-bundle -- --locked
+        env:
+          OWGUIDE_CONTENT_PUBLIC_KEY: ${{ vars.OWGUIDE_CONTENT_PUBLIC_KEY }}
+      - name: Sign binary before bundling
+        run: ./packaging/sign.ps1 -Phase Binary
+        env:
+          OWGUIDE_CERTIFICATE_BASE64: ${{ secrets.OWGUIDE_CERTIFICATE_BASE64 }}
+          OWGUIDE_CERTIFICATE_PASSWORD: ${{ secrets.OWGUIDE_CERTIFICATE_PASSWORD }}
+      - name: Bundle the signed binary without changing its bytes
+        run: npm run tauri -- bundle --bundles msi --no-binary-patching
+      - name: Sign MSI when configured
+        run: ./packaging/sign.ps1 -Phase Msi
+        env:
+          OWGUIDE_CERTIFICATE_BASE64: ${{ secrets.OWGUIDE_CERTIFICATE_BASE64 }}
+          OWGUIDE_CERTIFICATE_PASSWORD: ${{ secrets.OWGUIDE_CERTIFICATE_PASSWORD }}
+      - run: python scripts/notices.py
+      - run: choco install nsis --version=3.11 -y --no-progress
+      - run: ./packaging/package.ps1
+      - name: Sign setup wrapper when configured
+        run: ./packaging/sign.ps1 -Phase Setup
+        env:
+          OWGUIDE_CERTIFICATE_BASE64: ${{ secrets.OWGUIDE_CERTIFICATE_BASE64 }}
+          OWGUIDE_CERTIFICATE_PASSWORD: ${{ secrets.OWGUIDE_CERTIFICATE_PASSWORD }}
+      - name: Native WebView2 offline and window checks
+        run: node tests/windows-native.mjs
+      - name: Clear native test portable data
+        run: Remove-Item release/OWGuide-1.0.0-portable/OWGuideData -Recurse -Force
+      - run: ./packaging/smoke.ps1
+      - run: ./packaging/wrapper-smoke.ps1
+      - run: ./packaging/finish.ps1
+      - name: Add release documents and reports
+        shell: pwsh
+        run: |
+          Copy-Item README.md,CHANGELOG.md,LICENSE,dependency-licenses.json,rust-licenses.json,THIRD_PARTY_NOTICES.txt release/
+          Copy-Item docs/RELEASE.md release/RELEASE.md
+          Copy-Item docs/VERIFICATION.md release/VERIFICATION.md
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: OWGuide-validated-v1.0.0
+          path: release/*.*
+          if-no-files-found: error
+  publish:
+    needs: acceptance
+    runs-on: ubuntu-24.04
+    environment: production-release
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: OWGuide-validated-v1.0.0
+          path: release
+      - uses: actions/attest-build-provenance@96b4a1ef7235a096b17240c259729fdd70c83d45
+        with:
+          subject-path: "release/*"
+      - name: Publish actual artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create v1.0.0 release/* --verify-tag --title 'OWGuide v1.0.0' --notes-file docs/RELEASE.md

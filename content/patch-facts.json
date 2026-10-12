@@ -1,0 +1,343 @@
+{
+  "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+  "statistics": [
+    {
+      "hero": "roadhog",
+      "ability": "scrap-gun",
+      "name": "Damage per volley",
+      "value": 204,
+      "unit": "damage",
+      "evidence": "Total damage per volley increased from 175 to 204."
+    },
+    {
+      "hero": "roadhog",
+      "ability": "scrap-gun",
+      "name": "Ammo",
+      "value": 12,
+      "unit": "rounds",
+      "evidence": "Ammo increased from 6 to 12."
+    },
+    {
+      "hero": "roadhog",
+      "ability": "scrap-gun",
+      "name": "Critical multiplier",
+      "value": 1.5,
+      "unit": "×",
+      "evidence": "Critical damage multiplier decreased from 2x to 1.5x."
+    },
+    {
+      "hero": "roadhog",
+      "ability": "scrap-gun",
+      "name": "Falloff starts",
+      "value": 20,
+      "unit": "m",
+      "evidence": "Falloff range decreased from 30-50 meters to 20-35 meters."
+    },
+    {
+      "hero": "roadhog",
+      "ability": "scrap-gun",
+      "name": "Falloff ends",
+      "value": 35,
+      "unit": "m",
+      "evidence": "Falloff range decreased from 30-50 meters to 20-35 meters."
+    },
+    {
+      "hero": "roadhog",
+      "ability": "trash-compactor",
+      "name": "Absorption duration",
+      "value": 2,
+      "unit": "s",
+      "evidence": "begin absorbing projectiles in front of Roadhog for 2 seconds."
+    },
+    {
+      "hero": "roadhog",
+      "ability": "trash-compactor",
+      "name": "Cooldown (5v5)",
+      "value": 10,
+      "unit": "s",
+      "evidence": "Cooldown is 10 seconds in 5v5."
+    },
+    {
+      "hero": "roadhog",
+      "ability": "trash-compactor",
+      "name": "Explosion damage minimum",
+      "value": 75,
+      "unit": "damage",
+      "evidence": "ranging from 75 to 200 damage."
+    },
+    {
+      "hero": "roadhog",
+      "ability": "trash-compactor",
+      "name": "Explosion damage maximum",
+      "value": 200,
+      "unit": "damage",
+      "evidence": "ranging from 75 to 200 damage."
+    },
+    {
+      "hero": "roadhog",
+      "ability": "chain-hook",
+      "name": "Cooldown (5v5)",
+      "value": 6,
+      "unit": "s",
+      "evidence": "Cooldown decreased from 7 seconds to 6 seconds in 5v5."
+    },
+    {
+      "hero": "roadhog",
+      "ability": "chain-hook",
+      "name": "Pulled enemy distance",
+      "value": 4.5,
+      "unit": "m",
+      "evidence": "increased from 3 meters to 4.5 meters."
+    },
+    {
+      "hero": "roadhog",
+      "ability": "take-a-breather",
+      "name": "Maximum duration",
+      "value": 2,
+      "unit": "s",
+      "evidence": "Max duration decreased from 3 seconds to 2 seconds."
+    },
+    {
+      "hero": "roadhog",
+      "ability": "take-a-breather",
+      "name": "Healing rate",
+      "value": 200,
+      "unit": "health/s",
+      "evidence": "Healing over time increased from 150 per second to 200 per second."
+    },
+    {
+      "hero": "roadhog",
+      "ability": "take-a-breather",
+      "name": "Damage reduction",
+      "value": 35,
+      "unit": "%",
+      "evidence": "Damage reduction decreased from 40% to 35%."
+    },
+    {
+      "hero": "roadhog",
+      "ability": "take-a-breather",
+      "name": "Cooldown",
+      "value": 2,
+      "unit": "s",
+      "evidence": "Cooldown increased from 1.25 seconds to 2 seconds."
+    },
+    {
+      "hero": "sombra",
+      "ability": "machine-pistol",
+      "name": "Damage per projectile",
+      "value": 7,
+      "unit": "damage",
+      "evidence": "Damage per projectile decreased from 8 to 7."
+    },
+    {
+      "hero": "sombra",
+      "ability": "hotfix",
+      "name": "Immediate healing",
+      "value": 65,
+      "unit": "health",
+      "evidence": "heals them for 65 instant health and 25 health per second"
+    },
+    {
+      "hero": "sombra",
+      "ability": "hotfix",
+      "name": "Healing rate",
+      "value": 25,
+      "unit": "health/s",
+      "evidence": "heals them for 65 instant health and 25 health per second"
+    },
+    {
+      "hero": "sombra",
+      "ability": "hotfix",
+      "name": "Total healing cap",
+      "value": 175,
+      "unit": "health",
+      "evidence": "until either 175 total healing is done or until 12 seconds have passed."
+    },
+    {
+      "hero": "sombra",
+      "ability": "hotfix",
+      "name": "Maximum duration",
+      "value": 12,
+      "unit": "s",
+      "evidence": "until either 175 total healing is done or until 12 seconds have passed."
+    },
+    {
+      "hero": "sombra",
+      "ability": "hotfix",
+      "name": "Range",
+      "value": 17,
+      "unit": "m",
+      "evidence": "Range is 17 meters."
+    },
+    {
+      "hero": "sombra",
+      "ability": "hotfix",
+      "name": "Charges",
+      "value": 2,
+      "unit": "charges",
+      "evidence": "Has 2 charges."
+    },
+    {
+      "hero": "sombra",
+      "ability": "hotfix",
+      "name": "Cooldown",
+      "value": 8,
+      "unit": "s",
+      "evidence": "Cooldown is 8 seconds."
+    },
+    {
+      "hero": "sombra",
+      "ability": "cyberspace",
+      "name": "Zone duration",
+      "value": 3,
+      "unit": "s",
+      "evidence": "Zone duration is 3 seconds."
+    },
+    {
+      "hero": "sombra",
+      "ability": "cyberspace",
+      "name": "Zone radius",
+      "value": 5,
+      "unit": "m",
+      "evidence": "Zone radius is 5 meters."
+    },
+    {
+      "hero": "sombra",
+      "ability": "cyberspace",
+      "name": "Damage/healing output reduction",
+      "value": 50,
+      "unit": "%",
+      "evidence": "reduces the target’s own damage and healing output by 50%."
+    },
+    {
+      "hero": "sombra",
+      "ability": "translocator",
+      "name": "Cooldown",
+      "value": 7.5,
+      "unit": "s",
+      "evidence": "Cooldown increased from 6 seconds to 7.5 seconds."
+    },
+    {
+      "hero": "sombra",
+      "ability": "translocator",
+      "name": "Stealth duration",
+      "value": 6.5,
+      "unit": "s",
+      "evidence": "Stealth duration increased from 5 seconds to 6.5 seconds."
+    },
+    {
+      "hero": "sombra",
+      "ability": "emp",
+      "name": "Current-health damage",
+      "value": 20,
+      "unit": "%",
+      "evidence": "Damage decreased from 25% of current health to 20% of current health."
+    },
+    {
+      "hero": "dva",
+      "ability": "micro-missiles",
+      "name": "Fire rate",
+      "value": 14,
+      "unit": "shots/s",
+      "evidence": "Fire rate increased from 11 to 14 shots per second."
+    },
+    {
+      "hero": "domina",
+      "ability": "crystal-charge",
+      "name": "Cooldown",
+      "value": 7,
+      "unit": "s",
+      "evidence": "Cooldown reduced from 8 to 7 seconds."
+    },
+    {
+      "hero": "bastion",
+      "ability": "reconfigure",
+      "name": "Duration",
+      "value": 5,
+      "unit": "s",
+      "evidence": "Duration reduced from 6 to 5 seconds."
+    },
+    {
+      "hero": "emre",
+      "ability": "cyber-frag",
+      "name": "Cooldown",
+      "value": 9,
+      "unit": "s",
+      "evidence": "Cooldown reduced from 10 to 9 seconds."
+    },
+    {
+      "hero": "genji",
+      "ability": "swift-strike",
+      "name": "Damage",
+      "value": 60,
+      "unit": "damage",
+      "evidence": "Damage increased from 50 to 60."
+    },
+    {
+      "hero": "genji",
+      "ability": "dragonblade",
+      "name": "Damage per swing",
+      "value": 100,
+      "unit": "damage",
+      "evidence": "Damage reduced from 110 to 100."
+    },
+    {
+      "hero": "doctrine",
+      "ability": "invigorating-drones",
+      "name": "Attack speed bonus",
+      "value": 30,
+      "unit": "%",
+      "evidence": "Attack Speed reduced from 35% to 30%."
+    },
+    {
+      "hero": "doctrine",
+      "ability": "shrouded-momentum",
+      "name": "Cooldown",
+      "value": 8,
+      "unit": "s",
+      "evidence": "Cooldown increased from 7 to 8 seconds."
+    },
+    {
+      "hero": "doctrine",
+      "ability": "shrouded-momentum",
+      "name": "Damage reduction",
+      "value": 40,
+      "unit": "%",
+      "evidence": "Damage reduction reduced from 50% to 40%."
+    },
+    {
+      "hero": "doctrine",
+      "ability": "deliverance",
+      "name": "Overhealth/debuff duration",
+      "value": 6,
+      "unit": "s",
+      "evidence": "Overhealth and debuff duration reduced from 8 to 6 seconds."
+    },
+    {
+      "hero": "lucio",
+      "ability": "sound-barrier",
+      "name": "Duration",
+      "value": 6,
+      "unit": "s",
+      "evidence": "Duration increased from 5 to 6 seconds."
+    }
+  ],
+  "additionalAbilities": [
+    {
+      "hero": "sombra",
+      "id": "conspirator",
+      "name": "Conspirator",
+      "kind": "passive",
+      "description": "See which opposing ultimates are fully charged.",
+      "evidence": "Fully-charged enemy ultimates are revealed to you."
+    },
+    {
+      "hero": "domina",
+      "id": "reconstruction",
+      "name": "Reconstruction",
+      "kind": "passive",
+      "description": "Recover health through ability lifesteal.",
+      "evidence": "Ability lifesteal increased from 75% to 100%."
+    }
+  ]
+}

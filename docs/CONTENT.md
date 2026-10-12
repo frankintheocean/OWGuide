@@ -1,0 +1,81 @@
+# 🛰️ Content publishing
+
+The initial map list comes from OverFast commit `6ca950ec3ed2b3419b2b89beb9fbf3f5bad77405`. It was retrieved through GitHub on 2026-10-12. The current hero list and ability names were then refreshed from all 54 official hero pages. The latest retail patch title is “Overwatch Retail Patch Notes – October 6, 2026”. File hashes and retrieval dates are in `content/source-evidence.json` and `content/live-evidence.json`. No artwork or full official page prose is copied into the app.
+
+```sh
+npm run content:capture
+python3 scripts/import-live.py
+npx tsx scripts/apply-coaching.ts
+python3 scripts/apply-abilities.py
+python3 scripts/apply-patch-facts.py
+python3 scripts/apply-hero-facts.py
+python3 scripts/apply-profiles.py
+python3 scripts/apply-perks.py --captures /tmp/owguide-live-heroes
+npm run schemas
+npm run content:validate
+npm run content:verify-live
+npm run content:release
+```
+
+The source capture saves raw pages outside the checkout. Importing metadata invalidates tactical review; the coaching tool applies original text and leaves review pending. The separate `seed-snapshot.py` tool writes an archived source snapshot under `release`, never over the current app data. `verify-live` captures official page hashes and compares roster IDs; it does not claim that biographies, mechanics, or coaching were reviewed. The verifier also checks the latest official patch title. Map rotation and tactical correctness still need independent review. `content:release` intentionally fails on the candidate's incomplete data.
+
+## 📝 Review a new package
+
+Use stable IDs. Record the actual patch, source URLs, retrieval dates, reviewer dates, and confidence. Numeric ability values need sources; leave unavailable values out. Matchups are editorial evidence, not empirical win rates. Mark guides and relationships stale when relevant mechanics or the game patch changes. User data must stay outside content packages.
+
+The publisher compares packages when `OWGUIDE_PREVIOUS_CONTENT` is set and marks affected relationships stale. Review the resulting package before approving a production package. Changes never grant approval automatically. Accurate map geometry requires both source evidence and redistribution rights; the Rust updater currently accepts text-only maps and rejects image packages.
+
+## 🔑 Create your own trust key
+
+Use an Ed25519 key outside the checkout. For example, on a trusted publishing machine:
+
+```sh
+openssl genpkey -algorithm ED25519 -out /secure/location/owguide-content.pem
+OWGUIDE_SIGNING_KEY_FILE=/secure/location/owguide-content.pem npm run content:publish -- src/data/content.json https://your-domain.example/owguide/
+```
+
+This command validates and signs the exact content bytes. It creates a versioned package, manifest, and public-key file in `release/content`. It does not upload them or deploy a server. Keep the private key secret. Compile the public key into the desktop build as `OWGUIDE_CONTENT_PUBLIC_KEY`.
+
+Upload the versioned package to your HTTPS host first, then replace `manifest.json` last. Use the manifest URL in Settings. The package must stay on the same origin. Static hosting can serve the files. There is no polling or fake default feed. The user requests an update explicitly.
+
+The Rust client checks size, SHA-256, Ed25519, schema, references, and version. Installation is atomic. A failed download or validation keeps the active offline package. “Restore previous content” swaps in the retained package and does not alter notes or favorites.
+
+## 🧯 Limits
+
+No live feed has been deployed, no key is configured in this build, and network update success has not been tested against a real publishing endpoint. Cryptographic verification, SQLite install failure, rollback, and user-data preservation are covered by unit tests. Key rotation, remote asset caching, release-grade DNS defenses, and automatic binary updates remain unfinished.
+
+## 📖 Ability summaries
+
+`content/ability-summaries.json` contains original summaries of mechanics described by the captured official hero pages. Run `python3 scripts/apply-abilities.py` after source capture. It stops if ability names or list lengths change. The source hashes are recorded in `content/ability-evidence.json`. It copies no images or full page text. These summaries establish basic mechanics, not cooldowns, damage values, complete passive coverage, or balance approval. Unconfirmed ability types stay `unknown`.
+
+## 🧮 Retail patch facts
+
+`content/patch-facts.json` records 41 current numeric values and two passives from the October 6 patch. The importer checks the patch identity and each quote inside the correct hero and ability block. It keeps 5v5 values separate from 6v6 and excludes Stadium sections. `content/patch-evidence.json` records the raw page hash. Available values link to their source in the app; missing values remain blank. Four maps have current availability evidence from the patch, but that does not establish the full rotation or tactical coverage.
+
+## 🧑‍🏫 Qualitative profiles
+
+`content/hero-profiles.json` contains original difficulty estimates, playstyles, range descriptions, strengths and resource constraints for all 54 heroes. These are coaching judgments, not official ratings or measured outcomes. They stay marked for tactical review. The publisher invalidates advice when role, biography, abilities, map facts or patch identity change. An explicit new review can be preserved only when it matches the patch, follows package generation and differs from the old review date.
+
+## 🧾 Hero page facts
+
+Eleven additional numeric facts come from eight official hero pages. `content/hero-page-facts.json` records the short factual excerpts; the importer checks each excerpt inside the named ability. `content/hero-fact-evidence.json` records page hashes and capture dates. Together with the 41 patch facts, the package contains 52 sourced values. Missing base values remain blank.
+
+## 🏷️ Draft reviews and source hashes
+
+The bundled matchup drafts have no balance review date and low confidence. Current recommendations require a matching patch, a review date and a clear stale flag. Both desktop and frontend validation reject contradictory active review metadata. The publisher first marks affected guides stale, then checks these rules, so changing a patch does not approve old advice.
+
+Older Python source records hashed text after universal-newline conversion. They retain that `sha256` field for audit and also record `rawSha256` from the captured file bytes. Use the raw-byte field for direct page comparisons. Signed content package hashes always use exact package bytes.
+
+## 🪄 Official perk mechanics
+
+Content package 0.7.0 includes 216 minor and major perk entries from all 54 captured official hero pages. The Abilities tab displays attributed short mechanic quotations, level, source, patch and review date. Universal search includes these entries. `content/perk-evidence.json` records every source URL and exact capture hash. The importer refuses changed captures or an unexpected four-perk layout. Perk changes invalidate related advice; a patch change marks unrevised perks stale. This does not approve broader guides or matchup rankings.
+
+## 🥊 Current editorial matchup advice
+
+Package 0.8.0 adds 55 directed assessments across all 54 heroes. Each is narrow, source-based original coaching with low confidence. These are subjective recommendations, not measured win rates or gameplay-tested rankings. Most pairs remain unknown, and this is not full favorable/neutral/unfavorable coverage for every hero. `content/matchup-reviews.json` records the author method, source page hashes and exact ability references; earlier drafts remain in `content/archived-matchups.json`.
+
+Commit the reviewed file, then run `npx tsx scripts/apply-matchups.ts <full-review-file-commit>`. The importer checks that its bytes match the pinned commit and that each cited hero, ability, page and source hash still matches this package. Use this step after the perk import. A changed patch or mechanic requires review again.
+
+## 🖼️ Required headshots
+
+The release gate now requires a licensed local headshot and favorable, neutral and unfavorable advice for every hero. A headshot record contains its local `/heroes/<hero-id>/headshot.png`, `.webp` or `.jpg` path, exact SHA-256, source and license. The build checks its file bytes. The interface loads it lazily and shows a visible fallback if it cannot load. Content updates can reuse the headshots shipped with the app; adding or changing image files requires an app build. No headshot files have been cleared or bundled yet. A schema field is not evidence of usage rights.

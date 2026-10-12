@@ -1,0 +1,3247 @@
+{
+  "checkedAt": "2026-10-12T04:23:17.401048Z",
+  "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+  "scope": "Official perk mechanic facts only; does not approve tactical guides or matchups. No image assets imported.",
+  "heroes": [
+    {
+      "heroId": "ana",
+      "sourceId": "official-perks-ana",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/ana/",
+      "rawSha256": "bbb5d6ee7f2d84b4ad11760a0c7b7192800280890e25c4892e8fd57569abcd81",
+      "perks": [
+        {
+          "id": "local-anesthetic",
+          "name": "Local Anesthetic",
+          "tier": "minor",
+          "description": "Sleep dart explodes on impact, slowing enemies and dealing 45 damage over 3 seconds.",
+          "review": {
+            "sourceId": "official-perks-ana",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "speed-serum",
+          "name": "Speed Serum",
+          "tier": "minor",
+          "description": "Nano Boost grants a 30% movement speed boost to both Ana and her target.",
+          "review": {
+            "sourceId": "official-perks-ana",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "biotic-bounce",
+          "name": "Biotic Bounce",
+          "tier": "major",
+          "description": "After exploding, Biotic Grenade bounces and explodes again for 60 damage and healing.",
+          "review": {
+            "sourceId": "official-perks-ana",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "headhunter",
+          "name": "Headhunter",
+          "tier": "major",
+          "description": "Biotic Rifle can crit enemies.",
+          "review": {
+            "sourceId": "official-perks-ana",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "anran",
+      "sourceId": "official-perks-anran",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/anran/",
+      "rawSha256": "d73283c0106883629f367e19d90d13dbd0c68bc429837e23d4069baf2d0c75e1",
+      "perks": [
+        {
+          "id": "smoulder",
+          "name": "Smoulder",
+          "tier": "minor",
+          "description": "Ignited enemies burn 1.5 seconds longer.",
+          "review": {
+            "sourceId": "official-perks-anran",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "heat-shield",
+          "name": "Heat Shield",
+          "tier": "minor",
+          "description": "Gain 50 overhealth when you use your Ultimate and for each enemy ignited by it.",
+          "review": {
+            "sourceId": "official-perks-anran",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "short-fuse",
+          "name": "Short Fuse",
+          "tier": "major",
+          "description": "Impacting an enemy with Inferno Rush reduces its cooldown by 1.5 seconds.",
+          "review": {
+            "sourceId": "official-perks-anran",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "hungering-blaze",
+          "name": "Hungering Blaze",
+          "tier": "major",
+          "description": "Increase the healing of Dancing Blaze's subsequent strikes by 25.",
+          "review": {
+            "sourceId": "official-perks-anran",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "ashe",
+      "sourceId": "official-perks-ashe",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/ashe/",
+      "rawSha256": "a4f228111860ba3bbaf589dad5bdf66e66fade715710bd8bb2ece6a5d4f8fd5c",
+      "perks": [
+        {
+          "id": "remote-detonator",
+          "name": "Remote Detonator",
+          "tier": "minor",
+          "description": "After using Dynamite, pressing E again causes it to detonate after a 0.5 second delay.",
+          "review": {
+            "sourceId": "official-perks-ashe",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "double-barreled",
+          "name": "Double-Barreled",
+          "tier": "minor",
+          "description": "Knocking an enemy back with Coach Gun allows you use it one extra time within 2 seconds.",
+          "review": {
+            "sourceId": "official-perks-ashe",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "viper-s-sting",
+          "name": "Viper's Sting",
+          "tier": "major",
+          "description": "Hitting 2 consecutive scoped shots on a target deals 25 extra damage.",
+          "review": {
+            "sourceId": "official-perks-ashe",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "airburst",
+          "name": "Airburst",
+          "tier": "major",
+          "description": "Dynamite has a 40% increased detonation radius while airborne and refunds 6 ammo when thrown.",
+          "review": {
+            "sourceId": "official-perks-ashe",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "baptiste",
+      "sourceId": "official-perks-baptiste",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/baptiste/",
+      "rawSha256": "d3c98918942d780ae5c538726f391976f0ce4570b25b075b7f2967e8676212ff",
+      "perks": [
+        {
+          "id": "expanded-field",
+          "name": "Expanded Field",
+          "tier": "minor",
+          "description": "Immortality Field's radius is 30% bigger.",
+          "review": {
+            "sourceId": "official-perks-baptiste",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "assault-burst",
+          "name": "Assault Burst",
+          "tier": "minor",
+          "description": "Regenerative Burst now provides Baptiste with 20% increased attack speed for 3 seconds.",
+          "review": {
+            "sourceId": "official-perks-baptiste",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "automated-healing",
+          "name": "Automated Healing",
+          "tier": "major",
+          "description": "Using any ability triggers Baptiste's Shoulder Turret, periodically firing up to 3 shots at allies, each restoring 40 health.",
+          "review": {
+            "sourceId": "official-perks-baptiste",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "rocket-boots",
+          "name": "Rocket Boots",
+          "tier": "major",
+          "description": "While airborne from Exo Boots, use SPACE to dash horizontally.",
+          "review": {
+            "sourceId": "official-perks-baptiste",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "bastion",
+      "sourceId": "official-perks-bastion",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/bastion/",
+      "rawSha256": "16b0c9a7816e648e728a78b6dafddf8890d9951ab0a249b206531c29e4726210",
+      "perks": [
+        {
+          "id": "smart-bomb",
+          "name": "Smart Bomb",
+          "tier": "minor",
+          "description": "A-36 Tactical Grenade's self-knockback is increased by 25% and no longer damages you.",
+          "review": {
+            "sourceId": "official-perks-bastion",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "configuration-reload",
+          "name": "Configuration Reload",
+          "tier": "minor",
+          "description": "Reduce the cooldown of A-36 Tactical Grenade by 4 seconds when changing configurations.",
+          "review": {
+            "sourceId": "official-perks-bastion",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "lindholm-explosives",
+          "name": "Lindholm Explosives",
+          "tier": "major",
+          "description": "Configuration: Assault's weapon slowly fires explosive shells instead of a rotary cannon.",
+          "review": {
+            "sourceId": "official-perks-bastion",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "self-repair",
+          "name": "Self-Repair",
+          "tier": "major",
+          "description": "Press E to rapidly heal yourself.",
+          "review": {
+            "sourceId": "official-perks-bastion",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "brigitte",
+      "sourceId": "official-perks-brigitte",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/brigitte/",
+      "rawSha256": "13c5495efcef0cbfe3fa086540020c6be7bdf3eb253e08dc45074687e794b84b",
+      "perks": [
+        {
+          "id": "combat-medic",
+          "name": "Combat Medic",
+          "tier": "minor",
+          "description": "Melee attacks against enemies reduce the cooldown of Repair Pack by 0.75 seconds.",
+          "review": {
+            "sourceId": "official-perks-brigitte",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "morale-boost",
+          "name": "Morale Boost",
+          "tier": "minor",
+          "description": "Inspire lasts 3 seconds longer when activated by Whip Shot.",
+          "review": {
+            "sourceId": "official-perks-brigitte",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "inspiring-strike",
+          "name": "Inspiring Strike",
+          "tier": "major",
+          "description": "Shield Bash grants 30% increased movement speed for 2 seconds. Inspire's healing is instant when activated by Shield Bash.",
+          "review": {
+            "sourceId": "official-perks-brigitte",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "whiplash",
+          "name": "Whiplash",
+          "tier": "major",
+          "description": "Whip Shot's knockback can slam enemies into walls, dealing 60 extra damage.",
+          "review": {
+            "sourceId": "official-perks-brigitte",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "cassidy",
+      "sourceId": "official-perks-cassidy",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/cassidy/",
+      "rawSha256": "8d58a774c49d80528937fc79a838938e8daac6e984028f1815128aa3089122af",
+      "perks": [
+        {
+          "id": "bang-bang",
+          "name": "Bang Bang",
+          "tier": "minor",
+          "description": "Cassidy throws a second Flashbang that travels farther, but both Flashbangs deal 40% reduced damage.",
+          "review": {
+            "sourceId": "official-perks-cassidy",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "giddy-up",
+          "name": "Giddy Up",
+          "tier": "minor",
+          "description": "After using Combat Roll, Cassidy gains a 60% movement speed boost that decays over 1.5 seconds.",
+          "review": {
+            "sourceId": "official-perks-cassidy",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "rollin-round-up",
+          "name": "Rollin' Round-Up",
+          "tier": "major",
+          "description": "Combat Roll also heals 15 health for each bullet reloaded.",
+          "review": {
+            "sourceId": "official-perks-cassidy",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "silver-bullet",
+          "name": "Silver Bullet",
+          "tier": "major",
+          "description": "Peacekeeper's secondary fire is replaced with a piercing shot that inflicts bleeding. Combat Roll and Deadeye reset its cooldown.",
+          "review": {
+            "sourceId": "official-perks-cassidy",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "dmon",
+      "sourceId": "official-perks-dmon",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/dmon/",
+      "rawSha256": "db4bf2c42c95b7358e6fe5a895cb29c69b8e167fbe569c4cd1a16b0ced205ca4",
+      "perks": [
+        {
+          "id": "beast-within",
+          "name": "Beast Within",
+          "tier": "minor",
+          "description": "Plasma Saber hits heal Power Barrier by 40 health.",
+          "review": {
+            "sourceId": "official-perks-dmon",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "meka-mobility",
+          "name": "MEKA Mobility",
+          "tier": "minor",
+          "description": "While holding Power Barrier, Propulsors fuel cost is reduced by 30%.",
+          "review": {
+            "sourceId": "official-perks-dmon",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "overstrike",
+          "name": "Overstrike",
+          "tier": "major",
+          "description": "Surging Strike gains 150% lifesteal.",
+          "review": {
+            "sourceId": "official-perks-dmon",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "focused-fusion",
+          "name": "Focused Fusion",
+          "tier": "major",
+          "description": "Fusion Repeater fires stronger shots with no spread at a slower rate.",
+          "review": {
+            "sourceId": "official-perks-dmon",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "dva",
+      "sourceId": "official-perks-dva",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/dva/",
+      "rawSha256": "8be36c992e1e84c58973d20d6db41e309d7e766aa6f5bc1ad21bebc7934c07a3",
+      "perks": [
+        {
+          "id": "bunny-power",
+          "name": "Bunny Power",
+          "tier": "minor",
+          "description": "Eject grants 75 temporary overhealth and Call Mech’s damage radius is increased by 50%.",
+          "review": {
+            "sourceId": "official-perks-dva",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "extended-boosters",
+          "name": "Extended Boosters",
+          "tier": "minor",
+          "description": "Hitting an enemy with Boosters deals 40% increased damage and extends the duration by 0.5 seconds.",
+          "review": {
+            "sourceId": "official-perks-dva",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "shield-system",
+          "name": "Shield System",
+          "tier": "major",
+          "description": "Convert 100 health to shields. Defense Matrix restores shields based on 25% of its damage absorbed.",
+          "review": {
+            "sourceId": "official-perks-dva",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "precision-fusion",
+          "name": "Precision Fusion",
+          "tier": "major",
+          "description": "Press R to reduce Fusion Cannons' spread by 75% for 3 seconds.",
+          "review": {
+            "sourceId": "official-perks-dva",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "doctrine",
+      "sourceId": "official-perks-doctrine",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/doctrine/",
+      "rawSha256": "76308c359da547d5993fc01a2d5dd559a8e15347fba3bc85fd0333a1896afc95",
+      "perks": [
+        {
+          "id": "saving-grace",
+          "name": "Saving Grace",
+          "tier": "minor",
+          "description": "Invigorating Drones heal for 40 health when applied.",
+          "review": {
+            "sourceId": "official-perks-doctrine",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "sanguine-siphon",
+          "name": "Sanguine Siphon",
+          "tier": "minor",
+          "description": "Heal for 50% of damage dealt with Infused Eternal Scepter.",
+          "review": {
+            "sourceId": "official-perks-doctrine",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "transfusion",
+          "name": "Transfusion",
+          "tier": "major",
+          "description": "Reduce Infuse's cooldown from damage and healing dealt.",
+          "review": {
+            "sourceId": "official-perks-doctrine",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "cost-of-life",
+          "name": "Cost of Life",
+          "tier": "major",
+          "description": "Sacrifice 25 maximum health. Eternal Scepter healing is increased by 20%.",
+          "review": {
+            "sourceId": "official-perks-doctrine",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "domina",
+      "sourceId": "official-perks-domina",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/domina/",
+      "rawSha256": "0c035bf2e03cbb3b5c12672613747f1595d980d194dbf9c77e4bc4e36ac163cc",
+      "perks": [
+        {
+          "id": "efficient-design",
+          "name": "Efficient Design",
+          "tier": "minor",
+          "description": "After using Barrier Array, restore 50 shields and activate passive health regeneration.",
+          "review": {
+            "sourceId": "official-perks-domina",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "extended-power",
+          "name": "Extended Power",
+          "tier": "minor",
+          "description": "Increase the range of Photon Magnum by 20%.",
+          "review": {
+            "sourceId": "official-perks-domina",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "disruptive-detonation",
+          "name": "Disruptive Detonation",
+          "tier": "major",
+          "description": "Enemies hit by Crystal Charge's explosion are slowed by 30% for 2 seconds.",
+          "review": {
+            "sourceId": "official-perks-domina",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "corporate-retreat",
+          "name": "Corporate Retreat",
+          "tier": "major",
+          "description": "While Barrier Array is active, it can be moved one time to another location.",
+          "review": {
+            "sourceId": "official-perks-domina",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "doomfist",
+      "sourceId": "official-perks-doomfist",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/doomfist/",
+      "rawSha256": "b666f256e01b19cb5bad3ddc0abd32bbb2128104f670e9706dd7a8f9e3c7bb31",
+      "perks": [
+        {
+          "id": "one-two",
+          "name": "One-Two",
+          "tier": "minor",
+          "description": "Hitting an enemy into a wall with Rocket Punch reloads Hand Cannon and overfills ammo by 2.",
+          "review": {
+            "sourceId": "official-perks-doomfist",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "survival-of-the-fittest",
+          "name": "Survival of the Fittest",
+          "tier": "minor",
+          "description": "The Best Defense grants 25 overhealth from eliminations and its max overhealth is increased by 50.",
+          "review": {
+            "sourceId": "official-perks-doomfist",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "aftershock",
+          "name": "Aftershock",
+          "tier": "major",
+          "description": "Enemies hit by Seismic Slam are slowed by 40% for 2 seconds.",
+          "review": {
+            "sourceId": "official-perks-doomfist",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "power-matrix",
+          "name": "Power Matrix",
+          "tier": "major",
+          "description": "Power Block absorbs projectiles for the first 0.8 seconds of its duration.",
+          "review": {
+            "sourceId": "official-perks-doomfist",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "echo",
+      "sourceId": "official-perks-echo",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/echo/",
+      "rawSha256": "8086b72816c9c4f9b21774c5e5ef4a81c27628ee5d60443016b3671a4da052c2",
+      "perks": [
+        {
+          "id": "aerial-munitions",
+          "name": "Aerial Munitions",
+          "tier": "minor",
+          "description": "Echo has infinite ammo during Flight.",
+          "review": {
+            "sourceId": "official-perks-echo",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "partial-scan",
+          "name": "Partial Scan",
+          "tier": "minor",
+          "description": "Duplicate starts with 30% of its ultimate charge.",
+          "review": {
+            "sourceId": "official-perks-echo",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "full-salvo",
+          "name": "Full Salvo",
+          "tier": "major",
+          "description": "Sticky Bombs fires 2 additional projectiles.",
+          "review": {
+            "sourceId": "official-perks-echo",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "focused-rush",
+          "name": "Focused Rush",
+          "tier": "major",
+          "description": "Focusing Beam's range is increased by 8 meters and movement speed is increased by 25% when active.",
+          "review": {
+            "sourceId": "official-perks-echo",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "emre",
+      "sourceId": "official-perks-emre",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/emre/",
+      "rawSha256": "df3f4aa7e1cd00f790277d552e3c8af3044df8b6567887fd26aef22ebb7bea67",
+      "perks": [
+        {
+          "id": "suppressive-security",
+          "name": "Suppressive Security",
+          "tier": "minor",
+          "description": "Override Protocol’s light rounds slow enemies by 30% for 1.5 seconds.",
+          "review": {
+            "sourceId": "official-perks-emre",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "enhanced-agility",
+          "name": "Enhanced Agility",
+          "tier": "minor",
+          "description": "Siphon Blaster’s movement speed bonus is increased by 20% while not firing.",
+          "review": {
+            "sourceId": "official-perks-emre",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "heat-sink",
+          "name": "Heat Sink",
+          "tier": "major",
+          "description": "Direct hits with Siphon Blaster refunds 60% heat and increase its duration by 0.1 seconds.",
+          "review": {
+            "sourceId": "official-perks-emre",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "cyber-adhesion",
+          "name": "Cyber Adhesion",
+          "tier": "major",
+          "description": "Cyber Frag now sticks on contact, dealing 40 extra damage to stuck enemies.",
+          "review": {
+            "sourceId": "official-perks-emre",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "freja",
+      "sourceId": "official-perks-freja",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/freja/",
+      "rawSha256": "ea9298d41d3edbdef7de765a983ce0f7bacaffa0d2f046b913dbd03ceeeaf742",
+      "perks": [
+        {
+          "id": "relentless-barrage",
+          "name": "Relentless Barrage",
+          "tier": "minor",
+          "description": "Direct hits with Take Aim refund 5 automatic bolt ammo.",
+          "review": {
+            "sourceId": "official-perks-freja",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "momentum-boost",
+          "name": "Momentum Boost",
+          "tier": "minor",
+          "description": "Quick Dash distance is increased by 20%.",
+          "review": {
+            "sourceId": "official-perks-freja",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "aerial-recovery",
+          "name": "Aerial Recovery",
+          "tier": "major",
+          "description": "After using Updraft, heal for 30 health per second until Freja touches the ground.",
+          "review": {
+            "sourceId": "official-perks-freja",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "rising-winds",
+          "name": "Rising Winds",
+          "tier": "major",
+          "description": "Updraft gains an additional charge.",
+          "review": {
+            "sourceId": "official-perks-freja",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "genji",
+      "sourceId": "official-perks-genji",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/genji/",
+      "rawSha256": "11394bb54596b644fcf055675d185d55060b7e471a9d188df09312277d2ac997",
+      "perks": [
+        {
+          "id": "swift-cuts",
+          "name": "Swift Cuts",
+          "tier": "minor",
+          "description": "Quick Melee reduces the cooldown of Swift Strike by 3 seconds.",
+          "review": {
+            "sourceId": "official-perks-genji",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "dragon-s-thirst",
+          "name": "Dragon's Thirst",
+          "tier": "minor",
+          "description": "Dragonblade swings gain 30% lifesteal.",
+          "review": {
+            "sourceId": "official-perks-genji",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "blade-twisting",
+          "name": "Blade Twisting",
+          "tier": "major",
+          "description": "Swift Strike deals 25 additional damage over time if the enemy is below half health.",
+          "review": {
+            "sourceId": "official-perks-genji",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "meditation",
+          "name": "Meditation",
+          "tier": "major",
+          "description": "Regenerate 50 health per second while Deflect is active.",
+          "review": {
+            "sourceId": "official-perks-genji",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "hanzo",
+      "sourceId": "official-perks-hanzo",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/hanzo/",
+      "rawSha256": "b925ca25d61129888c86c80e7fbe63bdb50f69f250c05889c17ecb61398e4e75",
+      "perks": [
+        {
+          "id": "sonic-disruption",
+          "name": "Sonic Disruption",
+          "tier": "minor",
+          "description": "Sonic Arrow hacks nearby Health Packs for 30 seconds.",
+          "review": {
+            "sourceId": "official-perks-hanzo",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "dragon-fury",
+          "name": "Dragon Fury",
+          "tier": "minor",
+          "description": "After hitting an enemy with Primary Fire, gain 20% attack speed for 1.5 seconds.",
+          "review": {
+            "sourceId": "official-perks-hanzo",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "frost-arrow",
+          "name": "Frost Arrow",
+          "tier": "major",
+          "description": "Press R to ready an explosive frost arrow, slowing enemies hit by 35% for 2 seconds.",
+          "review": {
+            "sourceId": "official-perks-hanzo",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "scatter-arrows",
+          "name": "Scatter Arrows",
+          "tier": "major",
+          "description": "On first ricochet, Storm Arrows split into 5 shots dealing 33% damage and bounce 1 extra time.",
+          "review": {
+            "sourceId": "official-perks-hanzo",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "hazard",
+      "sourceId": "official-perks-hazard",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/hazard/",
+      "rawSha256": "ff4a2352df63bba72d5334a47c1877a9ef8521effe422b98716883b2e291f44b",
+      "perks": [
+        {
+          "id": "reconstitution",
+          "name": "Reconstitution",
+          "tier": "minor",
+          "description": "Jagged Wall hits overfill Spike Guard with 25% additional energy.",
+          "review": {
+            "sourceId": "official-perks-hazard",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "anarchic-zeal",
+          "name": "Anarchic Zeal",
+          "tier": "minor",
+          "description": "Spike Guard's spikes gain 40% Lifesteal.",
+          "review": {
+            "sourceId": "official-perks-hazard",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "deep-leap",
+          "name": "Deep Leap",
+          "tier": "major",
+          "description": "Violent Leap's range is increased by 20%.",
+          "review": {
+            "sourceId": "official-perks-hazard",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "explosive-impalements",
+          "name": "Explosive Impalements",
+          "tier": "major",
+          "description": "Bonespur hits mark targets with spikes. Quick Melee and Violent Leap's slash detonate them for 30 explosive damage.",
+          "review": {
+            "sourceId": "official-perks-hazard",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "illari",
+      "sourceId": "official-perks-illari",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/illari/",
+      "rawSha256": "84198c0cedb637371232eb2c1fa65e38344af082b386603dbabfdd938c15a3e9",
+      "perks": [
+        {
+          "id": "rapid-construction",
+          "name": "Rapid Construction",
+          "tier": "minor",
+          "description": "Healing Pylon builds 300% faster and its cooldown is reduced by 2 seconds.",
+          "review": {
+            "sourceId": "official-perks-illari",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "summer-solstice",
+          "name": "Summer Solstice",
+          "tier": "minor",
+          "description": "Captive Sun grants Illari 20% increased flight and attack speed, and extends her flight duration by 3 seconds.",
+          "review": {
+            "sourceId": "official-perks-illari",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "solar-flare",
+          "name": "Solar Flare",
+          "tier": "major",
+          "description": "Press while using Solar Rifle's healing beam to heal all allies in front of Illari for 100 healing.",
+          "review": {
+            "sourceId": "official-perks-illari",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "sunburn",
+          "name": "Sunburn",
+          "tier": "major",
+          "description": "Outburst ignites enemies, dealing an additional 50 damage over 3 seconds.",
+          "review": {
+            "sourceId": "official-perks-illari",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "jetpack-cat",
+      "sourceId": "official-perks-jetpack-cat",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/jetpack-cat/",
+      "rawSha256": "8a8ea9fa2c5f4ef53c3528c0c79bb05cd90bfa3877ceb3a65cd2d9662ddcba9e",
+      "perks": [
+        {
+          "id": "ulterior-motive",
+          "name": "Ulterior Motive",
+          "tier": "minor",
+          "description": "15% of Biotic Pawjectiles healing recovers fuel.",
+          "review": {
+            "sourceId": "official-perks-jetpack-cat",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "transport-shielding",
+          "name": "Transport Shielding",
+          "tier": "minor",
+          "description": "Gain up to 50 extra shield health while carrying another hero.",
+          "review": {
+            "sourceId": "official-perks-jetpack-cat",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "purrfect-form",
+          "name": "Purrfect Form",
+          "tier": "major",
+          "description": "Each pulse of Purr contains 3 waves.",
+          "review": {
+            "sourceId": "official-perks-jetpack-cat",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "claws-out",
+          "name": "Claws Out",
+          "tier": "major",
+          "description": "Quick melee becomes empowered every 6 seconds, wounding enemies for 40 damage and slowing them by 30% for 1 second.",
+          "review": {
+            "sourceId": "official-perks-jetpack-cat",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "junker-queen",
+      "sourceId": "official-perks-junker-queen",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/junker-queen/",
+      "rawSha256": "8c8af6f16b0d1106d1694e547f0e7ce9551933815e8ca5f350bd79beb25bf737",
+      "perks": [
+        {
+          "id": "rampant-charge",
+          "name": "Rampant Charge",
+          "tier": "minor",
+          "description": "Gain Unstoppable and reduce all cooldowns by 6 seconds when using Rampage.",
+          "review": {
+            "sourceId": "official-perks-junker-queen",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "battle-shout",
+          "name": "Battle Shout",
+          "tier": "minor",
+          "description": "Commanding Shout fully reloads Scatter Gun and increases allied reload speed by 50%.",
+          "review": {
+            "sourceId": "official-perks-junker-queen",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "willy-willy",
+          "name": "Willy-Willy",
+          "tier": "major",
+          "description": "When recalling Jagged Blade, its radius is increased by 100% and it deals 30 additional impact damage.",
+          "review": {
+            "sourceId": "official-perks-junker-queen",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "savage-satiation",
+          "name": "Savage Satiation",
+          "tier": "major",
+          "description": "Carnage's impact damage gains 100% lifesteal.",
+          "review": {
+            "sourceId": "official-perks-junker-queen",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "junkrat",
+      "sourceId": "official-perks-junkrat",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/junkrat/",
+      "rawSha256": "10647db05e8a1cc9745ec33ad617d56f1e3088acc0cf57a9bc008b57a7233ef2",
+      "perks": [
+        {
+          "id": "nitro-boost",
+          "name": "Nitro Boost",
+          "tier": "minor",
+          "description": "During RIP-Tire, use LSHIFT to gain a quick boost of speed. Doing so reduces RIP-Tire's damage by 50%.",
+          "review": {
+            "sourceId": "official-perks-junkrat",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "bomb-voyage",
+          "name": "Bomb Voyage",
+          "tier": "minor",
+          "description": "After launching with Concussion Mine, Junkrat gains 35% increased attack speed for 3 seconds.",
+          "review": {
+            "sourceId": "official-perks-junkrat",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "mine-recycling",
+          "name": "Mine Recycling",
+          "tier": "major",
+          "description": "Eliminations with Concussion Mine restore one charge.",
+          "review": {
+            "sourceId": "official-perks-junkrat",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "frag-cannon",
+          "name": "Frag Cannon",
+          "tier": "major",
+          "description": "Frag Launcher's projectile speed is increased by 25%.",
+          "review": {
+            "sourceId": "official-perks-junkrat",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "juno",
+      "sourceId": "official-perks-juno",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/juno/",
+      "rawSha256": "aca0b514022c61883298bef05ab7880bfea71dfa0add8be90b35caa1ccebc82d",
+      "perks": [
+        {
+          "id": "familiar-vitals",
+          "name": "Familiar Vitals",
+          "tier": "minor",
+          "description": "Pulsar Torpedoes lock onto allies 35% faster.",
+          "review": {
+            "sourceId": "official-perks-juno",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "locked-on",
+          "name": "Locked On",
+          "tier": "minor",
+          "description": "Reduce the cooldown of Pulsar Torpedoes by 1 second for each enemy hit.",
+          "review": {
+            "sourceId": "official-perks-juno",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "lift-off",
+          "name": "Lift Off",
+          "tier": "major",
+          "description": "Martian Overboots can now triple jump.",
+          "review": {
+            "sourceId": "official-perks-juno",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "faster-blaster",
+          "name": "Faster Blaster",
+          "tier": "major",
+          "description": "While Glide Boost is active, Mediblaster fires continuously.",
+          "review": {
+            "sourceId": "official-perks-juno",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "kiriko",
+      "sourceId": "official-perks-kiriko",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/kiriko/",
+      "rawSha256": "cf11ee361a3792f42ff6c031a4425878975ac7aa9c39b1c2047a765e2a531485",
+      "perks": [
+        {
+          "id": "urgent-care",
+          "name": "Urgent Care",
+          "tier": "minor",
+          "description": "Healing Ofuda projectile speed is increased by 50% when seeking allies below half health.",
+          "review": {
+            "sourceId": "official-perks-kiriko",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "fortune-teller",
+          "name": "Fortune Teller",
+          "tier": "minor",
+          "description": "Kunai hits launch 2 Healing Ofuda to an ally in front of you.",
+          "review": {
+            "sourceId": "official-perks-kiriko",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "ready-step",
+          "name": "Ready Step",
+          "tier": "major",
+          "description": "Swift Step grants Kiriko 40% increased attack and reload speed for 3 seconds.",
+          "review": {
+            "sourceId": "official-perks-kiriko",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "foxtrot",
+          "name": "Foxtrot",
+          "tier": "major",
+          "description": "Protection Suzu grants allies 30% increased movement speed for 4 seconds.",
+          "review": {
+            "sourceId": "official-perks-kiriko",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "lifeweaver",
+      "sourceId": "official-perks-lifeweaver",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/lifeweaver/",
+      "rawSha256": "7a910434c9db68efd465f0f57f63dab00cee3b12a8dcf9c23de7313d52297ea4",
+      "perks": [
+        {
+          "id": "petal-protection",
+          "name": "Petal Protection",
+          "tier": "minor",
+          "description": "Allies heal 20 health per second while standing on Petal Platform.",
+          "review": {
+            "sourceId": "official-perks-lifeweaver",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "dashing-escape",
+          "name": "Dashing Escape",
+          "tier": "minor",
+          "description": "Rejuvenating Dash's distance is increased by 30%.",
+          "review": {
+            "sourceId": "official-perks-lifeweaver",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "sow-the-seed",
+          "name": "Sow the Seed",
+          "tier": "major",
+          "description": "Quick Melee with Healing Blossom to throw a seed. Another ally can pick it up for overhealth and movement speed.",
+          "review": {
+            "sourceId": "official-perks-lifeweaver",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "superbloom",
+          "name": "Superbloom",
+          "tier": "major",
+          "description": "Thorns detonate for 40 extra damage when enough stick within 2.5 seconds.",
+          "review": {
+            "sourceId": "official-perks-lifeweaver",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "lucio",
+      "sourceId": "official-perks-lucio",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/lucio/",
+      "rawSha256": "146fdae5ce33468d037b1626ac808066055f37fbaa0511c84e11763208a583ed",
+      "perks": [
+        {
+          "id": "soundwave-rider",
+          "name": "Soundwave Rider",
+          "tier": "minor",
+          "description": "Wall Riding empowers your next Soundwave, increasing its knockback by 25% and damage by 50%.",
+          "review": {
+            "sourceId": "official-perks-lucio",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "beat-drop",
+          "name": "Beat Drop",
+          "tier": "minor",
+          "description": "Amp It Up is active for 4 seconds after casting Sound Barrier.",
+          "review": {
+            "sourceId": "official-perks-lucio",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "noise-violation",
+          "name": "Noise Violation",
+          "tier": "major",
+          "description": "Crossfade's range is increased by 150% while Amp It Up is active.",
+          "review": {
+            "sourceId": "official-perks-lucio",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "accelerando",
+          "name": "Accelerando",
+          "tier": "major",
+          "description": "Gain 15% attack speed while Lucio's Speed Song is active, tripled during Amp It Up.",
+          "review": {
+            "sourceId": "official-perks-lucio",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "mauga",
+      "sourceId": "official-perks-mauga",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/mauga/",
+      "rawSha256": "f43770ef98e017b357f094626ab05159f942fae4ca569f1972b4d2eda7f5cc0b",
+      "perks": [
+        {
+          "id": "kinetic-bandolier",
+          "name": "Kinetic Bandolier",
+          "tier": "minor",
+          "description": "Overrun reloads up to 150 ammo during the first second of charging.",
+          "review": {
+            "sourceId": "official-perks-mauga",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "pyromaniac",
+          "name": "Pyromaniac",
+          "tier": "minor",
+          "description": "Igniting enemies with Incendiary Chaingun grants 50 overhealth.",
+          "review": {
+            "sourceId": "official-perks-mauga",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "firewalker",
+          "name": "Firewalker",
+          "tier": "major",
+          "description": "Overrun ignites enemies hit.",
+          "review": {
+            "sourceId": "official-perks-mauga",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "combat-fuel",
+          "name": "Combat Fuel",
+          "tier": "major",
+          "description": "Critical hits grant Mauga 4 temporary overhealth on Cardiac Overdrive's next use, up to 150 overhealth.",
+          "review": {
+            "sourceId": "official-perks-mauga",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "mei",
+      "sourceId": "official-perks-mei",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/mei/",
+      "rawSha256": "332b8a137208327d3eba04f24c9620399e3eab7fcf657034aa253f848d52d583",
+      "perks": [
+        {
+          "id": "skating-rink",
+          "name": "Skating Rink",
+          "tier": "minor",
+          "description": "Allies within Blizzard gain 25% increased movement speed and heal for 50 health per second.",
+          "review": {
+            "sourceId": "official-perks-mei",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "glacial-propulsion",
+          "name": "Glacial Propulsion",
+          "tier": "minor",
+          "description": "Double jumping creates a small ice pillar that launches Mei into the air.",
+          "review": {
+            "sourceId": "official-perks-mei",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "deep-freeze",
+          "name": "Deep Freeze",
+          "tier": "major",
+          "description": "Continuously hitting enemies with primary fire freezes them for a short time.",
+          "review": {
+            "sourceId": "official-perks-mei",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "cryo-storm",
+          "name": "Cryo-Storm",
+          "tier": "major",
+          "description": "Cryo-Freeze slows and deals 70 damage per second to nearby enemies.",
+          "review": {
+            "sourceId": "official-perks-mei",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "mercy",
+      "sourceId": "official-perks-mercy",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/mercy/",
+      "rawSha256": "3bc1add93c94eb58d68a3d0200f5def42d19486989ef9a70edb8b7dbfb8ce7cf",
+      "perks": [
+        {
+          "id": "angelic-resurrection",
+          "name": "Angelic Resurrection",
+          "tier": "minor",
+          "description": "Mercy gains 100 overhealth after casting Resurrect.",
+          "review": {
+            "sourceId": "official-perks-mercy",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "winged-reach",
+          "name": "Winged Reach",
+          "tier": "minor",
+          "description": "Guardian Angel's range is increased by 30%.",
+          "review": {
+            "sourceId": "official-perks-mercy",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "chain-boost",
+          "name": "Chain Boost",
+          "tier": "major",
+          "description": "Caduceus Staff's damage boost is increased by 5% and links to a second nearby ally.",
+          "review": {
+            "sourceId": "official-perks-mercy",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "double-dose",
+          "name": "Double Dose",
+          "tier": "major",
+          "description": "Flash Heal gains an additional charge but its base healing is reduced by 10.",
+          "review": {
+            "sourceId": "official-perks-mercy",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "mizuki",
+      "sourceId": "official-perks-mizuki",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/mizuki/",
+      "rawSha256": "a51063ace9c3b6adf3f1efd74072c4aeb5826747b3231336a3ebf2f79444ecd7",
+      "perks": [
+        {
+          "id": "wellspring",
+          "name": "Wellspring",
+          "tier": "minor",
+          "description": "Remedy Aura generation is increased by 25%.",
+          "review": {
+            "sourceId": "official-perks-mizuki",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "exposed-soul",
+          "name": "Exposed Soul",
+          "tier": "minor",
+          "description": "Hitting an enemy with Binding Chain increases your damage dealt to them by 30% for 2 seconds.",
+          "review": {
+            "sourceId": "official-perks-mizuki",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "resonant-return",
+          "name": "Resonant Return",
+          "tier": "major",
+          "description": "Healing Kasa bounces one additional time. Each bounce increases its healing by 10.",
+          "review": {
+            "sourceId": "official-perks-mizuki",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "quickstep",
+          "name": "Quickstep",
+          "tier": "major",
+          "description": "While Katashiro Return is active, allies within Remedy Aura gain 20% increased movement speed.",
+          "review": {
+            "sourceId": "official-perks-mizuki",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "moira",
+      "sourceId": "official-perks-moira",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/moira/",
+      "rawSha256": "9add5a0e0f46951a67a6762f3dfedaee7189762a7df6469ca00d200d72fde6d4",
+      "perks": [
+        {
+          "id": "destruction-s-divide",
+          "name": "Destruction's Divide",
+          "tier": "minor",
+          "description": "Coalescence can be toggled between pure healing or pure damage, with 30% greater effect.",
+          "review": {
+            "sourceId": "official-perks-moira",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "ethical-nourishment",
+          "name": "Ethical Nourishment",
+          "tier": "minor",
+          "description": "Biotic Orb's first 30 healing is instant on each ally it encounters.",
+          "review": {
+            "sourceId": "official-perks-moira",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "reversal",
+          "name": "Reversal",
+          "tier": "major",
+          "description": "Reactivating Biotic Orb reverses its direction.",
+          "review": {
+            "sourceId": "official-perks-moira",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "phantom-step",
+          "name": "Phantom Step",
+          "tier": "major",
+          "description": "Fade lasts 0.5 seconds longer and boosts jump height by 50%.",
+          "review": {
+            "sourceId": "official-perks-moira",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "orisa",
+      "sourceId": "official-perks-orisa",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/orisa/",
+      "rawSha256": "68b67c86b4c99ab39619a5727f873faf3a97b07051507e9f809444f8bfa0e4ec",
+      "perks": [
+        {
+          "id": "defense-protocol",
+          "name": "Defense Protocol",
+          "tier": "minor",
+          "description": "Regenerate 100 health per second while charging Terra Surge.",
+          "review": {
+            "sourceId": "official-perks-orisa",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "mobile-fortification",
+          "name": "Mobile Fortification",
+          "tier": "minor",
+          "description": "While Fortify is active, Orisa has no movement speed reduction and no heat generation.",
+          "review": {
+            "sourceId": "official-perks-orisa",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "heavy-javelin",
+          "name": "Heavy Javelin",
+          "tier": "major",
+          "description": "Energy Javelin's knockback is increased by 25% and its wall impact damage is increased by 15.",
+          "review": {
+            "sourceId": "official-perks-orisa",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "protective-barrier",
+          "name": "Protective Barrier",
+          "tier": "major",
+          "description": "Convert Javelin Spin to instead launch a barrier.",
+          "review": {
+            "sourceId": "official-perks-orisa",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "pharah",
+      "sourceId": "official-perks-pharah",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/pharah/",
+      "rawSha256": "6a0f085b9ce05954d87c4624e5107a5af28cc276bcf0a3df8479b15d2db8764a",
+      "perks": [
+        {
+          "id": "concussive-force",
+          "name": "Concussive Force",
+          "tier": "minor",
+          "description": "Concussive Blast deals up to 30 explosion damage.",
+          "review": {
+            "sourceId": "official-perks-pharah",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "helix-shields",
+          "name": "Helix Shields",
+          "tier": "minor",
+          "description": "Convert 125 health to shields. Direct hits with the Rocket Launcher triggers passive shield regeneration.",
+          "review": {
+            "sourceId": "official-perks-pharah",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "fuel-stores",
+          "name": "Fuel Stores",
+          "tier": "major",
+          "description": "Jet Dash grants 50% fuel. Maximum overfuel is increased by 100%.",
+          "review": {
+            "sourceId": "official-perks-pharah",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "rocket-salvo",
+          "name": "Rocket Salvo",
+          "tier": "major",
+          "description": "After using a movement ability, your next primary fire also shoots two spiraling mini-rockets, each exploding for 30 damage.",
+          "review": {
+            "sourceId": "official-perks-pharah",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "ramattra",
+      "sourceId": "official-perks-ramattra",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/ramattra/",
+      "rawSha256": "b5e6eb45486752c9f096807f22dbaba4d33bf427b67e07a306fe7498f2d9c37d",
+      "perks": [
+        {
+          "id": "relentless-form",
+          "name": "Relentless Form",
+          "tier": "minor",
+          "description": "While Nemesis Form is active, eliminations extend the duration by 2 seconds. Half duration gained during Annihilation.",
+          "review": {
+            "sourceId": "official-perks-ramattra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "prolonged-barrier",
+          "name": "Prolonged Barrier",
+          "tier": "minor",
+          "description": "Void Barrier's duration and size is increased by 25%.",
+          "review": {
+            "sourceId": "official-perks-ramattra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "void-surge",
+          "name": "Void Surge",
+          "tier": "major",
+          "description": "Void Accelerator periodically releases a burst of 6 additional projectiles during continuous fire.",
+          "review": {
+            "sourceId": "official-perks-ramattra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "nanite-repair",
+          "name": "Nanite Repair",
+          "tier": "major",
+          "description": "Ramattra is healed for 100 health per second while within Ravenous Vortex.",
+          "review": {
+            "sourceId": "official-perks-ramattra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "reaper",
+      "sourceId": "official-perks-reaper",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/reaper/",
+      "rawSha256": "c1130c9ab1d937513f4d99be9f39c927f6069438859c4a1779509960a38bbcaa",
+      "perks": [
+        {
+          "id": "soul-reaving",
+          "name": "Soul Reaving",
+          "tier": "minor",
+          "description": "Collect Soul Globes from dead enemies to restore 50 health.",
+          "review": {
+            "sourceId": "official-perks-reaper",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "lingering-wraith",
+          "name": "Lingering Wraith",
+          "tier": "minor",
+          "description": "Leaving Wraith Form grants 30% movement speed for 2 seconds.",
+          "review": {
+            "sourceId": "official-perks-reaper",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "shadow-blink",
+          "name": "Shadow Blink",
+          "tier": "major",
+          "description": "Shadow Step's cast time and cooldown are 25% faster, but the range is reduced by 25%.",
+          "review": {
+            "sourceId": "official-perks-reaper",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "trigger-finger",
+          "name": "Trigger Finger",
+          "tier": "major",
+          "description": "Refresh Dire Triggers' cooldown whenever using an ability or reloading.",
+          "review": {
+            "sourceId": "official-perks-reaper",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "reinhardt",
+      "sourceId": "official-perks-reinhardt",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/reinhardt/",
+      "rawSha256": "1fbb8f88f5715e9d51232c24f360b5a8bf184ca61210d3d7787e370514efb8ad",
+      "perks": [
+        {
+          "id": "crusader-s-fire",
+          "name": "Crusader's Fire",
+          "tier": "minor",
+          "description": "Refund a charge of Fire Strike when you stun an enemy, overfilling up to 3.",
+          "review": {
+            "sourceId": "official-perks-reinhardt",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "crusader-s-resolve",
+          "name": "Crusader's Resolve",
+          "tier": "minor",
+          "description": "While using Barrier Field, your passive health regeneration triggers 75% sooner.",
+          "review": {
+            "sourceId": "official-perks-reinhardt",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "shield-slam",
+          "name": "Shield Slam",
+          "tier": "major",
+          "description": "While Barrier Field is active, use to damage and knockback enemies.",
+          "review": {
+            "sourceId": "official-perks-reinhardt",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "ignited-fury",
+          "name": "Ignited Fury",
+          "tier": "major",
+          "description": "For each enemy you hit with Fire Strike, gain 2 seconds of 25% increased attack speed.",
+          "review": {
+            "sourceId": "official-perks-reinhardt",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "roadhog",
+      "sourceId": "official-perks-roadhog",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/roadhog/",
+      "rawSha256": "8a97eea3bd2182ff1893d10f550ef4916ad0aa994404fa5665e9f52049a6db12",
+      "perks": [
+        {
+          "id": "scrap-hook",
+          "name": "Scrap Hook",
+          "tier": "minor",
+          "description": "Chain Hook hits reload 4 ammo.",
+          "review": {
+            "sourceId": "official-perks-roadhog",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "here-piggy-piggy",
+          "name": "Here, Piggy Piggy",
+          "tier": "minor",
+          "description": "During Whole Hog, Chain Hook's cooldown is reduced by 80%.",
+          "review": {
+            "sourceId": "official-perks-roadhog",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "hogdrogen-exposure",
+          "name": "Hogdrogen Exposure",
+          "tier": "major",
+          "description": "Take A Breather also heals nearby allies for 50% of its healing.",
+          "review": {
+            "sourceId": "official-perks-roadhog",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "toxic-exhaust",
+          "name": "Toxic Exhaust",
+          "tier": "major",
+          "description": "Enemies in front of Roadhog while Trash Compactor is active are slowed by 30% and take 20 damage per second.",
+          "review": {
+            "sourceId": "official-perks-roadhog",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "shion",
+      "sourceId": "official-perks-shion",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/shion/",
+      "rawSha256": "8f3e244b6cad130bf953f08d90b0b003b3dc34426176aa05b789517d35a66c4d",
+      "perks": [
+        {
+          "id": "survival-instinct",
+          "name": "Survival Instinct",
+          "tier": "minor",
+          "description": "Evade's overhealth duration is increased by 1 second.",
+          "review": {
+            "sourceId": "official-perks-shion",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "x-machina",
+          "name": "X Machina",
+          "tier": "minor",
+          "description": "Execution does 20% more damage to enemies below half health.",
+          "review": {
+            "sourceId": "official-perks-shion",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "refuel",
+          "name": "Refuel",
+          "tier": "major",
+          "description": "Joyride instantly restores 50 health and regenerates 20 health per second while active.",
+          "review": {
+            "sourceId": "official-perks-shion",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "faces-of-death",
+          "name": "Faces of Death",
+          "tier": "major",
+          "description": "Gain all other Damage subrole passives (Recon, Specialist, and Sharpshooter).",
+          "review": {
+            "sourceId": "official-perks-shion",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "sierra",
+      "sourceId": "official-perks-sierra",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/sierra/",
+      "rawSha256": "da7c4e96e55e72d4419093f294cda38aa860b045432e3cef1acd51c714472967",
+      "perks": [
+        {
+          "id": "full-flight",
+          "name": "Full Flight",
+          "tier": "minor",
+          "description": "Increase Anchor Drone flight and grapple ranges by 25%.",
+          "review": {
+            "sourceId": "official-perks-sierra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "tight-grip",
+          "name": "Tight Grip",
+          "tier": "minor",
+          "description": "Helix Rifle's bullet spread tightens 70% faster and widens 30% slower.",
+          "review": {
+            "sourceId": "official-perks-sierra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "medi-drone",
+          "name": "Medi-Drone",
+          "tier": "major",
+          "description": "Anchor Drones hold a medkit that can heal Sierra.",
+          "review": {
+            "sourceId": "official-perks-sierra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "locked-in",
+          "name": "Locked In",
+          "tier": "major",
+          "description": "Hitting an enemy with Tracking Shot increases your attack speed by 20% for 2 seconds.",
+          "review": {
+            "sourceId": "official-perks-sierra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "sigma",
+      "sourceId": "official-perks-sigma",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/sigma/",
+      "rawSha256": "b6b33114fbc0693c278476f516517bf20dd251659f4ed26fb909b61332a79a9a",
+      "perks": [
+        {
+          "id": "kinetic-cycle",
+          "name": "Kinetic Cycle",
+          "tier": "minor",
+          "description": "Absorbing projectiles with Kinetic Grasp also reduces Accretion's cooldown.",
+          "review": {
+            "sourceId": "official-perks-sigma",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "hyper-regeneration",
+          "name": "Hyper Regeneration",
+          "tier": "minor",
+          "description": "30% of Hyperspheres' damage restores Experimental Barrier's health.",
+          "review": {
+            "sourceId": "official-perks-sigma",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "hyper-strike",
+          "name": "Hyper Strike",
+          "tier": "major",
+          "description": "Every 5 direct hits with Hyperspheres, your next successful Quick Melee levitates and knocks away enemies.",
+          "review": {
+            "sourceId": "official-perks-sigma",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "levitation",
+          "name": "Levitation",
+          "tier": "major",
+          "description": "Activate and hold Double Jump to briefly levitate upward.",
+          "review": {
+            "sourceId": "official-perks-sigma",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "sojourn",
+      "sourceId": "official-perks-sojourn",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/sojourn/",
+      "rawSha256": "bb5e802e6a4e93d6a61216a35d79ed9e115a3b95a629dea220e3681702195af6",
+      "perks": [
+        {
+          "id": "overcharged",
+          "name": "Overcharged",
+          "tier": "minor",
+          "description": "Railgun's maximum energy is increased by 50 while Overclock is active.",
+          "review": {
+            "sourceId": "official-perks-sojourn",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "deceleration-field",
+          "name": "Deceleration Field",
+          "tier": "minor",
+          "description": "Enemies hit by Disruptor Shot are slowed by 25%.",
+          "review": {
+            "sourceId": "official-perks-sojourn",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "friction-generators",
+          "name": "Friction Generators",
+          "tier": "major",
+          "description": "Power Slide generates up to 75 energy.",
+          "review": {
+            "sourceId": "official-perks-sojourn",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "dual-thrusters",
+          "name": "Dual Thrusters",
+          "tier": "major",
+          "description": "Power Slide gains an additional charge and its jump height shifts to lateral movement.",
+          "review": {
+            "sourceId": "official-perks-sojourn",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "soldier-76",
+      "sourceId": "official-perks-soldier-76",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/soldier-76/",
+      "rawSha256": "ee6a77ccdfddd44910788abb749aafc4b8022cfa4e09cec5df19595dc6bc8633",
+      "perks": [
+        {
+          "id": "helix-propulsion",
+          "name": "Helix Propulsion",
+          "tier": "minor",
+          "description": "Helix Rockets' projectile speed is increased by 50%.",
+          "review": {
+            "sourceId": "official-perks-soldier-76",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "tactical-salvo",
+          "name": "Tactical Salvo",
+          "tier": "minor",
+          "description": "During Tactical Visor, Helix Rockets' cooldown is reduced by 80% and no longer interrupts firing Heavy Pulse Rifle.",
+          "review": {
+            "sourceId": "official-perks-soldier-76",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "full-stride",
+          "name": "Full Stride",
+          "tier": "major",
+          "description": "Sprint's movement speed bonus gradually increases by an additional 25% over 2 seconds.",
+          "review": {
+            "sourceId": "official-perks-soldier-76",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "stim-pack",
+          "name": "Stim Pack",
+          "tier": "major",
+          "description": "Stim Pack replaces Biotic Field. On use, Soldier: 76 heals for 30 health per second and gains 20% increased attack speed for 5 seconds.",
+          "review": {
+            "sourceId": "official-perks-soldier-76",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "sombra",
+      "sourceId": "official-perks-sombra",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/sombra/",
+      "rawSha256": "3bc12867f79aa2cada94a834cff25dbfe8cf08709e9766966427a78bcc9ac46e",
+      "perks": [
+        {
+          "id": "life-hack",
+          "name": "Life Hack",
+          "tier": "minor",
+          "description": "EMP applies Hotfix to all nearby allies.",
+          "review": {
+            "sourceId": "official-perks-sombra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "ctrl-alt-esc",
+          "name": "CTRL ALT ESC",
+          "tier": "minor",
+          "description": "Teleporting with Translocator while below half health initiates passive health regeneration.",
+          "review": {
+            "sourceId": "official-perks-sombra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "data-packet",
+          "name": "Data Packet",
+          "tier": "major",
+          "description": "Hacking health packs with Hotfix reduces its main cooldown by 4 seconds.",
+          "review": {
+            "sourceId": "official-perks-sombra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "cybersecurity",
+          "name": "Cybersecurity",
+          "tier": "major",
+          "description": "Cyberspace's healing is doubled on allies below half health.",
+          "review": {
+            "sourceId": "official-perks-sombra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "symmetra",
+      "sourceId": "official-perks-symmetra",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/symmetra/",
+      "rawSha256": "2f01f300a9a8afcfd8aaf99eb19215e4746265904ca490c8d0e98c81b52f79f3",
+      "perks": [
+        {
+          "id": "sentry-capacity",
+          "name": "Sentry Capacity",
+          "tier": "minor",
+          "description": "Sentry Turret gains an additional charge.",
+          "review": {
+            "sourceId": "official-perks-symmetra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "perfect-alignment",
+          "name": "Perfect Alignment",
+          "tier": "minor",
+          "description": "Increase the range of Photon Projector's primary fire by 20%.",
+          "review": {
+            "sourceId": "official-perks-symmetra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "hovering-barrier",
+          "name": "Hovering Barrier",
+          "tier": "major",
+          "description": "Teleporter gains the option to create a forward moving barrier instead. Pressing E again slows down the barrier's movement.",
+          "review": {
+            "sourceId": "official-perks-symmetra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "shield-battery",
+          "name": "Shield Battery",
+          "tier": "major",
+          "description": "Symmetra regenerates 20 shields per second while within 10 meters of her teleporter.",
+          "review": {
+            "sourceId": "official-perks-symmetra",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "torbjorn",
+      "sourceId": "official-perks-torbjorn",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/torbjorn/",
+      "rawSha256": "0ddbff09407577bf4220065b83aa1b68dc800495340b0ba3e275d03e3ff427ea",
+      "perks": [
+        {
+          "id": "hammer-time",
+          "name": "Hammer Time",
+          "tier": "minor",
+          "description": "Move 20% faster while Forge Hammer is equipped.",
+          "review": {
+            "sourceId": "official-perks-torbjorn",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "pre-heated",
+          "name": "Pre-Heated",
+          "tier": "minor",
+          "description": "Molten Core activates Overload.",
+          "review": {
+            "sourceId": "official-perks-torbjorn",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "anchor-bolts",
+          "name": "Anchor Bolts",
+          "tier": "major",
+          "description": "Deploy Turret's throw range is increased by 25% and it can now attach to walls and ceilings.",
+          "review": {
+            "sourceId": "official-perks-torbjorn",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "overloaded-turret",
+          "name": "Overloaded Turret",
+          "tier": "major",
+          "description": "Overload upgrades your Turret for 5 seconds, increasing its health and damage.",
+          "review": {
+            "sourceId": "official-perks-torbjorn",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "tracer",
+      "sourceId": "official-perks-tracer",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/tracer/",
+      "rawSha256": "7ce1c3fb5038421d2e68709a6afff03273e08d9d1a09922bbd1869eb8dae26e9",
+      "perks": [
+        {
+          "id": "temporal-regen",
+          "name": "Temporal Regen",
+          "tier": "minor",
+          "description": "Passive health regeneration triggers 100% faster.",
+          "review": {
+            "sourceId": "official-perks-tracer",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "kinetic-reload",
+          "name": "Kinetic Reload",
+          "tier": "minor",
+          "description": "Melee hits reload 12 ammo.",
+          "review": {
+            "sourceId": "official-perks-tracer",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "blink-packs",
+          "name": "Blink Packs",
+          "tier": "major",
+          "description": "Health Packs restore 1 Blink charge.",
+          "review": {
+            "sourceId": "official-perks-tracer",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "quantum-entanglement",
+          "name": "Quantum Entanglement",
+          "tier": "major",
+          "description": "Recall grants 50 overhealth and 20 ammo that decays over time.",
+          "review": {
+            "sourceId": "official-perks-tracer",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "vendetta",
+      "sourceId": "official-perks-vendetta",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/vendetta/",
+      "rawSha256": "c355c1901dee71a9b20de2fcccd4361907997d1fc5b59ac37af7a4e3834360d4",
+      "perks": [
+        {
+          "id": "extra-edge",
+          "name": "Extra Edge",
+          "tier": "minor",
+          "description": "Projected Edge costs 25% less energy.",
+          "review": {
+            "sourceId": "official-perks-vendetta",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "raging-storm",
+          "name": "Raging Storm",
+          "tier": "minor",
+          "description": "Whirlwind Dash continues to spin, hitting 3 more times for 30 damage in a wide area.",
+          "review": {
+            "sourceId": "official-perks-vendetta",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "siphoning-strike",
+          "name": "Siphoning Strike",
+          "tier": "major",
+          "description": "Overhead strikes gain 40% Lifesteal.",
+          "review": {
+            "sourceId": "official-perks-vendetta",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "relentless",
+          "name": "Relentless",
+          "tier": "major",
+          "description": "Onslaught can stack 3 more times, increasing attack speed by 5% and movement speed by 3% per stack.",
+          "review": {
+            "sourceId": "official-perks-vendetta",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "venture",
+      "sourceId": "official-perks-venture",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/venture/",
+      "rawSha256": "ae01fb29a8c08730fd7a1ab11d1713b88f0667c815291beb59f213e21c07fa36",
+      "perks": [
+        {
+          "id": "deep-burrow",
+          "name": "Deep Burrow",
+          "tier": "minor",
+          "description": "Drill Dash distance is 75% longer while burrowed.",
+          "review": {
+            "sourceId": "official-perks-venture",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "excavation-exhilaration",
+          "name": "Excavation Exhilaration",
+          "tier": "minor",
+          "description": "While Tectonic Shock is active, cooldowns refresh 300% faster.",
+          "review": {
+            "sourceId": "official-perks-venture",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "smart-extender",
+          "name": "SMART Extender",
+          "tier": "major",
+          "description": "Empower SMART Excavator with E to increase its maximum projectile range by 100% for 4 seconds.",
+          "review": {
+            "sourceId": "official-perks-venture",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "covered-in-dirt",
+          "name": "Covered In Dirt",
+          "tier": "major",
+          "description": "Dealing damage with Clobber grants up to 40 Explorer's Resolve shields.",
+          "review": {
+            "sourceId": "official-perks-venture",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "widowmaker",
+      "sourceId": "official-perks-widowmaker",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/widowmaker/",
+      "rawSha256": "b87f334d4bad1cf5ab365895b02e32717185f2f0514570fea6797d560930db9f",
+      "perks": [
+        {
+          "id": "scoped-efficiency",
+          "name": "Scoped Efficiency",
+          "tier": "minor",
+          "description": "Scoped shots cost 3 ammo instead of 5.",
+          "review": {
+            "sourceId": "official-perks-widowmaker",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "sniper-s-instinct",
+          "name": "Sniper's Instinct",
+          "tier": "minor",
+          "description": "Scoped shots charge 100% faster for 2 seconds after using Grappling Hook.",
+          "review": {
+            "sourceId": "official-perks-widowmaker",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "seeker-mine",
+          "name": "Seeker Mine",
+          "tier": "major",
+          "description": "Venom Mine now fires poison darts at enemies within 10 meters and remains active after triggered.",
+          "review": {
+            "sourceId": "official-perks-widowmaker",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "widow-s-bite",
+          "name": "Widow's Bite",
+          "tier": "major",
+          "description": "Scoped shots can charge up to 125%, piercing enemies when fully charged.",
+          "review": {
+            "sourceId": "official-perks-widowmaker",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "winston",
+      "sourceId": "official-perks-winston",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/winston/",
+      "rawSha256": "36f3fa466f35e4b6e8c920dad84f52f06ebb9aae3fff8cae7fb766734b62562f",
+      "perks": [
+        {
+          "id": "electric-charge",
+          "name": "Electric Charge",
+          "tier": "minor",
+          "description": "Winston gains 10% movement speed for each enemy he is damaging with Tesla Cannon's primary fire, up to 30%.",
+          "review": {
+            "sourceId": "official-perks-winston",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "heavy-landing",
+          "name": "Heavy Landing",
+          "tier": "minor",
+          "description": "During Primal Rage, Jump Pack's damage and area increase by up to 75% while airborne.",
+          "review": {
+            "sourceId": "official-perks-winston",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "chain-lightning",
+          "name": "Chain Lightning",
+          "tier": "major",
+          "description": "Fully charged Secondary Fire hits bounce to up to 2 additional targets.",
+          "review": {
+            "sourceId": "official-perks-winston",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "revitalizing-barrier",
+          "name": "Revitalizing Barrier",
+          "tier": "major",
+          "description": "Barrier Projector heals allies within it for 35 health per second.",
+          "review": {
+            "sourceId": "official-perks-winston",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "wrecking-ball",
+      "sourceId": "official-perks-wrecking-ball",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/wrecking-ball/",
+      "rawSha256": "a91ea29b505ac4bd5d994ce60e5e750d1f16c0da1b6a8f5dbdd6a707cd994bdb",
+      "perks": [
+        {
+          "id": "steamroller",
+          "name": "Steamroller",
+          "tier": "minor",
+          "description": "Roll impacts deal 100% more damage to Tanks.",
+          "review": {
+            "sourceId": "official-perks-wrecking-ball",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "multi-ball",
+          "name": "Multi-Ball",
+          "tier": "minor",
+          "description": "Press Q within 5 seconds after using Minefield to deploy 7 additional mines.",
+          "review": {
+            "sourceId": "official-perks-wrecking-ball",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "hang-time",
+          "name": "Hang Time",
+          "tier": "major",
+          "description": "Piledriver winds up longer, gaining air control and dealing up to 50% more damage.",
+          "review": {
+            "sourceId": "official-perks-wrecking-ball",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "adaptive-barrier",
+          "name": "Adaptive Barrier",
+          "tier": "major",
+          "description": "Adaptive Shield generates a 1 second barrier on activation.",
+          "review": {
+            "sourceId": "official-perks-wrecking-ball",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "wuyang",
+      "sourceId": "official-perks-wuyang",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/wuyang/",
+      "rawSha256": "bcd90ed1928d7d1bfde058470b0e788b105ab4912becf64ac3f4fa1c857c13bf",
+      "perks": [
+        {
+          "id": "overflow",
+          "name": "Overflow",
+          "tier": "minor",
+          "description": "Gain 10 ammo and 50% healing resource when Rushing Torrent is activated.",
+          "review": {
+            "sourceId": "official-perks-wuyang",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "balance",
+          "name": "Balance",
+          "tier": "minor",
+          "description": "When you deal damage with water orbs, increase Restorative Stream's passive healing by 30% for 2 seconds.",
+          "review": {
+            "sourceId": "official-perks-wuyang",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "ebb-and-flow",
+          "name": "Ebb and Flow",
+          "tier": "major",
+          "description": "Guardian Wave rewinds to its starting location.",
+          "review": {
+            "sourceId": "official-perks-wuyang",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "falling-rain",
+          "name": "Falling Rain",
+          "tier": "major",
+          "description": "Simultaneously control 3 water orbs that deal 60% decreased damage and have 25% decreased empowered explosion radius.",
+          "review": {
+            "sourceId": "official-perks-wuyang",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "zarya",
+      "sourceId": "official-perks-zarya",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/zarya/",
+      "rawSha256": "079261cf95433e042d371392ec2b28ae64b93d5df996a32bcea4d009e0a4cf57",
+      "perks": [
+        {
+          "id": "jump-ups",
+          "name": "Jump-Ups",
+          "tier": "minor",
+          "description": "Secondary Fire's self-knockback is increased by 75%.",
+          "review": {
+            "sourceId": "official-perks-zarya",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "spotter",
+          "name": "Spotter",
+          "tier": "minor",
+          "description": "Projected Barrier activates ally health regeneration and increases their movement speed by 20%.",
+          "review": {
+            "sourceId": "official-perks-zarya",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "extra-oomph",
+          "name": "Extra Oomph",
+          "tier": "major",
+          "description": "While a Barrier is active, dealing damage with Particle Cannon's beam generates energy.",
+          "review": {
+            "sourceId": "official-perks-zarya",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "energy-lance",
+          "name": "Energy Lance",
+          "tier": "major",
+          "description": "Particle Cannon's beam pierces enemies.",
+          "review": {
+            "sourceId": "official-perks-zarya",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    },
+    {
+      "heroId": "zenyatta",
+      "sourceId": "official-perks-zenyatta",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/zenyatta/",
+      "rawSha256": "dc4481870e0e00d61ca98d44e39e45f13a304b6ff82c74af4d8d7705bb43eea5",
+      "perks": [
+        {
+          "id": "discordant-repair",
+          "name": "Discordant Repair",
+          "tier": "minor",
+          "description": "Zenyatta gains 15% lifesteal against enemies with Discord Orb.",
+          "review": {
+            "sourceId": "official-perks-zenyatta",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "ascendance",
+          "name": "Ascendance",
+          "tier": "minor",
+          "description": "Activate and hold Double Jump to hover for up to 3 seconds.",
+          "review": {
+            "sourceId": "official-perks-zenyatta",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "focused-destruction",
+          "name": "Focused Destruction",
+          "tier": "major",
+          "description": "Secondary Fire charges 20% faster and can store 1 extra Orb of Destruction.",
+          "review": {
+            "sourceId": "official-perks-zenyatta",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        },
+        {
+          "id": "dual-harmony",
+          "name": "Dual Harmony",
+          "tier": "major",
+          "description": "Gain a 2nd Harmony Orb but they both heal for 70% effectiveness.",
+          "review": {
+            "sourceId": "official-perks-zenyatta",
+            "patch": "Overwatch Retail Patch Notes – October 6, 2026",
+            "reviewedAt": "2026-10-12T04:23:17.401048Z",
+            "confidence": "high",
+            "stale": false
+          }
+        }
+      ]
+    }
+  ]
+}

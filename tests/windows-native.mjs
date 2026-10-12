@@ -1,0 +1,352 @@
+// 🖥️ Exercise real Tauri/WebView2 windows; never substitute browser storage.
+import { chromium, expect } from "@playwright/test";
+import AxeBuilder from "@axe-core/playwright";
+import { spawn, execFileSync } from "node:child_process";
+import { mkdirSync, writeFileSync, existsSync, readFileSync } from "node:fs";
+import { resolve, dirname, join } from "node:path";
+import { release } from "node:os";
+import { createServer } from "node:net";
+import { setTimeout as delay } from "node:timers/promises";
+if (process.platform !== "win32")
+  throw new Error("Native checks require Windows and WebView2.");
+const executable = resolve(
+  process.argv[2] ?? "release/OWGuide-1.0.0-portable/OWGuide.exe",
+);
+if (!existsSync(join(dirname(executable), "portable.marker")))
+  throw new Error("Native checks require the isolated portable candidate.");
+if (existsSync(join(dirname(executable), "OWGuideData", "owguide.sqlite")))
+  throw new Error(
+    "Refusing to overwrite pre-existing portable user data. Use a fresh test candidate.",
+  );
+const directory = resolve("test-results/native-windows");
+mkdirSync(directory, { recursive: true });
+const checks = [];
+const head = execFileSync("git", ["rev-parse", "HEAD"], {
+  encoding: "utf8",
+}).trim();
+let processHandle, browser;
+function windowAction(title, action, width = 1000, height = 720) {
+  execFileSync(
+    "pwsh",
+    [
+      "-NoProfile",
+      "-File",
+      "tests/windows-window.ps1",
+      "-Title",
+      title,
+      "-Action",
+      action,
+      "-ProcessId",
+      String(processHandle.pid),
+      "-Width",
+      String(width),
+      "-Height",
+      String(height),
+    ],
+    { stdio: "pipe" },
+  );
+}
+async function evaluateStable(page, expression) {
+  const deadline = Date.now() + 10000;
+  while (true) {
+    try {
+      return await page.evaluate(expression);
+    } catch (error) {
+      if (
+        !String(error).includes("Execution context was destroyed") ||
+        Date.now() >= deadline
+      )
+        throw error;
+      await page.waitForLoadState("domcontentloaded");
+      await delay(100);
+    }
+  }
+}
+async function start() {
+  const port = await new Promise((resolve, reject) => {
+    const server = createServer();
+    server.once("error", reject);
+    server.listen(0, "127.0.0.1", () => {
+      const address = server.address();
+      server.close(() => resolve(address.port));
+    });
+  });
+  processHandle = spawn(executable, [], {
+    cwd: dirname(executable),
+    env: {
+      ...process.env,
+      WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS: `--remote-debugging-port=${port} --host-resolver-rules="MAP * ~NOTFOUND"`,
+    },
+    stdio: "ignore",
+  });
+  processHandle.on("error", (error) => {
+    writeFileSync(join(directory, "launch-error.txt"), String(error));
+  });
+  const deadline = Date.now() + 45000;
+  while (Date.now() < deadline) {
+    try {
+      browser = await chromium.connectOverCDP(`http://127.0.0.1:${port}`, {
+        timeout: 2000,
+      });
+      break;
+    } catch {
+      await delay(500);
+    }
+  }
+  if (!browser)
+    throw new Error("Could not connect to the actual WebView2 target.");
+  const context = browser.contexts()[0];
+  await expect
+    .poll(() => context.pages().length, { timeout: 15000 })
+    .toBeGreaterThan(0);
+  const page =
+    context.pages().find((p) => !p.url().includes("quick=1")) ??
+    context.pages()[0];
+  await page.getByRole("button", { name: "Heroes", exact: true }).waitFor();
+  windowAction("OWGuide", "restore");
+  const native = await evaluateStable(page, () =>
+    Boolean(globalThis.__TAURI_INTERNALS__),
+  );
+  expect(native).toBe(true);
+  return { context, page };
+}
+async function stop() {
+  if (processHandle && processHandle.exitCode === null && processHandle.pid) {
+    try {
+      windowAction("OWGuide · Quick Reference", "close");
+    } catch {
+      /* The compact window may already be closed. */
+    }
+    try {
+      windowAction("OWGuide", "close");
+    } catch {
+      processHandle.kill();
+    }
+    try {
+      await expect
+        .poll(
+          () =>
+            processHandle.exitCode !== null ||
+            processHandle.signalCode !== null,
+          { timeout: 15000 },
+        )
+        .toBe(true);
+    } catch {
+      processHandle.kill();
+      throw new Error(
+        "Native app did not exit after closing its owned windows.",
+      );
+    }
+  }
+  if (browser) {
+    await browser.close();
+    browser = undefined;
+  }
+}
+
+try {
+  let { context, page } = await start();
+  await context.setOffline(true);
+  await page.reload();
+  await page.getByRole("button", { name: "Heroes", exact: true }).click();
+  await page.getByRole("textbox", { name: "Filter heroes" }).fill("Ana");
+  await page.getByRole("button", { name: "Ana", exact: true }).click();
+  for (const tab of ["Overview", "Abilities", "Matchups", "Maps", "Strategy"]) {
+    await page.getByRole("tab", { name: tab, exact: true }).click();
+    await expect(page.getByRole("tabpanel")).toBeVisible();
+  }
+  await evaluateStable(page, () =>
+    globalThis.scrollTo(0, globalThis.document.documentElement.scrollHeight),
+  );
+  await expect(
+    page.getByRole("heading", { name: "Ana", exact: true }),
+  ).toBeInViewport();
+  await expect(
+    page.getByRole("tab", { name: "Abilities", exact: true }),
+  ).toBeInViewport();
+  checks.push(
+    "native offline reload, five guide tabs and persistent hero header",
+  );
+  await page.getByRole("button", { name: "Add favorite", exact: true }).click();
+  await page
+    .getByRole("button", { name: "Personal notes", exact: true })
+    .click();
+  await page
+    .getByRole("textbox", { name: "Your note", exact: true })
+    .fill("Native SQLite acceptance note.");
+  await page.getByRole("button", { name: "Save note", exact: true }).click();
+  await expect(page.getByRole("status")).toContainText("Note saved");
+  await page
+    .getByRole("button", { name: "Quick Reference", exact: true })
+    .click();
+  await expect.poll(() => context.pages().length, { timeout: 15000 }).toBe(2);
+  const quick = context.pages().find((p) => p !== page);
+  await quick
+    .getByRole("combobox", { name: "Hero", exact: true })
+    .selectOption("ana");
+  await quick
+    .getByRole("button", { name: "Personal notes", exact: true })
+    .click();
+  await expect(
+    quick.getByRole("textbox", { name: "Your note", exact: true }),
+  ).toHaveValue("Native SQLite acceptance note.");
+  await quick
+    .getByRole("textbox", { name: "Your note", exact: true })
+    .fill("Quick window SQLite acceptance note.");
+  await quick.getByRole("button", { name: "Save note", exact: true }).click();
+  await expect(quick.getByRole("alert")).toContainText("Note saved");
+  await page.getByRole("button", { name: "Dashboard", exact: true }).click();
+  await page.getByRole("button", { name: "Notebook", exact: true }).click();
+  await page
+    .getByRole("combobox", { name: "Note subject", exact: true })
+    .selectOption("ana");
+  await expect(
+    page.getByRole("textbox", { name: "Your note", exact: true }),
+  ).toHaveValue("Quick window SQLite acceptance note.");
+  checks.push("SQLite notes/favorites and native cross-window synchronization");
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
+  await page
+    .getByRole("combobox", { name: "Text size", exact: true })
+    .selectOption("1.5");
+  for (const target of [page, quick]) {
+    await expect
+      .poll(
+        () =>
+          evaluateStable(target, () =>
+            parseFloat(
+              globalThis.getComputedStyle(globalThis.document.documentElement)
+                .fontSize,
+            ),
+          ),
+        { timeout: 10000 },
+      )
+      .toBeGreaterThan(22);
+  }
+  await page.getByRole("button", { name: "Notebook", exact: true }).click();
+  await page
+    .getByRole("combobox", { name: "Note subject", exact: true })
+    .selectOption("ana");
+  checks.push("largest text size reaches both native windows");
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
+  await page
+    .getByRole("combobox", { name: "Heroes shortcut", exact: true })
+    .selectOption("x");
+  await expect(
+    page.getByRole("combobox", { name: "Heroes shortcut", exact: true }),
+  ).toHaveValue("x");
+  await page.keyboard.press("Control+Alt+x");
+  await expect(
+    page.getByRole("textbox", { name: "Filter heroes", exact: true }),
+  ).toBeVisible();
+  await page.keyboard.press("Control+Alt+n");
+  await expect(
+    page.getByRole("textbox", { name: "Your note", exact: true }),
+  ).toBeVisible();
+  checks.push("custom native navigation shortcuts");
+
+  for (const action of ["maximize", "restore", "resize"]) {
+    windowAction("OWGuide", action, 900, 680);
+    await expect(
+      page.getByRole("textbox", { name: "Your note", exact: true }),
+    ).toBeVisible();
+  }
+  windowAction("OWGuide · Quick Reference", "resize", 340, 450);
+  await expect
+    .poll(() => evaluateStable(quick, () => globalThis.innerWidth), {
+      timeout: 10000,
+    })
+    .toBeLessThan(400);
+  await expect(
+    quick.getByRole("textbox", { name: "Your note", exact: true }),
+  ).toBeVisible();
+  for (const p of [page, quick]) {
+    await expect
+      .poll(
+        () =>
+          evaluateStable(
+            p,
+            () =>
+              globalThis.document.documentElement.scrollWidth <=
+              globalThis.innerWidth,
+          ),
+        { timeout: 10000 },
+      )
+      .toBe(true);
+    const accessibility = await new AxeBuilder({ page: p })
+      // Native WebView2 does not create browser tabs; the app has no frames.
+      .setLegacyMode(true)
+      .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
+      .analyze();
+    expect(accessibility.violations).toEqual([]);
+  }
+  await page.screenshot({ path: join(directory, "main.png") });
+  await quick.screenshot({ path: join(directory, "quick.png") });
+  checks.push("native maximize/restore/resize and automated accessibility");
+  windowAction("OWGuide · Quick Reference", "close");
+  await expect.poll(() => context.pages().length).toBe(1);
+  await stop();
+  const statePath = join(dirname(executable), "OWGuideData", "windows.json");
+  expect(existsSync(statePath)).toBe(true);
+  const state = JSON.parse(readFileSync(statePath, "utf8"));
+  expect(state.main).toBeDefined();
+  expect(state.quick).toBeDefined();
+  ({ context, page } = await start());
+  await context.setOffline(true);
+  await page.getByRole("button", { name: "Notebook", exact: true }).click();
+  await page
+    .getByRole("combobox", { name: "Note subject", exact: true })
+    .selectOption("ana");
+  await expect(
+    page.getByRole("textbox", { name: "Your note", exact: true }),
+  ).toHaveValue("Quick window SQLite acceptance note.");
+  await page
+    .getByRole("button", { name: "Quick Reference", exact: true })
+    .click();
+  await expect.poll(() => context.pages().length).toBe(2);
+  const restoredQuick = context.pages().find((p) => p !== page);
+  await expect(
+    restoredQuick.getByRole("combobox", { name: "Hero", exact: true }),
+  ).toHaveValue("ana");
+  await expect
+    .poll(() => evaluateStable(restoredQuick, () => globalThis.innerWidth), {
+      timeout: 10000,
+    })
+    .toBeLessThan(400);
+  checks.push(
+    "desktop restart preserves notes and independent compact window dimensions",
+  );
+  writeFileSync(
+    join(directory, "validation.json"),
+    JSON.stringify(
+      {
+        schemaVersion: 1,
+        head,
+        checkedAt: new Date().toISOString(),
+        platform: process.platform,
+        release: release(),
+        checks,
+        limitations: [
+          "Not Windows 10/11 physical hardware coverage",
+          "Not manual screen-reader or multi-monitor validation",
+          "No installer GUI automation",
+        ],
+      },
+      null,
+      2,
+    ),
+  );
+} catch (error) {
+  writeFileSync(join(directory, "failure.txt"), String(error?.stack ?? error));
+  const annotation = String(error?.message ?? error)
+    .replaceAll("%", "%25")
+    .replaceAll("\r", "%0D")
+    .replaceAll("\n", "%0A");
+  console.error(`::error title=Native Windows acceptance::${annotation}`);
+  throw error;
+} finally {
+  await stop();
+}
+console.log(checks.join("\n"));
+console.log(
+  `::notice title=Native WebView2 acceptance::Passed for ${head}: ${checks.join("; ")}`,
+);

@@ -1,0 +1,151 @@
+name: Check and build
+on:
+  push:
+    branches: [main, "feature/**"]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.event.pull_request.head.repo.full_name || github.repository }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+jobs:
+  app:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-2022]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "24.19.0"
+          cache: npm
+      - uses: dtolnay/rust-toolchain@686976e191b89faba57d3206551f0f330d8cb249
+        with:
+          toolchain: "1.99.0"
+          components: rustfmt, clippy
+      - name: Restore Rust build and check tools
+        id: rust-cache
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            ~/.cargo/bin/cargo-audit*
+            ~/.cargo/bin/cargo-license*
+            ~/.cargo/.crates.toml
+            ~/.cargo/.crates2.json
+            src-tauri/target
+          key: ${{ runner.os }}-rust-1.99.0-${{ hashFiles('src-tauri/Cargo.lock') }}-${{ hashFiles('src-tauri/src/**', 'src/data/content.json') }}
+          restore-keys: ${{ runner.os }}-rust-1.99.0-${{ hashFiles('src-tauri/Cargo.lock') }}-
+      - name: Linux desktop libraries
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y libwebkit2gtk-4.1-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev patchelf
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run content:validate
+      - run: npm run test
+      - run: npm run build
+      - name: Shared schema files are current
+        shell: bash
+        run: npm run schemas && git diff --exit-code -- content/*.schema.json
+      - run: cargo fmt --manifest-path src-tauri/Cargo.toml --check
+      - run: cargo test --manifest-path src-tauri/Cargo.toml --locked --no-default-features --lib
+      - run: cargo clippy --manifest-path src-tauri/Cargo.toml --locked --all-targets -- -D warnings
+      - run: npm audit --audit-level=moderate
+      - run: cargo install cargo-audit --version 0.22.0 --locked
+      - run: cargo audit --file src-tauri/Cargo.lock
+      - run: npm run licenses
+      - run: cargo install cargo-license --version 0.6.1 --locked
+      - name: Rust license report
+        shell: bash
+        run: cd src-tauri && cargo license --json > ../rust-licenses.json
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - name: Build desktop binary
+        run: npm run tauri -- build --no-bundle -- --locked
+        env:
+          OWGUIDE_CONTENT_PUBLIC_KEY: ${{ vars.OWGUIDE_CONTENT_PUBLIC_KEY }}
+      - name: Bundle Windows MSI from the compiled app
+        if: runner.os == 'Windows'
+        run: npm run tauri -- bundle --bundles msi
+      - name: Windows third-party notices
+        if: runner.os == 'Windows'
+        run: python scripts/notices.py
+      - name: Install pinned NSIS tool
+        if: runner.os == 'Windows'
+        run: choco install nsis --version=3.11 -y --no-progress
+      - name: Prepare Windows installer and portable folder
+        id: windows-package
+        if: runner.os == 'Windows'
+        run: ./packaging/package.ps1
+      - name: Native WebView2 offline and window checks
+        id: native-check
+        continue-on-error: true
+        if: runner.os == 'Windows'
+        run: node tests/windows-native.mjs
+      - name: Clear native test portable data
+        if: runner.os == 'Windows'
+        run: |
+          $data = 'release/OWGuide-1.0.0-portable/OWGuideData'
+          if (Test-Path $data) { Remove-Item $data -Recurse -Force }
+      - name: Check install, repair, uninstall and portable database
+        if: runner.os == 'Windows'
+        run: ./packaging/smoke.ps1
+      - name: Check the setup GUI and explicit data deletion
+        if: runner.os == 'Windows'
+        run: ./packaging/wrapper-smoke.ps1
+      - name: Require native Windows check success
+        if: runner.os == 'Windows' && steps.native-check.outcome != 'success'
+        run: throw 'Native Windows UI acceptance failed. Maintenance results remain available, but this candidate is not validated.'
+      - name: Package validated candidate artifacts
+        if: runner.os == 'Windows'
+        run: ./packaging/finish.ps1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: runner.os == 'Windows'
+        with:
+          name: OWGuide-Windows-development-candidate
+          path: |
+            release/*.exe
+            release/*.msi
+            release/*.zip
+            release/*.json
+            release/*.txt
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: checks-${{ matrix.os }}
+          path: |
+            dependency-licenses.json
+            rust-licenses.json
+            test-results/
+          if-no-files-found: ignore
+      - name: Save unvalidated Windows files for investigation
+        if: failure() && runner.os == 'Windows' && steps.windows-package.outcome == 'success'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: OWGuide-Windows-unvalidated-test-candidate
+          path: |
+            release/*.exe
+            release/*.msi
+            release/windows-validation.json
+            release/OWGuide-1.0.0-portable/*
+            !release/OWGuide-1.0.0-portable/OWGuideData/**
+          if-no-files-found: error
+      - name: Save Rust build and check tools
+        if: always() && steps.rust-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            ~/.cargo/bin/cargo-audit*
+            ~/.cargo/bin/cargo-license*
+            ~/.cargo/.crates.toml
+            ~/.cargo/.crates2.json
+            src-tauri/target
+          key: ${{ steps.rust-cache.outputs.cache-primary-key }}

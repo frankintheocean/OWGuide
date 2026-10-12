@@ -1,0 +1,668 @@
+{
+  "checkedAt": "2026-10-12T08:22:21.797389+00:00",
+  "officialPages": {
+    "records": [
+      {
+        "url": "https://overwatch.blizzard.com/en-us/heroes/",
+        "retrievedAt": "2026-10-12T08:04:49.398Z",
+        "sha256": "c4e8959a76a9084e0687b59595c77675ba7ebf4494f1a3e8d4421bd081f8ae48",
+        "roster": [
+          "doctrine",
+          "ana",
+          "anran",
+          "ashe",
+          "baptiste",
+          "bastion",
+          "brigitte",
+          "cassidy",
+          "dmon",
+          "dva",
+          "domina",
+          "doomfist",
+          "echo",
+          "emre",
+          "freja",
+          "genji",
+          "hanzo",
+          "hazard",
+          "illari",
+          "jetpack-cat",
+          "junker-queen",
+          "junkrat",
+          "juno",
+          "kiriko",
+          "lifeweaver",
+          "lucio",
+          "mauga",
+          "mei",
+          "mercy",
+          "mizuki",
+          "moira",
+          "orisa",
+          "pharah",
+          "ramattra",
+          "reaper",
+          "reinhardt",
+          "roadhog",
+          "shion",
+          "sierra",
+          "sigma",
+          "sojourn",
+          "soldier-76",
+          "sombra",
+          "symmetra",
+          "torbjorn",
+          "tracer",
+          "vendetta",
+          "venture",
+          "widowmaker",
+          "winston",
+          "wrecking-ball",
+          "wuyang",
+          "zarya",
+          "zenyatta"
+        ],
+        "patchTitle": null
+      },
+      {
+        "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/",
+        "retrievedAt": "2026-10-12T08:04:49.963Z",
+        "sha256": "03d8559f26c57a7b2c46cd630c69ce8f09c563959fb14a076543264dc0197b04",
+        "roster": [],
+        "patchTitle": "Overwatch Retail Patch Notes – October 6, 2026"
+      }
+    ],
+    "missing": [],
+    "extra": [],
+    "note": "Patch identity, modes, prose and guides still require human review."
+  },
+  "heroPages": [
+    {
+      "heroId": "ana",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/ana/",
+      "capturedSha256": "bbb5d6ee7f2d84b4ad11760a0c7b7192800280890e25c4892e8fd57569abcd81",
+      "firstCheckSha256": "bbb5d6ee7f2d84b4ad11760a0c7b7192800280890e25c4892e8fd57569abcd81",
+      "currentSha256": "bbb5d6ee7f2d84b4ad11760a0c7b7192800280890e25c4892e8fd57569abcd81",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "bbb5d6ee7f2d84b4ad11760a0c7b7192800280890e25c4892e8fd57569abcd81",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "anran",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/anran/",
+      "capturedSha256": "d73283c0106883629f367e19d90d13dbd0c68bc429837e23d4069baf2d0c75e1",
+      "firstCheckSha256": "d73283c0106883629f367e19d90d13dbd0c68bc429837e23d4069baf2d0c75e1",
+      "currentSha256": "d73283c0106883629f367e19d90d13dbd0c68bc429837e23d4069baf2d0c75e1",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "d73283c0106883629f367e19d90d13dbd0c68bc429837e23d4069baf2d0c75e1",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "ashe",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/ashe/",
+      "capturedSha256": "a4f228111860ba3bbaf589dad5bdf66e66fade715710bd8bb2ece6a5d4f8fd5c",
+      "firstCheckSha256": "a4f228111860ba3bbaf589dad5bdf66e66fade715710bd8bb2ece6a5d4f8fd5c",
+      "currentSha256": "a4f228111860ba3bbaf589dad5bdf66e66fade715710bd8bb2ece6a5d4f8fd5c",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "a4f228111860ba3bbaf589dad5bdf66e66fade715710bd8bb2ece6a5d4f8fd5c",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "baptiste",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/baptiste/",
+      "capturedSha256": "d3c98918942d780ae5c538726f391976f0ce4570b25b075b7f2967e8676212ff",
+      "firstCheckSha256": "d3c98918942d780ae5c538726f391976f0ce4570b25b075b7f2967e8676212ff",
+      "currentSha256": "d3c98918942d780ae5c538726f391976f0ce4570b25b075b7f2967e8676212ff",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "d3c98918942d780ae5c538726f391976f0ce4570b25b075b7f2967e8676212ff",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "bastion",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/bastion/",
+      "capturedSha256": "16b0c9a7816e648e728a78b6dafddf8890d9951ab0a249b206531c29e4726210",
+      "firstCheckSha256": "16b0c9a7816e648e728a78b6dafddf8890d9951ab0a249b206531c29e4726210",
+      "currentSha256": "16b0c9a7816e648e728a78b6dafddf8890d9951ab0a249b206531c29e4726210",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "16b0c9a7816e648e728a78b6dafddf8890d9951ab0a249b206531c29e4726210",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "brigitte",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/brigitte/",
+      "capturedSha256": "13c5495efcef0cbfe3fa086540020c6be7bdf3eb253e08dc45074687e794b84b",
+      "firstCheckSha256": "13c5495efcef0cbfe3fa086540020c6be7bdf3eb253e08dc45074687e794b84b",
+      "currentSha256": "13c5495efcef0cbfe3fa086540020c6be7bdf3eb253e08dc45074687e794b84b",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "13c5495efcef0cbfe3fa086540020c6be7bdf3eb253e08dc45074687e794b84b",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "cassidy",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/cassidy/",
+      "capturedSha256": "8d58a774c49d80528937fc79a838938e8daac6e984028f1815128aa3089122af",
+      "firstCheckSha256": "8d58a774c49d80528937fc79a838938e8daac6e984028f1815128aa3089122af",
+      "currentSha256": "8d58a774c49d80528937fc79a838938e8daac6e984028f1815128aa3089122af",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "8d58a774c49d80528937fc79a838938e8daac6e984028f1815128aa3089122af",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "dmon",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/dmon/",
+      "capturedSha256": "db4bf2c42c95b7358e6fe5a895cb29c69b8e167fbe569c4cd1a16b0ced205ca4",
+      "firstCheckSha256": "db4bf2c42c95b7358e6fe5a895cb29c69b8e167fbe569c4cd1a16b0ced205ca4",
+      "currentSha256": "db4bf2c42c95b7358e6fe5a895cb29c69b8e167fbe569c4cd1a16b0ced205ca4",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "db4bf2c42c95b7358e6fe5a895cb29c69b8e167fbe569c4cd1a16b0ced205ca4",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "dva",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/dva/",
+      "capturedSha256": "8be36c992e1e84c58973d20d6db41e309d7e766aa6f5bc1ad21bebc7934c07a3",
+      "firstCheckSha256": "8be36c992e1e84c58973d20d6db41e309d7e766aa6f5bc1ad21bebc7934c07a3",
+      "currentSha256": "8be36c992e1e84c58973d20d6db41e309d7e766aa6f5bc1ad21bebc7934c07a3",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "8be36c992e1e84c58973d20d6db41e309d7e766aa6f5bc1ad21bebc7934c07a3",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "doctrine",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/doctrine/",
+      "capturedSha256": "76308c359da547d5993fc01a2d5dd559a8e15347fba3bc85fd0333a1896afc95",
+      "firstCheckSha256": "76308c359da547d5993fc01a2d5dd559a8e15347fba3bc85fd0333a1896afc95",
+      "currentSha256": "76308c359da547d5993fc01a2d5dd559a8e15347fba3bc85fd0333a1896afc95",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "a4ced38a4390d075df984ee145c8a08064ab5601d5201f3e418b81b439a5e7fc",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "domina",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/domina/",
+      "capturedSha256": "0c035bf2e03cbb3b5c12672613747f1595d980d194dbf9c77e4bc4e36ac163cc",
+      "firstCheckSha256": "0c035bf2e03cbb3b5c12672613747f1595d980d194dbf9c77e4bc4e36ac163cc",
+      "currentSha256": "0c035bf2e03cbb3b5c12672613747f1595d980d194dbf9c77e4bc4e36ac163cc",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "0c035bf2e03cbb3b5c12672613747f1595d980d194dbf9c77e4bc4e36ac163cc",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "doomfist",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/doomfist/",
+      "capturedSha256": "b666f256e01b19cb5bad3ddc0abd32bbb2128104f670e9706dd7a8f9e3c7bb31",
+      "firstCheckSha256": "b666f256e01b19cb5bad3ddc0abd32bbb2128104f670e9706dd7a8f9e3c7bb31",
+      "currentSha256": "b666f256e01b19cb5bad3ddc0abd32bbb2128104f670e9706dd7a8f9e3c7bb31",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "b666f256e01b19cb5bad3ddc0abd32bbb2128104f670e9706dd7a8f9e3c7bb31",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "echo",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/echo/",
+      "capturedSha256": "8086b72816c9c4f9b21774c5e5ef4a81c27628ee5d60443016b3671a4da052c2",
+      "firstCheckSha256": "8086b72816c9c4f9b21774c5e5ef4a81c27628ee5d60443016b3671a4da052c2",
+      "currentSha256": "8086b72816c9c4f9b21774c5e5ef4a81c27628ee5d60443016b3671a4da052c2",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "8086b72816c9c4f9b21774c5e5ef4a81c27628ee5d60443016b3671a4da052c2",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "emre",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/emre/",
+      "capturedSha256": "df3f4aa7e1cd00f790277d552e3c8af3044df8b6567887fd26aef22ebb7bea67",
+      "firstCheckSha256": "df3f4aa7e1cd00f790277d552e3c8af3044df8b6567887fd26aef22ebb7bea67",
+      "currentSha256": "df3f4aa7e1cd00f790277d552e3c8af3044df8b6567887fd26aef22ebb7bea67",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "df3f4aa7e1cd00f790277d552e3c8af3044df8b6567887fd26aef22ebb7bea67",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "freja",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/freja/",
+      "capturedSha256": "ea9298d41d3edbdef7de765a983ce0f7bacaffa0d2f046b913dbd03ceeeaf742",
+      "firstCheckSha256": "ea9298d41d3edbdef7de765a983ce0f7bacaffa0d2f046b913dbd03ceeeaf742",
+      "currentSha256": "ea9298d41d3edbdef7de765a983ce0f7bacaffa0d2f046b913dbd03ceeeaf742",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "ea9298d41d3edbdef7de765a983ce0f7bacaffa0d2f046b913dbd03ceeeaf742",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "genji",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/genji/",
+      "capturedSha256": "11394bb54596b644fcf055675d185d55060b7e471a9d188df09312277d2ac997",
+      "firstCheckSha256": "11394bb54596b644fcf055675d185d55060b7e471a9d188df09312277d2ac997",
+      "currentSha256": "11394bb54596b644fcf055675d185d55060b7e471a9d188df09312277d2ac997",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "11394bb54596b644fcf055675d185d55060b7e471a9d188df09312277d2ac997",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "hanzo",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/hanzo/",
+      "capturedSha256": "b925ca25d61129888c86c80e7fbe63bdb50f69f250c05889c17ecb61398e4e75",
+      "firstCheckSha256": "b925ca25d61129888c86c80e7fbe63bdb50f69f250c05889c17ecb61398e4e75",
+      "currentSha256": "b925ca25d61129888c86c80e7fbe63bdb50f69f250c05889c17ecb61398e4e75",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "b925ca25d61129888c86c80e7fbe63bdb50f69f250c05889c17ecb61398e4e75",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "hazard",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/hazard/",
+      "capturedSha256": "ff4a2352df63bba72d5334a47c1877a9ef8521effe422b98716883b2e291f44b",
+      "firstCheckSha256": "ff4a2352df63bba72d5334a47c1877a9ef8521effe422b98716883b2e291f44b",
+      "currentSha256": "ff4a2352df63bba72d5334a47c1877a9ef8521effe422b98716883b2e291f44b",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "ff4a2352df63bba72d5334a47c1877a9ef8521effe422b98716883b2e291f44b",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "illari",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/illari/",
+      "capturedSha256": "84198c0cedb637371232eb2c1fa65e38344af082b386603dbabfdd938c15a3e9",
+      "firstCheckSha256": "84198c0cedb637371232eb2c1fa65e38344af082b386603dbabfdd938c15a3e9",
+      "currentSha256": "84198c0cedb637371232eb2c1fa65e38344af082b386603dbabfdd938c15a3e9",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "84198c0cedb637371232eb2c1fa65e38344af082b386603dbabfdd938c15a3e9",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "jetpack-cat",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/jetpack-cat/",
+      "capturedSha256": "8a8ea9fa2c5f4ef53c3528c0c79bb05cd90bfa3877ceb3a65cd2d9662ddcba9e",
+      "firstCheckSha256": "8a8ea9fa2c5f4ef53c3528c0c79bb05cd90bfa3877ceb3a65cd2d9662ddcba9e",
+      "currentSha256": "8a8ea9fa2c5f4ef53c3528c0c79bb05cd90bfa3877ceb3a65cd2d9662ddcba9e",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "8a8ea9fa2c5f4ef53c3528c0c79bb05cd90bfa3877ceb3a65cd2d9662ddcba9e",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "junker-queen",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/junker-queen/",
+      "capturedSha256": "8c8af6f16b0d1106d1694e547f0e7ce9551933815e8ca5f350bd79beb25bf737",
+      "firstCheckSha256": "8c8af6f16b0d1106d1694e547f0e7ce9551933815e8ca5f350bd79beb25bf737",
+      "currentSha256": "8c8af6f16b0d1106d1694e547f0e7ce9551933815e8ca5f350bd79beb25bf737",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "8c8af6f16b0d1106d1694e547f0e7ce9551933815e8ca5f350bd79beb25bf737",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "junkrat",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/junkrat/",
+      "capturedSha256": "10647db05e8a1cc9745ec33ad617d56f1e3088acc0cf57a9bc008b57a7233ef2",
+      "firstCheckSha256": "10647db05e8a1cc9745ec33ad617d56f1e3088acc0cf57a9bc008b57a7233ef2",
+      "currentSha256": "10647db05e8a1cc9745ec33ad617d56f1e3088acc0cf57a9bc008b57a7233ef2",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "10647db05e8a1cc9745ec33ad617d56f1e3088acc0cf57a9bc008b57a7233ef2",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "juno",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/juno/",
+      "capturedSha256": "aca0b514022c61883298bef05ab7880bfea71dfa0add8be90b35caa1ccebc82d",
+      "firstCheckSha256": "aca0b514022c61883298bef05ab7880bfea71dfa0add8be90b35caa1ccebc82d",
+      "currentSha256": "aca0b514022c61883298bef05ab7880bfea71dfa0add8be90b35caa1ccebc82d",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "aca0b514022c61883298bef05ab7880bfea71dfa0add8be90b35caa1ccebc82d",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "kiriko",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/kiriko/",
+      "capturedSha256": "cf11ee361a3792f42ff6c031a4425878975ac7aa9c39b1c2047a765e2a531485",
+      "firstCheckSha256": "cf11ee361a3792f42ff6c031a4425878975ac7aa9c39b1c2047a765e2a531485",
+      "currentSha256": "cf11ee361a3792f42ff6c031a4425878975ac7aa9c39b1c2047a765e2a531485",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "cf11ee361a3792f42ff6c031a4425878975ac7aa9c39b1c2047a765e2a531485",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "lifeweaver",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/lifeweaver/",
+      "capturedSha256": "7a910434c9db68efd465f0f57f63dab00cee3b12a8dcf9c23de7313d52297ea4",
+      "firstCheckSha256": "7a910434c9db68efd465f0f57f63dab00cee3b12a8dcf9c23de7313d52297ea4",
+      "currentSha256": "7a910434c9db68efd465f0f57f63dab00cee3b12a8dcf9c23de7313d52297ea4",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "f3ef989916d889e799d0c9696ad42b51581d3dc0eb8a4113c5932a50857abaee",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "lucio",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/lucio/",
+      "capturedSha256": "146fdae5ce33468d037b1626ac808066055f37fbaa0511c84e11763208a583ed",
+      "firstCheckSha256": "146fdae5ce33468d037b1626ac808066055f37fbaa0511c84e11763208a583ed",
+      "currentSha256": "146fdae5ce33468d037b1626ac808066055f37fbaa0511c84e11763208a583ed",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "146fdae5ce33468d037b1626ac808066055f37fbaa0511c84e11763208a583ed",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "mauga",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/mauga/",
+      "capturedSha256": "f43770ef98e017b357f094626ab05159f942fae4ca569f1972b4d2eda7f5cc0b",
+      "firstCheckSha256": "f43770ef98e017b357f094626ab05159f942fae4ca569f1972b4d2eda7f5cc0b",
+      "currentSha256": "f43770ef98e017b357f094626ab05159f942fae4ca569f1972b4d2eda7f5cc0b",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "f43770ef98e017b357f094626ab05159f942fae4ca569f1972b4d2eda7f5cc0b",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "mei",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/mei/",
+      "capturedSha256": "332b8a137208327d3eba04f24c9620399e3eab7fcf657034aa253f848d52d583",
+      "firstCheckSha256": "332b8a137208327d3eba04f24c9620399e3eab7fcf657034aa253f848d52d583",
+      "currentSha256": "332b8a137208327d3eba04f24c9620399e3eab7fcf657034aa253f848d52d583",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "5f4b24a041d4b5e054a89edaa3b9f1fe9bffc91ed9604b7a5237892fddb147f9",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "mercy",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/mercy/",
+      "capturedSha256": "3bc1add93c94eb58d68a3d0200f5def42d19486989ef9a70edb8b7dbfb8ce7cf",
+      "firstCheckSha256": "3bc1add93c94eb58d68a3d0200f5def42d19486989ef9a70edb8b7dbfb8ce7cf",
+      "currentSha256": "3bc1add93c94eb58d68a3d0200f5def42d19486989ef9a70edb8b7dbfb8ce7cf",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "3bc1add93c94eb58d68a3d0200f5def42d19486989ef9a70edb8b7dbfb8ce7cf",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "mizuki",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/mizuki/",
+      "capturedSha256": "a51063ace9c3b6adf3f1efd74072c4aeb5826747b3231336a3ebf2f79444ecd7",
+      "firstCheckSha256": "a51063ace9c3b6adf3f1efd74072c4aeb5826747b3231336a3ebf2f79444ecd7",
+      "currentSha256": "a51063ace9c3b6adf3f1efd74072c4aeb5826747b3231336a3ebf2f79444ecd7",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "a51063ace9c3b6adf3f1efd74072c4aeb5826747b3231336a3ebf2f79444ecd7",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "moira",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/moira/",
+      "capturedSha256": "9add5a0e0f46951a67a6762f3dfedaee7189762a7df6469ca00d200d72fde6d4",
+      "firstCheckSha256": "9add5a0e0f46951a67a6762f3dfedaee7189762a7df6469ca00d200d72fde6d4",
+      "currentSha256": "9add5a0e0f46951a67a6762f3dfedaee7189762a7df6469ca00d200d72fde6d4",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "9add5a0e0f46951a67a6762f3dfedaee7189762a7df6469ca00d200d72fde6d4",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "orisa",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/orisa/",
+      "capturedSha256": "68b67c86b4c99ab39619a5727f873faf3a97b07051507e9f809444f8bfa0e4ec",
+      "firstCheckSha256": "68b67c86b4c99ab39619a5727f873faf3a97b07051507e9f809444f8bfa0e4ec",
+      "currentSha256": "68b67c86b4c99ab39619a5727f873faf3a97b07051507e9f809444f8bfa0e4ec",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "68b67c86b4c99ab39619a5727f873faf3a97b07051507e9f809444f8bfa0e4ec",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "pharah",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/pharah/",
+      "capturedSha256": "6a0f085b9ce05954d87c4624e5107a5af28cc276bcf0a3df8479b15d2db8764a",
+      "firstCheckSha256": "6a0f085b9ce05954d87c4624e5107a5af28cc276bcf0a3df8479b15d2db8764a",
+      "currentSha256": "6a0f085b9ce05954d87c4624e5107a5af28cc276bcf0a3df8479b15d2db8764a",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "6a0f085b9ce05954d87c4624e5107a5af28cc276bcf0a3df8479b15d2db8764a",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "ramattra",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/ramattra/",
+      "capturedSha256": "b5e6eb45486752c9f096807f22dbaba4d33bf427b67e07a306fe7498f2d9c37d",
+      "firstCheckSha256": "b5e6eb45486752c9f096807f22dbaba4d33bf427b67e07a306fe7498f2d9c37d",
+      "currentSha256": "b5e6eb45486752c9f096807f22dbaba4d33bf427b67e07a306fe7498f2d9c37d",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "b5e6eb45486752c9f096807f22dbaba4d33bf427b67e07a306fe7498f2d9c37d",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "reaper",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/reaper/",
+      "capturedSha256": "c1130c9ab1d937513f4d99be9f39c927f6069438859c4a1779509960a38bbcaa",
+      "firstCheckSha256": "c1130c9ab1d937513f4d99be9f39c927f6069438859c4a1779509960a38bbcaa",
+      "currentSha256": "c1130c9ab1d937513f4d99be9f39c927f6069438859c4a1779509960a38bbcaa",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "c1130c9ab1d937513f4d99be9f39c927f6069438859c4a1779509960a38bbcaa",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "reinhardt",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/reinhardt/",
+      "capturedSha256": "1fbb8f88f5715e9d51232c24f360b5a8bf184ca61210d3d7787e370514efb8ad",
+      "firstCheckSha256": "1fbb8f88f5715e9d51232c24f360b5a8bf184ca61210d3d7787e370514efb8ad",
+      "currentSha256": "1fbb8f88f5715e9d51232c24f360b5a8bf184ca61210d3d7787e370514efb8ad",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "1fbb8f88f5715e9d51232c24f360b5a8bf184ca61210d3d7787e370514efb8ad",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "roadhog",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/roadhog/",
+      "capturedSha256": "8a97eea3bd2182ff1893d10f550ef4916ad0aa994404fa5665e9f52049a6db12",
+      "firstCheckSha256": "8a97eea3bd2182ff1893d10f550ef4916ad0aa994404fa5665e9f52049a6db12",
+      "currentSha256": "8a97eea3bd2182ff1893d10f550ef4916ad0aa994404fa5665e9f52049a6db12",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "8a97eea3bd2182ff1893d10f550ef4916ad0aa994404fa5665e9f52049a6db12",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "shion",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/shion/",
+      "capturedSha256": "8f3e244b6cad130bf953f08d90b0b003b3dc34426176aa05b789517d35a66c4d",
+      "firstCheckSha256": "8f3e244b6cad130bf953f08d90b0b003b3dc34426176aa05b789517d35a66c4d",
+      "currentSha256": "8f3e244b6cad130bf953f08d90b0b003b3dc34426176aa05b789517d35a66c4d",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "8f3e244b6cad130bf953f08d90b0b003b3dc34426176aa05b789517d35a66c4d",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "sierra",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/sierra/",
+      "capturedSha256": "da7c4e96e55e72d4419093f294cda38aa860b045432e3cef1acd51c714472967",
+      "firstCheckSha256": "da7c4e96e55e72d4419093f294cda38aa860b045432e3cef1acd51c714472967",
+      "currentSha256": "da7c4e96e55e72d4419093f294cda38aa860b045432e3cef1acd51c714472967",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "312eca3cb0df68ee4b86e9fe5c3eabf7d392a9f73b057e0d938862a56992ca16",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "sigma",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/sigma/",
+      "capturedSha256": "b6b33114fbc0693c278476f516517bf20dd251659f4ed26fb909b61332a79a9a",
+      "firstCheckSha256": "b6b33114fbc0693c278476f516517bf20dd251659f4ed26fb909b61332a79a9a",
+      "currentSha256": "b6b33114fbc0693c278476f516517bf20dd251659f4ed26fb909b61332a79a9a",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "b6b33114fbc0693c278476f516517bf20dd251659f4ed26fb909b61332a79a9a",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "sojourn",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/sojourn/",
+      "capturedSha256": "bb5e802e6a4e93d6a61216a35d79ed9e115a3b95a629dea220e3681702195af6",
+      "firstCheckSha256": "bb5e802e6a4e93d6a61216a35d79ed9e115a3b95a629dea220e3681702195af6",
+      "currentSha256": "bb5e802e6a4e93d6a61216a35d79ed9e115a3b95a629dea220e3681702195af6",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "bb5e802e6a4e93d6a61216a35d79ed9e115a3b95a629dea220e3681702195af6",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "soldier-76",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/soldier-76/",
+      "capturedSha256": "ee6a77ccdfddd44910788abb749aafc4b8022cfa4e09cec5df19595dc6bc8633",
+      "firstCheckSha256": "ee6a77ccdfddd44910788abb749aafc4b8022cfa4e09cec5df19595dc6bc8633",
+      "currentSha256": "ee6a77ccdfddd44910788abb749aafc4b8022cfa4e09cec5df19595dc6bc8633",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "ee6a77ccdfddd44910788abb749aafc4b8022cfa4e09cec5df19595dc6bc8633",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "sombra",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/sombra/",
+      "capturedSha256": "3bc12867f79aa2cada94a834cff25dbfe8cf08709e9766966427a78bcc9ac46e",
+      "firstCheckSha256": "3bc12867f79aa2cada94a834cff25dbfe8cf08709e9766966427a78bcc9ac46e",
+      "currentSha256": "3bc12867f79aa2cada94a834cff25dbfe8cf08709e9766966427a78bcc9ac46e",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "3bc12867f79aa2cada94a834cff25dbfe8cf08709e9766966427a78bcc9ac46e",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "symmetra",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/symmetra/",
+      "capturedSha256": "2f01f300a9a8afcfd8aaf99eb19215e4746265904ca490c8d0e98c81b52f79f3",
+      "firstCheckSha256": "2f01f300a9a8afcfd8aaf99eb19215e4746265904ca490c8d0e98c81b52f79f3",
+      "currentSha256": "2f01f300a9a8afcfd8aaf99eb19215e4746265904ca490c8d0e98c81b52f79f3",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "2f01f300a9a8afcfd8aaf99eb19215e4746265904ca490c8d0e98c81b52f79f3",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "torbjorn",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/torbjorn/",
+      "capturedSha256": "0ddbff09407577bf4220065b83aa1b68dc800495340b0ba3e275d03e3ff427ea",
+      "firstCheckSha256": "0ddbff09407577bf4220065b83aa1b68dc800495340b0ba3e275d03e3ff427ea",
+      "currentSha256": "0ddbff09407577bf4220065b83aa1b68dc800495340b0ba3e275d03e3ff427ea",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "0ddbff09407577bf4220065b83aa1b68dc800495340b0ba3e275d03e3ff427ea",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "tracer",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/tracer/",
+      "capturedSha256": "7ce1c3fb5038421d2e68709a6afff03273e08d9d1a09922bbd1869eb8dae26e9",
+      "firstCheckSha256": "7ce1c3fb5038421d2e68709a6afff03273e08d9d1a09922bbd1869eb8dae26e9",
+      "currentSha256": "7ce1c3fb5038421d2e68709a6afff03273e08d9d1a09922bbd1869eb8dae26e9",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "7ce1c3fb5038421d2e68709a6afff03273e08d9d1a09922bbd1869eb8dae26e9",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "vendetta",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/vendetta/",
+      "capturedSha256": "c355c1901dee71a9b20de2fcccd4361907997d1fc5b59ac37af7a4e3834360d4",
+      "firstCheckSha256": "c355c1901dee71a9b20de2fcccd4361907997d1fc5b59ac37af7a4e3834360d4",
+      "currentSha256": "c355c1901dee71a9b20de2fcccd4361907997d1fc5b59ac37af7a4e3834360d4",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "c355c1901dee71a9b20de2fcccd4361907997d1fc5b59ac37af7a4e3834360d4",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "venture",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/venture/",
+      "capturedSha256": "ae01fb29a8c08730fd7a1ab11d1713b88f0667c815291beb59f213e21c07fa36",
+      "firstCheckSha256": "ae01fb29a8c08730fd7a1ab11d1713b88f0667c815291beb59f213e21c07fa36",
+      "currentSha256": "ae01fb29a8c08730fd7a1ab11d1713b88f0667c815291beb59f213e21c07fa36",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "ae01fb29a8c08730fd7a1ab11d1713b88f0667c815291beb59f213e21c07fa36",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "widowmaker",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/widowmaker/",
+      "capturedSha256": "b87f334d4bad1cf5ab365895b02e32717185f2f0514570fea6797d560930db9f",
+      "firstCheckSha256": "b87f334d4bad1cf5ab365895b02e32717185f2f0514570fea6797d560930db9f",
+      "currentSha256": "b87f334d4bad1cf5ab365895b02e32717185f2f0514570fea6797d560930db9f",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "b87f334d4bad1cf5ab365895b02e32717185f2f0514570fea6797d560930db9f",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "winston",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/winston/",
+      "capturedSha256": "36f3fa466f35e4b6e8c920dad84f52f06ebb9aae3fff8cae7fb766734b62562f",
+      "firstCheckSha256": "36f3fa466f35e4b6e8c920dad84f52f06ebb9aae3fff8cae7fb766734b62562f",
+      "currentSha256": "36f3fa466f35e4b6e8c920dad84f52f06ebb9aae3fff8cae7fb766734b62562f",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "36f3fa466f35e4b6e8c920dad84f52f06ebb9aae3fff8cae7fb766734b62562f",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "wrecking-ball",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/wrecking-ball/",
+      "capturedSha256": "a91ea29b505ac4bd5d994ce60e5e750d1f16c0da1b6a8f5dbdd6a707cd994bdb",
+      "firstCheckSha256": "a91ea29b505ac4bd5d994ce60e5e750d1f16c0da1b6a8f5dbdd6a707cd994bdb",
+      "currentSha256": "a91ea29b505ac4bd5d994ce60e5e750d1f16c0da1b6a8f5dbdd6a707cd994bdb",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "a91ea29b505ac4bd5d994ce60e5e750d1f16c0da1b6a8f5dbdd6a707cd994bdb",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "wuyang",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/wuyang/",
+      "capturedSha256": "bcd90ed1928d7d1bfde058470b0e788b105ab4912becf64ac3f4fa1c857c13bf",
+      "firstCheckSha256": "bcd90ed1928d7d1bfde058470b0e788b105ab4912becf64ac3f4fa1c857c13bf",
+      "currentSha256": "bcd90ed1928d7d1bfde058470b0e788b105ab4912becf64ac3f4fa1c857c13bf",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "bcd90ed1928d7d1bfde058470b0e788b105ab4912becf64ac3f4fa1c857c13bf",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "zarya",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/zarya/",
+      "capturedSha256": "079261cf95433e042d371392ec2b28ae64b93d5df996a32bcea4d009e0a4cf57",
+      "firstCheckSha256": "079261cf95433e042d371392ec2b28ae64b93d5df996a32bcea4d009e0a4cf57",
+      "currentSha256": "079261cf95433e042d371392ec2b28ae64b93d5df996a32bcea4d009e0a4cf57",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "079261cf95433e042d371392ec2b28ae64b93d5df996a32bcea4d009e0a4cf57",
+      "rawBytesUnchanged": true
+    },
+    {
+      "heroId": "zenyatta",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/zenyatta/",
+      "capturedSha256": "dc4481870e0e00d61ca98d44e39e45f13a304b6ff82c74af4d8d7705bb43eea5",
+      "firstCheckSha256": "dc4481870e0e00d61ca98d44e39e45f13a304b6ff82c74af4d8d7705bb43eea5",
+      "currentSha256": "dc4481870e0e00d61ca98d44e39e45f13a304b6ff82c74af4d8d7705bb43eea5",
+      "abilityTextUnchanged": true,
+      "legacyNormalizedSha256": "dc4481870e0e00d61ca98d44e39e45f13a304b6ff82c74af4d8d7705bb43eea5",
+      "rawBytesUnchanged": true
+    }
+  ],
+  "numericHeroSources": {
+    "checkedAt": "2026-10-12T08:12:30.706Z",
+    "results": [
+      {
+        "heroId": "baptiste",
+        "sha256": "d3c98918942d780ae5c538726f391976f0ce4570b25b075b7f2967e8676212ff",
+        "unchanged": true
+      },
+      {
+        "heroId": "bastion",
+        "sha256": "16b0c9a7816e648e728a78b6dafddf8890d9951ab0a249b206531c29e4726210",
+        "unchanged": true
+      },
+      {
+        "heroId": "echo",
+        "sha256": "8086b72816c9c4f9b21774c5e5ef4a81c27628ee5d60443016b3671a4da052c2",
+        "unchanged": true
+      },
+      {
+        "heroId": "emre",
+        "sha256": "df3f4aa7e1cd00f790277d552e3c8af3044df8b6567887fd26aef22ebb7bea67",
+        "unchanged": true
+      },
+      {
+        "heroId": "genji",
+        "sha256": "11394bb54596b644fcf055675d185d55060b7e471a9d188df09312277d2ac997",
+        "unchanged": true
+      },
+      {
+        "heroId": "hanzo",
+        "sha256": "b925ca25d61129888c86c80e7fbe63bdb50f69f250c05889c17ecb61398e4e75",
+        "unchanged": true
+      },
+      {
+        "heroId": "shion",
+        "sha256": "8f3e244b6cad130bf953f08d90b0b003b3dc34426176aa05b789517d35a66c4d",
+        "unchanged": true
+      },
+      {
+        "heroId": "zenyatta",
+        "sha256": "dc4481870e0e00d61ca98d44e39e45f13a304b6ff82c74af4d8d7705bb43eea5",
+        "unchanged": true
+      }
+    ]
+  },
+  "scope": "Roster IDs, patch page and all 54 retained hero-page bytes match current responses. Four earlier comparisons differed because Python universal-newline normalization changed carriage returns before hashing. Historical normalized hashes are retained for audit. This does not approve tactical guides, matchups, complete kits or map rotation.",
+  "tacticalGuidesApproved": false
+}
