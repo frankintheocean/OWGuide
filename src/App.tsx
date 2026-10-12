@@ -1,3 +1,4 @@
+import { NoteList } from "./components/NoteList";
 import {
   useCallback,
   useEffect,
@@ -1294,21 +1295,20 @@ export default function App() {
                 </section>
                 <section className="card">
                   <h3>Saved notes</h3>
-                  {Object.entries(user.notes)
-                    .filter(([, v]) => v)
-                    .map(([k]) => (
-                      <button
-                        className="list-row"
-                        key={k}
-                        onClick={() => {
-                          setNoteKey(k);
-                          setDraft(user.notes[k]);
-                        }}
-                      >
-                        {content.heroes.find((h) => h.id === k)?.name ??
-                          k.replace(/^strategy:/, "")}
-                      </button>
-                    ))}
+                  <NoteList
+                    entries={Object.entries(user.notes)
+                      .filter(([, value]) => value)
+                      .map(([key]) => ({
+                        key,
+                        label:
+                          content.heroes.find((hero) => hero.id === key)
+                            ?.name ?? key.replace(/^strategy:/, ""),
+                      }))}
+                    onSelect={(key) => {
+                      setNoteKey(key);
+                      setDraft(user.notes[key]);
+                    }}
+                  />
                   <h3>Bookmarked strategies</h3>
                   {user.bookmarks.length ? (
                     user.bookmarks.map((k) => {

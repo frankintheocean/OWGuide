@@ -8,6 +8,7 @@ trap {
 }
 $root=Split-Path $PSScriptRoot -Parent
 Set-Location $root
+. "$PSScriptRoot/shortcuts.ps1"
 $setup=(Resolve-Path "release/OWGuide-$Version-x64-setup.exe").Path
 $data=Join-Path $env:LOCALAPPDATA 'com.owguide.desktop'
 if (Test-Path $data) { throw 'Refusing GUI maintenance checks with pre-existing personal data.' }
@@ -48,6 +49,7 @@ function Installed-Exe {
 }
 Run-Setup 'Install OWGuide'
 $exe=Installed-Exe
+Test-OWGuideShortcuts $exe
 $appProcess=Start-Process $exe -PassThru
 try {
   $ready=$false
@@ -77,6 +79,7 @@ if (!(Test-Path $exe) -or (Get-FileHash $exe -Algorithm SHA256).Hash -ne $hash) 
 if ($LASTEXITCODE -ne 0) { throw 'Setup GUI repair changed personal data.' }
 Run-Setup 'Uninstall OWGuide'
 if (Test-Path $exe) { throw 'Setup GUI uninstall left the application executable.' }
+Test-OWGuideShortcutsRemoved
 & python tests/desktop-db.py (Join-Path $data 'owguide.sqlite') --check-personal
 if ($LASTEXITCODE -ne 0) { throw 'Setup GUI uninstall did not retain personal data.' }
 Run-Setup 'Install OWGuide'

@@ -8,6 +8,7 @@ trap {
 }
 $root = Split-Path $PSScriptRoot -Parent
 Set-Location $root
+. "$PSScriptRoot/shortcuts.ps1"
 $msi = (Resolve-Path "release/OWGuide-$Version-x64.msi").Path
 $install = Join-Path $env:TEMP 'OWGuide-install-smoke'
 $data = Join-Path $env:LOCALAPPDATA 'com.owguide.desktop'
@@ -38,6 +39,7 @@ Run-Msi "/i `"$msi`" /qn /norestart INSTALLDIR=`"$install`" /l*v `"$env:TEMP\owg
 $exe = Join-Path $install 'OWGuide.exe'
 if (!(Test-Path $exe)) { $exe = Join-Path $install 'owguide.exe' }
 if (!(Test-Path $exe)) { throw 'Installed executable missing.' }
+Test-OWGuideShortcuts $exe
 $process = Start-Process $exe -PassThru
 try { Wait-Database (Join-Path $data 'owguide.sqlite') $process } finally { Close-TestApp $process }
 & python tests/desktop-db.py (Join-Path $data 'owguide.sqlite') --seed-personal
@@ -52,6 +54,7 @@ if ((Get-Content $sentinel) -ne 'personal data sentinel') { throw 'Repair change
 if ($LASTEXITCODE -ne 0) { throw 'Repair changed personal database contents.' }
 Run-Msi "/x `"$msi`" /qn /norestart /l*v `"$env:TEMP\owguide-uninstall.log`""
 if (Test-Path $exe) { throw 'Uninstall left the installed executable.' }
+Test-OWGuideShortcutsRemoved
 if (!(Test-Path $sentinel)) { throw 'Uninstall unexpectedly removed personal data.' }
 & python tests/desktop-db.py (Join-Path $data 'owguide.sqlite') --check-personal
 if ($LASTEXITCODE -ne 0) { throw 'Uninstall changed personal database contents.' }

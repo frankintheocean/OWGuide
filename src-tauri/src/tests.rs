@@ -115,6 +115,10 @@ fn dangerous_urls_are_rejected() {
     for u in [
         "http://example.com/x",
         "https://localhost/x",
+        "https://localhost./x",
+        "https://app.localhost/x",
+        "https://machine.local./x",
+        "https://machine.home.arpa/x",
         "https://127.0.0.1/x",
         "https://[::1]/x",
         "https://user:pass@example.com/x",

@@ -1474,3 +1474,50 @@ summary {
   border: 0;
   background: transparent;
 }
+
+/* Keep the selected hero and section controls available during guide reading. */
+.guide-header {
+  position: sticky;
+  z-index: 12;
+  background: var(--bg);
+  padding-top: 8px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+.guide-header .profile-top {
+  margin: 0 0 10px;
+}
+.guide-header .tabs {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+@media (max-height: 600px) {
+  .guide-header .profile-top .hero-glyph,
+  .guide-header .profile-top .eyebrow,
+  .guide-header .profile-top p:not(.eyebrow) {
+    display: none;
+  }
+  .guide-header .profile-top h1 {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  .guide-header .profile-top {
+    margin-bottom: 4px;
+  }
+  .guide-header .tabs button {
+    padding-block: 8px;
+  }
+}
+
+.note-viewport {
+  height: 324px;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.note-viewport .list-row {
+  height: 54px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

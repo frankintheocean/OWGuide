@@ -155,7 +155,18 @@ try {
     await page.getByRole("tab", { name: tab, exact: true }).click();
     await expect(page.getByRole("tabpanel")).toBeVisible();
   }
-  checks.push("native offline reload and five guide tabs");
+  await evaluateStable(page, () =>
+    window.scrollTo(0, document.documentElement.scrollHeight),
+  );
+  await expect(
+    page.getByRole("heading", { name: "Ana", exact: true }),
+  ).toBeInViewport();
+  await expect(
+    page.getByRole("tab", { name: "Abilities", exact: true }),
+  ).toBeInViewport();
+  checks.push(
+    "native offline reload, five guide tabs and persistent hero header",
+  );
   await page.getByRole("button", { name: "Add favorite", exact: true }).click();
   await page
     .getByRole("button", { name: "Personal notes", exact: true })
@@ -253,6 +264,9 @@ try {
     .click();
   await expect.poll(() => context.pages().length).toBe(2);
   const restoredQuick = context.pages().find((p) => p !== page);
+  await expect(
+    restoredQuick.getByRole("combobox", { name: "Hero", exact: true }),
+  ).toHaveValue("ana");
   await expect
     .poll(() => evaluateStable(restoredQuick, () => globalThis.innerWidth), {
       timeout: 10000,

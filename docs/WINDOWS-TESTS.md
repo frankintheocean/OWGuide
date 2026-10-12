@@ -28,3 +28,17 @@ Run on both Windows 10 and Windows 11. Record the OS build, executable hash, tes
 - Review Tauri permissions, update signatures, import limits, source opening and error recovery. Do not record a security review based only on a successful build.
 
 Record only observed passes in `content/production-acceptance.json`. Physical screen-reader and monitor checks remain separate from automatic accessibility scans.
+
+## 🧭 Check a downloaded candidate without developer tools
+
+A candidate is for testing and is not the final release. Download the Windows candidate artifact from the linked GitHub Actions run and extract it. Read its manifest and checksum file first. You do not need Node.js, Rust, Python or Git to run the packaged app.
+
+1. Compare the downloaded files with `SHA256SUMS.txt`, using PowerShell `Get-FileHash <file> -Algorithm SHA256`.
+2. Extract the portable ZIP into a writable folder. Use its launcher to check WebView2 and start OWGuide. If the runtime is missing, follow the launcher's prerequisite instructions.
+3. Save a note, favorite a hero and complete a drill. Close both windows, turn networking off, then reopen and confirm the saved data and guides are available.
+4. Resize both windows, maximize and restore the main window, and reopen the compact window. Check its saved size and placement. Try different monitor scales if those monitors are available.
+5. Use the setup EXE to install, then check both shortcuts. Save a different installed-app note. Close OWGuide, remove only the installed executable, and choose Repair in setup. Confirm the executable and note are restored.
+6. Choose Uninstall while retaining personal data. Reinstall and confirm the note. Then uninstall with the explicit delete-data checkbox. Portable notes should remain in their separate folder.
+7. Record the commit from the manifest, file hashes, Windows build shown by `winver`, date, and results. Include any failed action and visible error. Report missing hardware or unchecked screen-reader behavior rather than recording a pass.
+
+Automated scripts above require a build environment; these manual steps do not. Windows 11 results cannot replace the separate Windows 10 requirement.

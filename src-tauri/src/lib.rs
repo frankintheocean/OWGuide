@@ -450,12 +450,17 @@ pub fn verify_package(manifest: &Manifest, bytes: &[u8], key: &str) -> Result<Va
 }
 pub fn safe_url(raw: &str) -> Result<reqwest::Url> {
     let u = reqwest::Url::parse(raw).map_err(|_| "Invalid URL")?;
-    let host = u.host_str().ok_or("URL needs a host")?;
+    let host = u
+        .host_str()
+        .ok_or("URL needs a host")?
+        .trim_end_matches('.');
     if u.scheme() != "https"
         || !u.username().is_empty()
         || u.password().is_some()
         || u.port().is_some()
         || host == "localhost"
+        || host.ends_with(".localhost")
+        || host.ends_with(".home.arpa")
         || !host.contains('.')
         || host.ends_with(".local")
         || host.parse::<std::net::IpAddr>().is_ok()

@@ -34,6 +34,15 @@ public static class OWGuideWindowTest {
     },IntPtr.Zero);
     return found;
   }
+  public static string ControlTitles(IntPtr window) {
+    var titles=new List<string>();
+    EnumChildWindows(window,(h,l)=>{
+      var text=new StringBuilder(512);GetWindowText(h,text,text.Capacity);
+      if (text.Length>0) titles.Add(text.ToString()+" [enabled="+IsWindowEnabled(h)+"]");
+      return true;
+    },IntPtr.Zero);
+    return string.Join(" | ",titles);
+  }
   public static string OwnedTitles(uint processId) {
     var titles=new List<string>();
     EnumWindows((h,l)=>{
@@ -58,7 +67,7 @@ switch ($Action) {
   'click' {
     if (!$Control) { throw 'A named control is required.' }
     $button=[OWGuideWindowTest]::FindControl($h,$Control)
-    if ($button -eq [IntPtr]::Zero) { throw "Enabled control not found: $Control" }
+    if ($button -eq [IntPtr]::Zero) { throw "Enabled control not found: $Control. Controls: $([OWGuideWindowTest]::ControlTitles($h))" }
     [OWGuideWindowTest]::SetForegroundWindow($h) | Out-Null
     [OWGuideWindowTest]::SendMessage($button,0x00F5,[IntPtr]::Zero,[IntPtr]::Zero) | Out-Null
   }

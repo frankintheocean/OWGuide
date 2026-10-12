@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import type { Content, Hero, UserData } from "../domain/schema";
 import { Heart, NotebookPen } from "lucide-react";
 import { HeroGlyph } from "./HeroGlyph";
@@ -65,6 +66,26 @@ export function HeroProfile({
   onNote,
   onCompare,
 }: Props) {
+  const headerRef = useRef<HTMLDivElement>(null);
+  const [headerOffset, setHeaderOffset] = useState(0);
+  useEffect(() => {
+    const toolbar = headerRef.current?.closest(".app")?.querySelector("header");
+    if (!toolbar) return;
+    const measure = () =>
+      setHeaderOffset(
+        getComputedStyle(toolbar).position === "sticky"
+          ? toolbar.getBoundingClientRect().height
+          : 0,
+      );
+    const observer = new ResizeObserver(measure);
+    observer.observe(toolbar);
+    window.addEventListener("resize", measure);
+    measure();
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, [compact]);
   const tabs = guideTabs;
   const activeMap = content.maps.find((m) => m.id === mapId);
   const mapOptions = content.maps.map((m) => (
@@ -74,52 +95,58 @@ export function HeroProfile({
   ));
   return (
     <>
-      <div className="profile-top">
-        <HeroGlyph hero={hero} />
-        <div>
-          <p className={`eyebrow ${hero.role}`}>{hero.role} / field guide</p>
-          <h1>{hero.name}</h1>
-          <p>{hero.playstyle.join(" · ") || "Playstyle review pending"}</p>
-        </div>
-        <button
-          className="icon-button"
-          aria-label={
-            user.favorites.includes(hero.id)
-              ? "Remove favorite"
-              : "Add favorite"
-          }
-          aria-pressed={user.favorites.includes(hero.id)}
-          disabled={busy}
-          onClick={() => favorite(hero.id)}
-        >
-          <Heart
-            fill={user.favorites.includes(hero.id) ? "currentColor" : "none"}
-          />
-        </button>
-      </div>
-      <div className="tabs" role="tablist" aria-label="Hero guide sections">
-        {tabs.map((t) => (
+      <div
+        ref={headerRef}
+        className="guide-header"
+        style={{ top: headerOffset }}
+      >
+        <div className="profile-top">
+          <HeroGlyph hero={hero} />
+          <div>
+            <p className={`eyebrow ${hero.role}`}>{hero.role} / field guide</p>
+            <h1>{hero.name}</h1>
+            <p>{hero.playstyle.join(" · ") || "Playstyle review pending"}</p>
+          </div>
           <button
-            role="tab"
-            id={`tab-${t}`}
-            aria-selected={tab === t}
-            aria-controls="guide-panel"
-            tabIndex={tab === t ? 0 : -1}
-            key={t}
-            onClick={() => setTab(t)}
-            onKeyDown={(e) => {
-              if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
-                e.preventDefault();
-                const i =
-                  (tabs.indexOf(t) + (e.key === "ArrowRight" ? 1 : 4)) % 5;
-                setTab(tabs[i]);
-                document.getElementById(`tab-${tabs[i]}`)?.focus();
-              }
-            }}
+            className="icon-button"
+            aria-label={
+              user.favorites.includes(hero.id)
+                ? "Remove favorite"
+                : "Add favorite"
+            }
+            aria-pressed={user.favorites.includes(hero.id)}
+            disabled={busy}
+            onClick={() => favorite(hero.id)}
           >
-            {t}
+            <Heart
+              fill={user.favorites.includes(hero.id) ? "currentColor" : "none"}
+            />
           </button>
-        ))}
+        </div>
+        <div className="tabs" role="tablist" aria-label="Hero guide sections">
+          {tabs.map((t) => (
+            <button
+              role="tab"
+              id={`tab-${t}`}
+              aria-selected={tab === t}
+              aria-controls="guide-panel"
+              tabIndex={tab === t ? 0 : -1}
+              key={t}
+              onClick={() => setTab(t)}
+              onKeyDown={(e) => {
+                if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+                  e.preventDefault();
+                  const i =
+                    (tabs.indexOf(t) + (e.key === "ArrowRight" ? 1 : 4)) % 5;
+                  setTab(tabs[i]);
+                  document.getElementById(`tab-${tabs[i]}`)?.focus();
+                }
+              }}
+            >
+              {t}
+            </button>
+          ))}
+        </div>
       </div>
       <section
         role="tabpanel"
@@ -180,6 +207,12 @@ export function HeroProfile({
         )}
         {tab === "Abilities" && (
           <div className="ability-grid">
+            <p className="muted" style={{ gridColumn: "1 / -1" }}>
+              These entries use captured official hero pages and current patch
+              notes. Unlisted weapon details, passives, classifications and
+              numeric values still need review; this is not yet a complete
+              mechanical kit.
+            </p>
             {hero.abilities.map((a, i) => (
               <article className="card" key={a.id}>
                 <span className="ability-index">

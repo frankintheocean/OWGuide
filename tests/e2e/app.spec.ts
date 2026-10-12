@@ -14,10 +14,11 @@ test("hero guide tabs, favorites, drill and notes persist offline", async ({
     await page.getByRole("tab", { name: tab, exact: true }).click();
     await expect(page.getByRole("tabpanel")).toBeVisible();
   }
-  await page
+  const drill = page
     .getByRole("checkbox", { name: "Completed", exact: true })
-    .first()
-    .check();
+    .first();
+  await drill.click();
+  await expect(drill).toBeChecked();
   await page.getByRole("button", { name: "Add favorite", exact: true }).click();
   await page
     .getByRole("button", { name: "Personal notes", exact: true })

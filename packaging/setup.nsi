@@ -92,4 +92,6 @@ Section
     delete_done:
   ${EndIf}
   SetErrorLevel $Result
+  GetDlgItem $0 $HWNDPARENT 1
+  SendMessage $0 ${WM_SETTEXT} 0 "STR:Close"
 SectionEnd
