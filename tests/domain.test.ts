@@ -303,3 +303,37 @@ it("does not assign balance review dates to the bundled unreviewed drafts", () =
     expect(row.review.confidence).toBe("low");
   }
 });
+
+it("includes sourced minor and major perks for every captured hero and searches their mechanics", () => {
+  for (const hero of content.heroes) {
+    expect(hero.perks?.filter((p) => p.tier === "minor")).toHaveLength(2);
+    expect(hero.perks?.filter((p) => p.tier === "major")).toHaveLength(2);
+    for (const perk of hero.perks ?? []) {
+      expect(perk.description.length).toBeGreaterThan(0);
+      expect(perk.review.patch).toBe(content.patch);
+      expect(
+        content.sources.find((s) => s.id === perk.review.sourceId)?.kind,
+      ).toBe("official");
+    }
+  }
+  expect(
+    search(content, content.heroes[0].perks![0].name).some(
+      (r) => r.id === content.heroes[0].id,
+    ),
+  ).toBe(true);
+});
+it("rejects duplicate perks, missing perk sources and active perk reviews from another patch", () => {
+  for (const damage of [
+    (c: typeof content) => c.heroes[0].perks!.push(c.heroes[0].perks![0]),
+    (c: typeof content) => {
+      c.heroes[0].perks![0].review.sourceId = "missing";
+    },
+    (c: typeof content) => {
+      c.heroes[0].perks![0].review.patch = "old patch";
+    },
+  ]) {
+    const c = structuredClone(content);
+    damage(c);
+    expect(() => contentSchema.parse(c)).toThrow();
+  }
+});

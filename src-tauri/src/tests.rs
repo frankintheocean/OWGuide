@@ -361,3 +361,30 @@ fn navigation_bindings_preserve_legacy_data_and_reject_conflicts() {
     user["settings"]["navigationShortcuts"] = serde_json::json!({"home":"e","heroes":""});
     assert!(validate_user(&user).is_ok());
 }
+#[test]
+fn perk_sources_ids_and_patch_reviews_are_checked_before_installation() {
+    let content = seed();
+    assert!(validate_content(&content).is_ok());
+    assert_eq!(
+        content["heroes"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .map(|h| h["perks"].as_array().unwrap().len())
+            .sum::<usize>(),
+        216
+    );
+    let mut duplicate = content.clone();
+    let perk = duplicate["heroes"][0]["perks"][0].clone();
+    duplicate["heroes"][0]["perks"]
+        .as_array_mut()
+        .unwrap()
+        .push(perk);
+    assert!(validate_content(&duplicate).is_err());
+    let mut missing = content.clone();
+    missing["heroes"][0]["perks"][0]["review"]["sourceId"] = serde_json::json!("missing");
+    assert!(validate_content(&missing).is_err());
+    let mut outdated = content.clone();
+    outdated["heroes"][0]["perks"][0]["review"]["patch"] = serde_json::json!("Old patch");
+    assert!(validate_content(&outdated).is_err());
+}

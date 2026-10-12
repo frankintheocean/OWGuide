@@ -16,6 +16,12 @@ export function search(c: Content, q: string) {
         title: `${h.name} · ${a.name}`,
         body: a.description ?? "",
       })),
+      ...(h.perks ?? []).map((p) => ({
+        kind: "hero" as const,
+        id: h.id,
+        title: `${h.name} · ${p.name}`,
+        body: p.description,
+      })),
       ...h.guides.map((g) => ({
         kind: "hero" as const,
         id: h.id,

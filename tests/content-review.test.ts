@@ -75,3 +75,19 @@ it("patch changes invalidate existing reviews, and a later explicit review is pr
       .review.stale,
   ).toBe(false);
 });
+it("perk changes invalidate related advice and patch changes mark unrevised perks stale", () => {
+  const old = reviewedFixture(),
+    next = structuredClone(old);
+  next.heroes[0].perks![0].description += " Changed mechanic.";
+  const changed = invalidateChangedContent(old, next);
+  expect(changed.heroes[0].review.stale).toBe(true);
+  expect(changed.heroes[0].perks![0].review.stale).toBe(true);
+  expect(changed.heroes[0].perks![1].review.stale).toBe(false);
+  const patch = structuredClone(old);
+  patch.patch = "Next patch";
+  expect(
+    invalidateChangedContent(old, patch).heroes.every((h) =>
+      h.perks?.every((p) => p.review.stale),
+    ),
+  ).toBe(true);
+});

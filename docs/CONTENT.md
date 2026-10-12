@@ -10,6 +10,7 @@ python3 scripts/apply-abilities.py
 python3 scripts/apply-patch-facts.py
 python3 scripts/apply-hero-facts.py
 python3 scripts/apply-profiles.py
+python3 scripts/apply-perks.py --captures /tmp/owguide-live-heroes
 npm run schemas
 npm run content:validate
 npm run content:verify-live
@@ -64,3 +65,7 @@ Eleven additional numeric facts come from eight official hero pages. `content/he
 The bundled matchup drafts have no balance review date and low confidence. Current recommendations require a matching patch, a review date and a clear stale flag. Both desktop and frontend validation reject contradictory active review metadata. The publisher first marks affected guides stale, then checks these rules, so changing a patch does not approve old advice.
 
 Older Python source records hashed text after universal-newline conversion. They retain that `sha256` field for audit and also record `rawSha256` from the captured file bytes. Use the raw-byte field for direct page comparisons. Signed content package hashes always use exact package bytes.
+
+## 🪄 Official perk mechanics
+
+Content package 0.7.0 includes 216 minor and major perk entries from all 54 captured official hero pages. The Abilities tab displays attributed short mechanic quotations, level, source, patch and review date. Universal search includes these entries. `content/perk-evidence.json` records every source URL and exact capture hash. The importer refuses changed captures or an unexpected four-perk layout. Perk changes invalidate related advice; a patch change marks unrevised perks stale. This does not approve broader guides or matchup rankings.

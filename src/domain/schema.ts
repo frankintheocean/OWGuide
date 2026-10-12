@@ -63,6 +63,20 @@ export const heroSchema = z
         })
         .strict(),
     ),
+    perks: z
+      .array(
+        z
+          .object({
+            id,
+            name: z.string().min(1),
+            tier: z.enum(["minor", "major"]),
+            description: z.string().min(1).max(12000),
+            review,
+          })
+          .strict(),
+      )
+      .max(20)
+      .optional(),
     guides: z.array(guideSchema),
     review,
   })
@@ -165,6 +179,7 @@ export const contentSchema = contentStructureSchema.superRefine((c, ctx) => {
   for (const row of [
     ...c.heroes,
     ...c.maps,
+    ...c.heroes.flatMap((h) => h.perks ?? []),
     ...c.matchups,
     ...c.synergies,
     ...c.mapFit,
@@ -178,6 +193,12 @@ export const contentSchema = contentStructureSchema.superRefine((c, ctx) => {
     if (new Set(h.abilities.map((a) => a.id)).size !== h.abilities.length)
       issue(`Duplicate ability in ${h.id}`);
     if (!sources.has(h.review.sourceId)) issue(`Unknown source for ${h.id}`);
+    if (
+      new Set((h.perks ?? []).map((p) => p.id)).size !== (h.perks ?? []).length
+    )
+      issue(`Duplicate perk in ${h.id}`);
+    for (const p of h.perks ?? [])
+      if (!sources.has(p.review.sourceId)) issue("Unknown perk source");
     for (const a of h.abilities) {
       if (new Set(a.stats.map((s) => s.name)).size !== a.stats.length)
         issue(`Duplicate statistic in ${h.id}:${a.id}`);

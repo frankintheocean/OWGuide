@@ -24,7 +24,8 @@ export function invalidateChangedContent(
           !old ||
           old.role !== hero.role ||
           old.biography !== hero.biography ||
-          JSON.stringify(old.abilities) !== JSON.stringify(hero.abilities)
+          JSON.stringify(old.abilities) !== JSON.stringify(hero.abilities) ||
+          JSON.stringify(old.perks) !== JSON.stringify(hero.perks)
         );
       })
       .map((h) => h.id),
@@ -68,6 +69,20 @@ export function invalidateChangedContent(
       )
     )
       hero.review.stale = true;
+  for (const hero of result.heroes)
+    for (const perk of hero.perks ?? []) {
+      const old = previous.heroes
+        .find((h) => h.id === hero.id)
+        ?.perks?.find((p) => p.id === perk.id);
+      if (
+        (patchChanged ||
+          !old ||
+          old.description !== perk.description ||
+          old.tier !== perk.tier) &&
+        shouldInvalidate(perk.review, old?.review)
+      )
+        perk.review.stale = true;
+    }
   for (const map of result.maps)
     if (
       (patchChanged || changedMaps.has(map.id)) &&

@@ -256,6 +256,40 @@ export function HeroProfile({
                 )}
               </article>
             ))}
+            <h3 style={{ gridColumn: "1 / -1" }}>Perks</h3>
+            {(hero.perks ?? []).length ? (
+              (hero.perks ?? []).map((perk) => (
+                <article className="card" key={perk.id}>
+                  <h4>{perk.name}</h4>
+                  <small className="badge">
+                    {perk.tier} · Level {perk.tier === "minor" ? 2 : 3}
+                  </small>
+                  <p>
+                    <q>{perk.description}</q>
+                  </p>
+                  <small>
+                    Official mechanic wording · {perk.review.patch} ·{" "}
+                    {perk.review.stale ? "Needs review" : "Source checked"}{" "}
+                    {perk.review.reviewedAt?.slice(0, 10)}
+                  </small>
+                  <p>
+                    <a
+                      href={
+                        content.sources.find(
+                          (s) => s.id === perk.review.sourceId,
+                        )?.url
+                      }
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Official hero page
+                    </a>
+                  </p>
+                </article>
+              ))
+            ) : (
+              <p>Perk mechanics await source verification.</p>
+            )}
           </div>
         )}
         {tab === "Matchups" && (

@@ -3,6 +3,7 @@
 ## 🌱 1.0.0 development candidate — 2026-10-12
 
 - Added the React and Tauri desktop app, original selector graphics, and three themes.
+- Added 216 sourced minor and major perk entries, with source hashes, search and stale review handling.
 - Added hero sections, an offline snapshot, and original source-informed coaching for all 54 heroes.
 - Added explainable counter scoring with explicit stale and missing-data handling.
 - Added map text fallbacks, comparisons, notes, favorites, drills, and search.

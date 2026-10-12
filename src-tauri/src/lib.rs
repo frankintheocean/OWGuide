@@ -63,6 +63,27 @@ pub fn validate_content(value: &Value) -> Result<()> {
                         return Err("Duplicate guide level".into());
                     }
                 }
+                if let Some(perks) = row["perks"].as_array() {
+                    let mut perk_ids = HashSet::new();
+                    for perk in perks {
+                        if !perk_ids.insert(perk["id"].as_str().unwrap_or_default()) {
+                            return Err("Duplicate perk".into());
+                        }
+                        if !sources
+                            .contains(perk["review"]["sourceId"].as_str().unwrap_or_default())
+                        {
+                            return Err("Unknown perk source".into());
+                        }
+                        let review = &perk["review"];
+                        if review["stale"] == false
+                            && (review["reviewedAt"].is_null() || review["patch"] != value["patch"])
+                        {
+                            return Err(
+                                "Active perk reviews need a date and the current patch".into()
+                            );
+                        }
+                    }
+                }
                 let mut abilities = HashSet::new();
                 for a in row["abilities"].as_array().ok_or("Missing abilities")? {
                     if !abilities.insert(a["id"].as_str().unwrap_or_default()) {
