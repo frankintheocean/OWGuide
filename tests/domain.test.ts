@@ -36,7 +36,7 @@ describe("content integrity", () => {
     const facts = content.heroes.flatMap((h) =>
       h.abilities.flatMap((a) => a.stats),
     );
-    expect(facts).toHaveLength(41);
+    expect(facts).toHaveLength(52);
     expect(
       facts.every((s) =>
         content.sources.some(
@@ -180,9 +180,13 @@ it("provides sourced original summaries for every captured ability without inven
   for (const hero of content.heroes) {
     for (const ability of hero.abilities) {
       expect(ability.description?.trim().length).toBeGreaterThan(20);
-      expect(ability.stats.every((s) => s.sourceId === "blizzard-live")).toBe(
-        true,
-      );
+      expect(
+        ability.stats.every((s) =>
+          content.sources.some(
+            (source) => source.id === s.sourceId && source.kind === "official",
+          ),
+        ),
+      ).toBe(true);
     }
   }
 });

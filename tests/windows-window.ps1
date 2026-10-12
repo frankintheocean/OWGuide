@@ -20,7 +20,7 @@ public static class OWGuideWindowTest {
       uint owner; GetWindowThreadProcessId(h,out owner);
       if (owner!=processId) return true;
       var text=new StringBuilder(512); GetWindowText(h,text,text.Capacity);
-      if (text.ToString()!=title) return true;
+      if (text.ToString().Trim()!=title.Trim()) return true;
       found=h;return false;
     },IntPtr.Zero);
     return found;

@@ -8,6 +8,7 @@ python3 scripts/import-live.py
 npx tsx scripts/apply-coaching.ts
 python3 scripts/apply-abilities.py
 python3 scripts/apply-patch-facts.py
+python3 scripts/apply-hero-facts.py
 python3 scripts/apply-profiles.py
 npm run schemas
 npm run content:validate
@@ -53,3 +54,7 @@ No live feed has been deployed, no key is configured in this build, and network 
 ## 🧑‍🏫 Qualitative profiles
 
 `content/hero-profiles.json` contains original difficulty estimates, playstyles, range descriptions, strengths and resource constraints for all 54 heroes. These are coaching judgments, not official ratings or measured outcomes. They stay marked for tactical review. The publisher invalidates advice when role, biography, abilities, map facts or patch identity change. An explicit new review can be preserved only when it matches the patch, follows package generation and differs from the old review date.
+
+## 🧾 Hero page facts
+
+Eleven additional numeric facts come from eight official hero pages. `content/hero-page-facts.json` records the short factual excerpts; the importer checks each excerpt inside the named ability. `content/hero-fact-evidence.json` records page hashes and capture dates. Together with the 41 patch facts, the package contains 52 sourced values. Missing base values remain blank.

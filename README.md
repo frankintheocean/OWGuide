@@ -7,7 +7,7 @@ OWGuide is an independent Windows hero guide and strategy companion for Overwatc
 ## 🎮 What works
 
 - Hero selector with search, role filters, sorting, keyboard and standard gamepad navigation, and original role graphics.
-- Five guide sections for each of 54 official roster entries. All 54 have original profiles and coaching; 278 abilities include 41 sourced patch values. Missing content is clearly labeled.
+- Five guide sections for each of 54 official roster entries. All 54 have original profiles and coaching; 278 abilities include 52 sourced numeric facts. Missing content is clearly labeled.
 - Counter Picker with deterministic scores, role filters, team selection, synergy evidence, confidence, and missing-evidence states. Stale advice is excluded unless you select it.
 - A library of 59 snapshot map entries with honest text fallbacks. Map geometry is not invented.
 - Favorites, recent guides, three-hero comparison, notes, named strategies, guide/map bookmarks, practice progress, and a configurable dashboard.

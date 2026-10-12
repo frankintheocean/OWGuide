@@ -46,6 +46,22 @@ function windowAction(title, action, width = 1000, height = 720) {
     { stdio: "pipe" },
   );
 }
+async function evaluateStable(page, expression) {
+  const deadline = Date.now() + 10000;
+  while (true) {
+    try {
+      return await page.evaluate(expression);
+    } catch (error) {
+      if (
+        !String(error).includes("Execution context was destroyed") ||
+        Date.now() >= deadline
+      )
+        throw error;
+      await page.waitForLoadState("domcontentloaded");
+      await delay(100);
+    }
+  }
+}
 async function start() {
   const port = await new Promise((resolve, reject) => {
     const server = createServer();
@@ -88,7 +104,7 @@ async function start() {
     context.pages()[0];
   await page.getByRole("button", { name: "Heroes", exact: true }).waitFor();
   windowAction("OWGuide", "restore");
-  const native = await page.evaluate(() =>
+  const native = await evaluateStable(page, () =>
     Boolean(globalThis.__TAURI_INTERNALS__),
   );
   expect(native).toBe(true);
@@ -185,7 +201,9 @@ try {
   }
   windowAction("OWGuide · Quick Reference", "resize", 340, 450);
   await expect
-    .poll(() => quick.evaluate(() => globalThis.innerWidth), { timeout: 10000 })
+    .poll(() => evaluateStable(quick, () => globalThis.innerWidth), {
+      timeout: 10000,
+    })
     .toBeLessThan(400);
   await expect(
     quick.getByRole("textbox", { name: "Your note", exact: true }),
@@ -194,7 +212,8 @@ try {
     await expect
       .poll(
         () =>
-          p.evaluate(
+          evaluateStable(
+            p,
             () =>
               globalThis.document.documentElement.scrollWidth <=
               globalThis.innerWidth,
@@ -235,7 +254,7 @@ try {
   await expect.poll(() => context.pages().length).toBe(2);
   const restoredQuick = context.pages().find((p) => p !== page);
   await expect
-    .poll(() => restoredQuick.evaluate(() => globalThis.innerWidth), {
+    .poll(() => evaluateStable(restoredQuick, () => globalThis.innerWidth), {
       timeout: 10000,
     })
     .toBeLessThan(400);

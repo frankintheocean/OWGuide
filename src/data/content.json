@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "version": "0.4.0",
+  "version": "0.5.0",
   "patch": "Overwatch Retail Patch Notes – October 6, 2026",
-  "generatedAt": "2026-10-12T04:46:54.419420Z",
+  "generatedAt": "2026-10-12T06:33:08.696184Z",
   "liveVerifiedAt": "2026-10-12T03:23:53.284825Z",
   "rosterVerified": true,
   "standardTeamSize": 5,
@@ -38,6 +38,70 @@
       "retrievedAt": "2026-10-12T03:23:53.284825Z",
       "kind": "official",
       "license": "Factual metadata and original OWGuide summaries only; no game artwork or full source prose redistributed."
+    },
+    {
+      "id": "blizzard-baptiste-kit",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/baptiste/",
+      "label": "Baptiste official kit page",
+      "retrievedAt": "2026-10-12T04:17:02.745Z",
+      "kind": "official",
+      "license": "Factual values and original summaries only; no game images or full source prose redistributed."
+    },
+    {
+      "id": "blizzard-bastion-kit",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/bastion/",
+      "label": "Bastion official kit page",
+      "retrievedAt": "2026-10-12T04:17:02.745Z",
+      "kind": "official",
+      "license": "Factual values and original summaries only; no game images or full source prose redistributed."
+    },
+    {
+      "id": "blizzard-echo-kit",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/echo/",
+      "label": "Echo official kit page",
+      "retrievedAt": "2026-10-12T04:17:02.745Z",
+      "kind": "official",
+      "license": "Factual values and original summaries only; no game images or full source prose redistributed."
+    },
+    {
+      "id": "blizzard-emre-kit",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/emre/",
+      "label": "Emre official kit page",
+      "retrievedAt": "2026-10-12T04:17:02.745Z",
+      "kind": "official",
+      "license": "Factual values and original summaries only; no game images or full source prose redistributed."
+    },
+    {
+      "id": "blizzard-genji-kit",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/genji/",
+      "label": "Genji official kit page",
+      "retrievedAt": "2026-10-12T04:17:02.745Z",
+      "kind": "official",
+      "license": "Factual values and original summaries only; no game images or full source prose redistributed."
+    },
+    {
+      "id": "blizzard-hanzo-kit",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/hanzo/",
+      "label": "Hanzo official kit page",
+      "retrievedAt": "2026-10-12T04:17:02.745Z",
+      "kind": "official",
+      "license": "Factual values and original summaries only; no game images or full source prose redistributed."
+    },
+    {
+      "id": "blizzard-shion-kit",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/shion/",
+      "label": "Shion official kit page",
+      "retrievedAt": "2026-10-12T04:17:02.745Z",
+      "kind": "official",
+      "license": "Factual values and original summaries only; no game images or full source prose redistributed."
+    },
+    {
+      "id": "blizzard-zenyatta-kit",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/zenyatta/",
+      "label": "Zenyatta official kit page",
+      "retrievedAt": "2026-10-12T04:17:02.745Z",
+      "kind": "official",
+      "license": "Factual values and original summaries only; no game images or full source prose redistributed."
     }
   ],
   "heroes": [
@@ -349,7 +413,14 @@
           "name": "Regenerative Burst",
           "description": "Restore nearby teammates immediately and over time; the immediate heal is stronger below half health.",
           "kind": "ability",
-          "stats": []
+          "stats": [
+            {
+              "name": "Immediate healing multiplier below half health",
+              "value": 2,
+              "unit": "×",
+              "sourceId": "blizzard-baptiste-kit"
+            }
+          ]
         },
         {
           "id": "immortality-field",
@@ -363,7 +434,20 @@
           "name": "Amplification Matrix",
           "description": "Place a window that amplifies friendly projectile damage and healing.",
           "kind": "ultimate",
-          "stats": []
+          "stats": [
+            {
+              "name": "Projectile damage multiplier",
+              "value": 2,
+              "unit": "×",
+              "sourceId": "blizzard-baptiste-kit"
+            },
+            {
+              "name": "Projectile healing multiplier",
+              "value": 2,
+              "unit": "×",
+              "sourceId": "blizzard-baptiste-kit"
+            }
+          ]
         },
         {
           "id": "exo-boots",
@@ -467,7 +551,14 @@
           "name": "Configuration: Artillery",
           "description": "Stop moving to launch targeted artillery shells.",
           "kind": "ultimate",
-          "stats": []
+          "stats": [
+            {
+              "name": "Maximum shells",
+              "value": 3,
+              "unit": "shells",
+              "sourceId": "blizzard-bastion-kit"
+            }
+          ]
         }
       ],
       "guides": [
@@ -1263,7 +1354,14 @@
           "name": "Tri-Shot",
           "description": "Each shot sends projectiles along a triangular spread.",
           "kind": "weapon",
-          "stats": []
+          "stats": [
+            {
+              "name": "Projectiles per shot",
+              "value": 3,
+              "unit": "projectiles",
+              "sourceId": "blizzard-echo-kit"
+            }
+          ]
         },
         {
           "id": "sticky-bombs",
@@ -1388,7 +1486,14 @@
           "name": "Altered Vitals",
           "description": "Health regeneration starts earlier and provides an immediate heal on activation.",
           "kind": "passive",
-          "stats": []
+          "stats": [
+            {
+              "name": "Healing when regeneration starts",
+              "value": 30,
+              "unit": "health",
+              "sourceId": "blizzard-emre-kit"
+            }
+          ]
         }
       ],
       "guides": [
@@ -1533,7 +1638,20 @@
           "name": "Shuriken",
           "description": "Choose a narrow projectile burst or a wider fan.",
           "kind": "weapon",
-          "stats": []
+          "stats": [
+            {
+              "name": "Burst projectile count",
+              "value": 3,
+              "unit": "projectiles",
+              "sourceId": "blizzard-genji-kit"
+            },
+            {
+              "name": "Fan projectile count",
+              "value": 3,
+              "unit": "projectiles",
+              "sourceId": "blizzard-genji-kit"
+            }
+          ]
         },
         {
           "id": "deflect",
@@ -1644,7 +1762,14 @@
           "name": "Storm Arrows",
           "description": "Fire a limited set of instant arrows with ricochet and reduced damage.",
           "kind": "ability",
-          "stats": []
+          "stats": [
+            {
+              "name": "Arrow count",
+              "value": 5,
+              "unit": "arrows",
+              "sourceId": "blizzard-hanzo-kit"
+            }
+          ]
         },
         {
           "id": "sonic-arrow",
@@ -3684,7 +3809,14 @@
           "name": "Satsuriku Spree",
           "description": "Perform a sequence of forward rushes with gunfire.",
           "kind": "unknown",
-          "stats": []
+          "stats": [
+            {
+              "name": "Forward rushes",
+              "value": 3,
+              "unit": "rushes",
+              "sourceId": "blizzard-shion-kit"
+            }
+          ]
         }
       ],
       "guides": [
@@ -5191,7 +5323,14 @@
           "name": "Snap Kick",
           "description": "Quick melee deals increased damage with stronger knockback.",
           "kind": "passive",
-          "stats": []
+          "stats": [
+            {
+              "name": "Quick melee damage increase",
+              "value": 50,
+              "unit": "%",
+              "sourceId": "blizzard-zenyatta-kit"
+            }
+          ]
         }
       ],
       "guides": [

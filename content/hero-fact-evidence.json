@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-10-12T06:33:08.696184Z",
+  "patch": "Overwatch Retail Patch Notes \u2013 October 6, 2026",
+  "statistics": 11,
+  "records": [
+    {
+      "heroId": "baptiste",
+      "sourceId": "blizzard-baptiste-kit",
+      "sha256": "d3c98918942d780ae5c538726f391976f0ce4570b25b075b7f2967e8676212ff"
+    },
+    {
+      "heroId": "bastion",
+      "sourceId": "blizzard-bastion-kit",
+      "sha256": "16b0c9a7816e648e728a78b6dafddf8890d9951ab0a249b206531c29e4726210"
+    },
+    {
+      "heroId": "echo",
+      "sourceId": "blizzard-echo-kit",
+      "sha256": "8086b72816c9c4f9b21774c5e5ef4a81c27628ee5d60443016b3671a4da052c2"
+    },
+    {
+      "heroId": "emre",
+      "sourceId": "blizzard-emre-kit",
+      "sha256": "df3f4aa7e1cd00f790277d552e3c8af3044df8b6567887fd26aef22ebb7bea67"
+    },
+    {
+      "heroId": "genji",
+      "sourceId": "blizzard-genji-kit",
+      "sha256": "11394bb54596b644fcf055675d185d55060b7e471a9d188df09312277d2ac997"
+    },
+    {
+      "heroId": "hanzo",
+      "sourceId": "blizzard-hanzo-kit",
+      "sha256": "b925ca25d61129888c86c80e7fbe63bdb50f69f250c05889c17ecb61398e4e75"
+    },
+    {
+      "heroId": "shion",
+      "sourceId": "blizzard-shion-kit",
+      "sha256": "8f3e244b6cad130bf953f08d90b0b003b3dc34426176aa05b789517d35a66c4d"
+    },
+    {
+      "heroId": "zenyatta",
+      "sourceId": "blizzard-zenyatta-kit",
+      "sha256": "dc4481870e0e00d61ca98d44e39e45f13a304b6ff82c74af4d8d7705bb43eea5"
+    }
+  ],
+  "note": "Only explicitly listed values copied; no missing damage, cooldown or baseline values inferred."
+}

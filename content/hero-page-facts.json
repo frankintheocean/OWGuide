@@ -1,0 +1,13 @@
+[
+  {"hero":"baptiste","ability":"regenerative-burst","name":"Immediate healing multiplier below half health","value":2,"unit":"×","evidence":"Instant heal is doubled for targets less than half health."},
+  {"hero":"baptiste","ability":"amplification-matrix","name":"Projectile damage multiplier","value":2,"unit":"×","evidence":"doubles the damage and healing effects of allied projectiles."},
+  {"hero":"baptiste","ability":"amplification-matrix","name":"Projectile healing multiplier","value":2,"unit":"×","evidence":"doubles the damage and healing effects of allied projectiles."},
+  {"hero":"bastion","ability":"configuration-artillery","name":"Maximum shells","value":3,"unit":"shells","evidence":"fire up to 3 powerful artillery shells."},
+  {"hero":"echo","ability":"tri-shot","name":"Projectiles per shot","value":3,"unit":"projectiles","evidence":"Fires 3 shots at once"},
+  {"hero":"emre","ability":"altered-vitals","name":"Healing when regeneration starts","value":30,"unit":"health","evidence":"instantly restores 30 health when activated."},
+  {"hero":"genji","ability":"shuriken","name":"Burst projectile count","value":3,"unit":"projectiles","evidence":"an accurate burst of 3 projectiles."},
+  {"hero":"genji","ability":"shuriken","name":"Fan projectile count","value":3,"unit":"projectiles","evidence":"a fan of 3 projectiles in an arc."},
+  {"hero":"hanzo","ability":"storm-arrows","name":"Arrow count","value":5,"unit":"arrows","evidence":"The next 5 arrows ricochet"},
+  {"hero":"shion","ability":"satsuriku-spree","name":"Forward rushes","value":3,"unit":"rushes","evidence":"Rush forward 3 times"},
+  {"hero":"zenyatta","ability":"snap-kick","name":"Quick melee damage increase","value":50,"unit":"%","evidence":"Quick melee damage increased by 50%"}
+]
