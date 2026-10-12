@@ -23,6 +23,7 @@ Var DeleteData
 Var Operation
 Var DeletePersonal
 Var Result
+Var LogFile
 Page custom MaintenancePage MaintenanceLeave
 !insertmacro MUI_PAGE_INSTFILES
 !insertmacro MUI_LANGUAGE "English"
@@ -60,19 +61,20 @@ Function MaintenanceLeave
   ${NSD_GetState} $DeleteData $DeletePersonal
 FunctionEnd
 Section
+  StrCpy $LogFile "$TEMP\OWGuide-setup.log"
   InitPluginsDir
   SetOutPath $PLUGINSDIR
   File /oname=OWGuide.msi "${MSI_FILE}"
   ${If} $Operation == "repair"
-    ExecWait '"$SYSDIR\msiexec.exe" /fa "$PLUGINSDIR\OWGuide.msi" /passive /norestart' $Result
+    ExecWait '"$SYSDIR\msiexec.exe" /fa "$PLUGINSDIR\OWGuide.msi" /passive /norestart /l*v "$LogFile"' $Result
   ${ElseIf} $Operation == "uninstall"
-    ExecWait '"$SYSDIR\msiexec.exe" /x "$PLUGINSDIR\OWGuide.msi" /passive /norestart' $Result
+    ExecWait '"$SYSDIR\msiexec.exe" /x "$PLUGINSDIR\OWGuide.msi" /passive /norestart /l*v "$LogFile"' $Result
   ${Else}
-    ExecWait '"$SYSDIR\msiexec.exe" /i "$PLUGINSDIR\OWGuide.msi" /passive /norestart' $Result
+    ExecWait '"$SYSDIR\msiexec.exe" /i "$PLUGINSDIR\OWGuide.msi" /passive /norestart /l*v "$LogFile"' $Result
   ${EndIf}
   ${If} $Result != 0
   ${AndIf} $Result != 3010
-    MessageBox MB_OK|MB_ICONSTOP "Windows Installer returned $Result. Your personal data has not been deleted."
+    MessageBox MB_OK|MB_ICONSTOP "Windows Installer returned $Result. Your personal data has not been deleted. Details: $LogFile"
     SetErrorLevel $Result
     Abort
   ${EndIf}

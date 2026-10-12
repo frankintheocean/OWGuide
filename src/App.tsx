@@ -210,6 +210,13 @@ export default function App() {
   }, [snapshot?.user.settings.shortcut]);
   const content = snapshot?.content,
     user = snapshot?.user ?? defaultUser;
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty("--font-scale", String(user.settings.fontScale));
+    return () => {
+      root.style.removeProperty("--font-scale");
+    };
+  }, [user.settings.fontScale]);
   const hero =
     content?.heroes.find((h) => h.id === selected) ?? content?.heroes[0];
   const filtered = useMemo(

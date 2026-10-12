@@ -2,7 +2,14 @@
 param([string]$Version='1.0.0')
 $ErrorActionPreference='Stop'
 trap {
-  $message=$_.Exception.Message.Replace('%','%25').Replace("`r",'%0D').Replace("`n",'%0A')
+  $diagnostic=''
+  $log=Join-Path $env:TEMP 'OWGuide-setup.log'
+  if (Test-Path $log) {
+    $failures=@(Select-String -Path $log -Pattern 'Return value 3' -Context 15,3)
+    if ($failures.Count) { $diagnostic=($failures[0].Context.PreContext + $failures[0].Line + $failures[0].Context.PostContext) -join "`n" }
+    else { $diagnostic=(Get-Content $log -Tail 15) -join "`n" }
+  }
+  $message=("Action: $script:setupChoice. " + $_.Exception.Message + "`nMSI log: " + $diagnostic).Replace('%','%25').Replace("`r",'%0D').Replace("`n",'%0A')
   Write-Host "::error title=Setup GUI acceptance::$message"
   exit 1
 }
@@ -23,11 +30,13 @@ function Click-Control($process,[string]$control) {
       $output=& pwsh -NoProfile -File tests/windows-window.ps1 -Title 'OWGuide Setup' -ProcessId $process.Id -Action click -Control $control 2>&1
       if ($LASTEXITCODE -eq 0) { return }
     } catch { }
+    if (($output -join ' ') -match 'Windows Installer returned') { throw "Setup reported a Windows Installer failure: $($output -join ' ')" }
     Start-Sleep -Milliseconds 500
   }
   throw "Setup control did not become ready: $control. Last helper output: $($output -join ' ')"
 }
 function Run-Setup([string]$choice,[bool]$deleteData=$false) {
+  $script:setupChoice=$choice
   $process=Start-Process $setup -PassThru
   try {
     Click-Control $process $choice
