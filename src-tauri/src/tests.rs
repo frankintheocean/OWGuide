@@ -207,3 +207,89 @@ fn duplicate_guide_levels_and_stats_are_rejected() {
         .unwrap_err()
         .contains("Duplicate statistic"));
 }
+
+#[test]
+fn background_initialization_is_shared_by_all_window_requests() {
+    let dir = tempfile::tempdir().unwrap();
+    let db = std::sync::Arc::new(BackgroundStore::start(dir.path().join("async.sqlite")).unwrap());
+    let threads: Vec<_> = (0..4)
+        .map(|_| {
+            let db = db.clone();
+            std::thread::spawn(move || {
+                db.with_store(|store| {
+                    Ok(store.snapshot()?.content["heroes"]
+                        .as_array()
+                        .unwrap()
+                        .len())
+                })
+            })
+        })
+        .collect();
+    for thread in threads {
+        assert_eq!(thread.join().unwrap().unwrap(), 54);
+    }
+    db.with_store(|store| store.save_user(&user(), 0)).unwrap();
+    assert_eq!(
+        db.with_store(|store| Ok(store.snapshot()?.user))
+            .unwrap()
+            .unwrap(),
+        user()
+    );
+}
+#[test]
+fn background_initialization_failure_preserves_the_database_and_reports_consistently() {
+    let dir = tempfile::tempdir().unwrap();
+    let path = dir.path().join("newer.sqlite");
+    let db = Connection::open(&path).unwrap();
+    db.execute_batch("PRAGMA user_version=99;").unwrap();
+    drop(db);
+    let store = BackgroundStore::start(path.clone()).unwrap();
+    for _ in 0..2 {
+        assert!(store
+            .with_store(|db| db.snapshot())
+            .err()
+            .unwrap()
+            .contains("newer"));
+    }
+    assert_eq!(
+        Connection::open(path)
+            .unwrap()
+            .query_row("PRAGMA user_version", [], |r| r.get::<_, i64>(0))
+            .unwrap(),
+        99
+    );
+    assert!(dir.path().join("startup-error.log").is_file());
+}
+
+#[test]
+fn explicit_initialization_retry_keeps_notes_after_the_underlying_error_is_corrected() {
+    let dir = tempfile::tempdir().unwrap();
+    let path = dir.path().join("retry.sqlite");
+    {
+        let mut store = Store::open(&path).unwrap();
+        store.save_user(&user(), 0).unwrap();
+    }
+    {
+        let db = Connection::open(&path).unwrap();
+        db.execute_batch("PRAGMA user_version=99;").unwrap();
+    }
+    let store = BackgroundStore::start(path.clone()).unwrap();
+    assert!(store.with_store(|s| s.snapshot()).is_err());
+    {
+        let db = Connection::open(path).unwrap();
+        db.execute_batch("PRAGMA user_version=2;").unwrap();
+    }
+    // The cached failure stays stable until an explicit retry is requested.
+    assert!(store.with_store(|s| s.snapshot()).is_err());
+    store.retry_failed().unwrap();
+    assert_eq!(
+        store
+            .with_store(|s| Ok(s.snapshot()?.user))
+            .unwrap()
+            .unwrap(),
+        user()
+    );
+    // Retry on a healthy store must not replace or reset it.
+    store.retry_failed().unwrap();
+    assert_eq!(store.with_store(|s| Ok(s.snapshot()?.revision)).unwrap(), 1);
+}

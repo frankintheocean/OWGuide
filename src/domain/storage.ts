@@ -12,13 +12,13 @@ export interface Snapshot {
   content: Content;
 }
 const key = "owguide.personal.v1";
-export async function load(): Promise<Snapshot> {
+export async function load(retry = false): Promise<Snapshot> {
   if (isTauri()) {
     const s = await invoke<{
       revision: number;
       user: unknown;
       content: unknown;
-    }>("load_data");
+    }>("load_data", { retry });
     return {
       revision: s.revision,
       user:

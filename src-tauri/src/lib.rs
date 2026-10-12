@@ -1,3 +1,5 @@
+mod background;
+pub use background::BackgroundStore;
 use base64::{engine::general_purpose::STANDARD, Engine};
 use ed25519_dalek::{Signature, VerifyingKey};
 use rusqlite::{params, Connection, OptionalExtension};

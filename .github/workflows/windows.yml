@@ -23,7 +23,7 @@ jobs:
       - run: npm run build
       - run: cargo test --manifest-path src-tauri/Cargo.toml --locked --no-default-features --lib
       - run: cargo clippy --manifest-path src-tauri/Cargo.toml --locked --all-targets -- -D warnings
-      - run: npm run tauri -- build --bundles msi
+      - run: npm run tauri -- build --bundles msi -- --locked
         env:
           OWGUIDE_CONTENT_PUBLIC_KEY: ${{ vars.OWGUIDE_CONTENT_PUBLIC_KEY }}
       - run: python scripts/notices.py
@@ -34,6 +34,7 @@ jobs:
       - name: Clear native test portable data
         run: Remove-Item release/OWGuide-1.0.0-portable/OWGuideData -Recurse -Force
       - run: ./packaging/smoke.ps1
+      - run: ./packaging/wrapper-smoke.ps1
       - run: ./packaging/finish.ps1
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:

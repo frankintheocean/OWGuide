@@ -1,23 +1,29 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
-use owguide_core::{Result, Store};
-use std::sync::{Arc, Mutex};
+use owguide_core::{BackgroundStore, Result, Store};
+use std::sync::Arc;
 use tauri::{Emitter, Manager};
 use tauri_plugin_opener::OpenerExt;
-type Database = Arc<Mutex<Store>>;
+type Database = Arc<BackgroundStore>;
 struct DataRoot(std::path::PathBuf);
 async fn run<T: Send + 'static>(
     db: Database,
     f: impl FnOnce(&mut Store) -> Result<T> + Send + 'static,
 ) -> Result<T> {
-    tauri::async_runtime::spawn_blocking(move || {
-        let mut store = db.lock().map_err(|_| "Database lock failed")?;
-        f(&mut store)
-    })
-    .await
-    .map_err(|e| e.to_string())?
+    tauri::async_runtime::spawn_blocking(move || db.with_store(f))
+        .await
+        .map_err(|e| e.to_string())?
 }
 #[tauri::command]
-async fn load_data(db: tauri::State<'_, Database>) -> Result<owguide_core::Snapshot> {
+async fn load_data(
+    db: tauri::State<'_, Database>,
+    retry: Option<bool>,
+) -> Result<owguide_core::Snapshot> {
+    if retry.unwrap_or(false) {
+        let retry_db = db.inner().clone();
+        tauri::async_runtime::spawn_blocking(move || retry_db.retry_failed())
+            .await
+            .map_err(|e| e.to_string())??;
+    }
     run(db.inner().clone(), |s| s.snapshot()).await
 }
 #[tauri::command]
@@ -126,11 +132,9 @@ fn main() {
                 &app.path().app_local_data_dir()?,
             )
             .map_err(std::io::Error::other)?;
-            let db = Store::open(&root.join("owguide.sqlite")).map_err(|error| {
-                let _ = std::fs::write(root.join("startup-error.log"), &error);
-                std::io::Error::other(error)
-            })?;
-            app.manage(Arc::new(Mutex::new(db)));
+            let db = BackgroundStore::start(root.join("owguide.sqlite"))
+                .map_err(std::io::Error::other)?;
+            app.manage(Arc::new(db));
             app.manage(DataRoot(root.clone()));
             tauri::WebviewWindowBuilder::from_config(app, &app.config().app.windows[0])?
                 .data_directory(root.join("webview"))

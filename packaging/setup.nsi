@@ -3,6 +3,7 @@ Unicode true
 !include "MUI2.nsh"
 !include "nsDialogs.nsh"
 !include "LogicLib.nsh"
+!include "WinMessages.nsh"
 !ifndef MSI_FILE
   !error "Define MSI_FILE with the tested MSI path"
 !endif
@@ -10,6 +11,7 @@ Unicode true
   !define OUT_FILE "OWGuide-1.0.0-x64-setup.exe"
 !endif
 Name "OWGuide"
+Caption "OWGuide Setup"
 OutFile "${OUT_FILE}"
 RequestExecutionLevel admin
 Icon "..\src-tauri\icons\icon.ico"
@@ -41,6 +43,8 @@ Function MaintenancePage
   Pop $RemoveOption
   ${NSD_CreateCheckbox} 0 115u 100% 25u "Also delete this Windows user's notes and settings after uninstall"
   Pop $DeleteData
+  GetDlgItem $0 $HWNDPARENT 1
+  SendMessage $0 ${WM_SETTEXT} 0 "STR:Apply"
   nsDialogs::Show
 FunctionEnd
 Function MaintenanceLeave
@@ -75,7 +79,14 @@ Section
   ${If} $Operation == "uninstall"
   ${AndIf} $DeletePersonal == ${BST_CHECKED}
     ; Current user only. Portable folders are deliberately untouched.
+    ClearErrors
     RMDir /r "$LOCALAPPDATA\com.owguide.desktop"
+    IfFileExists "$LOCALAPPDATA\com.owguide.desktop\." delete_failed delete_done
+    delete_failed:
+      MessageBox MB_OK|MB_ICONSTOP "OWGuide was uninstalled, but personal data could not be deleted. Close its windows and check folder permissions before trying again."
+      SetErrorLevel 1
+      Abort
+    delete_done:
   ${EndIf}
   SetErrorLevel $Result
 SectionEnd

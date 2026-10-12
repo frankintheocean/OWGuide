@@ -6,11 +6,14 @@ Use a disposable Windows machine. Build and package the candidate first. Install
 node tests/windows-native.mjs
 Remove-Item release/OWGuide-1.0.0-portable/OWGuideData -Recurse -Force
 ./packaging/smoke.ps1
+./packaging/wrapper-smoke.ps1
 ```
 
 The native test launches the packaged portable executable with a test-only WebView2 debugging port. It connects Playwright to the real desktop windows and requires Tauri IPC. It checks offline reload, five guide tabs, SQLite notes and favorites, changes between windows, native maximize/restore/resize, horizontal scrolling, automatic accessibility rules, restart persistence, and independent Quick Reference dimensions. Network name resolution is disabled for that child process; WebView2 is also put offline during interaction. The app itself does not enable remote debugging.
 
-Screenshots, failures, and a report containing the exact commit are saved under `test-results/native-windows`. CI uploads these files. The maintenance script then installs, removes and repairs a real installed executable, checks saved notes and favorites, uninstalls while keeping personal data, and verifies portable database isolation.
+Screenshots, failures, and a report containing the exact commit are saved under `test-results/native-windows`. CI uploads these files. The setup UI script uses only the test process’s controls. It exercises the wrapper’s install, repair, retain-data uninstall and explicit delete-data choice. It records failures and actual outcomes separately; UAC and physical Windows 10/11 behavior remain manual checks.
+
+The maintenance script then installs, removes and repairs a real installed executable, checks saved notes and favorites, uninstalls while keeping personal data, and verifies portable database isolation.
 
 ## 🧑‍🦯 Checks that need a person
 

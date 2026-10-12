@@ -102,9 +102,9 @@ export default function App() {
   const searchRef = useRef<HTMLInputElement>(null),
     gridRef = useRef<HTMLDivElement>(null);
   const controller = useGamepad(gridRef, page === "heroes" && !quick);
-  const refresh = useCallback(async () => {
+  const refresh = useCallback(async (retry = false) => {
     try {
-      const s = await load();
+      const s = await load(retry);
       if (!current.current)
         setSelected(s.user.recent[0] ?? s.user.favorites[0] ?? "ana");
       current.current = s;
@@ -319,7 +319,7 @@ export default function App() {
           Your stored data has not been deleted. Back it up before making
           repairs.
         </p>
-        <button onClick={() => void refresh()}>Retry</button>
+        <button onClick={() => void refresh(true)}>Retry</button>
       </main>
     );
   if (!snapshot || !content || !hero)

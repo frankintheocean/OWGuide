@@ -15,10 +15,13 @@ function Wait-Database([string]$path, [System.Diagnostics.Process]$appProcess) {
   for ($i=0;$i -lt 30;$i++) {
     $appProcess.Refresh()
     if ($appProcess.HasExited) { throw 'The app exited before its database and main window became ready.' }
-    if ((Test-Path $path) -and (Get-Item $path).Length -gt 0 -and $appProcess.MainWindowHandle -ne [IntPtr]::Zero) { return }
+    if ((Test-Path $path) -and (Get-Item $path).Length -gt 0 -and $appProcess.MainWindowHandle -ne [IntPtr]::Zero) {
+      & python tests/desktop-db.py $path *> $null
+      if ($LASTEXITCODE -eq 0) { return }
+    }
     Start-Sleep -Seconds 1
   }
-  throw "Application did not create its database: $path"
+  throw "Application did not finish database initialization: $path"
 }
 Run-Msi "/i `"$msi`" /qn /norestart INSTALLDIR=`"$install`" /l*v `"$env:TEMP\owguide-install.log`""
 $exe = Join-Path $install 'OWGuide.exe'

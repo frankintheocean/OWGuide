@@ -203,6 +203,8 @@ try {
       )
       .toBe(true);
     const accessibility = await new AxeBuilder({ page: p })
+      // Native WebView2 does not create browser tabs; the app has no frames.
+      .setLegacyMode(true)
       .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
       .analyze();
     expect(accessibility.violations).toEqual([]);

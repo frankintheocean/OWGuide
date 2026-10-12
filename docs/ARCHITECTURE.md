@@ -37,3 +37,7 @@ A content package must pass the shared JSON Schema and Rust reference checks. Do
 No publisher key is supplied in this candidate. Content update controls report that prerequisite rather than contacting a fake service. Do not configure untrusted endpoints: a signed package authenticates content but does not make a hostname private or safe. A full DNS rebinding defense and independently reviewed network threat model remain release work.
 
 The CSP blocks remote scripts, frames, fonts, and images. React renders content as text, not HTML. Tauri capabilities grant only the listed core event/window operations. There are no remote WebView capabilities. Source links use a Rust command that validates HTTPS and checks the active source list before handing the URL to the OS browser. The opener plugin has no frontend permissions.
+
+## ⏳ Database startup
+
+SQLite startup and migrations run on a named background worker. The main window can render its loading state while the database is prepared. Commands wait on that shared result inside blocking workers; all windows use the same store. Initialization errors preserve the database and write a local startup error log.

@@ -4,7 +4,7 @@ path=pathlib.Path(sys.argv[1]); root=pathlib.Path(__file__).resolve().parents[1]
 if not path.is_file():raise SystemExit('Desktop database is missing')
 fixture=json.loads((root/'tests/user-fixture.json').read_text(encoding='utf-8'))
 seed=json.loads((root/'src/data/content.json').read_text(encoding='utf-8'))
-with sqlite3.connect(path) as db:
+with sqlite3.connect(path,timeout=0.2) as db:
  if db.execute('PRAGMA user_version').fetchone()[0]!=2:raise SystemExit('Unexpected migration version')
  if db.execute('SELECT count(*) FROM hero').fetchone()[0]!=len(seed['heroes']):raise SystemExit('Desktop seed roster is incomplete')
  if db.execute('PRAGMA foreign_key_check').fetchall():raise SystemExit('Foreign-key check failed')

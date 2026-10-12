@@ -7,7 +7,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: ci-${{ github.ref }}
+  group: ci-${{ github.event.pull_request.head.repo.full_name || github.repository }}-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
 jobs:
   app:
@@ -66,7 +66,7 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
       - name: Build desktop binary
-        run: npm run tauri -- build --no-bundle
+        run: npm run tauri -- build --no-bundle -- --locked
         env:
           OWGUIDE_CONTENT_PUBLIC_KEY: ${{ vars.OWGUIDE_CONTENT_PUBLIC_KEY }}
       - name: Bundle Windows MSI from the compiled app
@@ -95,6 +95,9 @@ jobs:
       - name: Check install, repair, uninstall and portable database
         if: runner.os == 'Windows'
         run: ./packaging/smoke.ps1
+      - name: Check the setup GUI and explicit data deletion
+        if: runner.os == 'Windows'
+        run: ./packaging/wrapper-smoke.ps1
       - name: Require native Windows check success
         if: runner.os == 'Windows' && steps.native-check.outcome != 'success'
         run: throw 'Native Windows UI acceptance failed. Maintenance results remain available, but this candidate is not validated.'
