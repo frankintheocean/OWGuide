@@ -156,7 +156,7 @@ try {
     await expect(page.getByRole("tabpanel")).toBeVisible();
   }
   await evaluateStable(page, () =>
-    window.scrollTo(0, document.documentElement.scrollHeight),
+    globalThis.scrollTo(0, globalThis.document.documentElement.scrollHeight),
   );
   await expect(
     page.getByRole("heading", { name: "Ana", exact: true }),
