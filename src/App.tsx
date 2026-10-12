@@ -1481,12 +1481,17 @@ export default function App() {
                     <button
                       disabled={busy || !settings.updateEndpoint}
                       onClick={() => {
+                        if (pending.current) return;
+                        pending.current = true;
                         setBusy(true);
                         void updateContent(settings.updateEndpoint)
                           .then(() => refresh())
                           .then(() => setNotice("Signed content installed."))
                           .catch((e) => setNotice(message(e)))
-                          .finally(() => setBusy(false));
+                          .finally(() => {
+                            pending.current = false;
+                            setBusy(false);
+                          });
                       }}
                     >
                       Check signed content
@@ -1494,12 +1499,17 @@ export default function App() {
                     <button
                       disabled={busy}
                       onClick={() => {
+                        if (pending.current) return;
+                        pending.current = true;
                         setBusy(true);
                         void rollbackContent()
                           .then(() => refresh())
                           .then(() => setNotice("Previous content restored."))
                           .catch((e) => setNotice(message(e)))
-                          .finally(() => setBusy(false));
+                          .finally(() => {
+                            pending.current = false;
+                            setBusy(false);
+                          });
                       }}
                     >
                       Restore previous content

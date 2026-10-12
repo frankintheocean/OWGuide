@@ -239,3 +239,20 @@ test("named strategies, guide bookmarks and map bookmarks persist", async ({
     page.getByRole("heading", { name: "Dorado", exact: true }),
   ).toBeVisible();
 });
+
+test("a content rollback error releases the save guard and reports the limitation", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
+  await page
+    .getByRole("button", { name: "Restore previous content", exact: true })
+    .click();
+  await expect(page.getByRole("status")).toContainText("desktop");
+  await page
+    .getByRole("combobox", { name: "Theme", exact: true })
+    .selectOption("ember");
+  await expect(page.locator(".app")).toHaveClass(/theme-ember/);
+  await page.reload();
+  await expect(page.locator(".app")).toHaveClass(/theme-ember/);
+});
