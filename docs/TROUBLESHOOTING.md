@@ -17,3 +17,7 @@
 **Windows Installer repair fails.** Keep its error code and logs. Repair must run against the installed product's MSI. Do not assume the NSIS wrapper alone provides repair; it delegates to Windows Installer. Native maintenance checks are still required.
 
 **Development dependency installation fails.** Use the pinned tool versions and lockfiles. In this cloud instance, use a writable npm cache such as `/workspace/.npm-cache`. Never disable TLS or package integrity verification to fix an install.
+
+## 🩺 Setup error details
+
+If the maintenance wrapper reports a Windows Installer error, read `%TEMP%\OWGuide-setup.log`. It records the last operation. Error 1603 is a general installer failure; the nearby failed action in the log explains more. Keep personal data until the cause is understood. The wrapper does not silently delete it after a failed MSI operation.

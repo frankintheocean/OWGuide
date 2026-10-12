@@ -204,6 +204,29 @@ try {
     page.getByRole("textbox", { name: "Your note", exact: true }),
   ).toHaveValue("Quick window SQLite acceptance note.");
   checks.push("SQLite notes/favorites and native cross-window synchronization");
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
+  await page
+    .getByRole("combobox", { name: "Text size", exact: true })
+    .selectOption("1.5");
+  for (const target of [page, quick]) {
+    await expect
+      .poll(
+        () =>
+          evaluateStable(target, () =>
+            parseFloat(
+              globalThis.getComputedStyle(globalThis.document.documentElement)
+                .fontSize,
+            ),
+          ),
+        { timeout: 10000 },
+      )
+      .toBeGreaterThan(22);
+  }
+  await page.getByRole("button", { name: "Notebook", exact: true }).click();
+  await page
+    .getByRole("combobox", { name: "Note subject", exact: true })
+    .selectOption("ana");
+  checks.push("largest text size reaches both native windows");
   for (const action of ["maximize", "restore", "resize"]) {
     windowAction("OWGuide", action, 900, 680);
     await expect(
