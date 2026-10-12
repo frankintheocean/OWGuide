@@ -83,14 +83,21 @@ jobs:
         if: runner.os == 'Windows'
         run: ./packaging/package.ps1
       - name: Native WebView2 offline and window checks
+        id: native-check
+        continue-on-error: true
         if: runner.os == 'Windows'
         run: node tests/windows-native.mjs
       - name: Clear native test portable data
         if: runner.os == 'Windows'
-        run: Remove-Item release/OWGuide-1.0.0-portable/OWGuideData -Recurse -Force
+        run: |
+          $data = 'release/OWGuide-1.0.0-portable/OWGuideData'
+          if (Test-Path $data) { Remove-Item $data -Recurse -Force }
       - name: Check install, repair, uninstall and portable database
         if: runner.os == 'Windows'
         run: ./packaging/smoke.ps1
+      - name: Require native Windows check success
+        if: runner.os == 'Windows' && steps.native-check.outcome != 'success'
+        run: throw 'Native Windows UI acceptance failed. Maintenance results remain available, but this candidate is not validated.'
       - name: Package validated candidate artifacts
         if: runner.os == 'Windows'
         run: ./packaging/finish.ps1
@@ -122,6 +129,7 @@ jobs:
           path: |
             release/*.exe
             release/*.msi
+            release/windows-validation.json
             release/OWGuide-1.0.0-portable/*
             !release/OWGuide-1.0.0-portable/OWGuideData/**
           if-no-files-found: error

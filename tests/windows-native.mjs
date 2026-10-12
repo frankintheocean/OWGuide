@@ -108,8 +108,13 @@ async function stop() {
     }
     try {
       await expect
-        .poll(() => processHandle.exitCode, { timeout: 15000 })
-        .not.toBeNull();
+        .poll(
+          () =>
+            processHandle.exitCode !== null ||
+            processHandle.signalCode !== null,
+          { timeout: 15000 },
+        )
+        .toBe(true);
     } catch {
       processHandle.kill();
       throw new Error(
