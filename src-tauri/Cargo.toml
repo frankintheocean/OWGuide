@@ -2,7 +2,7 @@
 name = "owguide"
 version = "1.0.0"
 edition = "2021"
-rust-version = "1.88"
+rust-version = "1.99"
 license = "GPL-3.0-only"
 
 [lib]

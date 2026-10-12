@@ -1,0 +1,64 @@
+name: Check and build
+on:
+  push:
+    branches: [main, "feature/**"]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  app:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-2022]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "24.19.0"
+          cache: npm
+      - uses: dtolnay/rust-toolchain@686976e191b89faba57d3206551f0f330d8cb249
+        with:
+          toolchain: "1.99.0"
+          components: rustfmt, clippy
+      - name: Linux desktop libraries
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y libwebkit2gtk-4.1-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev patchelf
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run content:validate
+      - run: npm run test
+      - run: npm run build
+      - name: Shared schema files are current
+        shell: bash
+        run: npm run schemas && git diff --exit-code -- content/*.schema.json
+      - run: cargo fmt --manifest-path src-tauri/Cargo.toml --check
+      - run: cargo test --manifest-path src-tauri/Cargo.toml --locked --no-default-features --lib
+      - run: cargo clippy --manifest-path src-tauri/Cargo.toml --locked --all-targets -- -D warnings
+      - run: npm audit --audit-level=moderate
+      - run: cargo install cargo-audit --version 0.22.0 --locked
+      - run: cargo audit --file src-tauri/Cargo.lock
+      - run: npm run licenses
+      - run: cargo install cargo-license --version 0.6.1 --locked
+      - name: Rust license report
+        shell: bash
+        run: cd src-tauri && cargo license --json > ../rust-licenses.json
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - name: Build desktop binary
+        run: cargo build --manifest-path src-tauri/Cargo.toml --locked --release
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: checks-${{ matrix.os }}
+          path: |
+            dependency-licenses.json
+            rust-licenses.json
+            test-results/
+          if-no-files-found: ignore
