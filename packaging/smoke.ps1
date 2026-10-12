@@ -23,7 +23,7 @@ $process = Start-Process $exe -PassThru
 try { Wait-Database (Join-Path $data 'owguide.sqlite') } finally { if (!$process.HasExited) { Stop-Process -Id $process.Id -Force } }
 & python tests/desktop-db.py (Join-Path $data 'owguide.sqlite') --seed-personal
 if ($LASTEXITCODE -ne 0) { throw 'Could not seed personal data for the maintenance test.' }
-$sentinel = Join-Path $data 'preserve-test.txt' 
+$sentinel = Join-Path $data 'preserve-test.txt'
 Set-Content $sentinel 'personal data sentinel'
 Remove-Item $exe
 Run-Msi "/fa `"$msi`" /qn /norestart /l*v `"$env:TEMP\owguide-repair.log`""

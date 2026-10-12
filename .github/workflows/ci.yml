@@ -52,7 +52,38 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
       - name: Build desktop binary
-        run: cargo build --manifest-path src-tauri/Cargo.toml --locked --release
+        run: npm run tauri -- build --no-bundle
+        env:
+          OWGUIDE_CONTENT_PUBLIC_KEY: ${{ vars.OWGUIDE_CONTENT_PUBLIC_KEY }}
+      - name: Bundle Windows MSI from the compiled app
+        if: runner.os == 'Windows'
+        run: npm run tauri -- bundle --bundles msi
+      - name: Windows third-party notices
+        if: runner.os == 'Windows'
+        run: python scripts/notices.py
+      - name: Install pinned NSIS tool
+        if: runner.os == 'Windows'
+        run: choco install nsis --version=3.11 -y --no-progress
+      - name: Prepare Windows installer and portable folder
+        if: runner.os == 'Windows'
+        run: ./packaging/package.ps1
+      - name: Check install, repair, uninstall and portable database
+        if: runner.os == 'Windows'
+        run: ./packaging/smoke.ps1
+      - name: Package validated candidate artifacts
+        if: runner.os == 'Windows'
+        run: ./packaging/finish.ps1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: runner.os == 'Windows'
+        with:
+          name: OWGuide-Windows-development-candidate
+          path: |
+            release/*.exe
+            release/*.msi
+            release/*.zip
+            release/*.json
+            release/*.txt
+          if-no-files-found: error
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:

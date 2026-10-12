@@ -34,7 +34,7 @@ python scripts/notices.py
 
 Run `smoke.ps1` only on a disposable machine with no existing OWGuide user data. It installs and removes OWGuide. It stops only the app processes it starts. It verifies MSI file repair and folder preservation; it is not a GUI test of the wrapper's radio buttons or delete-data checkbox.
 
-`Windows packages` is a manual Actions workflow for candidate artifacts. `Check and build` runs on feature-branch pushes and pull requests. The release workflow requires live content, recorded GUI acceptance, audits, UI tests, and Windows smoke checks before publishing.
+`Windows packages` is a manual Actions workflow for candidate artifacts. `Check and build` runs on feature-branch pushes and pull requests, and packages a Windows candidate after the automated maintenance checks pass. The release workflow requires live content, recorded GUI acceptance, audits, UI tests, and Windows smoke checks before publishing.
 
 ## 🖋️ Optional signing
 

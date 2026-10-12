@@ -38,9 +38,11 @@ async fn update_content(
     db: tauri::State<'_, Database>,
     endpoint: String,
 ) -> Result<()> {
-    let key = option_env!("OWGUIDE_CONTENT_PUBLIC_KEY").ok_or(
-        "No trusted publisher key was configured for this build. Content updates are disabled.",
-    )?;
+    let key = option_env!("OWGUIDE_CONTENT_PUBLIC_KEY")
+        .filter(|key| !key.trim().is_empty())
+        .ok_or(
+            "No trusted publisher key was configured for this build. Content updates are disabled.",
+        )?;
     let current = run(db.inner().clone(), |s| {
         Ok(s.snapshot()?.content["version"]
             .as_str()
