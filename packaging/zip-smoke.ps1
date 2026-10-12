@@ -20,20 +20,23 @@ try {
   if (!$launcher.WaitForExit(15000)) { Stop-Process -Id $launcher.Id -Force;throw 'Portable prerequisite launcher did not finish.' }
   if ($launcher.ExitCode -ne 0) { throw "Portable launcher failed: $($launcher.ExitCode)" }
   $ready=$false
+  $databaseCheck='Database file not created'
+  $processSummary='No matching process'
   for ($i=0;$i -lt 30;$i++) {
     $zipProcesses=@(Get-Process -Name OWGuide -ErrorAction SilentlyContinue | Where-Object { $_.Path -eq $exe })
+    $processSummary=(@(Get-Process -Name OWGuide -ErrorAction SilentlyContinue | ForEach-Object { "PID=$($_.Id) path=$($_.Path) window=$($_.MainWindowHandle)" }) -join '; ')
     if ($zipProcesses.Count -eq 1) {
       $appProcess=$zipProcesses[0]
       $database=Join-Path $folder 'OWGuideData/owguide.sqlite'
       if (Test-Path $database) {
-        & python tests/desktop-db.py $database *> $null
+        $databaseCheck=(& python tests/desktop-db.py $database 2>&1 | Out-String).Trim()
         $appProcess.Refresh()
         if ($LASTEXITCODE -eq 0 -and $appProcess.MainWindowHandle -ne [IntPtr]::Zero) { $ready=$true;break }
       }
     }
     Start-Sleep -Seconds 1
   }
-  if (!$ready) { throw 'The extracted portable app did not initialize its database and window.' }
+  if (!$ready) { throw "The extracted portable app did not initialize its database and window. Processes: $processSummary. Database: $databaseCheck. Expected executable: $exe" }
   if (Test-Path $installed) { throw 'The extracted portable app created installed-app data.' }
   & pwsh -NoProfile -File tests/windows-window.ps1 -Title 'OWGuide' -ProcessId $appProcess.Id -Action close
   if ($LASTEXITCODE -ne 0 -or !$appProcess.WaitForExit(15000)) { throw 'The extracted portable app did not close normally.' }
