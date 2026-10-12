@@ -27,6 +27,7 @@ fn validate_schema(value: &Value, schema: &str) -> Result<()> {
         .validate(value)
         .map_err(|e| format!("Data validation failed: {e}"))
 }
+
 pub fn validate_content(value: &Value) -> Result<()> {
     validate_schema(value, include_str!("../../content/content.schema.json"))?;
     let ids = |key: &str| -> Result<HashSet<String>> {
@@ -521,3 +522,18 @@ pub fn fetch_update(endpoint: &str, current: &str, key: &str) -> Result<Value> {
 }
 #[cfg(test)]
 mod tests;
+
+/// 🧳 Keep geometry beside the database and preserve older installed window settings.
+pub fn window_state_path(root: &Path, previous: Option<&Path>) -> Result<PathBuf> {
+    let destination = root.join("windows.json");
+    if !destination.exists() {
+        if let Some(previous) = previous.filter(|path| path.is_file()) {
+            if fs::metadata(previous).map_err(|e| e.to_string())?.len() > 65536 {
+                return Err("Previous window settings are too large. Back them up before resetting window placement.".into());
+            }
+            fs::copy(previous, &destination)
+                .map_err(|e| format!("Could not preserve previous window settings: {e}"))?;
+        }
+    }
+    Ok(destination)
+}

@@ -293,3 +293,39 @@ fn explicit_initialization_retry_keeps_notes_after_the_underlying_error_is_corre
     store.retry_failed().unwrap();
     assert_eq!(store.with_store(|s| Ok(s.snapshot()?.revision)).unwrap(), 1);
 }
+
+#[test]
+fn geometry_migration_preserves_existing_settings_and_portable_isolation() {
+    let dir = tempfile::tempdir().unwrap();
+    let legacy = dir.path().join("legacy.json");
+    fs::write(&legacy, r#"{"main":{"width":1200},"quick":{"width":340}}"#).unwrap();
+    let root = dir.path().join("data");
+    fs::create_dir(&root).unwrap();
+    let migrated = window_state_path(&root, Some(&legacy)).unwrap();
+    assert_eq!(fs::read(&migrated).unwrap(), fs::read(&legacy).unwrap());
+    fs::write(&migrated, "new window positions").unwrap();
+    window_state_path(&root, Some(&legacy)).unwrap();
+    assert_eq!(
+        fs::read_to_string(&migrated).unwrap(),
+        "new window positions"
+    );
+    let portable = dir.path().join("portable");
+    fs::create_dir(&portable).unwrap();
+    let isolated = window_state_path(&portable, None).unwrap();
+    assert!(!isolated.exists());
+    assert!(legacy.is_file());
+}
+
+#[test]
+fn unicode_text_limits_match_the_frontend_without_installing_unreadable_content() {
+    let mut u = user();
+    u["notes"]["ana"] = "🙂".repeat(12000).into();
+    assert!(validate_user(&u).is_ok());
+    u["notes"]["ana"] = "🙂".repeat(12001).into();
+    assert!(validate_user(&u).is_err());
+    let mut c = seed();
+    c["heroes"][0]["biography"] = "🙂".repeat(12001).into();
+    let mut store = Store::open(Path::new(":memory:")).unwrap();
+    assert!(store.install(&c).is_err());
+    assert_eq!(store.snapshot().unwrap().content, seed());
+}

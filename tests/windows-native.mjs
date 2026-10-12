@@ -274,3 +274,6 @@ try {
   await stop();
 }
 console.log(checks.join("\n"));
+console.log(
+  `::notice title=Native WebView2 acceptance::Passed for ${head}: ${checks.join("; ")}`,
+);

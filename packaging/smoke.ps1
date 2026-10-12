@@ -1,6 +1,11 @@
 # 🧪 Runs on a disposable Windows runner. Never run against a user's installation.
 param([string]$Version = '1.0.0')
 $ErrorActionPreference = 'Stop'
+trap {
+  $message=$_.Exception.Message.Replace('%','%25').Replace("`r",'%0D').Replace("`n",'%0A')
+  Write-Host "::error title=MSI maintenance acceptance::$message"
+  exit 1
+}
 $root = Split-Path $PSScriptRoot -Parent
 Set-Location $root
 $msi = (Resolve-Path "release/OWGuide-$Version-x64.msi").Path
@@ -10,6 +15,12 @@ if (Test-Path $data) { throw 'Refusing to test with pre-existing app data.' }
 function Run-Msi([string]$arguments) {
   $p = Start-Process msiexec.exe -ArgumentList $arguments -Wait -PassThru
   if ($p.ExitCode -notin @(0,3010)) { throw "Windows Installer failed: $($p.ExitCode)" }
+}
+function Close-TestApp([System.Diagnostics.Process]$appProcess) {
+  if ($appProcess.HasExited) { return }
+  & pwsh -NoProfile -File tests/windows-window.ps1 -Title 'OWGuide' -ProcessId $appProcess.Id -Action close
+  if ($LASTEXITCODE -ne 0) { Stop-Process -Id $appProcess.Id -Force; throw 'Could not close the owned test window.' }
+  if (!$appProcess.WaitForExit(15000)) { Stop-Process -Id $appProcess.Id -Force; throw 'The test app did not shut down normally.' }
 }
 function Wait-Database([string]$path, [System.Diagnostics.Process]$appProcess) {
   for ($i=0;$i -lt 30;$i++) {
@@ -28,7 +39,7 @@ $exe = Join-Path $install 'OWGuide.exe'
 if (!(Test-Path $exe)) { $exe = Join-Path $install 'owguide.exe' }
 if (!(Test-Path $exe)) { throw 'Installed executable missing.' }
 $process = Start-Process $exe -PassThru
-try { Wait-Database (Join-Path $data 'owguide.sqlite') $process } finally { if (!$process.HasExited) { Stop-Process -Id $process.Id -Force } }
+try { Wait-Database (Join-Path $data 'owguide.sqlite') $process } finally { Close-TestApp $process }
 & python tests/desktop-db.py (Join-Path $data 'owguide.sqlite') --seed-personal
 if ($LASTEXITCODE -ne 0) { throw 'Could not seed personal data for the maintenance test.' }
 $sentinel = Join-Path $data 'preserve-test.txt'
@@ -47,10 +58,15 @@ if ($LASTEXITCODE -ne 0) { throw 'Uninstall changed personal database contents.'
 $before = (Get-FileHash (Join-Path $data 'owguide.sqlite')).Hash
 $portable = Join-Path $root "release/OWGuide-$Version-portable"
 $process = Start-Process "$portable\OWGuide.exe" -WorkingDirectory $portable -PassThru
-try { Wait-Database "$portable\OWGuideData\owguide.sqlite" $process } finally { if (!$process.HasExited) { Stop-Process -Id $process.Id -Force } }
+try { Wait-Database "$portable\OWGuideData\owguide.sqlite" $process } finally { Close-TestApp $process }
 if ((Get-FileHash (Join-Path $data 'owguide.sqlite')).Hash -ne $before) { throw 'Portable launch touched installed app data.' }
 & python tests/desktop-db.py "$portable\OWGuideData\owguide.sqlite"
 if ($LASTEXITCODE -ne 0) { throw 'Portable database validation failed.' }
-Remove-Item "$portable\OWGuideData" -Recurse -Force
-Remove-Item $data -Recurse -Force
-@{ schemaVersion=1; version=$Version; automated=@('MSI install','MSI file repair','MSI uninstall','personal folder preservation','portable database isolation'); manualGui='Not tested by this script'; checkedAt=(Get-Date).ToUniversalTime().ToString('o') } | ConvertTo-Json -Depth 4 | Set-Content release/windows-validation.json
+foreach ($folder in @("$portable\OWGuideData", $data)) {
+  for ($attempt=0;$attempt -lt 10;$attempt++) {
+    try { Remove-Item $folder -Recurse -Force;break } catch { if ($attempt -eq 9) { throw };Start-Sleep -Milliseconds 500 }
+  }
+}
+@{ schemaVersion=1; version=$Version; commit=(& git rev-parse HEAD).Trim(); automated=@('MSI install','MSI file repair','MSI uninstall','personal folder preservation','portable database isolation'); manualGui='Not tested by this script'; checkedAt=(Get-Date).ToUniversalTime().ToString('o') } | ConvertTo-Json -Depth 4 | Set-Content release/windows-validation.json
+
+Write-Host '::notice title=MSI maintenance acceptance::Install, file repair, uninstall, personal data retention and portable database isolation passed.'

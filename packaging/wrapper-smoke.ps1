@@ -54,13 +54,19 @@ try {
   for ($i=0;$i -lt 30;$i++) {
     if (Test-Path (Join-Path $data 'owguide.sqlite')) {
       & python tests/desktop-db.py (Join-Path $data 'owguide.sqlite') *> $null
-      if ($LASTEXITCODE -eq 0) { $ready=$true;break }
+      $appProcess.Refresh()
+      if ($LASTEXITCODE -eq 0 -and $appProcess.MainWindowHandle -ne [IntPtr]::Zero) { $ready=$true;break }
     }
     if ($appProcess.HasExited) { throw 'GUI-installed app exited before its database was ready.' }
     Start-Sleep -Seconds 1
   }
   if (!$ready) { throw 'GUI-installed application database did not become ready.' }
-} finally { if (!$appProcess.HasExited) { Stop-Process -Id $appProcess.Id -Force } }
+} finally {
+  if (!$appProcess.HasExited) {
+    & pwsh -NoProfile -File tests/windows-window.ps1 -Title 'OWGuide' -ProcessId $appProcess.Id -Action close
+    if ($LASTEXITCODE -ne 0 -or !$appProcess.WaitForExit(15000)) { Stop-Process -Id $appProcess.Id -Force;throw 'Installed app did not close normally.' }
+  }
+}
 & python tests/desktop-db.py (Join-Path $data 'owguide.sqlite') --seed-personal
 if ($LASTEXITCODE -ne 0) { throw 'Could not seed GUI repair notes.' }
 $hash=(Get-FileHash $exe -Algorithm SHA256).Hash
@@ -76,4 +82,6 @@ if ($LASTEXITCODE -ne 0) { throw 'Setup GUI uninstall did not retain personal da
 Run-Setup 'Install OWGuide'
 Run-Setup 'Uninstall OWGuide' $true
 if (Test-Path $data) { throw 'Explicit delete-data option left personal data.' }
-@{schemaVersion=1;version=$Version;commit=$env:GITHUB_SHA;checkedAt=(Get-Date).ToUniversalTime().ToString('o');automated=@('setup GUI install and registration','setup GUI repair and notes/favorites retention','setup GUI uninstall with data retention','setup GUI explicit personal-data deletion');limitations=@('Windows Server CI, not Windows 10/11 hardware','UAC prompt and screen reader not checked')} | ConvertTo-Json -Depth 4 | Set-Content release/windows-wrapper-validation.json
+@{schemaVersion=1;version=$Version;commit=(& git rev-parse HEAD).Trim();checkedAt=(Get-Date).ToUniversalTime().ToString('o');automated=@('setup GUI install and registration','setup GUI repair and notes/favorites retention','setup GUI uninstall with data retention','setup GUI explicit personal-data deletion');limitations=@('Windows Server CI, not Windows 10/11 hardware','UAC prompt and screen reader not checked')} | ConvertTo-Json -Depth 4 | Set-Content release/windows-wrapper-validation.json
+
+Write-Host '::notice title=Setup GUI acceptance::Install, repair, retain-data uninstall and explicit delete-data uninstall passed.'

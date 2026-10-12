@@ -238,3 +238,14 @@ it("keeps current rework facts distinct from archived coaching and six-player va
       .sort(),
   ).toEqual(["chateau-guillard", "eichenwalde", "hollywood", "lijiang-tower"]);
 });
+
+it("uses the same emoji text boundary as the native validator", () => {
+  expect(
+    userSchema.safeParse({ ...defaultUser, notes: { ana: "🙂".repeat(12000) } })
+      .success,
+  ).toBe(true);
+  expect(
+    userSchema.safeParse({ ...defaultUser, notes: { ana: "🙂".repeat(12001) } })
+      .success,
+  ).toBe(false);
+});

@@ -81,6 +81,9 @@ Section
     ; Current user only. Portable folders are deliberately untouched.
     ClearErrors
     RMDir /r "$LOCALAPPDATA\com.owguide.desktop"
+    ; Remove legacy app-owned geometry only when deletion was explicitly selected.
+    RMDir /r "$APPDATA\com.owguide.desktop"
+    IfFileExists "$APPDATA\com.owguide.desktop\." delete_failed
     IfFileExists "$LOCALAPPDATA\com.owguide.desktop\." delete_failed delete_done
     delete_failed:
       MessageBox MB_OK|MB_ICONSTOP "OWGuide was uninstalled, but personal data could not be deleted. Close its windows and check folder permissions before trying again."

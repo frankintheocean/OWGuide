@@ -298,6 +298,15 @@ export default function App() {
       setNotice(`Import failed: ${message(e)}`);
     }
   }
+  function editDraft(value: string) {
+    if (Array.from(value).length > 12000) {
+      setNotice(
+        "Your note can contain up to 12000 characters. The previous draft was kept.",
+      );
+      return;
+    }
+    setDraft(value);
+  }
   function reorder(id: string, target: string) {
     void mutate((u) => {
       const widgets = u.widgets.filter((x) => x !== id);
@@ -397,10 +406,10 @@ export default function App() {
                 Your note
                 <textarea
                   aria-label="Your note"
-                  maxLength={12000}
+                  maxLength={24000}
                   rows={12}
                   value={draft}
-                  onChange={(e) => setDraft(e.target.value)}
+                  onChange={(e) => editDraft(e.target.value)}
                 />
               </label>
               <button
@@ -1238,10 +1247,10 @@ export default function App() {
                     Your note
                     <textarea
                       aria-label="Your note"
-                      maxLength={12000}
+                      maxLength={24000}
                       rows={12}
                       value={draft}
-                      onChange={(e) => setDraft(e.target.value)}
+                      onChange={(e) => editDraft(e.target.value)}
                       placeholder="A plan, a lesson, a reminder…"
                     />
                   </label>
@@ -1279,8 +1288,8 @@ export default function App() {
                     </button>
                   </div>
                   <small>
-                    {draft.length}/12000 characters · Save before changing
-                    subject
+                    {Array.from(draft).length}/12000 characters · Save before
+                    changing subject
                   </small>
                 </section>
                 <section className="card">

@@ -107,24 +107,7 @@ async fn open_source(
         .map_err(|e| e.to_string())
 }
 fn main() {
-    let mut windows = tauri_plugin_window_state::Builder::default();
-    if let Ok(executable) = std::env::current_exe() {
-        if let Some(parent) = executable.parent() {
-            if parent.join("portable.marker").is_file() {
-                let root = match owguide_core::data_root(&executable, parent) {
-                    Ok(root) => root,
-                    Err(error) => {
-                        report_startup_error(&error);
-                        std::process::exit(1);
-                    }
-                };
-                windows =
-                    windows.with_filename(root.join("windows.json").to_string_lossy().into_owned());
-            }
-        }
-    }
     let result = tauri::Builder::default()
-        .plugin(windows.build())
         .plugin(tauri_plugin_opener::init())
         .setup(|app| {
             let root = owguide_core::data_root(
@@ -132,6 +115,26 @@ fn main() {
                 &app.path().app_local_data_dir()?,
             )
             .map_err(std::io::Error::other)?;
+            let executable = std::env::current_exe()?;
+            let portable = executable
+                .parent()
+                .is_some_and(|parent| parent.join("portable.marker").is_file());
+            let previous = if portable {
+                None
+            } else {
+                Some(
+                    app.path()
+                        .app_config_dir()?
+                        .join(tauri_plugin_window_state::DEFAULT_FILENAME),
+                )
+            };
+            let windows = owguide_core::window_state_path(&root, previous.as_deref())
+                .map_err(std::io::Error::other)?;
+            app.handle().plugin(
+                tauri_plugin_window_state::Builder::default()
+                    .with_filename(windows.to_string_lossy().into_owned())
+                    .build(),
+            )?;
             let db = BackgroundStore::start(root.join("owguide.sqlite"))
                 .map_err(std::io::Error::other)?;
             app.manage(Arc::new(db));
