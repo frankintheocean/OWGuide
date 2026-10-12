@@ -349,3 +349,15 @@ fn active_content_reviews_require_the_current_patch_and_a_date() {
     value["matchups"][0]["review"]["patch"] = serde_json::json!("TEST OLD PATCH");
     assert!(validate_content(&value).is_err());
 }
+
+#[test]
+fn navigation_bindings_preserve_legacy_data_and_reject_conflicts() {
+    let mut user = user();
+    assert!(validate_user(&user).is_ok());
+    user["settings"]["navigationShortcuts"] = serde_json::json!({"heroes":"x"});
+    assert!(validate_user(&user).is_ok());
+    user["settings"]["navigationShortcuts"] = serde_json::json!({"home":"e"});
+    assert!(validate_user(&user).is_err());
+    user["settings"]["navigationShortcuts"] = serde_json::json!({"home":"e","heroes":""});
+    assert!(validate_user(&user).is_ok());
+}

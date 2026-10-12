@@ -1,3 +1,9 @@
+import {
+  navigationAction,
+  navigationShortcuts,
+  navigationLabels,
+  type NavigationAction,
+} from "./domain/shortcuts";
 import { NoteList } from "./components/NoteList";
 import {
   useCallback,
@@ -194,11 +200,38 @@ export default function App() {
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (
+        !quick &&
+        !e.altKey &&
+        !e.shiftKey &&
         (e.ctrlKey || e.metaKey) &&
         e.key.toLowerCase() === (snapshot?.user.settings.shortcut ?? "k")
       ) {
         e.preventDefault();
         searchRef.current?.focus();
+      }
+      const action = !quick
+        ? navigationAction(
+            {
+              ...e,
+              key: e.key,
+              ctrlKey: e.ctrlKey,
+              metaKey: e.metaKey,
+              altKey: e.altKey,
+              shiftKey: e.shiftKey,
+              altGraph: e.getModifierState("AltGraph"),
+            },
+            navigationShortcuts(snapshot?.user.settings.navigationShortcuts),
+          )
+        : null;
+      if (action) {
+        e.preventDefault();
+        if (action === "quick")
+          void quickReference().catch((error) => setNotice(message(error)));
+        else {
+          setPage(action);
+          setProfile(false);
+          setGlobalQuery("");
+        }
       }
       if (e.key === "Escape") {
         setGlobalQuery("");
@@ -207,7 +240,10 @@ export default function App() {
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [snapshot?.user.settings.shortcut]);
+  }, [
+    snapshot?.user.settings.shortcut,
+    snapshot?.user.settings.navigationShortcuts,
+  ]);
   const content = snapshot?.content,
     user = snapshot?.user ?? defaultUser;
   useEffect(() => {
@@ -1488,6 +1524,50 @@ export default function App() {
                       }}
                     />
                   </label>
+                  <fieldset>
+                    <legend>
+                      Main-window navigation · Ctrl + Alt / Cmd + Alt + letter
+                    </legend>
+                    {(Object.keys(navigationLabels) as NavigationAction[]).map(
+                      (action) => (
+                        <label key={action}>
+                          {navigationLabels[action]} shortcut
+                          <select
+                            aria-label={`${navigationLabels[action]} shortcut`}
+                            value={
+                              navigationShortcuts(settings.navigationShortcuts)[
+                                action
+                              ]
+                            }
+                            onChange={(event) =>
+                              updateSettings({
+                                navigationShortcuts: {
+                                  ...navigationShortcuts(
+                                    settings.navigationShortcuts,
+                                  ),
+                                  [action]: event.target.value,
+                                },
+                              })
+                            }
+                          >
+                            <option value="">Disabled</option>
+                            {Array.from("abcdefghijklmnopqrstuvwxyz").map(
+                              (letter) => (
+                                <option key={letter} value={letter}>
+                                  {letter.toUpperCase()}
+                                </option>
+                              ),
+                            )}
+                          </select>
+                        </label>
+                      ),
+                    )}
+                    <p className="muted">
+                      Each letter can control one action. Disable a binding
+                      before assigning its letter to another action. AltGr
+                      typing does not activate navigation.
+                    </p>
+                  </fieldset>
                 </section>
                 <section className="card">
                   <h2>

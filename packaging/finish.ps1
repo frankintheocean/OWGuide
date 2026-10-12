@@ -12,6 +12,7 @@ foreach ($report in @('release/windows-validation.json','release/windows-wrapper
 }
 if (Test-Path "release/OWGuide-$Version-portable/OWGuideData") { throw 'Do not distribute test database or cache data.' }
 Compress-Archive -Path "release/OWGuide-$Version-portable/*" -DestinationPath "release/OWGuide-$Version-portable.zip" -Force
+& "$PSScriptRoot/zip-smoke.ps1" -Version $Version
 $files=Get-ChildItem release -File | Where-Object { $_.Extension -in @('.exe','.msi','.zip') }
 $records=@($files | ForEach-Object { @{ name=$_.Name; bytes=$_.Length; sha256=(Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLowerInvariant(); authenticode=if ($_.Extension -in @('.exe','.msi')) { (Get-AuthenticodeSignature $_.FullName).Status.ToString() } else { 'NotApplicable' } } })
 $records | ForEach-Object { "$($_.sha256)  $($_.name)" } | Set-Content release/SHA256SUMS.txt

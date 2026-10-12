@@ -153,6 +153,26 @@ pub fn validate_user(value: &Value) -> Result<()> {
             return Err(format!("Duplicate {key} entries"));
         }
     }
+    let shortcuts = &value["settings"]["navigationShortcuts"];
+    let mut letters = HashSet::new();
+    for (action, fallback) in [
+        ("home", "h"),
+        ("heroes", "e"),
+        ("counter", "c"),
+        ("maps", "m"),
+        ("compare", "p"),
+        ("journal", "n"),
+        ("settings", "s"),
+        ("quick", "q"),
+    ] {
+        let letter = shortcuts
+            .get(action)
+            .and_then(Value::as_str)
+            .unwrap_or(fallback);
+        if !letter.is_empty() && !letters.insert(letter) {
+            return Err("Navigation shortcut letters must be unique".into());
+        }
+    }
     Ok(())
 }
 pub fn data_root(executable: &Path, installed_root: &Path) -> Result<PathBuf> {

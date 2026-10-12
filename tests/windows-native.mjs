@@ -227,6 +227,23 @@ try {
     .getByRole("combobox", { name: "Note subject", exact: true })
     .selectOption("ana");
   checks.push("largest text size reaches both native windows");
+  await page.getByRole("button", { name: "Settings", exact: true }).click();
+  await page
+    .getByRole("combobox", { name: "Heroes shortcut", exact: true })
+    .selectOption("x");
+  await expect(
+    page.getByRole("combobox", { name: "Heroes shortcut", exact: true }),
+  ).toHaveValue("x");
+  await page.keyboard.press("Control+Alt+x");
+  await expect(
+    page.getByRole("textbox", { name: "Filter heroes", exact: true }),
+  ).toBeVisible();
+  await page.keyboard.press("Control+Alt+n");
+  await expect(
+    page.getByRole("textbox", { name: "Your note", exact: true }),
+  ).toBeVisible();
+  checks.push("custom native navigation shortcuts");
+
   for (const action of ["maximize", "restore", "resize"]) {
     windowAction("OWGuide", action, 900, 680);
     await expect(

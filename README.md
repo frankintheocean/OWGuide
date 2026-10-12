@@ -11,7 +11,7 @@ OWGuide is an independent Windows hero guide and strategy companion for Overwatc
 - Counter Picker with deterministic scores, role filters, team selection, synergy evidence, confidence, and missing-evidence states. Stale advice is excluded unless you select it.
 - A library of 59 snapshot map entries with honest text fallbacks. Map geometry is not invented.
 - Favorites, recent guides, three-hero comparison, notes, named strategies, guide/map bookmarks, practice progress, and a configurable dashboard.
-- Themes, motion and quality settings, text size, contrast, selection sounds, and a search shortcut.
+- Themes, motion and quality settings, text size, contrast, selection sounds, and configurable search/page/Quick Reference shortcuts.
 - Validated personal-data backups and v0 → v1 import migration.
 - SQLite migrations, atomic signed-content installation, rollback, and a separate Quick Reference window.
 

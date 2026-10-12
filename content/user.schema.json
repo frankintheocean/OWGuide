@@ -105,6 +105,44 @@
           "type": "string",
           "pattern": "^[a-z]$"
         },
+        "navigationShortcuts": {
+          "type": "object",
+          "properties": {
+            "home": {
+              "type": "string",
+              "pattern": "^[a-z]?$"
+            },
+            "heroes": {
+              "type": "string",
+              "pattern": "^[a-z]?$"
+            },
+            "counter": {
+              "type": "string",
+              "pattern": "^[a-z]?$"
+            },
+            "maps": {
+              "type": "string",
+              "pattern": "^[a-z]?$"
+            },
+            "compare": {
+              "type": "string",
+              "pattern": "^[a-z]?$"
+            },
+            "journal": {
+              "type": "string",
+              "pattern": "^[a-z]?$"
+            },
+            "settings": {
+              "type": "string",
+              "pattern": "^[a-z]?$"
+            },
+            "quick": {
+              "type": "string",
+              "pattern": "^[a-z]?$"
+            }
+          },
+          "additionalProperties": false
+        },
         "updateEndpoint": {
           "type": "string",
           "maxLength": 2000

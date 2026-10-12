@@ -1,3 +1,4 @@
+import { navigationShortcuts } from "./shortcuts";
 import { isCurrentReview } from "./reviews";
 import { z } from "zod";
 export const roleSchema = z.enum(["tank", "damage", "support"]);
@@ -244,6 +245,20 @@ export const userSchema = z
         fontScale: z.number().min(0.85).max(1.5),
         contrast: z.boolean(),
         shortcut: z.string().regex(/^[a-z]$/),
+        navigationShortcuts: z
+          .object({
+            home: z.string().regex(/^[a-z]?$/),
+            heroes: z.string().regex(/^[a-z]?$/),
+            counter: z.string().regex(/^[a-z]?$/),
+            maps: z.string().regex(/^[a-z]?$/),
+            compare: z.string().regex(/^[a-z]?$/),
+            journal: z.string().regex(/^[a-z]?$/),
+            settings: z.string().regex(/^[a-z]?$/),
+            quick: z.string().regex(/^[a-z]?$/),
+          })
+          .partial()
+          .strict()
+          .optional(),
         updateEndpoint: z
           .string()
           .max(2000)
@@ -254,6 +269,15 @@ export const userSchema = z
   })
   .strict()
   .superRefine((u, ctx) => {
+    const letters = Object.values(
+      navigationShortcuts(u.settings.navigationShortcuts),
+    ).filter(Boolean);
+    if (new Set(letters).size !== letters.length)
+      ctx.addIssue({
+        code: "custom",
+        message:
+          "Navigation shortcut letters must be unique. Disable a binding before reusing its letter.",
+      });
     for (const key of [
       "favorites",
       "recent",
