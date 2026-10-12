@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "number",
+      "const": 1
+    },
+    "favorites": {
+      "maxItems": 200,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "recent": {
+      "maxItems": 20,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "bookmarks": {
+      "maxItems": 1000,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 200
+      }
+    },
+    "notes": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "maxLength": 200
+      },
+      "additionalProperties": {
+        "type": "string",
+        "maxLength": 12000
+      }
+    },
+    "completedDrills": {
+      "maxItems": 1000,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 200
+      }
+    },
+    "widgets": {
+      "maxItems": 5,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "favorites",
+          "recent",
+          "drills",
+          "notes",
+          "status"
+        ]
+      }
+    },
+    "settings": {
+      "type": "object",
+      "properties": {
+        "theme": {
+          "type": "string",
+          "enum": [
+            "midnight",
+            "light",
+            "ember"
+          ]
+        },
+        "motion": {
+          "type": "string",
+          "enum": [
+            "system",
+            "reduced",
+            "full"
+          ]
+        },
+        "quality": {
+          "type": "string",
+          "enum": [
+            "low",
+            "balanced",
+            "high"
+          ]
+        },
+        "sounds": {
+          "type": "boolean"
+        },
+        "fontScale": {
+          "type": "number",
+          "minimum": 0.85,
+          "maximum": 1.5
+        },
+        "contrast": {
+          "type": "boolean"
+        },
+        "shortcut": {
+          "type": "string",
+          "pattern": "^[a-z]$"
+        },
+        "updateEndpoint": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "diagnostics": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "theme",
+        "motion",
+        "quality",
+        "sounds",
+        "fontScale",
+        "contrast",
+        "shortcut",
+        "updateEndpoint",
+        "diagnostics"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "favorites",
+    "recent",
+    "bookmarks",
+    "notes",
+    "completedDrills",
+    "widgets",
+    "settings"
+  ],
+  "additionalProperties": false
+}

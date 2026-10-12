@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "favorites": ["ana"],
+  "recent": ["ana"],
+  "bookmarks": ["ana:beginner"],
+  "notes": { "ana": "Keep a retreat corner" },
+  "completedDrills": ["ana:beginner"],
+  "widgets": ["favorites", "recent", "drills", "notes", "status"],
+  "settings": {
+    "theme": "midnight",
+    "motion": "system",
+    "quality": "balanced",
+    "sounds": false,
+    "fontScale": 1,
+    "contrast": false,
+    "shortcut": "k",
+    "updateEndpoint": "",
+    "diagnostics": false
+  }
+}

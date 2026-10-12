@@ -1,0 +1,17 @@
+node_modules/
+dist/
+src-tauri/target/
+test-results/
+playwright-report/
+*.log
+dependency-licenses.json
+release/
+.env
+*.tsbuildinfo
+rust-licenses.json
+src-tauri/gen/
+__pycache__/
+THIRD_PARTY_NOTICES.txt
+*.pfx
+*.pem
+*.key
