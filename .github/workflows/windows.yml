@@ -29,6 +29,10 @@ jobs:
       - run: python scripts/notices.py
       - run: choco install nsis --version=3.11 -y --no-progress
       - run: ./packaging/package.ps1
+      - name: Native WebView2 offline and window checks
+        run: node tests/windows-native.mjs
+      - name: Clear native test portable data
+        run: Remove-Item release/OWGuide-1.0.0-portable/OWGuideData -Recurse -Force
       - run: ./packaging/smoke.ps1
       - run: ./packaging/finish.ps1
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -40,4 +44,5 @@ jobs:
             release/*.zip
             release/*.json
             release/*.txt
+            test-results/native-windows/
           if-no-files-found: error

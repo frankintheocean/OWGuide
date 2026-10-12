@@ -68,6 +68,10 @@ jobs:
         env:
           OWGUIDE_CERTIFICATE_BASE64: ${{ secrets.OWGUIDE_CERTIFICATE_BASE64 }}
           OWGUIDE_CERTIFICATE_PASSWORD: ${{ secrets.OWGUIDE_CERTIFICATE_PASSWORD }}
+      - name: Native WebView2 offline and window checks
+        run: node tests/windows-native.mjs
+      - name: Clear native test portable data
+        run: Remove-Item release/OWGuide-1.0.0-portable/OWGuideData -Recurse -Force
       - run: ./packaging/smoke.ps1
       - run: ./packaging/finish.ps1
       - name: Add release documents and reports

@@ -182,6 +182,9 @@ export function HeroProfile({
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3>{a.name}</h3>
+                <small className="badge">
+                  {a.kind === "unknown" ? "Type awaiting verification" : a.kind}
+                </small>
                 <p>
                   {a.description ??
                     "Mechanics and usage tips await review. Use the official hero page for current details."}

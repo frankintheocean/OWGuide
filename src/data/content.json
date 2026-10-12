@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "patch": "Overwatch Retail Patch Notes – October 6, 2026",
-  "generatedAt": "2026-10-12T03:23:53.284825Z",
+  "generatedAt": "2026-10-12T04:23:17.401048Z",
   "liveVerifiedAt": "2026-10-12T03:23:53.284825Z",
   "rosterVerified": true,
   "standardTeamSize": 5,
@@ -47,9 +47,18 @@
       "role": "support",
       "biography": "An Egyptian veteran sniper who supports allies from range.",
       "difficulty": "demanding",
-      "playstyle": ["backline", "poke"],
-      "strengths": ["Ranged support", "Healing denial"],
-      "weaknesses": ["No movement escape", "Vulnerable to coordinated dives"],
+      "playstyle": [
+        "backline",
+        "poke"
+      ],
+      "strengths": [
+        "Ranged support",
+        "Healing denial"
+      ],
+      "weaknesses": [
+        "No movement escape",
+        "Vulnerable to coordinated dives"
+      ],
       "attributes": {
         "Range": "Long sightlines",
         "Mobility": "Limited",
@@ -59,29 +68,29 @@
         {
           "id": "biotic-rifle",
           "name": "Biotic Rifle",
-          "description": "Shots can heal allies or damage enemies. Scoped shots use a different aiming mode.",
-          "kind": "unknown",
+          "description": "Use the scope for distant shots; the rifle damages opponents and restores teammates' health.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "sleep-dart",
           "name": "Sleep Dart",
-          "description": "A projectile that puts an enemy to sleep; damage can wake them.",
-          "kind": "unknown",
+          "description": "A landed dart temporarily incapacitates an opponent.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "biotic-grenade",
           "name": "Biotic Grenade",
-          "description": "A thrown explosive with healing, damage, and healing-denial effects.",
-          "kind": "unknown",
+          "description": "The grenade helps allies recover while denying healing to enemies caught by it.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "nano-boost",
           "name": "Nano Boost",
-          "description": "Empowers a selected ally for an engagement.",
-          "kind": "unknown",
+          "description": "Empower a teammate's damage output and resistance to incoming damage.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -119,7 +128,9 @@
       "role": "damage",
       "biography": "A graduate of Wuxing University's Fire College who specializes in fire attacks.",
       "difficulty": null,
-      "playstyle": ["flank"],
+      "playstyle": [
+        "flank"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -127,50 +138,50 @@
         {
           "id": "zhuque-fans",
           "name": "Zhuque Fans",
-          "description": null,
-          "kind": "unknown",
+          "description": "Launch fire projectiles from the fans.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "fan-the-flames",
           "name": "Fan the Flames",
-          "description": null,
-          "kind": "unknown",
+          "description": "A heated blast increases the effect of burning damage.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "dancing-blaze",
           "name": "Dancing Blaze",
-          "description": null,
-          "kind": "unknown",
+          "description": "Avoid incoming damage during the attack and recover health from enemies struck.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "inferno-rush",
           "name": "Inferno Rush",
-          "description": null,
-          "kind": "unknown",
+          "description": "Move forward with a damaging collision.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "vermillion-ascent",
           "name": "Vermillion Ascent",
-          "description": null,
+          "description": "A forward charge ends in an explosion that sets opponents alight.",
           "kind": "unknown",
           "stats": []
         },
         {
           "id": "vermillion-revival",
           "name": "Vermillion Revival",
-          "description": null,
+          "description": "Return from death through an explosive fire effect.",
           "kind": "unknown",
           "stats": []
         },
         {
           "id": "ignition",
           "name": "Ignition",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire attacks apply a burning effect.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -208,7 +219,9 @@
       "role": "damage",
       "biography": "A Deadlock gang leader who fights with a rifle and explosives.",
       "difficulty": null,
-      "playstyle": ["poke"],
+      "playstyle": [
+        "poke"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -216,29 +229,29 @@
         {
           "id": "the-viper",
           "name": "The Viper",
-          "description": null,
-          "kind": "unknown",
+          "description": "Aiming increases rifle accuracy and damage while reducing firing speed.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "coach-gun",
           "name": "Coach Gun",
-          "description": null,
-          "kind": "unknown",
+          "description": "The blast separates nearby enemies and propels you backward.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "dynamite",
           "name": "Dynamite",
-          "description": null,
-          "kind": "unknown",
+          "description": "Shoot the thrown explosive for early detonation or let its timer expire.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "bob",
           "name": "B.O.B.",
-          "description": null,
-          "kind": "unknown",
+          "description": "Send B.O.B. charging into opponents before he begins firing.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -276,7 +289,9 @@
       "role": "support",
       "biography": "A former Talon medic who now uses his combat training to help people harmed by war.",
       "difficulty": null,
-      "playstyle": ["backline"],
+      "playstyle": [
+        "backline"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -284,36 +299,36 @@
         {
           "id": "biotic-launcher",
           "name": "Biotic Launcher",
-          "description": null,
-          "kind": "unknown",
+          "description": "Alternate burst fire with healing projectiles that affect teammates near their landing point.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "regenerative-burst",
           "name": "Regenerative Burst",
-          "description": null,
-          "kind": "unknown",
+          "description": "Restore nearby teammates immediately and over time; the immediate heal is stronger below half health.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "immortality-field",
           "name": "Immortality Field",
-          "description": null,
-          "kind": "unknown",
+          "description": "Place a destroyable device that keeps nearby allies from dying.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "amplification-matrix",
           "name": "Amplification Matrix",
-          "description": null,
-          "kind": "unknown",
+          "description": "Place a window that amplifies friendly projectile damage and healing.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "exo-boots",
           "name": "Exo Boots",
-          "description": null,
-          "kind": "unknown",
+          "description": "Crouching prepares a higher jump.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -351,7 +366,9 @@
       "role": "damage",
       "biography": "An omnic war machine that became an explorer with an interest in nature.",
       "difficulty": null,
-      "playstyle": ["poke"],
+      "playstyle": [
+        "poke"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -359,36 +376,36 @@
         {
           "id": "configuration-assault",
           "name": "Configuration: Assault",
-          "description": null,
-          "kind": "unknown",
+          "description": "Trade movement speed for sustained rotary-cannon fire.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "configuration-recon",
           "name": "Configuration: Recon",
-          "description": null,
-          "kind": "unknown",
+          "description": "Use the accurate mobile configuration when repositioning.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "a-36-tactical-grenade",
           "name": "A-36 Tactical Grenade",
-          "description": null,
-          "kind": "unknown",
+          "description": "The explosive ricochets from walls but detonates on enemies or the ground.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "reconfigure",
           "name": "Reconfigure",
-          "description": null,
-          "kind": "unknown",
+          "description": "Change between the two weapon configurations.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "configuration-artillery",
           "name": "Configuration: Artillery",
-          "description": null,
-          "kind": "unknown",
+          "description": "Stop moving to launch targeted artillery shells.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -426,7 +443,9 @@
       "role": "support",
       "biography": "An engineer who took up arms to defend others alongside Reinhardt.",
       "difficulty": null,
-      "playstyle": ["peel"],
+      "playstyle": [
+        "peel"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -434,50 +453,50 @@
         {
           "id": "rocket-flail",
           "name": "Rocket Flail",
-          "description": null,
-          "kind": "unknown",
+          "description": "Strike nearby opponents with a melee flail.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "repair-pack",
           "name": "Repair Pack",
-          "description": null,
-          "kind": "unknown",
+          "description": "Send a teammate a short healing effect.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "whip-shot",
           "name": "Whip Shot",
-          "description": null,
-          "kind": "unknown",
+          "description": "Extend the flail to push an opponent away.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "barrier-shield",
           "name": "Barrier Shield",
-          "description": null,
-          "kind": "unknown",
+          "description": "Raise a barrier in front of you.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "shield-bash",
           "name": "Shield Bash",
-          "description": null,
-          "kind": "unknown",
+          "description": "With the shield raised, dash forward to push an opponent back.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "rally",
           "name": "Rally",
-          "description": null,
-          "kind": "unknown",
+          "description": "Gain armor, strengthen the shield and grant nearby teammates extra health.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "inspire",
           "name": "Inspire",
-          "description": null,
-          "kind": "unknown",
+          "description": "Landing damage starts healing for nearby teammates.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -515,7 +534,9 @@
       "role": "damage",
       "biography": "An outlaw gunslinger who uses a revolver to carry out his own idea of justice.",
       "difficulty": null,
-      "playstyle": ["peel"],
+      "playstyle": [
+        "peel"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -523,22 +544,22 @@
         {
           "id": "peacekeeper",
           "name": "Peacekeeper",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire aimed revolver shots or rapidly expend the remaining ammunition.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "combat-roll",
           "name": "Combat Roll",
-          "description": null,
-          "kind": "unknown",
+          "description": "Roll to reload and reduce damage received during the movement.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "deadeye",
           "name": "Deadeye",
-          "description": null,
-          "kind": "unknown",
+          "description": "Acquire targets before releasing the charged shots.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -576,7 +597,9 @@
       "role": "tank",
       "biography": "The new leader of MEKA, a Korean mech team, who coordinates allies in close fighting.",
       "difficulty": null,
-      "playstyle": ["frontline"],
+      "playstyle": [
+        "frontline"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -584,63 +607,63 @@
         {
           "id": "plasma-saber",
           "name": "Plasma Saber",
-          "description": null,
-          "kind": "unknown",
+          "description": "Attack at melee range with an energy blade.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "portable-fusion-repeater",
           "name": "Portable Fusion Repeater",
-          "description": null,
-          "kind": "unknown",
+          "description": "Use the portable heavy machine gun.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "power-barrier",
           "name": "Power Barrier",
-          "description": null,
-          "kind": "unknown",
+          "description": "Keep a protective energy barrier in front of you.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "surging-strike",
           "name": "Surging Strike",
-          "description": null,
-          "kind": "unknown",
+          "description": "Strike from the barrier stance to damage and displace opponents.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "fusion-repeater",
           "name": "Fusion Repeater",
-          "description": null,
-          "kind": "unknown",
+          "description": "Activate the mech's rapid-firing gun.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "propulsors",
           "name": "Propulsors",
-          "description": null,
-          "kind": "unknown",
+          "description": "Spend fuel to move quickly along a horizontal direction.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "eject",
           "name": "Eject!",
-          "description": null,
-          "kind": "unknown",
+          "description": "Leave the mech when it is destroyed.",
+          "kind": "passive",
           "stats": []
         },
         {
           "id": "limit-break",
           "name": "Limit Break",
-          "description": null,
+          "description": "The sweeping attack gives you overhealth and increases damage received by affected opponents.",
           "kind": "unknown",
           "stats": []
         },
         {
           "id": "call-mech",
           "name": "Call Mech",
-          "description": null,
+          "description": "Rebuild the mech to return to mech combat.",
           "kind": "unknown",
           "stats": []
         }
@@ -679,9 +702,18 @@
       "role": "tank",
       "biography": "A Korean pilot who uses a mobile mech to contest space and protect teammates.",
       "difficulty": "moderate",
-      "playstyle": ["dive", "peel"],
-      "strengths": ["Vertical mobility", "Projectile interception"],
-      "weaknesses": ["Resource-limited defense", "Beam threats"],
+      "playstyle": [
+        "dive",
+        "peel"
+      ],
+      "strengths": [
+        "Vertical mobility",
+        "Projectile interception"
+      ],
+      "weaknesses": [
+        "Resource-limited defense",
+        "Beam threats"
+      ],
       "attributes": {
         "Range": "Close pressure",
         "Mobility": "Boosters",
@@ -691,57 +723,57 @@
         {
           "id": "fusion-cannons",
           "name": "Fusion Cannons",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire automatic spread weapons at short distance.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "light-gun",
           "name": "Light Gun",
-          "description": null,
-          "kind": "unknown",
+          "description": "Use the automatic sidearm outside the mech.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "boosters",
           "name": "Boosters",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fly toward the direction you face.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "defense-matrix",
           "name": "Defense Matrix",
-          "description": "Intercepts eligible incoming projectiles; it does not stop all damage types.",
-          "kind": "unknown",
+          "description": "Intercept projectiles in the space in front of the mech.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "micro-missiles",
           "name": "Micro Missiles",
-          "description": null,
-          "kind": "unknown",
+          "description": "Release a sequence of small explosive missiles.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "self-destruct",
           "name": "Self-Destruct",
-          "description": null,
-          "kind": "unknown",
+          "description": "Abandon the mech and trigger its delayed explosion.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "call-mech",
           "name": "Call Mech",
-          "description": null,
-          "kind": "unknown",
+          "description": "Summon a replacement mech.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "eject",
           "name": "Eject!",
-          "description": null,
-          "kind": "unknown",
+          "description": "Exit the mech when its health is depleted.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -779,7 +811,9 @@
       "role": "support",
       "biography": "A cyberneticist who uses a drone fleet to control healing, pressure, and movement.",
       "difficulty": null,
-      "playstyle": ["backline"],
+      "playstyle": [
+        "backline"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -787,35 +821,35 @@
         {
           "id": "eternal-scepter",
           "name": "Eternal Scepter",
-          "description": null,
-          "kind": "unknown",
+          "description": "The scepter damages enemies and heals teammates; infusion changes its shot into a larger piercing blast.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "infuse",
           "name": "Infuse",
-          "description": null,
-          "kind": "unknown",
+          "description": "Modify the next ability with an added effect.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "invigorating-drones",
           "name": "Invigorating Drones",
-          "description": null,
-          "kind": "unknown",
+          "description": "Drones heal an ally and increase attack speed; infusion also sends drones to you.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "shrouded-momentum",
           "name": "Shrouded Momentum",
-          "description": null,
-          "kind": "unknown",
+          "description": "Move horizontally with damage reduction; infusion permits flight.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "deliverance",
           "name": "Deliverance",
-          "description": null,
+          "description": "The drone swarm gives teammates overhealth and lowers opponents' maximum health.",
           "kind": "unknown",
           "stats": []
         }
@@ -854,7 +888,9 @@
       "role": "tank",
       "biography": "A Vishkar negotiator who uses hard-light barriers and controlled pressure.",
       "difficulty": null,
-      "playstyle": ["frontline"],
+      "playstyle": [
+        "frontline"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -862,35 +898,35 @@
         {
           "id": "photon-magnum",
           "name": "Photon Magnum",
-          "description": null,
-          "kind": "unknown",
+          "description": "Sustain a medium-distance beam that finishes with a stronger shot.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "barrier-array",
           "name": "Barrier Array",
-          "description": null,
-          "kind": "unknown",
+          "description": "Build a barrier from separate segments.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "sonic-repulsors",
           "name": "Sonic Repulsors",
-          "description": null,
-          "kind": "unknown",
+          "description": "Push opponents away; a wall collision also stuns them.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "crystal-charge",
           "name": "Crystal Charge",
-          "description": null,
-          "kind": "unknown",
+          "description": "Place an explosive crystal and trigger it with a second activation.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "panopticon",
           "name": "Panopticon",
-          "description": null,
+          "description": "Enclose opponents with hard light that explodes when its duration ends.",
           "kind": "unknown",
           "stats": []
         }
@@ -929,7 +965,9 @@
       "role": "tank",
       "biography": "A former Talon leader who uses a powerful gauntlet and committed movement.",
       "difficulty": null,
-      "playstyle": ["dive"],
+      "playstyle": [
+        "dive"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -937,36 +975,36 @@
         {
           "id": "hand-cannon",
           "name": "Hand Cannon",
-          "description": null,
-          "kind": "unknown",
+          "description": "The close-range spread weapon replenishes ammunition automatically.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "rocket-punch",
           "name": "Rocket Punch",
-          "description": null,
-          "kind": "unknown",
+          "description": "Charge a forward punch that displaces the target; a wall impact adds damage.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "seismic-slam",
           "name": "Seismic Slam",
-          "description": null,
-          "kind": "unknown",
+          "description": "Leap toward a ground impact.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "power-block",
           "name": "Power Block",
-          "description": null,
-          "kind": "unknown",
+          "description": "Reduce frontal damage and empower a punch by blocking a sufficiently strong attack.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "meteor-strike",
           "name": "Meteor Strike",
-          "description": null,
-          "kind": "unknown",
+          "description": "Leap away, choose a landing area and strike it from above.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -1004,7 +1042,9 @@
       "role": "damage",
       "biography": "An adaptive omnic created by Overwatch scientist Mina Liao.",
       "difficulty": null,
-      "playstyle": ["flank"],
+      "playstyle": [
+        "flank"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -1012,43 +1052,43 @@
         {
           "id": "tri-shot",
           "name": "Tri-Shot",
-          "description": null,
-          "kind": "unknown",
+          "description": "Each shot sends projectiles along a triangular spread.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "sticky-bombs",
           "name": "Sticky Bombs",
-          "description": null,
-          "kind": "unknown",
+          "description": "Stick explosives to a surface or target for delayed detonation.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "flight",
           "name": "Flight",
-          "description": null,
-          "kind": "unknown",
+          "description": "Begin with a forward flight burst, then briefly steer freely.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "focusing-beam",
           "name": "Focusing Beam",
-          "description": null,
-          "kind": "unknown",
+          "description": "Channel damage that becomes much stronger against targets below half health.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "duplicate",
           "name": "Duplicate",
-          "description": null,
-          "kind": "unknown",
+          "description": "Copy a chosen enemy hero; that player cannot change hero while the copy lasts.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "glide",
           "name": "Glide",
-          "description": null,
-          "kind": "unknown",
+          "description": "Hold jump during a fall to descend more slowly.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -1086,7 +1126,9 @@
       "role": "damage",
       "biography": "A former Overwatch operative who returned after unexplained changes to his body and mind.",
       "difficulty": null,
-      "playstyle": ["poke"],
+      "playstyle": [
+        "poke"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -1094,29 +1136,29 @@
         {
           "id": "synthetic-burst-rifle",
           "name": "Synthetic Burst Rifle",
-          "description": null,
-          "kind": "unknown",
+          "description": "Aim down sights to tighten the burst and extend effective falloff distance.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "cyber-frag",
           "name": "Cyber Frag",
-          "description": null,
-          "kind": "unknown",
+          "description": "Throw an explosive with a delayed detonation after it bounces.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "override-protocol",
           "name": "Override Protocol",
-          "description": null,
+          "description": "Trigger a transformation into a weapon form.",
           "kind": "unknown",
           "stats": []
         },
         {
           "id": "altered-vitals",
           "name": "Altered Vitals",
-          "description": null,
-          "kind": "unknown",
+          "description": "Health regeneration starts earlier and provides an immediate heal on activation.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -1154,7 +1196,9 @@
       "role": "damage",
       "biography": "A former rescue operative who became a professional bounty hunter.",
       "difficulty": null,
-      "playstyle": ["poke"],
+      "playstyle": [
+        "poke"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -1162,29 +1206,29 @@
         {
           "id": "bola-shot",
           "name": "Bola Shot",
-          "description": null,
+          "description": "The explosive bola binds a hit enemy and draws nearby opponents toward them.",
           "kind": "unknown",
           "stats": []
         },
         {
           "id": "quick-dash",
           "name": "Quick Dash",
-          "description": null,
-          "kind": "unknown",
+          "description": "Dash in your movement direction and restore Take Aim.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "take-aim",
           "name": "Take Aim",
-          "description": null,
-          "kind": "unknown",
+          "description": "Slow your movement to fire a fast explosive bolt; Quick Dash refreshes this attack.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "updraft",
           "name": "Updraft",
-          "description": null,
-          "kind": "unknown",
+          "description": "Rise rapidly on an upward gust.",
+          "kind": "ability",
           "stats": []
         }
       ],
@@ -1222,9 +1266,18 @@
       "role": "damage",
       "biography": "A cybernetic ninja who creates pressure with mobility and precise projectiles.",
       "difficulty": "demanding",
-      "playstyle": ["flank", "dive"],
-      "strengths": ["Vertical routes", "Finishing pressure"],
-      "weaknesses": ["Control effects", "Risky deep engagements"],
+      "playstyle": [
+        "flank",
+        "dive"
+      ],
+      "strengths": [
+        "Vertical routes",
+        "Finishing pressure"
+      ],
+      "weaknesses": [
+        "Control effects",
+        "Risky deep engagements"
+      ],
       "attributes": {
         "Range": "Projectile poke and close finish",
         "Mobility": "Wall climb and dash",
@@ -1234,36 +1287,36 @@
         {
           "id": "shuriken",
           "name": "Shuriken",
-          "description": null,
-          "kind": "unknown",
+          "description": "Choose a narrow projectile burst or a wider fan.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "deflect",
           "name": "Deflect",
-          "description": "Redirects eligible incoming attacks; some attack types cannot be deflected.",
-          "kind": "unknown",
+          "description": "Return incoming projectiles toward your aim and stop melee attacks.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "swift-strike",
           "name": "Swift Strike",
-          "description": null,
-          "kind": "unknown",
+          "description": "Dash through opponents to damage them; an elimination resets the dash.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "dragonblade",
           "name": "Dragonblade",
-          "description": "A close-range sword ultimate that requires an engagement plan.",
-          "kind": "unknown",
+          "description": "Replace ranged attacks with a drawn blade.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "cyber-agility",
           "name": "Cyber-Agility",
-          "description": null,
-          "kind": "unknown",
+          "description": "Use wall climbing and a second jump to reach new positions.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -1301,7 +1354,9 @@
       "role": "damage",
       "biography": "A Shimada archer who seeks a new path after his family's conflict.",
       "difficulty": null,
-      "playstyle": ["poke"],
+      "playstyle": [
+        "poke"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -1309,43 +1364,43 @@
         {
           "id": "storm-bow",
           "name": "Storm Bow",
-          "description": null,
-          "kind": "unknown",
+          "description": "Charging the bow extends arrow travel before release.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "storm-arrows",
           "name": "Storm Arrows",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire a limited set of instant arrows with ricochet and reduced damage.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "sonic-arrow",
           "name": "Sonic Arrow",
-          "description": null,
-          "kind": "unknown",
+          "description": "An arrow impact temporarily exposes nearby opponents.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "lunge",
           "name": "Lunge",
-          "description": null,
-          "kind": "unknown",
+          "description": "Use the extra airborne jump to reposition.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "dragonstrike",
           "name": "Dragonstrike",
-          "description": null,
-          "kind": "unknown",
+          "description": "Send a damaging dragon through opponents along its path.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "wall-climb",
           "name": "Wall Climb",
-          "description": null,
-          "kind": "unknown",
+          "description": "Jump against a wall to climb it.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -1383,7 +1438,9 @@
       "role": "tank",
       "biography": "An underworld disruptor who fights with spikes, movement, and a temporary wall.",
       "difficulty": null,
-      "playstyle": ["brawl"],
+      "playstyle": [
+        "brawl"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -1391,43 +1448,43 @@
         {
           "id": "bonespur",
           "name": "Bonespur",
-          "description": null,
-          "kind": "unknown",
+          "description": "Shoot a spread burst of spikes.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "spike-guard",
           "name": "Spike Guard",
-          "description": null,
-          "kind": "unknown",
+          "description": "Guard the front while restoring ammunition and sending homing spikes at nearby enemies.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "violent-leap",
           "name": "Violent Leap",
-          "description": null,
-          "kind": "unknown",
+          "description": "Leap forward, then activate again for a slash that pushes enemies away.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "jagged-wall",
           "name": "Jagged Wall",
-          "description": null,
-          "kind": "unknown",
+          "description": "Create a spiked wall that damages and displaces nearby opponents.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "downpour",
           "name": "Downpour",
-          "description": null,
+          "description": "Falling spikes stop affected opponents from moving.",
           "kind": "unknown",
           "stats": []
         },
         {
           "id": "vault",
           "name": "Vault",
-          "description": null,
-          "kind": "unknown",
+          "description": "Climb low walls and catch ledges.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -1465,7 +1522,9 @@
       "role": "support",
       "biography": "A survivor of the Inti Warriors who uses solar-powered support technology.",
       "difficulty": null,
-      "playstyle": ["poke"],
+      "playstyle": [
+        "poke"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -1473,29 +1532,29 @@
         {
           "id": "solar-rifle",
           "name": "Solar Rifle",
-          "description": null,
-          "kind": "unknown",
+          "description": "Use an automatically charging ranged shot or spend solar energy on a shorter healing beam.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "captive-sun",
           "name": "Captive Sun",
-          "description": null,
-          "kind": "unknown",
+          "description": "Hit enemies with solar energy to slow them; further damage triggers their explosions.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "healing-pylon",
           "name": "Healing Pylon",
-          "description": null,
-          "kind": "unknown",
+          "description": "Set up a deployable that restores teammates' health.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "outburst",
           "name": "Outburst",
-          "description": null,
-          "kind": "unknown",
+          "description": "Burst in your movement direction and displace enemies; holding jump increases height.",
+          "kind": "ability",
           "stats": []
         }
       ],
@@ -1533,7 +1592,9 @@
       "role": "support",
       "biography": "A feline pilot using jet technology designed by Brigitte.",
       "difficulty": null,
-      "playstyle": ["peel"],
+      "playstyle": [
+        "peel"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -1541,35 +1602,35 @@
         {
           "id": "biotic-pawjectiles",
           "name": "Biotic Pawjectiles",
-          "description": null,
-          "kind": "unknown",
+          "description": "Spread projectiles heal friendly targets and damage opponents at medium distance.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "frenetic-flight",
           "name": "Frenetic Flight",
-          "description": null,
-          "kind": "unknown",
+          "description": "Accelerate toward your movement input; transporting an ally slows fuel recovery.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "lifeline",
           "name": "Lifeline",
-          "description": null,
-          "kind": "unknown",
+          "description": "Tow an ally in transport mode while healing them and moving faster.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "purr",
           "name": "Purr",
-          "description": null,
-          "kind": "unknown",
+          "description": "Start a healing pulse and push nearby enemies away; pulse frequency rises over time.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "catnapper",
           "name": "Catnapper",
-          "description": null,
+          "description": "Dive toward the ground to knock enemies down and tether the closest target.",
           "kind": "unknown",
           "stats": []
         }
@@ -1608,7 +1669,9 @@
       "role": "tank",
       "biography": "The ruler of Junkertown, known for close-range combat and her axe.",
       "difficulty": null,
-      "playstyle": ["brawl"],
+      "playstyle": [
+        "brawl"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -1616,36 +1679,36 @@
         {
           "id": "scattergun",
           "name": "Scattergun",
-          "description": null,
-          "kind": "unknown",
+          "description": "Use a pump-action shotgun for close combat.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "commanding-shout",
           "name": "Commanding Shout",
-          "description": null,
-          "kind": "unknown",
+          "description": "Temporarily increase nearby teammates' health and movement speed along with your own.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "carnage",
           "name": "Carnage",
-          "description": null,
-          "kind": "unknown",
+          "description": "Wound opponents in front of you; hitting more enemies shortens the cooldown.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "rampage",
           "name": "Rampage",
-          "description": null,
-          "kind": "unknown",
+          "description": "Charge through opponents to wound them and prevent their healing.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "adrenaline-rush",
           "name": "Adrenaline Rush",
-          "description": null,
-          "kind": "unknown",
+          "description": "Recover health from damage caused by wounds.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -1683,7 +1746,9 @@
       "role": "damage",
       "biography": "A demolitionist whose explosives create pressure around obstacles.",
       "difficulty": null,
-      "playstyle": ["poke"],
+      "playstyle": [
+        "poke"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -1691,36 +1756,36 @@
         {
           "id": "frag-launcher",
           "name": "Frag Launcher",
-          "description": null,
-          "kind": "unknown",
+          "description": "Lob explosive projectiles that bounce.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "concussion-mine",
           "name": "Concussion Mine",
-          "description": null,
-          "kind": "unknown",
+          "description": "Place a mine and trigger it remotely to create knockback.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "steel-trap",
           "name": "Steel Trap",
-          "description": null,
-          "kind": "unknown",
+          "description": "Leave a trap that stops an enemy's movement.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "rip-tire",
           "name": "RIP-Tire",
-          "description": null,
-          "kind": "unknown",
+          "description": "Steer an explosive tire and choose when to detonate it.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "total-mayhem",
           "name": "Total Mayhem",
-          "description": null,
-          "kind": "unknown",
+          "description": "Your explosives do not damage you, and death drops additional bombs.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -1758,7 +1823,9 @@
       "role": "support",
       "biography": "A Martian-born support using space technology to protect her team and help her home.",
       "difficulty": null,
-      "playstyle": ["backline"],
+      "playstyle": [
+        "backline"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -1766,43 +1833,43 @@
         {
           "id": "mediblaster",
           "name": "Mediblaster",
-          "description": null,
-          "kind": "unknown",
+          "description": "Burst shots restore friendly health or damage opponents.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "pulsar-torpedoes",
           "name": "Pulsar Torpedoes",
-          "description": null,
-          "kind": "unknown",
+          "description": "Lock targets before releasing guided shots that heal allies over time or damage enemies.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "orbital-ray",
           "name": "Orbital Ray",
-          "description": null,
-          "kind": "unknown",
+          "description": "Send a moving ray that heals teammates and increases their damage.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "hyper-ring",
           "name": "Hyper Ring",
-          "description": null,
-          "kind": "unknown",
+          "description": "Teammates gain movement speed by crossing the deployed ring.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "glide-boost",
           "name": "Glide Boost",
-          "description": null,
-          "kind": "unknown",
+          "description": "Move faster while gliding horizontally.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "martian-overboots",
           "name": "Martian Overboots",
-          "description": null,
-          "kind": "unknown",
+          "description": "Use a second airborne jump or hold jump to hover.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -1840,9 +1907,18 @@
       "role": "support",
       "biography": "A Kanezaka protector who combines healing with precise projectiles.",
       "difficulty": "demanding",
-      "playstyle": ["peel", "backline"],
-      "strengths": ["Cleanse utility", "Ally repositioning"],
-      "weaknesses": ["Projectile aim demands", "Escape depends on allies"],
+      "playstyle": [
+        "peel",
+        "backline"
+      ],
+      "strengths": [
+        "Cleanse utility",
+        "Ally repositioning"
+      ],
+      "weaknesses": [
+        "Projectile aim demands",
+        "Escape depends on allies"
+      ],
       "attributes": {
         "Range": "Ranged healing and projectiles",
         "Mobility": "Ally teleport and wall climb",
@@ -1852,36 +1928,36 @@
         {
           "id": "healing-ofuda",
           "name": "Healing Ofuda",
-          "description": null,
-          "kind": "unknown",
+          "description": "Send healing papers that seek a selected teammate.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "kunai",
           "name": "Kunai",
-          "description": null,
-          "kind": "unknown",
+          "description": "Throw a ranged damaging projectile.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "swift-step",
           "name": "Swift Step",
-          "description": "Repositions to an ally; check the destination before committing.",
-          "kind": "unknown",
+          "description": "Move directly to a chosen teammate by teleporting.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "protection-suzu",
           "name": "Protection Suzu",
-          "description": "Provides a short defensive effect and removes eligible negative effects.",
-          "kind": "unknown",
+          "description": "Give teammates brief invulnerability and remove most harmful effects.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "kitsune-rush",
           "name": "Kitsune Rush",
-          "description": null,
-          "kind": "unknown",
+          "description": "Create a forward path that speeds teammates' movement, attacks and cooldown recovery.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -1919,7 +1995,9 @@
       "role": "support",
       "biography": "The inventor of biolight, a technology that combines living forms with hard light.",
       "difficulty": null,
-      "playstyle": ["backline"],
+      "playstyle": [
+        "backline"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -1927,43 +2005,43 @@
         {
           "id": "healing-blossom",
           "name": "Healing Blossom",
-          "description": null,
-          "kind": "unknown",
+          "description": "Charge a targeted heal before release; the blossom also charges more slowly while unused.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "thorn-volley",
           "name": "Thorn Volley",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire repeated pairs of damaging thorns.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "petal-platform",
           "name": "Petal Platform",
-          "description": null,
-          "kind": "unknown",
+          "description": "Place a platform that rises when stepped on and resets while unused.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "rejuvenating-dash",
           "name": "Rejuvenating Dash",
-          "description": null,
-          "kind": "unknown",
+          "description": "Dash along your movement direction with a small self-heal.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "life-grip",
           "name": "Life Grip",
-          "description": null,
-          "kind": "unknown",
+          "description": "Bring an ally to your position while protecting them during travel.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "tree-of-life",
           "name": "Tree of Life",
-          "description": null,
-          "kind": "unknown",
+          "description": "Grow a tree that heals on placement and continues with periodic healing.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -2001,7 +2079,9 @@
       "role": "support",
       "biography": "A musician and activist who supports his team through movement and music.",
       "difficulty": null,
-      "playstyle": ["brawl"],
+      "playstyle": [
+        "brawl"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -2009,43 +2089,43 @@
         {
           "id": "sonic-amplifier",
           "name": "Sonic Amplifier",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire damaging sonic projectiles.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "crossfade",
           "name": "Crossfade",
-          "description": null,
-          "kind": "unknown",
+          "description": "Choose between healing nearby teammates and increasing their movement speed.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "amp-it-up",
           "name": "Amp It Up",
-          "description": null,
-          "kind": "unknown",
+          "description": "Strengthen whichever song is currently active.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "soundwave",
           "name": "Soundwave",
-          "description": null,
-          "kind": "unknown",
+          "description": "Push nearby opponents away with a sonic blast.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "sound-barrier",
           "name": "Sound Barrier",
-          "description": null,
-          "kind": "unknown",
+          "description": "Give nearby teammates a temporary extra-health buffer.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "wall-ride",
           "name": "Wall Ride",
-          "description": null,
-          "kind": "unknown",
+          "description": "Jump onto a wall to move along its surface.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -2083,7 +2163,9 @@
       "role": "tank",
       "biography": "A Samoan fighter who uses heavy pressure and thrives in a direct confrontation.",
       "difficulty": null,
-      "playstyle": ["brawl"],
+      "playstyle": [
+        "brawl"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -2091,29 +2173,29 @@
         {
           "id": "overrun",
           "name": "Overrun",
-          "description": null,
-          "kind": "unknown",
+          "description": "Charge without interruption, ending with a stomp that launches opponents.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "cardiac-overdrive",
           "name": "Cardiac Overdrive",
-          "description": null,
-          "kind": "unknown",
+          "description": "Reduce your incoming damage and let nearby teammates heal through their own damage.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "berserker",
           "name": "Berserker",
-          "description": null,
-          "kind": "unknown",
+          "description": "Critical damage provides temporary additional health.",
+          "kind": "passive",
           "stats": []
         },
         {
           "id": "cage-fight",
           "name": "Cage Fight",
-          "description": null,
-          "kind": "unknown",
+          "description": "Create a barrier that contains both you and nearby enemies.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -2151,7 +2233,9 @@
       "role": "damage",
       "biography": "A climate scientist who uses ice technology to shape a fight.",
       "difficulty": null,
-      "playstyle": ["brawl"],
+      "playstyle": [
+        "brawl"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -2159,29 +2243,29 @@
         {
           "id": "endothermic-blaster",
           "name": "Endothermic Blaster",
-          "description": null,
-          "kind": "unknown",
+          "description": "Slow opponents with a nearby spray or fire an icicle at range.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "cryo-freeze",
           "name": "Cryo-Freeze",
-          "description": null,
-          "kind": "unknown",
+          "description": "Pause fighting to become invulnerable and recover health.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "ice-wall",
           "name": "Ice Wall",
-          "description": null,
-          "kind": "unknown",
+          "description": "Raise a wall ahead of you.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "blizzard",
           "name": "Blizzard",
-          "description": null,
-          "kind": "unknown",
+          "description": "Deploy a drone whose wide-area weather effect freezes enemies.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -2219,9 +2303,18 @@
       "role": "support",
       "biography": "A Swiss doctor who follows allies with mobile single-target support.",
       "difficulty": "approachable",
-      "playstyle": ["backline", "peel"],
-      "strengths": ["Ally mobility", "Damage amplification"],
-      "weaknesses": ["Ally-dependent escape", "Risky resurrection exposure"],
+      "playstyle": [
+        "backline",
+        "peel"
+      ],
+      "strengths": [
+        "Ally mobility",
+        "Damage amplification"
+      ],
+      "weaknesses": [
+        "Ally-dependent escape",
+        "Risky resurrection exposure"
+      ],
       "attributes": {
         "Range": "Ally beam range",
         "Mobility": "Ally flight",
@@ -2231,43 +2324,43 @@
         {
           "id": "caduceus-staff",
           "name": "Caduceus Staff",
-          "description": null,
-          "kind": "unknown",
+          "description": "Maintain a beam to heal a teammate or amplify their damage.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "caduceus-blaster",
           "name": "Caduceus Blaster",
-          "description": null,
-          "kind": "unknown",
+          "description": "Switch to an automatic sidearm for damage.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "guardian-angel",
           "name": "Guardian Angel",
-          "description": "Fly toward an ally and use movement to choose a safe landing.",
-          "kind": "unknown",
+          "description": "Fly toward a teammate; jump and crouch change the follow-up movement direction.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "resurrect",
           "name": "Resurrect",
-          "description": "Revives an eliminated ally when the cast can safely complete.",
-          "kind": "unknown",
+          "description": "Bring a fallen teammate back to life.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "angelic-descent",
           "name": "Angelic Descent",
-          "description": null,
-          "kind": "unknown",
+          "description": "Slow your descent during a fall.",
+          "kind": "passive",
           "stats": []
         },
         {
           "id": "valkyrie",
           "name": "Valkyrie",
-          "description": null,
-          "kind": "unknown",
+          "description": "Gain flight and enhance your abilities.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -2305,7 +2398,9 @@
       "role": "support",
       "biography": "A fighter determined to escape a curse and control his own future.",
       "difficulty": null,
-      "playstyle": ["peel"],
+      "playstyle": [
+        "peel"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -2313,43 +2408,43 @@
         {
           "id": "spirit-glaive",
           "name": "Spirit Glaive",
-          "description": null,
-          "kind": "unknown",
+          "description": "Damage enemies with a ricocheting projectile.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "healing-kasa",
           "name": "Healing Kasa",
-          "description": null,
-          "kind": "unknown",
+          "description": "A thrown hat restores health as it bounces between teammates.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "binding-chain",
           "name": "Binding Chain",
-          "description": null,
-          "kind": "unknown",
+          "description": "Land a chain to restrict an opponent's movement.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "katashiro-return",
           "name": "Katashiro Return",
-          "description": null,
-          "kind": "unknown",
+          "description": "Leap forward with added movement speed, then reactivate to return.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "kekkai-sanctuary",
           "name": "Kekkai Sanctuary",
-          "description": null,
+          "description": "Create a healing area that absorbs opposing projectiles crossing it.",
           "kind": "unknown",
           "stats": []
         },
         {
           "id": "remedy-aura",
           "name": "Remedy Aura",
-          "description": null,
-          "kind": "unknown",
+          "description": "Nearby healing grows stronger through your damage and healing contributions.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -2387,7 +2482,9 @@
       "role": "support",
       "biography": "A genetic researcher whose methods are controversial and whose kit mixes healing and damage.",
       "difficulty": null,
-      "playstyle": ["backline"],
+      "playstyle": [
+        "backline"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -2395,29 +2492,29 @@
         {
           "id": "biotic-grasp",
           "name": "Biotic Grasp",
-          "description": null,
-          "kind": "unknown",
+          "description": "Spend biotic energy to heal in front of you; damaging with the beam restores health and energy.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "biotic-orb",
           "name": "Biotic Orb",
-          "description": null,
-          "kind": "unknown",
+          "description": "Choose a bouncing healing orb or a damaging orb.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "fade",
           "name": "Fade",
-          "description": null,
-          "kind": "unknown",
+          "description": "Become invulnerable and move quickly while temporarily unable to attack.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "coalescence",
           "name": "Coalescence",
-          "description": null,
-          "kind": "unknown",
+          "description": "Channel a beam that damages opponents and heals teammates.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -2455,7 +2552,9 @@
       "role": "tank",
       "biography": "A robot built to protect Numbani and learning how to meet that responsibility.",
       "difficulty": null,
-      "playstyle": ["frontline"],
+      "playstyle": [
+        "frontline"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -2463,36 +2562,36 @@
         {
           "id": "augmented-fusion-driver",
           "name": "Augmented Fusion Driver",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire an automatic weapon whose limit is heat.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "energy-javelin",
           "name": "Energy Javelin",
-          "description": null,
-          "kind": "unknown",
+          "description": "The thrown javelin stuns and displaces its target; wall collisions improve its effect.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "fortify",
           "name": "Fortify",
-          "description": null,
-          "kind": "unknown",
+          "description": "Gain extra health, damage reduction and resistance to interruption.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "javelin-spin",
           "name": "Javelin Spin",
-          "description": null,
-          "kind": "unknown",
+          "description": "Spin to remove projectiles, stop melee attacks, push enemies and move forward faster.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "terra-surge",
           "name": "Terra Surge",
-          "description": null,
-          "kind": "unknown",
+          "description": "Draw enemies inward while charging damage under Fortify; activate again to release early.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -2530,7 +2629,9 @@
       "role": "damage",
       "biography": "A soldier who uses flight equipment and explosive projectiles.",
       "difficulty": null,
-      "playstyle": ["poke"],
+      "playstyle": [
+        "poke"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -2538,43 +2639,43 @@
         {
           "id": "rocket-launcher",
           "name": "Rocket Launcher",
-          "description": null,
-          "kind": "unknown",
+          "description": "Launch explosive rockets over long distances.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "jet-dash",
           "name": "Jet Dash",
-          "description": null,
-          "kind": "unknown",
+          "description": "Make a horizontal movement burst.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "jump-jet",
           "name": "Jump Jet",
-          "description": null,
-          "kind": "unknown",
+          "description": "Rise quickly and regain some flight fuel.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "concussive-blast",
           "name": "Concussive Blast",
-          "description": null,
-          "kind": "unknown",
+          "description": "Push opponents away from the blast location.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "barrage",
           "name": "Barrage",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire a sustained stream of small rockets.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "hover-jets",
           "name": "Hover Jets",
-          "description": null,
-          "kind": "unknown",
+          "description": "Spend fuel to hover; recharge on the ground and fall more slowly when empty.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -2612,7 +2713,9 @@
       "role": "tank",
       "biography": "The leader of Null Sector who changes forms to control different engagement ranges.",
       "difficulty": null,
-      "playstyle": ["frontline"],
+      "playstyle": [
+        "frontline"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -2620,36 +2723,36 @@
         {
           "id": "void-accelerator-omnic-form",
           "name": "Void Accelerator (Omnic Form)",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire repeated projectiles in Omnic form.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "void-barrier-omnic-form",
           "name": "Void Barrier (Omnic Form)",
-          "description": null,
-          "kind": "unknown",
+          "description": "Place a barrier at the chosen location in Omnic form.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "pummel-nemesis-form",
           "name": "Pummel (Nemesis Form)",
-          "description": null,
-          "kind": "unknown",
+          "description": "Send piercing energy forward with each Nemesis-form punch.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "ravenous-vortex",
           "name": "Ravenous Vortex",
-          "description": null,
-          "kind": "unknown",
+          "description": "Place a ground effect that slows opponents and pulls them down; reactivate for early detonation.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "annihilation",
           "name": "Annihilation",
-          "description": null,
-          "kind": "unknown",
+          "description": "Enter Nemesis form with a damaging swarm that lasts longer while harming enemies.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -2687,7 +2790,9 @@
       "role": "damage",
       "biography": "A masked combatant whose identity and motives are shrouded in secrecy.",
       "difficulty": null,
-      "playstyle": ["flank"],
+      "playstyle": [
+        "flank"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -2695,36 +2800,36 @@
         {
           "id": "hellfire-shotguns",
           "name": "Hellfire Shotguns",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire a pair of shotguns with close-range spread.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "shadow-step",
           "name": "Shadow Step",
-          "description": null,
-          "kind": "unknown",
+          "description": "Relocate to a chosen spot by teleporting.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "wraith-form",
           "name": "Wraith Form",
-          "description": null,
-          "kind": "unknown",
+          "description": "Move faster and avoid damage while unable to shoot.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "death-blossom",
           "name": "Death Blossom",
-          "description": null,
-          "kind": "unknown",
+          "description": "Damage opponents around you.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "the-reaping",
           "name": "The Reaping",
-          "description": null,
-          "kind": "unknown",
+          "description": "Recover health by damaging opponents.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -2762,9 +2867,18 @@
       "role": "tank",
       "biography": "A German crusader who protects allies while contesting close-range space.",
       "difficulty": "approachable",
-      "playstyle": ["brawl", "frontline"],
-      "strengths": ["Close-range pressure", "Mobile barrier"],
-      "weaknesses": ["Limited vertical access", "Open sightlines are costly"],
+      "playstyle": [
+        "brawl",
+        "frontline"
+      ],
+      "strengths": [
+        "Close-range pressure",
+        "Mobile barrier"
+      ],
+      "weaknesses": [
+        "Limited vertical access",
+        "Open sightlines are costly"
+      ],
       "attributes": {
         "Range": "Close",
         "Mobility": "Committed charge",
@@ -2774,36 +2888,36 @@
         {
           "id": "rocket-hammer",
           "name": "Rocket Hammer",
-          "description": null,
-          "kind": "unknown",
+          "description": "Attack nearby opponents with the hammer.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "charge",
           "name": "Charge",
-          "description": null,
-          "kind": "unknown",
+          "description": "Charge an enemy toward a wall impact.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "fire-strike",
           "name": "Fire Strike",
-          "description": null,
-          "kind": "unknown",
+          "description": "Send a fire projectile ahead of you.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "barrier-field",
           "name": "Barrier Field",
-          "description": null,
-          "kind": "unknown",
+          "description": "Raise a protective barrier in front of you.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "earthshatter",
           "name": "Earthshatter",
-          "description": "A directional crowd-control ultimate affected by positioning and barriers.",
-          "kind": "unknown",
+          "description": "Knock opponents in front of you to the ground.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -2841,7 +2955,9 @@
       "role": "tank",
       "biography": "A powerful enforcer who threatens nearby enemies with a hook and shotgun.",
       "difficulty": null,
-      "playstyle": ["frontline"],
+      "playstyle": [
+        "frontline"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -2849,36 +2965,36 @@
         {
           "id": "scrap-gun",
           "name": "Scrap Gun",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire two bursts from a close-range shotgun.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "trash-compactor",
           "name": "Trash Compactor",
-          "description": null,
-          "kind": "unknown",
+          "description": "Collect incoming projectiles and turn them into an explosive scrap ball.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "chain-hook",
           "name": "Chain Hook",
-          "description": null,
-          "kind": "unknown",
+          "description": "Catch an opponent and pull them toward you.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "take-a-breather",
           "name": "Take a Breather",
-          "description": null,
-          "kind": "unknown",
+          "description": "Restore your health while reducing damage received.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "whole-hog",
           "name": "Whole Hog",
-          "description": null,
-          "kind": "unknown",
+          "description": "Push and damage enemies with sustained fire in front of you.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -2916,7 +3032,9 @@
       "role": "damage",
       "biography": "An omnic who escaped Hashimoto captivity and became one of the clan's feared Elders.",
       "difficulty": null,
-      "playstyle": ["flank"],
+      "playstyle": [
+        "flank"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -2924,35 +3042,35 @@
         {
           "id": "kira-pistols",
           "name": "Kira Pistols",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire fast anima-powered pistols.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "execution",
           "name": "Execution",
-          "description": null,
-          "kind": "unknown",
+          "description": "Send shots in a crossed pattern; holding narrows their spread.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "joyride",
           "name": "Joyride",
-          "description": null,
-          "kind": "unknown",
+          "description": "Ride the bike, then dismount and send it forward with another activation.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "evade",
           "name": "Evade",
-          "description": null,
-          "kind": "unknown",
+          "description": "Dash while briefly gaining an extra-health buffer.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "satsuriku-spree",
           "name": "Satsuriku Spree",
-          "description": null,
+          "description": "Perform a sequence of forward rushes with gunfire.",
           "kind": "unknown",
           "stats": []
         }
@@ -2991,7 +3109,9 @@
       "role": "damage",
       "biography": "A Helix Security teammate whose enhanced abilities support rifle pressure and movement.",
       "difficulty": null,
-      "playstyle": ["poke"],
+      "playstyle": [
+        "poke"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -2999,35 +3119,35 @@
         {
           "id": "helix-rifle",
           "name": "Helix Rifle",
-          "description": null,
-          "kind": "unknown",
+          "description": "Sustained fire tightens the rifle's spiral shot pattern.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "tracking-shot",
           "name": "Tracking Shot",
-          "description": null,
-          "kind": "unknown",
+          "description": "Mark an opponent so rifle shots track that target.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "tremor-charge",
           "name": "Tremor Charge",
-          "description": null,
-          "kind": "unknown",
+          "description": "Throw an explosive whose impact produces a shockwave.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "anchor-drone",
           "name": "Anchor Drone",
-          "description": null,
-          "kind": "unknown",
+          "description": "Place a drone and reactivate to grapple toward it.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "trailblazer",
           "name": "Trailblazer",
-          "description": null,
+          "description": "Send a drone forward to drop explosives along its flight.",
           "kind": "unknown",
           "stats": []
         }
@@ -3066,7 +3186,9 @@
       "role": "tank",
       "biography": "An astrophysicist whose gravity research left him with powers exploited by Talon.",
       "difficulty": null,
-      "playstyle": ["poke"],
+      "playstyle": [
+        "poke"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -3074,36 +3196,36 @@
         {
           "id": "hyperspheres",
           "name": "Hyperspheres",
-          "description": null,
-          "kind": "unknown",
+          "description": "Throw paired charges that detonate over an area after a delay.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "kinetic-grasp",
           "name": "Kinetic Grasp",
-          "description": null,
-          "kind": "unknown",
+          "description": "Intercept frontal projectiles and convert them into extra health.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "accretion",
           "name": "Accretion",
-          "description": null,
-          "kind": "unknown",
+          "description": "Throw collected debris to knock an opponent down.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "experimental-barrier",
           "name": "Experimental Barrier",
-          "description": null,
-          "kind": "unknown",
+          "description": "Move a barrier outward, stop it by releasing, or recall it with another activation.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "gravitic-flux",
           "name": "Gravitic Flux",
-          "description": null,
-          "kind": "unknown",
+          "description": "Lift opponents and slam them down with gravity.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -3141,7 +3263,9 @@
       "role": "damage",
       "biography": "A former Overwatch leader determined to help its new generation avoid past mistakes.",
       "difficulty": null,
-      "playstyle": ["poke"],
+      "playstyle": [
+        "poke"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -3149,29 +3273,29 @@
         {
           "id": "railgun",
           "name": "Railgun",
-          "description": null,
-          "kind": "unknown",
+          "description": "Build energy with projectile hits, then spend it on a powerful piercing shot.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "power-slide",
           "name": "Power Slide",
-          "description": null,
-          "kind": "unknown",
+          "description": "Slide along the ground and cancel into an elevated jump.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "disruptor-shot",
           "name": "Disruptor Shot",
-          "description": null,
-          "kind": "unknown",
+          "description": "Create an energy area that damages enemies inside it.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "overclock",
           "name": "Overclock",
-          "description": null,
-          "kind": "unknown",
+          "description": "Automatically replenish railgun energy for a limited time.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -3209,7 +3333,9 @@
       "role": "damage",
       "biography": "A wanted vigilante investigating the truth behind Overwatch's collapse.",
       "difficulty": null,
-      "playstyle": ["poke"],
+      "playstyle": [
+        "poke"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -3217,36 +3343,36 @@
         {
           "id": "heavy-pulse-rifle",
           "name": "Heavy Pulse Rifle",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire an automatic rifle.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "sprint",
           "name": "Sprint",
-          "description": null,
-          "kind": "unknown",
+          "description": "Move faster while running forward.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "biotic-field",
           "name": "Biotic Field",
-          "description": null,
-          "kind": "unknown",
+          "description": "Place a healing field for yourself and nearby teammates.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "helix-rockets",
           "name": "Helix Rockets",
-          "description": null,
-          "kind": "unknown",
+          "description": "Launch a group of explosive rockets.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "tactical-visor",
           "name": "Tactical Visor",
-          "description": null,
-          "kind": "unknown",
+          "description": "Automatically track targets visible to you.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -3284,7 +3410,9 @@
       "role": "support",
       "biography": "A hacker who uses information and, in the current Support kit, protective utility to influence a fight.",
       "difficulty": null,
-      "playstyle": ["peel"],
+      "playstyle": [
+        "peel"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -3292,36 +3420,36 @@
         {
           "id": "machine-pistol",
           "name": "Machine Pistol",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire a short-distance automatic pistol.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "hotfix",
           "name": "Hotfix",
-          "description": null,
-          "kind": "unknown",
+          "description": "Give an ally healing over time; also hack health packs and most opposing deployables.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "cyberspace",
           "name": "Cyberspace",
-          "description": null,
-          "kind": "unknown",
+          "description": "The impact zone weakens enemies and heals teammates.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "translocator",
           "name": "Translocator",
-          "description": null,
-          "kind": "unknown",
+          "description": "Teleport to a thrown beacon and briefly enter stealth afterward.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "emp",
           "name": "EMP",
-          "description": null,
-          "kind": "unknown",
+          "description": "Damage enemies based on their current health, hack them and remove nearby barriers.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -3359,7 +3487,9 @@
       "role": "damage",
       "biography": "A hard-light architect who uses constructs to shape movement and sightlines.",
       "difficulty": null,
-      "playstyle": ["brawl"],
+      "playstyle": [
+        "brawl"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -3367,29 +3497,29 @@
         {
           "id": "photon-projector",
           "name": "Photon Projector",
-          "description": null,
-          "kind": "unknown",
+          "description": "Build damage with a short beam or charge an explosive ranged orb.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "sentry-turret",
           "name": "Sentry Turret",
-          "description": null,
-          "kind": "unknown",
+          "description": "Place a small device that slows and damages opponents.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "teleporter",
           "name": "Teleporter",
-          "description": null,
-          "kind": "unknown",
+          "description": "Connect two temporary portals for immediate travel between them.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "photon-barrier",
           "name": "Photon Barrier",
-          "description": null,
-          "kind": "unknown",
+          "description": "Create a very large protective barrier.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -3427,7 +3557,9 @@
       "role": "damage",
       "biography": "An engineer whose weapons and turret technology helped equip Overwatch.",
       "difficulty": null,
-      "playstyle": ["poke"],
+      "playstyle": [
+        "poke"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -3435,36 +3567,36 @@
         {
           "id": "rivet-gun",
           "name": "Rivet Gun",
-          "description": null,
-          "kind": "unknown",
+          "description": "Choose slower distant shots or a stronger but less accurate close-range attack.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "forge-hammer",
           "name": "Forge Hammer",
-          "description": null,
-          "kind": "unknown",
+          "description": "Repair your turret or strike an opponent with the hammer.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "deploy-turret",
           "name": "Deploy Turret",
-          "description": null,
-          "kind": "unknown",
+          "description": "Place a turret that builds itself.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "overload",
           "name": "Overload",
-          "description": null,
-          "kind": "unknown",
+          "description": "Gain extra health and faster movement, attacks and reloads.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "molten-core",
           "name": "Molten Core",
-          "description": null,
-          "kind": "unknown",
+          "description": "Spread damaging molten pools that are more effective against armor.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -3502,7 +3634,9 @@
       "role": "damage",
       "biography": "A former Overwatch pilot whose time-shifting equipment gives her unusual movement.",
       "difficulty": null,
-      "playstyle": ["flank"],
+      "playstyle": [
+        "flank"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -3510,29 +3644,29 @@
         {
           "id": "pulse-pistols",
           "name": "Pulse Pistols",
-          "description": null,
-          "kind": "unknown",
+          "description": "Use automatic pistols at close distance.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "blink",
           "name": "Blink",
-          "description": null,
-          "kind": "unknown",
+          "description": "Teleport a short distance toward your movement input.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "recall",
           "name": "Recall",
-          "description": null,
-          "kind": "unknown",
+          "description": "Restore an earlier position and health state.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "pulse-bomb",
           "name": "Pulse Bomb",
-          "description": null,
-          "kind": "unknown",
+          "description": "Throw a sticky explosive.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -3570,7 +3704,9 @@
       "role": "damage",
       "biography": "An Italian arena champion seeking control of her family's criminal legacy.",
       "difficulty": null,
-      "playstyle": ["brawl"],
+      "playstyle": [
+        "brawl"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -3578,42 +3714,42 @@
         {
           "id": "palatine-fang",
           "name": "Palatine Fang",
-          "description": null,
-          "kind": "unknown",
+          "description": "Chain sword swings into a stronger overhead strike.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "warding-stance",
           "name": "Warding Stance",
-          "description": null,
-          "kind": "unknown",
+          "description": "Block frontal damage and deflect melee attacks while spending defensive energy.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "whirlwind-dash",
           "name": "Whirlwind Dash",
-          "description": null,
-          "kind": "unknown",
+          "description": "Rush into a spinning melee strike.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "soaring-slice",
           "name": "Soaring Slice",
-          "description": null,
-          "kind": "unknown",
+          "description": "Throw the sword, then travel to it.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "projected-edge",
           "name": "Projected Edge",
-          "description": null,
-          "kind": "unknown",
+          "description": "Spend energy during the guarding stance to launch a wide attack.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "sundering-blade",
           "name": "Sundering Blade",
-          "description": null,
+          "description": "Strike enemies ahead through most defensive effects.",
           "kind": "unknown",
           "stats": []
         }
@@ -3652,7 +3788,9 @@
       "role": "damage",
       "biography": "An archaeologist and explorer who uses excavation equipment in combat.",
       "difficulty": null,
-      "playstyle": ["flank"],
+      "playstyle": [
+        "flank"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -3660,29 +3798,29 @@
         {
           "id": "smart-excavator",
           "name": "SMART Excavator",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire a seismic charge that detonates after limited travel.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "drill-dash",
           "name": "Drill Dash",
-          "description": null,
-          "kind": "unknown",
+          "description": "Dash above or below ground and displace enemies; Burrow speeds cooldown recovery.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "burrow",
           "name": "Burrow",
-          "description": null,
-          "kind": "unknown",
+          "description": "Travel underground without taking damage, then emerge with an attack.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "tectonic-shock",
           "name": "Tectonic Shock",
-          "description": null,
-          "kind": "unknown",
+          "description": "Send damaging shockwaves across the ground.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -3720,7 +3858,9 @@
       "role": "damage",
       "biography": "An assassin who uses patient long-range aim and strict control of sightlines.",
       "difficulty": null,
-      "playstyle": ["poke"],
+      "playstyle": [
+        "poke"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -3728,29 +3868,29 @@
         {
           "id": "widows-kiss",
           "name": "Widow's Kiss",
-          "description": null,
-          "kind": "unknown",
+          "description": "Switch between automatic fire and a scoped long-distance shot.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "grappling-hook",
           "name": "Grappling Hook",
-          "description": null,
-          "kind": "unknown",
+          "description": "Pull yourself toward a ledge with a grapple.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "venom-mine",
           "name": "Venom Mine",
-          "description": null,
-          "kind": "unknown",
+          "description": "Place a trap that poisons opponents.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "infra-sight",
           "name": "Infra-Sight",
-          "description": null,
-          "kind": "unknown",
+          "description": "Reveal opponent locations to your team.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -3788,8 +3928,14 @@
       "role": "tank",
       "biography": "A scientist from the Horizon Lunar Colony who uses mobile barrier pressure.",
       "difficulty": "moderate",
-      "playstyle": ["dive", "frontline"],
-      "strengths": ["Vertical access", "Barrier isolation"],
+      "playstyle": [
+        "dive",
+        "frontline"
+      ],
+      "strengths": [
+        "Vertical access",
+        "Barrier isolation"
+      ],
       "weaknesses": [
         "Close-range exposure",
         "Punished by sustained close damage"
@@ -3803,29 +3949,29 @@
         {
           "id": "tesla-cannon",
           "name": "Tesla Cannon",
-          "description": "Electrical weapon pressure with distinct primary and secondary fire modes.",
-          "kind": "unknown",
+          "description": "Choose frontal electrical damage or charge a focused ranged shot.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "jump-pack",
           "name": "Jump Pack",
-          "description": "Leap to a new position; plan a landing and an exit.",
-          "kind": "unknown",
+          "description": "Leap ahead and damage an opponent at the landing point.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "barrier-projector",
           "name": "Barrier Projector",
-          "description": "Places a barrier that can split sightlines.",
-          "kind": "unknown",
+          "description": "Place an energy dome for protection.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "primal-rage",
           "name": "Primal Rage",
-          "description": "A transformation ultimate focused on close pressure and displacement.",
-          "kind": "unknown",
+          "description": "Gain a large health increase while combat is limited to jumping and punches.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -3863,7 +4009,9 @@
       "role": "tank",
       "biography": "A resourceful hamster engineer who turned a rolling mech into a fighting machine.",
       "difficulty": null,
-      "playstyle": ["dive"],
+      "playstyle": [
+        "dive"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -3871,43 +4019,43 @@
         {
           "id": "quad-cannons",
           "name": "Quad Cannons",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire automatic cannons.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "grappling-claw",
           "name": "Grappling Claw",
-          "description": null,
-          "kind": "unknown",
+          "description": "Swing around an anchor to build damaging, displacing collision speed.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "roll",
           "name": "Roll",
-          "description": null,
-          "kind": "unknown",
+          "description": "Enter ball form for faster travel.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "piledriver",
           "name": "Piledriver",
-          "description": null,
-          "kind": "unknown",
+          "description": "Drop onto the ground to damage enemies and launch them upward.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "adaptive-shield",
           "name": "Adaptive Shield",
-          "description": null,
-          "kind": "unknown",
+          "description": "Gain more temporary health with more nearby enemies and share some with teammates.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "minefield",
           "name": "Minefield",
-          "description": null,
-          "kind": "unknown",
+          "description": "Spread proximity-triggered explosives across an area.",
+          "kind": "ultimate",
           "stats": []
         }
       ],
@@ -3945,7 +4093,9 @@
       "role": "support",
       "biography": "A Water College support who uses healing technology and guided water attacks.",
       "difficulty": null,
-      "playstyle": ["backline"],
+      "playstyle": [
+        "backline"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -3953,36 +4103,36 @@
         {
           "id": "xuanwu-staff",
           "name": "Xuanwu Staff",
-          "description": null,
-          "kind": "unknown",
+          "description": "Launch a water orb; hold to guide it and strengthen its detonation.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "restorative-stream",
           "name": "Restorative Stream",
-          "description": null,
-          "kind": "unknown",
+          "description": "Maintain passive healing on a teammate or spend resource for stronger targeted healing.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "rushing-torrent",
           "name": "Rushing Torrent",
-          "description": null,
-          "kind": "unknown",
+          "description": "Move quickly on water and jump higher.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "tidal-blast",
           "name": "Tidal Blast",
-          "description": null,
+          "description": "Protect a chosen ally or yourself until an explosion heals the host and knocks enemies down.",
           "kind": "unknown",
           "stats": []
         },
         {
           "id": "guardian-wave",
           "name": "Guardian Wave",
-          "description": null,
-          "kind": "unknown",
+          "description": "Send a wave that pushes enemies away and increases healing received by allies.",
+          "kind": "ability",
           "stats": []
         }
       ],
@@ -4020,9 +4170,18 @@
       "role": "tank",
       "biography": "A Russian athlete who uses protective barriers to build weapon pressure.",
       "difficulty": "moderate",
-      "playstyle": ["brawl", "frontline"],
-      "strengths": ["Timed protection", "Close pressure"],
-      "weaknesses": ["Limited vertical access", "Barrier resource management"],
+      "playstyle": [
+        "brawl",
+        "frontline"
+      ],
+      "strengths": [
+        "Timed protection",
+        "Close pressure"
+      ],
+      "weaknesses": [
+        "Limited vertical access",
+        "Barrier resource management"
+      ],
       "attributes": {
         "Range": "Close beam and projectile pressure",
         "Mobility": "Limited",
@@ -4032,36 +4191,36 @@
         {
           "id": "particle-cannon",
           "name": "Particle Cannon",
-          "description": null,
-          "kind": "unknown",
+          "description": "Choose a short beam or an energy grenade.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "particle-barrier",
           "name": "Particle Barrier",
-          "description": "Protects Zarya and interacts with her weapon energy.",
-          "kind": "unknown",
+          "description": "Place a protective barrier around yourself.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "projected-barrier",
           "name": "Projected Barrier",
-          "description": "Protects an ally and interacts with weapon energy.",
-          "kind": "unknown",
+          "description": "Protect a teammate with a barrier.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "graviton-surge",
           "name": "Graviton Surge",
-          "description": "Groups enemies for coordinated follow-up.",
-          "kind": "unknown",
+          "description": "Create a gravity effect that draws enemies together.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "energy",
           "name": "Energy",
-          "description": null,
-          "kind": "unknown",
+          "description": "Absorbed barrier damage increases weapon output.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -4099,7 +4258,9 @@
       "role": "support",
       "biography": "An omnic monk who supports allies through spiritual orbs and precise projectile pressure.",
       "difficulty": null,
-      "playstyle": ["backline"],
+      "playstyle": [
+        "backline"
+      ],
       "strengths": [],
       "weaknesses": [],
       "attributes": {},
@@ -4107,36 +4268,36 @@
         {
           "id": "orb-of-destruction",
           "name": "Orb of Destruction",
-          "description": null,
-          "kind": "unknown",
+          "description": "Fire single energy orbs or charge a multi-orb release.",
+          "kind": "weapon",
           "stats": []
         },
         {
           "id": "orb-of-discord",
           "name": "Orb of Discord",
-          "description": null,
-          "kind": "unknown",
+          "description": "Place an orb on an opponent to increase damage received.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "orb-of-harmony",
           "name": "Orb of Harmony",
-          "description": null,
-          "kind": "unknown",
+          "description": "Place a healing orb on a teammate.",
+          "kind": "ability",
           "stats": []
         },
         {
           "id": "transcendence",
           "name": "Transcendence",
-          "description": null,
-          "kind": "unknown",
+          "description": "Become invulnerable and move faster while healing nearby teammates.",
+          "kind": "ultimate",
           "stats": []
         },
         {
           "id": "snap-kick",
           "name": "Snap Kick",
-          "description": null,
-          "kind": "unknown",
+          "description": "Quick melee deals increased damage with stronger knockback.",
+          "kind": "passive",
           "stats": []
         }
       ],
@@ -4173,7 +4334,9 @@
     {
       "id": "aatlis",
       "name": "Aatlis",
-      "modes": ["flashpoint"],
+      "modes": [
+        "flashpoint"
+      ],
       "location": "Morocco",
       "currentVerified": false,
       "notes": [
@@ -4192,7 +4355,9 @@
     {
       "id": "antarctic-peninsula",
       "name": "Antarctic Peninsula",
-      "modes": ["control"],
+      "modes": [
+        "control"
+      ],
       "location": "Antarctica",
       "currentVerified": false,
       "notes": [
@@ -4211,7 +4376,9 @@
     {
       "id": "anubis",
       "name": "Temple of Anubis",
-      "modes": ["assault"],
+      "modes": [
+        "assault"
+      ],
       "location": "Giza Plateau, Egypt",
       "currentVerified": false,
       "notes": [
@@ -4230,7 +4397,9 @@
     {
       "id": "arena-victoriae",
       "name": "Arena Victoriae",
-      "modes": ["control"],
+      "modes": [
+        "control"
+      ],
       "location": "Colosseo, Rome, Italy",
       "currentVerified": false,
       "notes": [
@@ -4249,7 +4418,9 @@
     {
       "id": "ayutthaya",
       "name": "Ayutthaya",
-      "modes": ["capture-the-flag"],
+      "modes": [
+        "capture-the-flag"
+      ],
       "location": "Thailand",
       "currentVerified": false,
       "notes": [
@@ -4268,7 +4439,9 @@
     {
       "id": "black-forest",
       "name": "Black Forest",
-      "modes": ["elimination"],
+      "modes": [
+        "elimination"
+      ],
       "location": "Germany",
       "currentVerified": false,
       "notes": [
@@ -4287,7 +4460,9 @@
     {
       "id": "blizzard-world",
       "name": "Blizzard World",
-      "modes": ["hybrid"],
+      "modes": [
+        "hybrid"
+      ],
       "location": "Irvine, California, United States",
       "currentVerified": false,
       "notes": [
@@ -4306,7 +4481,9 @@
     {
       "id": "busan",
       "name": "Busan",
-      "modes": ["control"],
+      "modes": [
+        "control"
+      ],
       "location": "South Korea",
       "currentVerified": false,
       "notes": [
@@ -4325,7 +4502,9 @@
     {
       "id": "castillo",
       "name": "Castillo",
-      "modes": ["elimination"],
+      "modes": [
+        "elimination"
+      ],
       "location": "Mexico",
       "currentVerified": false,
       "notes": [
@@ -4344,7 +4523,10 @@
     {
       "id": "chateau-guillard",
       "name": "Château Guillard",
-      "modes": ["deathmatch", "team-deathmatch"],
+      "modes": [
+        "deathmatch",
+        "team-deathmatch"
+      ],
       "location": "Annecy, France",
       "currentVerified": false,
       "notes": [
@@ -4364,7 +4546,9 @@
     {
       "id": "circuit-royal",
       "name": "Circuit Royal",
-      "modes": ["escort"],
+      "modes": [
+        "escort"
+      ],
       "location": "Monte Carlo, Monaco",
       "currentVerified": false,
       "notes": [
@@ -4383,7 +4567,9 @@
     {
       "id": "colosseo",
       "name": "Colosseo",
-      "modes": ["push"],
+      "modes": [
+        "push"
+      ],
       "location": "Rome, Italy",
       "currentVerified": false,
       "notes": [
@@ -4402,7 +4588,9 @@
     {
       "id": "dorado",
       "name": "Dorado",
-      "modes": ["escort"],
+      "modes": [
+        "escort"
+      ],
       "location": "Mexico",
       "currentVerified": false,
       "notes": [
@@ -4421,7 +4609,9 @@
     {
       "id": "ecopoint-antarctica",
       "name": "Ecopoint: Antarctica",
-      "modes": ["elimination"],
+      "modes": [
+        "elimination"
+      ],
       "location": "Antarctica",
       "currentVerified": false,
       "notes": [
@@ -4440,7 +4630,9 @@
     {
       "id": "eichenwalde",
       "name": "Eichenwalde",
-      "modes": ["hybrid"],
+      "modes": [
+        "hybrid"
+      ],
       "location": "Stuttgart, Germany",
       "currentVerified": false,
       "notes": [
@@ -4459,7 +4651,9 @@
     {
       "id": "esperanca",
       "name": "Esperança",
-      "modes": ["push"],
+      "modes": [
+        "push"
+      ],
       "location": "Portugal",
       "currentVerified": false,
       "notes": [
@@ -4478,7 +4672,9 @@
     {
       "id": "gogadoro",
       "name": "Gogadoro",
-      "modes": ["control"],
+      "modes": [
+        "control"
+      ],
       "location": "Busan, South Korea",
       "currentVerified": false,
       "notes": [
@@ -4497,7 +4693,9 @@
     {
       "id": "hanamura",
       "name": "Hanamura",
-      "modes": ["assault"],
+      "modes": [
+        "assault"
+      ],
       "location": "Tokyo, Japan",
       "currentVerified": false,
       "notes": [
@@ -4516,7 +4714,9 @@
     {
       "id": "hanaoka",
       "name": "Hanaoka",
-      "modes": ["clash"],
+      "modes": [
+        "clash"
+      ],
       "location": "Tokyo, Japan",
       "currentVerified": false,
       "notes": [
@@ -4535,7 +4735,9 @@
     {
       "id": "havana",
       "name": "Havana",
-      "modes": ["escort"],
+      "modes": [
+        "escort"
+      ],
       "location": "Havana, Cuba",
       "currentVerified": false,
       "notes": [
@@ -4554,7 +4756,9 @@
     {
       "id": "hollywood",
       "name": "Hollywood",
-      "modes": ["hybrid"],
+      "modes": [
+        "hybrid"
+      ],
       "location": "Los Angeles, United States",
       "currentVerified": false,
       "notes": [
@@ -4573,7 +4777,9 @@
     {
       "id": "horizon",
       "name": "Horizon Lunar Colony",
-      "modes": ["assault"],
+      "modes": [
+        "assault"
+      ],
       "location": "Earth's moon",
       "currentVerified": false,
       "notes": [
@@ -4592,7 +4798,9 @@
     {
       "id": "ilios",
       "name": "Ilios",
-      "modes": ["control"],
+      "modes": [
+        "control"
+      ],
       "location": "Greece",
       "currentVerified": false,
       "notes": [
@@ -4611,7 +4819,9 @@
     {
       "id": "junkertown",
       "name": "Junkertown",
-      "modes": ["escort"],
+      "modes": [
+        "escort"
+      ],
       "location": "Central Australia",
       "currentVerified": false,
       "notes": [
@@ -4630,7 +4840,9 @@
     {
       "id": "lijiang-tower",
       "name": "Lijiang Tower",
-      "modes": ["control"],
+      "modes": [
+        "control"
+      ],
       "location": "China",
       "currentVerified": false,
       "notes": [
@@ -4649,7 +4861,10 @@
     {
       "id": "kanezaka",
       "name": "Kanezaka",
-      "modes": ["deathmatch", "team-deathmatch"],
+      "modes": [
+        "deathmatch",
+        "team-deathmatch"
+      ],
       "location": "Tokyo, Japan",
       "currentVerified": false,
       "notes": [
@@ -4669,7 +4884,9 @@
     {
       "id": "kings-row",
       "name": "King’s Row",
-      "modes": ["hybrid"],
+      "modes": [
+        "hybrid"
+      ],
       "location": "London, United Kingdom",
       "currentVerified": false,
       "notes": [
@@ -4688,7 +4905,10 @@
     {
       "id": "malevento",
       "name": "Malevento",
-      "modes": ["deathmatch", "team-deathmatch"],
+      "modes": [
+        "deathmatch",
+        "team-deathmatch"
+      ],
       "location": "Italy",
       "currentVerified": false,
       "notes": [
@@ -4708,7 +4928,9 @@
     {
       "id": "midtown",
       "name": "Midtown",
-      "modes": ["hybrid"],
+      "modes": [
+        "hybrid"
+      ],
       "location": "New York, United States",
       "currentVerified": false,
       "notes": [
@@ -4727,7 +4949,9 @@
     {
       "id": "necropolis",
       "name": "Necropolis",
-      "modes": ["elimination"],
+      "modes": [
+        "elimination"
+      ],
       "location": "Egypt",
       "currentVerified": false,
       "notes": [
@@ -4746,7 +4970,9 @@
     {
       "id": "nepal",
       "name": "Nepal",
-      "modes": ["control"],
+      "modes": [
+        "control"
+      ],
       "location": "Nepal",
       "currentVerified": false,
       "notes": [
@@ -4765,7 +4991,9 @@
     {
       "id": "neon-junction",
       "name": "Neon Junction",
-      "modes": ["hybrid"],
+      "modes": [
+        "hybrid"
+      ],
       "location": "Japan",
       "currentVerified": false,
       "notes": [
@@ -4784,7 +5012,9 @@
     {
       "id": "new-junk-city",
       "name": "New Junk City",
-      "modes": ["flashpoint"],
+      "modes": [
+        "flashpoint"
+      ],
       "location": "Central Australia",
       "currentVerified": false,
       "notes": [
@@ -4803,7 +5033,9 @@
     {
       "id": "new-queen-street",
       "name": "New Queen Street",
-      "modes": ["push"],
+      "modes": [
+        "push"
+      ],
       "location": "Toronto, Canada",
       "currentVerified": false,
       "notes": [
@@ -4822,7 +5054,9 @@
     {
       "id": "numbani",
       "name": "Numbani",
-      "modes": ["hybrid"],
+      "modes": [
+        "hybrid"
+      ],
       "location": "Numbani (near Nigeria)",
       "currentVerified": false,
       "notes": [
@@ -4841,7 +5075,9 @@
     {
       "id": "oasis",
       "name": "Oasis",
-      "modes": ["control"],
+      "modes": [
+        "control"
+      ],
       "location": "Iraq",
       "currentVerified": false,
       "notes": [
@@ -4860,7 +5096,9 @@
     {
       "id": "paraiso",
       "name": "Paraíso",
-      "modes": ["hybrid"],
+      "modes": [
+        "hybrid"
+      ],
       "location": "Rio de Janeiro, Brazil",
       "currentVerified": false,
       "notes": [
@@ -4879,7 +5117,9 @@
     {
       "id": "paris",
       "name": "Paris",
-      "modes": ["assault"],
+      "modes": [
+        "assault"
+      ],
       "location": "Paris, France",
       "currentVerified": false,
       "notes": [
@@ -4898,7 +5138,10 @@
     {
       "id": "petra",
       "name": "Petra",
-      "modes": ["deathmatch", "team-deathmatch"],
+      "modes": [
+        "deathmatch",
+        "team-deathmatch"
+      ],
       "location": "Southern Jordan",
       "currentVerified": false,
       "notes": [
@@ -4918,7 +5161,9 @@
     {
       "id": "place-lacroix",
       "name": "Place Lacroix",
-      "modes": ["push"],
+      "modes": [
+        "push"
+      ],
       "location": "Paris, France",
       "currentVerified": false,
       "notes": [
@@ -4937,7 +5182,9 @@
     {
       "id": "powder-keg-mine",
       "name": "Powder Keg Mine",
-      "modes": ["payload-race"],
+      "modes": [
+        "payload-race"
+      ],
       "location": "Deadlock Gorge, Arizona, United States",
       "currentVerified": false,
       "notes": [
@@ -4956,7 +5203,9 @@
     {
       "id": "practice-range",
       "name": "Practice Range",
-      "modes": ["practice-range"],
+      "modes": [
+        "practice-range"
+      ],
       "location": "Swiss HQ",
       "currentVerified": false,
       "notes": [
@@ -4975,7 +5224,9 @@
     {
       "id": "redwood-dam",
       "name": "Redwood Dam",
-      "modes": ["push"],
+      "modes": [
+        "push"
+      ],
       "location": "Gibraltar",
       "currentVerified": false,
       "notes": [
@@ -4994,7 +5245,9 @@
     {
       "id": "rialto",
       "name": "Rialto",
-      "modes": ["escort"],
+      "modes": [
+        "escort"
+      ],
       "location": "Venice, Italy",
       "currentVerified": false,
       "notes": [
@@ -5013,7 +5266,9 @@
     {
       "id": "route-66",
       "name": "Route 66",
-      "modes": ["escort"],
+      "modes": [
+        "escort"
+      ],
       "location": "Albuquerque, New Mexico, United States",
       "currentVerified": false,
       "notes": [
@@ -5032,7 +5287,9 @@
     {
       "id": "runasapi",
       "name": "Runasapi",
-      "modes": ["push"],
+      "modes": [
+        "push"
+      ],
       "location": "Peru",
       "currentVerified": false,
       "notes": [
@@ -5051,7 +5308,9 @@
     {
       "id": "samoa",
       "name": "Samoa",
-      "modes": ["control"],
+      "modes": [
+        "control"
+      ],
       "location": "Samoa",
       "currentVerified": false,
       "notes": [
@@ -5070,7 +5329,9 @@
     {
       "id": "shambali-monastery",
       "name": "Shambali Monastery",
-      "modes": ["escort"],
+      "modes": [
+        "escort"
+      ],
       "location": "Nepal",
       "currentVerified": false,
       "notes": [
@@ -5089,7 +5350,9 @@
     {
       "id": "suravasa",
       "name": "Suravasa",
-      "modes": ["flashpoint"],
+      "modes": [
+        "flashpoint"
+      ],
       "location": "India",
       "currentVerified": false,
       "notes": [
@@ -5108,7 +5371,9 @@
     {
       "id": "thames-district",
       "name": "Thames District",
-      "modes": ["payload-race"],
+      "modes": [
+        "payload-race"
+      ],
       "location": "London, United Kingdom",
       "currentVerified": false,
       "notes": [
@@ -5127,7 +5392,9 @@
     {
       "id": "throne-of-anubis",
       "name": "Throne of Anubis",
-      "modes": ["clash"],
+      "modes": [
+        "clash"
+      ],
       "location": "Giza Plateau, Egypt",
       "currentVerified": false,
       "notes": [
@@ -5146,7 +5413,9 @@
     {
       "id": "volskaya",
       "name": "Volskaya Industries",
-      "modes": ["assault"],
+      "modes": [
+        "assault"
+      ],
       "location": "St. Petersburg, Russia",
       "currentVerified": false,
       "notes": [
@@ -5165,7 +5434,9 @@
     {
       "id": "watchpoint-gibraltar",
       "name": "Watchpoint: Gibraltar",
-      "modes": ["escort"],
+      "modes": [
+        "escort"
+      ],
       "location": "Gibraltar",
       "currentVerified": false,
       "notes": [
@@ -5184,7 +5455,9 @@
     {
       "id": "watchpoint-grimsvotn",
       "name": "Watchpoint: Grimsvotn",
-      "modes": ["escort"],
+      "modes": [
+        "escort"
+      ],
       "location": "Iceland",
       "currentVerified": false,
       "notes": [
@@ -5203,7 +5476,9 @@
     {
       "id": "workshop-chamber",
       "name": "Workshop Chamber",
-      "modes": ["workshop"],
+      "modes": [
+        "workshop"
+      ],
       "location": "Earth",
       "currentVerified": false,
       "notes": [
@@ -5222,7 +5497,9 @@
     {
       "id": "workshop-expanse",
       "name": "Workshop Expanse",
-      "modes": ["workshop"],
+      "modes": [
+        "workshop"
+      ],
       "location": "Earth",
       "currentVerified": false,
       "notes": [
@@ -5241,7 +5518,9 @@
     {
       "id": "workshop-green-screen",
       "name": "Workshop Green Screen",
-      "modes": ["workshop"],
+      "modes": [
+        "workshop"
+      ],
       "location": "Earth",
       "currentVerified": false,
       "notes": [
@@ -5260,7 +5539,9 @@
     {
       "id": "workshop-island",
       "name": "Workshop Island",
-      "modes": ["workshop"],
+      "modes": [
+        "workshop"
+      ],
       "location": "Earth",
       "currentVerified": false,
       "notes": [
@@ -5279,7 +5560,9 @@
     {
       "id": "wuxing-university",
       "name": "Wuxing University",
-      "modes": ["control"],
+      "modes": [
+        "control"
+      ],
       "location": "Chengdu, Sichuan, China",
       "currentVerified": false,
       "notes": [

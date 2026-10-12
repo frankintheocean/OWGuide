@@ -38,3 +38,7 @@ The Rust client checks size, SHA-256, Ed25519, schema, references, and version. 
 ## 🧯 Limits
 
 No live feed has been deployed, no key is configured in this build, and network update success has not been tested against a real publishing endpoint. Cryptographic verification, SQLite install failure, rollback, and user-data preservation are covered by unit tests. Key rotation, remote asset caching, release-grade DNS defenses, and automatic binary updates remain unfinished.
+
+## 📖 Ability summaries
+
+`content/ability-summaries.json` contains original summaries of mechanics described by the captured official hero pages. Run `python3 scripts/apply-abilities.py` after source capture. It stops if ability names or list lengths change. The source hashes are recorded in `content/ability-evidence.json`. It copies no images or full page text. These summaries establish basic mechanics, not cooldowns, damage values, complete passive coverage, or balance approval. Unconfirmed ability types stay `unknown`.

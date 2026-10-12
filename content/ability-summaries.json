@@ -1,0 +1,386 @@
+{
+  "ana": [
+    "weapon|Use the scope for distant shots; the rifle damages opponents and restores teammates' health.",
+    "ability|A landed dart temporarily incapacitates an opponent.",
+    "ability|The grenade helps allies recover while denying healing to enemies caught by it.",
+    "ultimate|Empower a teammate's damage output and resistance to incoming damage."
+  ],
+  "anran": [
+    "weapon|Launch fire projectiles from the fans.",
+    "ability|A heated blast increases the effect of burning damage.",
+    "ability|Avoid incoming damage during the attack and recover health from enemies struck.",
+    "ability|Move forward with a damaging collision.",
+    "unknown|A forward charge ends in an explosion that sets opponents alight.",
+    "unknown|Return from death through an explosive fire effect.",
+    "passive|Fire attacks apply a burning effect."
+  ],
+  "ashe": [
+    "weapon|Aiming increases rifle accuracy and damage while reducing firing speed.",
+    "ability|The blast separates nearby enemies and propels you backward.",
+    "ability|Shoot the thrown explosive for early detonation or let its timer expire.",
+    "ultimate|Send B.O.B. charging into opponents before he begins firing."
+  ],
+  "baptiste": [
+    "weapon|Alternate burst fire with healing projectiles that affect teammates near their landing point.",
+    "ability|Restore nearby teammates immediately and over time; the immediate heal is stronger below half health.",
+    "ability|Place a destroyable device that keeps nearby allies from dying.",
+    "ultimate|Place a window that amplifies friendly projectile damage and healing.",
+    "passive|Crouching prepares a higher jump."
+  ],
+  "bastion": [
+    "weapon|Trade movement speed for sustained rotary-cannon fire.",
+    "weapon|Use the accurate mobile configuration when repositioning.",
+    "ability|The explosive ricochets from walls but detonates on enemies or the ground.",
+    "ability|Change between the two weapon configurations.",
+    "ultimate|Stop moving to launch targeted artillery shells."
+  ],
+  "brigitte": [
+    "weapon|Strike nearby opponents with a melee flail.",
+    "ability|Send a teammate a short healing effect.",
+    "ability|Extend the flail to push an opponent away.",
+    "ability|Raise a barrier in front of you.",
+    "ability|With the shield raised, dash forward to push an opponent back.",
+    "ultimate|Gain armor, strengthen the shield and grant nearby teammates extra health.",
+    "passive|Landing damage starts healing for nearby teammates."
+  ],
+  "cassidy": [
+    "weapon|Fire aimed revolver shots or rapidly expend the remaining ammunition.",
+    "ability|Roll to reload and reduce damage received during the movement.",
+    "ultimate|Acquire targets before releasing the charged shots."
+  ],
+  "dmon": [
+    "weapon|Attack at melee range with an energy blade.",
+    "weapon|Use the portable heavy machine gun.",
+    "ability|Keep a protective energy barrier in front of you.",
+    "ability|Strike from the barrier stance to damage and displace opponents.",
+    "ability|Activate the mech's rapid-firing gun.",
+    "ability|Spend fuel to move quickly along a horizontal direction.",
+    "passive|Leave the mech when it is destroyed.",
+    "unknown|The sweeping attack gives you overhealth and increases damage received by affected opponents.",
+    "unknown|Rebuild the mech to return to mech combat."
+  ],
+  "doctrine": [
+    "weapon|The scepter damages enemies and heals teammates; infusion changes its shot into a larger piercing blast.",
+    "ability|Modify the next ability with an added effect.",
+    "ability|Drones heal an ally and increase attack speed; infusion also sends drones to you.",
+    "ability|Move horizontally with damage reduction; infusion permits flight.",
+    "unknown|The drone swarm gives teammates overhealth and lowers opponents' maximum health."
+  ],
+  "domina": [
+    "weapon|Sustain a medium-distance beam that finishes with a stronger shot.",
+    "ability|Build a barrier from separate segments.",
+    "ability|Push opponents away; a wall collision also stuns them.",
+    "ability|Place an explosive crystal and trigger it with a second activation.",
+    "unknown|Enclose opponents with hard light that explodes when its duration ends."
+  ],
+  "doomfist": [
+    "weapon|The close-range spread weapon replenishes ammunition automatically.",
+    "ability|Charge a forward punch that displaces the target; a wall impact adds damage.",
+    "ability|Leap toward a ground impact.",
+    "ability|Reduce frontal damage and empower a punch by blocking a sufficiently strong attack.",
+    "ultimate|Leap away, choose a landing area and strike it from above."
+  ],
+  "dva": [
+    "weapon|Fire automatic spread weapons at short distance.",
+    "weapon|Use the automatic sidearm outside the mech.",
+    "ability|Fly toward the direction you face.",
+    "ability|Intercept projectiles in the space in front of the mech.",
+    "ability|Release a sequence of small explosive missiles.",
+    "ultimate|Abandon the mech and trigger its delayed explosion.",
+    "ultimate|Summon a replacement mech.",
+    "passive|Exit the mech when its health is depleted."
+  ],
+  "echo": [
+    "weapon|Each shot sends projectiles along a triangular spread.",
+    "ability|Stick explosives to a surface or target for delayed detonation.",
+    "ability|Begin with a forward flight burst, then briefly steer freely.",
+    "ability|Channel damage that becomes much stronger against targets below half health.",
+    "ultimate|Copy a chosen enemy hero; that player cannot change hero while the copy lasts.",
+    "passive|Hold jump during a fall to descend more slowly."
+  ],
+  "emre": [
+    "weapon|Aim down sights to tighten the burst and extend effective falloff distance.",
+    "ability|Throw an explosive with a delayed detonation after it bounces.",
+    "unknown|Trigger a transformation into a weapon form.",
+    "passive|Health regeneration starts earlier and provides an immediate heal on activation."
+  ],
+  "freja": [
+    "unknown|The explosive bola binds a hit enemy and draws nearby opponents toward them.",
+    "ability|Dash in your movement direction and restore Take Aim.",
+    "ability|Slow your movement to fire a fast explosive bolt; Quick Dash refreshes this attack.",
+    "ability|Rise rapidly on an upward gust."
+  ],
+  "genji": [
+    "weapon|Choose a narrow projectile burst or a wider fan.",
+    "ability|Return incoming projectiles toward your aim and stop melee attacks.",
+    "ability|Dash through opponents to damage them; an elimination resets the dash.",
+    "ultimate|Replace ranged attacks with a drawn blade.",
+    "passive|Use wall climbing and a second jump to reach new positions."
+  ],
+  "hanzo": [
+    "weapon|Charging the bow extends arrow travel before release.",
+    "ability|Fire a limited set of instant arrows with ricochet and reduced damage.",
+    "ability|An arrow impact temporarily exposes nearby opponents.",
+    "ability|Use the extra airborne jump to reposition.",
+    "ultimate|Send a damaging dragon through opponents along its path.",
+    "passive|Jump against a wall to climb it."
+  ],
+  "hazard": [
+    "weapon|Shoot a spread burst of spikes.",
+    "ability|Guard the front while restoring ammunition and sending homing spikes at nearby enemies.",
+    "ability|Leap forward, then activate again for a slash that pushes enemies away.",
+    "ability|Create a spiked wall that damages and displaces nearby opponents.",
+    "unknown|Falling spikes stop affected opponents from moving.",
+    "passive|Climb low walls and catch ledges."
+  ],
+  "illari": [
+    "weapon|Use an automatically charging ranged shot or spend solar energy on a shorter healing beam.",
+    "ultimate|Hit enemies with solar energy to slow them; further damage triggers their explosions.",
+    "ability|Set up a deployable that restores teammates' health.",
+    "ability|Burst in your movement direction and displace enemies; holding jump increases height."
+  ],
+  "jetpack-cat": [
+    "weapon|Spread projectiles heal friendly targets and damage opponents at medium distance.",
+    "ability|Accelerate toward your movement input; transporting an ally slows fuel recovery.",
+    "ability|Tow an ally in transport mode while healing them and moving faster.",
+    "ability|Start a healing pulse and push nearby enemies away; pulse frequency rises over time.",
+    "unknown|Dive toward the ground to knock enemies down and tether the closest target."
+  ],
+  "junker-queen": [
+    "weapon|Use a pump-action shotgun for close combat.",
+    "ability|Temporarily increase nearby teammates' health and movement speed along with your own.",
+    "ability|Wound opponents in front of you; hitting more enemies shortens the cooldown.",
+    "ultimate|Charge through opponents to wound them and prevent their healing.",
+    "passive|Recover health from damage caused by wounds."
+  ],
+  "junkrat": [
+    "weapon|Lob explosive projectiles that bounce.",
+    "ability|Place a mine and trigger it remotely to create knockback.",
+    "ability|Leave a trap that stops an enemy's movement.",
+    "ultimate|Steer an explosive tire and choose when to detonate it.",
+    "passive|Your explosives do not damage you, and death drops additional bombs."
+  ],
+  "juno": [
+    "weapon|Burst shots restore friendly health or damage opponents.",
+    "ability|Lock targets before releasing guided shots that heal allies over time or damage enemies.",
+    "ultimate|Send a moving ray that heals teammates and increases their damage.",
+    "ability|Teammates gain movement speed by crossing the deployed ring.",
+    "ability|Move faster while gliding horizontally.",
+    "passive|Use a second airborne jump or hold jump to hover."
+  ],
+  "kiriko": [
+    "weapon|Send healing papers that seek a selected teammate.",
+    "weapon|Throw a ranged damaging projectile.",
+    "ability|Move directly to a chosen teammate by teleporting.",
+    "ability|Give teammates brief invulnerability and remove most harmful effects.",
+    "ultimate|Create a forward path that speeds teammates' movement, attacks and cooldown recovery."
+  ],
+  "lifeweaver": [
+    "weapon|Charge a targeted heal before release; the blossom also charges more slowly while unused.",
+    "weapon|Fire repeated pairs of damaging thorns.",
+    "ability|Place a platform that rises when stepped on and resets while unused.",
+    "ability|Dash along your movement direction with a small self-heal.",
+    "ability|Bring an ally to your position while protecting them during travel.",
+    "ultimate|Grow a tree that heals on placement and continues with periodic healing."
+  ],
+  "lucio": [
+    "weapon|Fire damaging sonic projectiles.",
+    "ability|Choose between healing nearby teammates and increasing their movement speed.",
+    "ability|Strengthen whichever song is currently active.",
+    "ability|Push nearby opponents away with a sonic blast.",
+    "ultimate|Give nearby teammates a temporary extra-health buffer.",
+    "passive|Jump onto a wall to move along its surface."
+  ],
+  "mauga": [
+    "ability|Charge without interruption, ending with a stomp that launches opponents.",
+    "ability|Reduce your incoming damage and let nearby teammates heal through their own damage.",
+    "passive|Critical damage provides temporary additional health.",
+    "ultimate|Create a barrier that contains both you and nearby enemies."
+  ],
+  "mei": [
+    "weapon|Slow opponents with a nearby spray or fire an icicle at range.",
+    "ability|Pause fighting to become invulnerable and recover health.",
+    "ability|Raise a wall ahead of you.",
+    "ultimate|Deploy a drone whose wide-area weather effect freezes enemies."
+  ],
+  "mercy": [
+    "weapon|Maintain a beam to heal a teammate or amplify their damage.",
+    "weapon|Switch to an automatic sidearm for damage.",
+    "ability|Fly toward a teammate; jump and crouch change the follow-up movement direction.",
+    "ability|Bring a fallen teammate back to life.",
+    "passive|Slow your descent during a fall.",
+    "ultimate|Gain flight and enhance your abilities."
+  ],
+  "mizuki": [
+    "weapon|Damage enemies with a ricocheting projectile.",
+    "ability|A thrown hat restores health as it bounces between teammates.",
+    "ability|Land a chain to restrict an opponent's movement.",
+    "ability|Leap forward with added movement speed, then reactivate to return.",
+    "unknown|Create a healing area that absorbs opposing projectiles crossing it.",
+    "passive|Nearby healing grows stronger through your damage and healing contributions."
+  ],
+  "moira": [
+    "weapon|Spend biotic energy to heal in front of you; damaging with the beam restores health and energy.",
+    "ability|Choose a bouncing healing orb or a damaging orb.",
+    "ability|Become invulnerable and move quickly while temporarily unable to attack.",
+    "ultimate|Channel a beam that damages opponents and heals teammates."
+  ],
+  "orisa": [
+    "weapon|Fire an automatic weapon whose limit is heat.",
+    "ability|The thrown javelin stuns and displaces its target; wall collisions improve its effect.",
+    "ability|Gain extra health, damage reduction and resistance to interruption.",
+    "ability|Spin to remove projectiles, stop melee attacks, push enemies and move forward faster.",
+    "ultimate|Draw enemies inward while charging damage under Fortify; activate again to release early."
+  ],
+  "pharah": [
+    "weapon|Launch explosive rockets over long distances.",
+    "ability|Make a horizontal movement burst.",
+    "ability|Rise quickly and regain some flight fuel.",
+    "ability|Push opponents away from the blast location.",
+    "ultimate|Fire a sustained stream of small rockets.",
+    "passive|Spend fuel to hover; recharge on the ground and fall more slowly when empty."
+  ],
+  "ramattra": [
+    "weapon|Fire repeated projectiles in Omnic form.",
+    "ability|Place a barrier at the chosen location in Omnic form.",
+    "weapon|Send piercing energy forward with each Nemesis-form punch.",
+    "ability|Place a ground effect that slows opponents and pulls them down; reactivate for early detonation.",
+    "ultimate|Enter Nemesis form with a damaging swarm that lasts longer while harming enemies."
+  ],
+  "reaper": [
+    "weapon|Fire a pair of shotguns with close-range spread.",
+    "ability|Relocate to a chosen spot by teleporting.",
+    "ability|Move faster and avoid damage while unable to shoot.",
+    "ultimate|Damage opponents around you.",
+    "passive|Recover health by damaging opponents."
+  ],
+  "reinhardt": [
+    "weapon|Attack nearby opponents with the hammer.",
+    "ability|Charge an enemy toward a wall impact.",
+    "ability|Send a fire projectile ahead of you.",
+    "ability|Raise a protective barrier in front of you.",
+    "ultimate|Knock opponents in front of you to the ground."
+  ],
+  "roadhog": [
+    "weapon|Fire two bursts from a close-range shotgun.",
+    "ability|Collect incoming projectiles and turn them into an explosive scrap ball.",
+    "ability|Catch an opponent and pull them toward you.",
+    "ability|Restore your health while reducing damage received.",
+    "ultimate|Push and damage enemies with sustained fire in front of you."
+  ],
+  "shion": [
+    "weapon|Fire fast anima-powered pistols.",
+    "ability|Send shots in a crossed pattern; holding narrows their spread.",
+    "ability|Ride the bike, then dismount and send it forward with another activation.",
+    "ability|Dash while briefly gaining an extra-health buffer.",
+    "unknown|Perform a sequence of forward rushes with gunfire."
+  ],
+  "sierra": [
+    "weapon|Sustained fire tightens the rifle's spiral shot pattern.",
+    "ability|Mark an opponent so rifle shots track that target.",
+    "ability|Throw an explosive whose impact produces a shockwave.",
+    "ability|Place a drone and reactivate to grapple toward it.",
+    "unknown|Send a drone forward to drop explosives along its flight."
+  ],
+  "sigma": [
+    "weapon|Throw paired charges that detonate over an area after a delay.",
+    "ability|Intercept frontal projectiles and convert them into extra health.",
+    "ability|Throw collected debris to knock an opponent down.",
+    "ability|Move a barrier outward, stop it by releasing, or recall it with another activation.",
+    "ultimate|Lift opponents and slam them down with gravity."
+  ],
+  "sojourn": [
+    "weapon|Build energy with projectile hits, then spend it on a powerful piercing shot.",
+    "ability|Slide along the ground and cancel into an elevated jump.",
+    "ability|Create an energy area that damages enemies inside it.",
+    "ultimate|Automatically replenish railgun energy for a limited time."
+  ],
+  "soldier-76": [
+    "weapon|Fire an automatic rifle.",
+    "ability|Move faster while running forward.",
+    "ability|Place a healing field for yourself and nearby teammates.",
+    "ability|Launch a group of explosive rockets.",
+    "ultimate|Automatically track targets visible to you."
+  ],
+  "sombra": [
+    "weapon|Fire a short-distance automatic pistol.",
+    "ability|Give an ally healing over time; also hack health packs and most opposing deployables.",
+    "ability|The impact zone weakens enemies and heals teammates.",
+    "ability|Teleport to a thrown beacon and briefly enter stealth afterward.",
+    "ultimate|Damage enemies based on their current health, hack them and remove nearby barriers."
+  ],
+  "symmetra": [
+    "weapon|Build damage with a short beam or charge an explosive ranged orb.",
+    "ability|Place a small device that slows and damages opponents.",
+    "ability|Connect two temporary portals for immediate travel between them.",
+    "ultimate|Create a very large protective barrier."
+  ],
+  "torbjorn": [
+    "weapon|Choose slower distant shots or a stronger but less accurate close-range attack.",
+    "weapon|Repair your turret or strike an opponent with the hammer.",
+    "ability|Place a turret that builds itself.",
+    "ability|Gain extra health and faster movement, attacks and reloads.",
+    "ultimate|Spread damaging molten pools that are more effective against armor."
+  ],
+  "tracer": [
+    "weapon|Use automatic pistols at close distance.",
+    "ability|Teleport a short distance toward your movement input.",
+    "ability|Restore an earlier position and health state.",
+    "ultimate|Throw a sticky explosive."
+  ],
+  "vendetta": [
+    "weapon|Chain sword swings into a stronger overhead strike.",
+    "ability|Block frontal damage and deflect melee attacks while spending defensive energy.",
+    "ability|Rush into a spinning melee strike.",
+    "ability|Throw the sword, then travel to it.",
+    "ability|Spend energy during the guarding stance to launch a wide attack.",
+    "unknown|Strike enemies ahead through most defensive effects."
+  ],
+  "venture": [
+    "weapon|Fire a seismic charge that detonates after limited travel.",
+    "ability|Dash above or below ground and displace enemies; Burrow speeds cooldown recovery.",
+    "ability|Travel underground without taking damage, then emerge with an attack.",
+    "ultimate|Send damaging shockwaves across the ground."
+  ],
+  "widowmaker": [
+    "weapon|Switch between automatic fire and a scoped long-distance shot.",
+    "ability|Pull yourself toward a ledge with a grapple.",
+    "ability|Place a trap that poisons opponents.",
+    "ultimate|Reveal opponent locations to your team."
+  ],
+  "winston": [
+    "weapon|Choose frontal electrical damage or charge a focused ranged shot.",
+    "ability|Leap ahead and damage an opponent at the landing point.",
+    "ability|Place an energy dome for protection.",
+    "ultimate|Gain a large health increase while combat is limited to jumping and punches."
+  ],
+  "wrecking-ball": [
+    "weapon|Fire automatic cannons.",
+    "ability|Swing around an anchor to build damaging, displacing collision speed.",
+    "ability|Enter ball form for faster travel.",
+    "ability|Drop onto the ground to damage enemies and launch them upward.",
+    "ability|Gain more temporary health with more nearby enemies and share some with teammates.",
+    "ultimate|Spread proximity-triggered explosives across an area."
+  ],
+  "wuyang": [
+    "weapon|Launch a water orb; hold to guide it and strengthen its detonation.",
+    "ability|Maintain passive healing on a teammate or spend resource for stronger targeted healing.",
+    "ability|Move quickly on water and jump higher.",
+    "unknown|Protect a chosen ally or yourself until an explosion heals the host and knocks enemies down.",
+    "ability|Send a wave that pushes enemies away and increases healing received by allies."
+  ],
+  "zarya": [
+    "weapon|Choose a short beam or an energy grenade.",
+    "ability|Place a protective barrier around yourself.",
+    "ability|Protect a teammate with a barrier.",
+    "ultimate|Create a gravity effect that draws enemies together.",
+    "passive|Absorbed barrier damage increases weapon output."
+  ],
+  "zenyatta": [
+    "weapon|Fire single energy orbs or charge a multi-orb release.",
+    "ability|Place an orb on an opponent to increase damage received.",
+    "ability|Place a healing orb on a teammate.",
+    "ultimate|Become invulnerable and move faster while healing nearby teammates.",
+    "passive|Quick melee deals increased damage with stronger knockback."
+  ]
+}

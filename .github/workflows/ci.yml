@@ -26,6 +26,20 @@ jobs:
         with:
           toolchain: "1.99.0"
           components: rustfmt, clippy
+      - name: Restore Rust build and check tools
+        id: rust-cache
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            ~/.cargo/bin/cargo-audit*
+            ~/.cargo/bin/cargo-license*
+            ~/.cargo/.crates.toml
+            ~/.cargo/.crates2.json
+            src-tauri/target
+          key: ${{ runner.os }}-rust-1.99.0-${{ hashFiles('src-tauri/Cargo.lock') }}-${{ hashFiles('src-tauri/src/**', 'src/data/content.json') }}
+          restore-keys: ${{ runner.os }}-rust-1.99.0-${{ hashFiles('src-tauri/Cargo.lock') }}-
       - name: Linux desktop libraries
         if: runner.os == 'Linux'
         run: sudo apt-get update && sudo apt-get install -y libwebkit2gtk-4.1-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev patchelf
@@ -67,6 +81,12 @@ jobs:
       - name: Prepare Windows installer and portable folder
         if: runner.os == 'Windows'
         run: ./packaging/package.ps1
+      - name: Native WebView2 offline and window checks
+        if: runner.os == 'Windows'
+        run: node tests/windows-native.mjs
+      - name: Clear native test portable data
+        if: runner.os == 'Windows'
+        run: Remove-Item release/OWGuide-1.0.0-portable/OWGuideData -Recurse -Force
       - name: Check install, repair, uninstall and portable database
         if: runner.os == 'Windows'
         run: ./packaging/smoke.ps1
@@ -93,3 +113,16 @@ jobs:
             rust-licenses.json
             test-results/
           if-no-files-found: ignore
+      - name: Save Rust build and check tools
+        if: always() && steps.rust-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            ~/.cargo/bin/cargo-audit*
+            ~/.cargo/bin/cargo-license*
+            ~/.cargo/.crates.toml
+            ~/.cargo/.crates2.json
+            src-tauri/target
+          key: ${{ steps.rust-cache.outputs.cache-primary-key }}

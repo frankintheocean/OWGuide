@@ -167,3 +167,36 @@ it("keeps teammate synergy in a legal mirrored enemy lineup", () => {
   );
   expect(rows.find((r) => r.hero.id === "ana")?.score).toBe(3);
 });
+
+it("provides sourced original summaries for every captured ability without inventing numbers", () => {
+  for (const hero of content.heroes) {
+    for (const ability of hero.abilities) {
+      expect(ability.description?.trim().length).toBeGreaterThan(20);
+      expect(ability.stats).toEqual([]);
+    }
+  }
+});
+
+it("maps standard controller input with a dead zone and ignores unsupported layouts", async () => {
+  const { gamepadAction } = await import("../src/domain/gamepad");
+  const buttons = Array.from({ length: 16 }, () => ({
+    pressed: false,
+    touched: false,
+    value: 0,
+  }));
+  expect(
+    gamepadAction({ mapping: "standard", axes: [0.2, -0.2], buttons }),
+  ).toBeNull();
+  expect(gamepadAction({ mapping: "standard", axes: [-0.9, 0], buttons })).toBe(
+    "ArrowLeft",
+  );
+  buttons[0].pressed = true;
+  expect(gamepadAction({ mapping: "standard", axes: [0, 0], buttons })).toBe(
+    "Enter",
+  );
+  buttons[1].pressed = true;
+  expect(gamepadAction({ mapping: "standard", axes: [0, 0], buttons })).toBe(
+    "Escape",
+  );
+  expect(gamepadAction({ mapping: "", axes: [-1, 0], buttons })).toBeNull();
+});

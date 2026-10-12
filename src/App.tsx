@@ -50,6 +50,7 @@ import { recommend } from "./domain/recommend";
 import { search } from "./domain/search";
 import { bookmarkTarget } from "./domain/bookmarks";
 import { record, diagnosticEvents } from "./domain/diagnostics";
+import { useGamepad } from "./hooks/useGamepad";
 import { HeroGlyph } from "./components/HeroGlyph";
 import { MapView } from "./components/MapView";
 import { Empty, Missing, RoleFilter } from "./components/Primitives";
@@ -100,6 +101,7 @@ export default function App() {
     [dragged, setDragged] = useState<string | null>(null);
   const searchRef = useRef<HTMLInputElement>(null),
     gridRef = useRef<HTMLDivElement>(null);
+  const controller = useGamepad(gridRef, page === "heroes" && !quick);
   const refresh = useCallback(async () => {
     try {
       const s = await load();
@@ -797,7 +799,9 @@ export default function App() {
                       {!filtered.length && <Empty>No matching heroes.</Empty>}
                       <small className="keyboard-hint">
                         <Keyboard size={14} />
-                        Arrow keys to browse · Enter to open
+                        {controller
+                          ? "Controller: D-pad / stick to browse · A to open · B to return"
+                          : "Arrow keys to browse · Enter to open"}
                       </small>
                     </section>
                     <section
@@ -1257,7 +1261,7 @@ export default function App() {
                       Save note
                     </button>
                     <button
-                      disabled={busy || !user.notes[noteKey]}
+                      disabled={busy || !Object.hasOwn(user.notes, noteKey)}
                       onClick={() =>
                         void mutate((u) => {
                           delete u.notes[noteKey];

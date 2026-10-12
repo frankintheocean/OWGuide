@@ -1,0 +1,661 @@
+{
+  "checkedAt": "2026-10-12T04:23:17.401048Z",
+  "patch": "Overwatch Retail Patch Notes \u2013 October 6, 2026",
+  "review": "OWGuide source-based editorial summary; no numeric balance claims; unknown classifications remain explicit. Coaching and matchups require separate review.",
+  "heroPages": [
+    {
+      "heroId": "ana",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/ana/",
+      "sha256": "bbb5d6ee7f2d84b4ad11760a0c7b7192800280890e25c4892e8fd57569abcd81",
+      "abilities": [
+        "biotic-rifle",
+        "sleep-dart",
+        "biotic-grenade",
+        "nano-boost"
+      ]
+    },
+    {
+      "heroId": "anran",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/anran/",
+      "sha256": "d73283c0106883629f367e19d90d13dbd0c68bc429837e23d4069baf2d0c75e1",
+      "abilities": [
+        "zhuque-fans",
+        "fan-the-flames",
+        "dancing-blaze",
+        "inferno-rush",
+        "vermillion-ascent",
+        "vermillion-revival",
+        "ignition"
+      ]
+    },
+    {
+      "heroId": "ashe",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/ashe/",
+      "sha256": "a4f228111860ba3bbaf589dad5bdf66e66fade715710bd8bb2ece6a5d4f8fd5c",
+      "abilities": [
+        "the-viper",
+        "coach-gun",
+        "dynamite",
+        "bob"
+      ]
+    },
+    {
+      "heroId": "baptiste",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/baptiste/",
+      "sha256": "d3c98918942d780ae5c538726f391976f0ce4570b25b075b7f2967e8676212ff",
+      "abilities": [
+        "biotic-launcher",
+        "regenerative-burst",
+        "immortality-field",
+        "amplification-matrix",
+        "exo-boots"
+      ]
+    },
+    {
+      "heroId": "bastion",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/bastion/",
+      "sha256": "16b0c9a7816e648e728a78b6dafddf8890d9951ab0a249b206531c29e4726210",
+      "abilities": [
+        "configuration-assault",
+        "configuration-recon",
+        "a-36-tactical-grenade",
+        "reconfigure",
+        "configuration-artillery"
+      ]
+    },
+    {
+      "heroId": "brigitte",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/brigitte/",
+      "sha256": "13c5495efcef0cbfe3fa086540020c6be7bdf3eb253e08dc45074687e794b84b",
+      "abilities": [
+        "rocket-flail",
+        "repair-pack",
+        "whip-shot",
+        "barrier-shield",
+        "shield-bash",
+        "rally",
+        "inspire"
+      ]
+    },
+    {
+      "heroId": "cassidy",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/cassidy/",
+      "sha256": "8d58a774c49d80528937fc79a838938e8daac6e984028f1815128aa3089122af",
+      "abilities": [
+        "peacekeeper",
+        "combat-roll",
+        "deadeye"
+      ]
+    },
+    {
+      "heroId": "dmon",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/dmon/",
+      "sha256": "db4bf2c42c95b7358e6fe5a895cb29c69b8e167fbe569c4cd1a16b0ced205ca4",
+      "abilities": [
+        "plasma-saber",
+        "portable-fusion-repeater",
+        "power-barrier",
+        "surging-strike",
+        "fusion-repeater",
+        "propulsors",
+        "eject",
+        "limit-break",
+        "call-mech"
+      ]
+    },
+    {
+      "heroId": "dva",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/dva/",
+      "sha256": "8be36c992e1e84c58973d20d6db41e309d7e766aa6f5bc1ad21bebc7934c07a3",
+      "abilities": [
+        "fusion-cannons",
+        "light-gun",
+        "boosters",
+        "defense-matrix",
+        "micro-missiles",
+        "self-destruct",
+        "call-mech",
+        "eject"
+      ]
+    },
+    {
+      "heroId": "doctrine",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/doctrine/",
+      "sha256": "a4ced38a4390d075df984ee145c8a08064ab5601d5201f3e418b81b439a5e7fc",
+      "abilities": [
+        "eternal-scepter",
+        "infuse",
+        "invigorating-drones",
+        "shrouded-momentum",
+        "deliverance"
+      ]
+    },
+    {
+      "heroId": "domina",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/domina/",
+      "sha256": "0c035bf2e03cbb3b5c12672613747f1595d980d194dbf9c77e4bc4e36ac163cc",
+      "abilities": [
+        "photon-magnum",
+        "barrier-array",
+        "sonic-repulsors",
+        "crystal-charge",
+        "panopticon"
+      ]
+    },
+    {
+      "heroId": "doomfist",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/doomfist/",
+      "sha256": "b666f256e01b19cb5bad3ddc0abd32bbb2128104f670e9706dd7a8f9e3c7bb31",
+      "abilities": [
+        "hand-cannon",
+        "rocket-punch",
+        "seismic-slam",
+        "power-block",
+        "meteor-strike"
+      ]
+    },
+    {
+      "heroId": "echo",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/echo/",
+      "sha256": "8086b72816c9c4f9b21774c5e5ef4a81c27628ee5d60443016b3671a4da052c2",
+      "abilities": [
+        "tri-shot",
+        "sticky-bombs",
+        "flight",
+        "focusing-beam",
+        "duplicate",
+        "glide"
+      ]
+    },
+    {
+      "heroId": "emre",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/emre/",
+      "sha256": "df3f4aa7e1cd00f790277d552e3c8af3044df8b6567887fd26aef22ebb7bea67",
+      "abilities": [
+        "synthetic-burst-rifle",
+        "cyber-frag",
+        "override-protocol",
+        "altered-vitals"
+      ]
+    },
+    {
+      "heroId": "freja",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/freja/",
+      "sha256": "ea9298d41d3edbdef7de765a983ce0f7bacaffa0d2f046b913dbd03ceeeaf742",
+      "abilities": [
+        "bola-shot",
+        "quick-dash",
+        "take-aim",
+        "updraft"
+      ]
+    },
+    {
+      "heroId": "genji",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/genji/",
+      "sha256": "11394bb54596b644fcf055675d185d55060b7e471a9d188df09312277d2ac997",
+      "abilities": [
+        "shuriken",
+        "deflect",
+        "swift-strike",
+        "dragonblade",
+        "cyber-agility"
+      ]
+    },
+    {
+      "heroId": "hanzo",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/hanzo/",
+      "sha256": "b925ca25d61129888c86c80e7fbe63bdb50f69f250c05889c17ecb61398e4e75",
+      "abilities": [
+        "storm-bow",
+        "storm-arrows",
+        "sonic-arrow",
+        "lunge",
+        "dragonstrike",
+        "wall-climb"
+      ]
+    },
+    {
+      "heroId": "hazard",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/hazard/",
+      "sha256": "ff4a2352df63bba72d5334a47c1877a9ef8521effe422b98716883b2e291f44b",
+      "abilities": [
+        "bonespur",
+        "spike-guard",
+        "violent-leap",
+        "jagged-wall",
+        "downpour",
+        "vault"
+      ]
+    },
+    {
+      "heroId": "illari",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/illari/",
+      "sha256": "84198c0cedb637371232eb2c1fa65e38344af082b386603dbabfdd938c15a3e9",
+      "abilities": [
+        "solar-rifle",
+        "captive-sun",
+        "healing-pylon",
+        "outburst"
+      ]
+    },
+    {
+      "heroId": "jetpack-cat",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/jetpack-cat/",
+      "sha256": "8a8ea9fa2c5f4ef53c3528c0c79bb05cd90bfa3877ceb3a65cd2d9662ddcba9e",
+      "abilities": [
+        "biotic-pawjectiles",
+        "frenetic-flight",
+        "lifeline",
+        "purr",
+        "catnapper"
+      ]
+    },
+    {
+      "heroId": "junker-queen",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/junker-queen/",
+      "sha256": "8c8af6f16b0d1106d1694e547f0e7ce9551933815e8ca5f350bd79beb25bf737",
+      "abilities": [
+        "scattergun",
+        "commanding-shout",
+        "carnage",
+        "rampage",
+        "adrenaline-rush"
+      ]
+    },
+    {
+      "heroId": "junkrat",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/junkrat/",
+      "sha256": "10647db05e8a1cc9745ec33ad617d56f1e3088acc0cf57a9bc008b57a7233ef2",
+      "abilities": [
+        "frag-launcher",
+        "concussion-mine",
+        "steel-trap",
+        "rip-tire",
+        "total-mayhem"
+      ]
+    },
+    {
+      "heroId": "juno",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/juno/",
+      "sha256": "aca0b514022c61883298bef05ab7880bfea71dfa0add8be90b35caa1ccebc82d",
+      "abilities": [
+        "mediblaster",
+        "pulsar-torpedoes",
+        "orbital-ray",
+        "hyper-ring",
+        "glide-boost",
+        "martian-overboots"
+      ]
+    },
+    {
+      "heroId": "kiriko",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/kiriko/",
+      "sha256": "cf11ee361a3792f42ff6c031a4425878975ac7aa9c39b1c2047a765e2a531485",
+      "abilities": [
+        "healing-ofuda",
+        "kunai",
+        "swift-step",
+        "protection-suzu",
+        "kitsune-rush"
+      ]
+    },
+    {
+      "heroId": "lifeweaver",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/lifeweaver/",
+      "sha256": "f3ef989916d889e799d0c9696ad42b51581d3dc0eb8a4113c5932a50857abaee",
+      "abilities": [
+        "healing-blossom",
+        "thorn-volley",
+        "petal-platform",
+        "rejuvenating-dash",
+        "life-grip",
+        "tree-of-life"
+      ]
+    },
+    {
+      "heroId": "lucio",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/lucio/",
+      "sha256": "146fdae5ce33468d037b1626ac808066055f37fbaa0511c84e11763208a583ed",
+      "abilities": [
+        "sonic-amplifier",
+        "crossfade",
+        "amp-it-up",
+        "soundwave",
+        "sound-barrier",
+        "wall-ride"
+      ]
+    },
+    {
+      "heroId": "mauga",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/mauga/",
+      "sha256": "f43770ef98e017b357f094626ab05159f942fae4ca569f1972b4d2eda7f5cc0b",
+      "abilities": [
+        "overrun",
+        "cardiac-overdrive",
+        "berserker",
+        "cage-fight"
+      ]
+    },
+    {
+      "heroId": "mei",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/mei/",
+      "sha256": "5f4b24a041d4b5e054a89edaa3b9f1fe9bffc91ed9604b7a5237892fddb147f9",
+      "abilities": [
+        "endothermic-blaster",
+        "cryo-freeze",
+        "ice-wall",
+        "blizzard"
+      ]
+    },
+    {
+      "heroId": "mercy",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/mercy/",
+      "sha256": "3bc1add93c94eb58d68a3d0200f5def42d19486989ef9a70edb8b7dbfb8ce7cf",
+      "abilities": [
+        "caduceus-staff",
+        "caduceus-blaster",
+        "guardian-angel",
+        "resurrect",
+        "angelic-descent",
+        "valkyrie"
+      ]
+    },
+    {
+      "heroId": "mizuki",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/mizuki/",
+      "sha256": "a51063ace9c3b6adf3f1efd74072c4aeb5826747b3231336a3ebf2f79444ecd7",
+      "abilities": [
+        "spirit-glaive",
+        "healing-kasa",
+        "binding-chain",
+        "katashiro-return",
+        "kekkai-sanctuary",
+        "remedy-aura"
+      ]
+    },
+    {
+      "heroId": "moira",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/moira/",
+      "sha256": "9add5a0e0f46951a67a6762f3dfedaee7189762a7df6469ca00d200d72fde6d4",
+      "abilities": [
+        "biotic-grasp",
+        "biotic-orb",
+        "fade",
+        "coalescence"
+      ]
+    },
+    {
+      "heroId": "orisa",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/orisa/",
+      "sha256": "68b67c86b4c99ab39619a5727f873faf3a97b07051507e9f809444f8bfa0e4ec",
+      "abilities": [
+        "augmented-fusion-driver",
+        "energy-javelin",
+        "fortify",
+        "javelin-spin",
+        "terra-surge"
+      ]
+    },
+    {
+      "heroId": "pharah",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/pharah/",
+      "sha256": "6a0f085b9ce05954d87c4624e5107a5af28cc276bcf0a3df8479b15d2db8764a",
+      "abilities": [
+        "rocket-launcher",
+        "jet-dash",
+        "jump-jet",
+        "concussive-blast",
+        "barrage",
+        "hover-jets"
+      ]
+    },
+    {
+      "heroId": "ramattra",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/ramattra/",
+      "sha256": "b5e6eb45486752c9f096807f22dbaba4d33bf427b67e07a306fe7498f2d9c37d",
+      "abilities": [
+        "void-accelerator-omnic-form",
+        "void-barrier-omnic-form",
+        "pummel-nemesis-form",
+        "ravenous-vortex",
+        "annihilation"
+      ]
+    },
+    {
+      "heroId": "reaper",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/reaper/",
+      "sha256": "c1130c9ab1d937513f4d99be9f39c927f6069438859c4a1779509960a38bbcaa",
+      "abilities": [
+        "hellfire-shotguns",
+        "shadow-step",
+        "wraith-form",
+        "death-blossom",
+        "the-reaping"
+      ]
+    },
+    {
+      "heroId": "reinhardt",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/reinhardt/",
+      "sha256": "1fbb8f88f5715e9d51232c24f360b5a8bf184ca61210d3d7787e370514efb8ad",
+      "abilities": [
+        "rocket-hammer",
+        "charge",
+        "fire-strike",
+        "barrier-field",
+        "earthshatter"
+      ]
+    },
+    {
+      "heroId": "roadhog",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/roadhog/",
+      "sha256": "8a97eea3bd2182ff1893d10f550ef4916ad0aa994404fa5665e9f52049a6db12",
+      "abilities": [
+        "scrap-gun",
+        "trash-compactor",
+        "chain-hook",
+        "take-a-breather",
+        "whole-hog"
+      ]
+    },
+    {
+      "heroId": "shion",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/shion/",
+      "sha256": "8f3e244b6cad130bf953f08d90b0b003b3dc34426176aa05b789517d35a66c4d",
+      "abilities": [
+        "kira-pistols",
+        "execution",
+        "joyride",
+        "evade",
+        "satsuriku-spree"
+      ]
+    },
+    {
+      "heroId": "sierra",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/sierra/",
+      "sha256": "312eca3cb0df68ee4b86e9fe5c3eabf7d392a9f73b057e0d938862a56992ca16",
+      "abilities": [
+        "helix-rifle",
+        "tracking-shot",
+        "tremor-charge",
+        "anchor-drone",
+        "trailblazer"
+      ]
+    },
+    {
+      "heroId": "sigma",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/sigma/",
+      "sha256": "b6b33114fbc0693c278476f516517bf20dd251659f4ed26fb909b61332a79a9a",
+      "abilities": [
+        "hyperspheres",
+        "kinetic-grasp",
+        "accretion",
+        "experimental-barrier",
+        "gravitic-flux"
+      ]
+    },
+    {
+      "heroId": "sojourn",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/sojourn/",
+      "sha256": "bb5e802e6a4e93d6a61216a35d79ed9e115a3b95a629dea220e3681702195af6",
+      "abilities": [
+        "railgun",
+        "power-slide",
+        "disruptor-shot",
+        "overclock"
+      ]
+    },
+    {
+      "heroId": "soldier-76",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/soldier-76/",
+      "sha256": "ee6a77ccdfddd44910788abb749aafc4b8022cfa4e09cec5df19595dc6bc8633",
+      "abilities": [
+        "heavy-pulse-rifle",
+        "sprint",
+        "biotic-field",
+        "helix-rockets",
+        "tactical-visor"
+      ]
+    },
+    {
+      "heroId": "sombra",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/sombra/",
+      "sha256": "3bc12867f79aa2cada94a834cff25dbfe8cf08709e9766966427a78bcc9ac46e",
+      "abilities": [
+        "machine-pistol",
+        "hotfix",
+        "cyberspace",
+        "translocator",
+        "emp"
+      ]
+    },
+    {
+      "heroId": "symmetra",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/symmetra/",
+      "sha256": "2f01f300a9a8afcfd8aaf99eb19215e4746265904ca490c8d0e98c81b52f79f3",
+      "abilities": [
+        "photon-projector",
+        "sentry-turret",
+        "teleporter",
+        "photon-barrier"
+      ]
+    },
+    {
+      "heroId": "torbjorn",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/torbjorn/",
+      "sha256": "0ddbff09407577bf4220065b83aa1b68dc800495340b0ba3e275d03e3ff427ea",
+      "abilities": [
+        "rivet-gun",
+        "forge-hammer",
+        "deploy-turret",
+        "overload",
+        "molten-core"
+      ]
+    },
+    {
+      "heroId": "tracer",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/tracer/",
+      "sha256": "7ce1c3fb5038421d2e68709a6afff03273e08d9d1a09922bbd1869eb8dae26e9",
+      "abilities": [
+        "pulse-pistols",
+        "blink",
+        "recall",
+        "pulse-bomb"
+      ]
+    },
+    {
+      "heroId": "vendetta",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/vendetta/",
+      "sha256": "c355c1901dee71a9b20de2fcccd4361907997d1fc5b59ac37af7a4e3834360d4",
+      "abilities": [
+        "palatine-fang",
+        "warding-stance",
+        "whirlwind-dash",
+        "soaring-slice",
+        "projected-edge",
+        "sundering-blade"
+      ]
+    },
+    {
+      "heroId": "venture",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/venture/",
+      "sha256": "ae01fb29a8c08730fd7a1ab11d1713b88f0667c815291beb59f213e21c07fa36",
+      "abilities": [
+        "smart-excavator",
+        "drill-dash",
+        "burrow",
+        "tectonic-shock"
+      ]
+    },
+    {
+      "heroId": "widowmaker",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/widowmaker/",
+      "sha256": "b87f334d4bad1cf5ab365895b02e32717185f2f0514570fea6797d560930db9f",
+      "abilities": [
+        "widows-kiss",
+        "grappling-hook",
+        "venom-mine",
+        "infra-sight"
+      ]
+    },
+    {
+      "heroId": "winston",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/winston/",
+      "sha256": "36f3fa466f35e4b6e8c920dad84f52f06ebb9aae3fff8cae7fb766734b62562f",
+      "abilities": [
+        "tesla-cannon",
+        "jump-pack",
+        "barrier-projector",
+        "primal-rage"
+      ]
+    },
+    {
+      "heroId": "wrecking-ball",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/wrecking-ball/",
+      "sha256": "a91ea29b505ac4bd5d994ce60e5e750d1f16c0da1b6a8f5dbdd6a707cd994bdb",
+      "abilities": [
+        "quad-cannons",
+        "grappling-claw",
+        "roll",
+        "piledriver",
+        "adaptive-shield",
+        "minefield"
+      ]
+    },
+    {
+      "heroId": "wuyang",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/wuyang/",
+      "sha256": "bcd90ed1928d7d1bfde058470b0e788b105ab4912becf64ac3f4fa1c857c13bf",
+      "abilities": [
+        "xuanwu-staff",
+        "restorative-stream",
+        "rushing-torrent",
+        "tidal-blast",
+        "guardian-wave"
+      ]
+    },
+    {
+      "heroId": "zarya",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/zarya/",
+      "sha256": "079261cf95433e042d371392ec2b28ae64b93d5df996a32bcea4d009e0a4cf57",
+      "abilities": [
+        "particle-cannon",
+        "particle-barrier",
+        "projected-barrier",
+        "graviton-surge",
+        "energy"
+      ]
+    },
+    {
+      "heroId": "zenyatta",
+      "url": "https://overwatch.blizzard.com/en-us/heroes/zenyatta/",
+      "sha256": "dc4481870e0e00d61ca98d44e39e45f13a304b6ff82c74af4d8d7705bb43eea5",
+      "abilities": [
+        "orb-of-destruction",
+        "orb-of-discord",
+        "orb-of-harmony",
+        "transcendence",
+        "snap-kick"
+      ]
+    }
+  ]
+}

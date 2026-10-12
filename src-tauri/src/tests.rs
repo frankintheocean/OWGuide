@@ -37,12 +37,12 @@ fn content_install_and_rollback_preserve_user() {
     let mut s = Store::open(Path::new(":memory:")).unwrap();
     s.save_user(&user(), 0).unwrap();
     let mut c = seed();
-    c["version"] = "0.3.0".into();
+    c["version"] = "99.0.0".into();
     s.install(&c).unwrap();
-    assert_eq!(s.snapshot().unwrap().content["version"], "0.3.0");
+    assert_eq!(s.snapshot().unwrap().content["version"], "99.0.0");
     s.rollback().unwrap();
     let result = s.snapshot().unwrap();
-    assert_eq!(result.content["version"], "0.2.0");
+    assert_eq!(result.content["version"], seed()["version"]);
     assert_eq!(result.user.unwrap(), user());
 }
 #[test]
@@ -50,9 +50,9 @@ fn failed_sql_transaction_restores_previous_package() {
     let mut s = Store::open(Path::new(":memory:")).unwrap();
     s.connection.execute_batch("CREATE TEMP TRIGGER reject_install BEFORE INSERT ON hero BEGIN SELECT RAISE(ABORT,'test fault'); END;").unwrap();
     let mut c = seed();
-    c["version"] = "0.3.0".into();
+    c["version"] = "99.0.0".into();
     assert!(s.install(&c).is_err());
-    assert_eq!(s.snapshot().unwrap().content["version"], "0.2.0");
+    assert_eq!(s.snapshot().unwrap().content["version"], seed()["version"]);
     assert_eq!(
         s.connection
             .query_row("SELECT COUNT(*) FROM hero", [], |r| r.get::<_, i64>(0))
@@ -75,16 +75,16 @@ fn signatures_hashes_sizes_and_versions_are_checked() {
     let key = STANDARD.encode(signing.verifying_key().to_bytes());
     let mut manifest = Manifest {
         schema_version: 1,
-        version: "0.2.0".into(),
+        version: seed()["version"].as_str().unwrap().into(),
         package_url: "https://example.com/content.json".into(),
         sha256: hex::encode(Sha256::digest(&bytes)),
         bytes: bytes.len(),
         signature: STANDARD.encode(signing.sign(&bytes).to_bytes()),
     };
     assert!(verify_package(&manifest, &bytes, &key).is_ok());
-    manifest.version = "0.3.0".into();
+    manifest.version = "99.0.0".into();
     assert!(verify_package(&manifest, &bytes, &key).is_err());
-    manifest.version = "0.2.0".into();
+    manifest.version = seed()["version"].as_str().unwrap().into();
     manifest.signature = STANDARD.encode([0; 64]);
     assert!(verify_package(&manifest, &bytes, &key).is_err());
     manifest.signature = STANDARD.encode(signing.sign(&bytes).to_bytes());
